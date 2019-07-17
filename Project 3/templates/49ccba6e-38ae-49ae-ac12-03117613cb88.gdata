@@ -1,0 +1,376 @@
+EBGUIDE 6.4.1.127810;
+@49ccba6e-38ae-49ae-ac12-03117613cb88
+{
+	#1345489561 name :: string : "AnalogClock";
+	#4168678326 structure :: GtfContainer : @4359d1e9-f278-4ee1-8a62-e01336ee0c05
+	{
+		#1100588299 features :: feature_list : @33fe8a5f-906a-44f3-89a8-667ec071a7a9
+		{
+		}
+		#4025189385 children :: children_list : @8703023b-b35a-4c51-8ceb-c6787081ccdd
+		{
+			#4079135116 "children_list 1" :: GtfContainer : @f7115b78-8b0a-4af8-8210-55eb571461c3
+			{
+				#1114273936 features :: feature_list : @4f5914dc-6ddd-47a0-9ece-eba8f94f6939
+				{
+				}
+				#3386192636 children :: children_list : @27778fc6-9922-4771-9638-dacaf273b617
+				{
+				}
+				#328278998 name :: string : "Pos";
+				#4147935939 visible :: propref(bool) : @4359d1e9-f278-4ee1-8a62-e01336ee0c05#849124415;
+				#2159639982 width :: int : 200;
+				#1993540473 height :: int : 200;
+				#3642655474 x :: int : 0;
+				#367242027 y :: int : 0;
+				#315010775 PosX :: propref(int) : @4359d1e9-f278-4ee1-8a62-e01336ee0c05#1192114178;
+				#440111574 PosY :: propref(int) : @4359d1e9-f278-4ee1-8a62-e01336ee0c05#3646423274;
+				#309832938 Width :: propref(int) : @4359d1e9-f278-4ee1-8a62-e01336ee0c05#2817006775;
+				#3911846106 Height :: propref(int) : @4359d1e9-f278-4ee1-8a62-e01336ee0c05#1443203509;
+			}
+			#2650434022 "children_list 10" :: GtfRectangle : @02a4f225-2b2a-40c7-ac69-bc8395267956
+			{
+				#304272614 features :: feature_list : @90141c0e-d775-414a-95ec-18c151ab976c
+				{
+					#1128884110 "feature_list 3" :: Rotation : @def9b7c1-0ff2-45f8-ac85-e421ac769350
+					{
+						#3248772901 rotationEnabled :: bool : true;
+						#3803691436 rotationAngleX :: float : 0.0;
+						#4199374387 rotationAngleY :: float : 0.0;
+						#3040080676 rotationAngleZ :: float : 180.0;
+					}
+					#1753164848 "feature_list 4" :: Scaling : @01b4c0e5-7c68-48d1-bcf6-56e5686c12e1
+					{
+						#3493462333 scalingEnabled :: bool : true;
+						#1207756948 scalingX :: float : 100.0;
+						#4055174460 scalingY :: float : 100.0;
+						#966051716 scalingZ :: float : 100.0;
+					}
+					#1541046707 "feature_list 5" :: Shearing : @d93c457d-708a-4500-a56f-e1f1d7177a9b
+					{
+						#613949274 shearingEnabled :: bool : true;
+						#182140227 shearingXbyY :: float : 0.0;
+						#3226808181 shearingXbyZ :: float : 0.0;
+						#2990705123 shearingYbyX :: float : 0.0;
+						#28939472 shearingYbyZ :: float : 0.0;
+						#2698975956 shearingZbyX :: float : 0.0;
+						#554013063 shearingZbyY :: float : 0.0;
+					}
+					#1755510041 "feature_list 6" :: Pivot : @998c2932-20bf-447f-b4e3-9cd9f0606a5a
+					{
+						#3645913913 pivotX :: float_scriptedValue : @ed96d5a1-55a8-4be1-8a87-d15f48c8918e
+						{
+							#1184791008 triggerList :: trigger_list : @05f84e11-4670-4539-8f82-6b0a49708f2f
+							{
+								#258581164 events :: event_refs : <objectref>[];
+								#466005537 dp_items :: dp_item_refs : <objectref>[];
+								#3658394791 properties :: property_reference_list : <propref>[];
+							}
+							#1577333929 onTrigger :: function(bool,bool) : @13a54960-a68c-4c14-9263-79d7cb0b166c
+							{
+								#2501585828 script :: string : "function(v:arg0::bool)\n{\n\tfalse\n}";
+							}
+							#2505123633 read :: function(float) : @f9530c09-ad8f-45fb-aa84-aafba01abfd5
+							{
+								#2962040201 script :: string : "function()\n{\n\tf:int2float(v:this.width / 2)\n}";
+							}
+							#2488966396 write :: function(bool,float) : @95c7e895-5727-4075-a809-c2543b4bf580
+							{
+								#2124963803 script :: string : "function(v:arg0::float)\n{\n\tv:this.pivotX = v:arg0\n\tfalse\n}";
+							}
+						}
+						#3428818694 pivotY :: float : 0.0;
+						#77443241 pivotZ :: float : 0.0;
+					}
+				}
+				#470213149 children :: children_list : @1b115a87-dabe-47b2-982d-898eb26c003e
+				{
+				}
+				#245971295 name :: string : "Hour";
+				#748121693 visible :: bool : true;
+				#3874433658 width :: propref(int) : @49ccba6e-38ae-49ae-ac12-03117613cb88#395114738;
+				#1197173915 height :: propref(int) : @49ccba6e-38ae-49ae-ac12-03117613cb88#2490721197;
+				#3474097944 x :: int_scriptedValue : @ab7dae18-74cf-4a73-a784-082d86537d45
+				{
+					#2012097643 triggerList :: trigger_list : @80d68b4e-cbae-40db-b3bc-590256660bfe
+					{
+						#97416722 events :: event_refs : <objectref>[];
+						#2909807904 dp_items :: dp_item_refs : <objectref>[];
+						#2553978918 properties :: property_reference_list : <propref>[];
+					}
+					#3410304295 onTrigger :: function(bool,bool) : @99f3d358-f922-43f7-8fb0-ce1cc6933fa7
+					{
+						#1325928716 script :: string : "function(v:arg0::bool)\n{\n\tfalse\n}";
+					}
+					#614611044 read :: function(int) : @2e427394-71cf-435a-8ae0-dc785fd34fb2
+					{
+						#1478973748 script :: string : "function()\n{\n\tv:this->^->Pos.Width / 2\n}";
+					}
+					#3564444055 write :: function(bool,int) : @85ca3660-200e-490f-b030-2117d2056852
+					{
+						#1849977824 script :: string : "function(v:arg0::int)\n{\n\tv:this.x = v:arg0\n\tfalse\n}";
+					}
+				}
+				#1158849485 y :: int_scriptedValue : @bc2bb4ba-2d02-4275-ad0a-9554bf2dcf21
+				{
+					#1724149123 triggerList :: trigger_list : @e04680ce-7104-4a01-ab6d-a0c19a3bed15
+					{
+						#3201041331 events :: event_refs : <objectref>[];
+						#12217741 dp_items :: dp_item_refs : <objectref>[];
+						#2595552973 properties :: property_reference_list : <propref>[];
+					}
+					#2667663263 onTrigger :: function(bool,bool) : @3cea84c1-61b3-4cb8-ac58-8bafb4bb2c7c
+					{
+						#1843735295 script :: string : "function(v:arg0::bool)\n{\n\tfalse\n}";
+					}
+					#883389121 read :: function(int) : @8de0ed26-17c1-42e1-b165-9a84f974c740
+					{
+						#2056847987 script :: string : "function()\n{\n\tv:this->^->Pos.Height / 2\n}";
+					}
+					#2580337227 write :: function(bool,int) : @eebb7191-8229-4645-83a9-c9bb847b7e98
+					{
+						#2851099649 script :: string : "function(v:arg0::int)\n{\n\tv:this.y = v:arg0\n\tfalse\n}";
+					}
+				}
+				#1821783224 fillColor :: propref(color) : @49ccba6e-38ae-49ae-ac12-03117613cb88#1508589599;
+			}
+			#2804577012 "children_list 11" :: GtfRectangle : @5871d2cf-bb07-4236-8c0c-c19b6dcc6efe
+			{
+				#304272614 features :: feature_list : @e6bb68a2-21a6-4870-9154-d5482338b9d6
+				{
+					#1128884110 "feature_list 3" :: Rotation : @3744177d-979e-4a9b-821c-4c3b18cfdad4
+					{
+						#3248772901 rotationEnabled :: bool : true;
+						#3803691436 rotationAngleX :: float : 0.0;
+						#4199374387 rotationAngleY :: float : 0.0;
+						#3040080676 rotationAngleZ :: float : 0.0;
+					}
+					#1753164848 "feature_list 4" :: Scaling : @c75e74e0-f584-45eb-89fe-e9417058abb3
+					{
+						#3493462333 scalingEnabled :: bool : true;
+						#1207756948 scalingX :: float : 100.0;
+						#4055174460 scalingY :: float : 100.0;
+						#966051716 scalingZ :: float : 100.0;
+					}
+					#1541046707 "feature_list 5" :: Shearing : @1c06f5c8-1ff0-48fc-aecd-cc8eb50e770f
+					{
+						#613949274 shearingEnabled :: bool : true;
+						#182140227 shearingXbyY :: float : 0.0;
+						#3226808181 shearingXbyZ :: float : 0.0;
+						#2990705123 shearingYbyX :: float : 0.0;
+						#28939472 shearingYbyZ :: float : 0.0;
+						#2698975956 shearingZbyX :: float : 0.0;
+						#554013063 shearingZbyY :: float : 0.0;
+					}
+					#1755510041 "feature_list 6" :: Pivot : @9a558a67-fa28-40db-b9ad-0bd052d6d4c1
+					{
+						#3645913913 pivotX :: float_scriptedValue : @e3ada779-b37f-402a-8706-ed86333b7998
+						{
+							#1184791008 triggerList :: trigger_list : @5af8b879-c1d2-4918-b023-73ab937ce923
+							{
+								#258581164 events :: event_refs : <objectref>[];
+								#466005537 dp_items :: dp_item_refs : <objectref>[];
+								#3658394791 properties :: property_reference_list : <propref>[];
+							}
+							#1577333929 onTrigger :: function(bool,bool) : @50d6866f-18e0-433f-a83a-8221c75c69ec
+							{
+								#2501585828 script :: string : "function(v:arg0::bool)\n{\n\tfalse\n}";
+							}
+							#2505123633 read :: function(float) : @e31a861e-6eb5-4d97-821c-a53f3bec5b18
+							{
+								#2962040201 script :: string : "function()\n{\n\tf:int2float(v:this.width / 2)\n}";
+							}
+							#2488966396 write :: function(bool,float) : @44b8b607-11d1-4eed-86cb-a3f19da5ebfd
+							{
+								#2124963803 script :: string : "function(v:arg0::float)\n{\n\tv:this.pivotX = v:arg0\n\tfalse\n}";
+							}
+						}
+						#3428818694 pivotY :: float : 0.0;
+						#77443241 pivotZ :: float : 0.0;
+					}
+				}
+				#470213149 children :: children_list : @fe03bd00-2bb0-4176-81e9-0635aaf7cc35
+				{
+				}
+				#245971295 name :: string : "Minute";
+				#748121693 visible :: bool : true;
+				#3874433658 width :: propref(int) : @49ccba6e-38ae-49ae-ac12-03117613cb88#1287727741;
+				#1197173915 height :: propref(int) : @49ccba6e-38ae-49ae-ac12-03117613cb88#4243940256;
+				#3474097944 x :: int_scriptedValue : @60f1466b-e620-4d02-a949-eb63c5cc7058
+				{
+					#2442533302 triggerList :: trigger_list : @bbd2f82e-8a36-4740-85a9-d621b7efa920
+					{
+						#543572974 events :: event_refs : <objectref>[];
+						#3115014441 dp_items :: dp_item_refs : <objectref>[];
+						#3167781039 properties :: property_reference_list : <propref>[];
+					}
+					#3272272113 onTrigger :: function(bool,bool) : @aabcaf52-9e08-4e3d-b1ca-09fef113c9ca
+					{
+						#2713693251 script :: string : "function(v:arg0::bool)\n{\n\tfalse\n}";
+					}
+					#1673112138 read :: function(int) : @a4095801-a17d-4219-a862-c6b96f5f272e
+					{
+						#2344632906 script :: string : "function()\n{\n\tv:this->^->Pos.Width / 2\n}";
+					}
+					#3352264957 write :: function(bool,int) : @c8a72e56-10e1-4271-bf5d-2285c9ac44a0
+					{
+						#2925688817 script :: string : "function(v:arg0::int)\n{\n\tv:this.x = v:arg0\n\tfalse\n}";
+					}
+				}
+				#1158849485 y :: int_scriptedValue : @8dd9c6be-c95e-4ca2-88b1-cbb94c3c3f49
+				{
+					#3070130484 triggerList :: trigger_list : @36cb3f02-5a89-4e3c-9a69-7ffb28f27aff
+					{
+						#232266453 events :: event_refs : <objectref>[];
+						#2920173998 dp_items :: dp_item_refs : <objectref>[];
+						#3425085050 properties :: property_reference_list : <propref>[];
+					}
+					#3494365597 onTrigger :: function(bool,bool) : @067d2079-7691-4e92-956c-54eb9f8c3576
+					{
+						#3258195591 script :: string : "function(v:arg0::bool)\n{\n\tfalse\n}";
+					}
+					#1124446608 read :: function(int) : @790581b2-905e-406e-9b8c-81c442eba4ad
+					{
+						#1815593537 script :: string : "function()\n{\n\tv:this->^->Pos.Height / 2\n}";
+					}
+					#3060459817 write :: function(bool,int) : @7b580be0-8f01-4168-976a-5b71d22264f1
+					{
+						#2069652706 script :: string : "function(v:arg0::int)\n{\n\tv:this.y = v:arg0\n\tfalse\n}";
+					}
+				}
+				#1821783224 fillColor :: propref(color) : @49ccba6e-38ae-49ae-ac12-03117613cb88#890947527;
+			}
+			#1130397102 "children_list 13" :: GtfRectangle : @f6b3cce6-66bc-4efe-9a0f-6f108cd5e0bb
+			{
+				#304272614 features :: feature_list : @1c196240-8f7e-45d6-9d5f-730a6e57ebee
+				{
+					#1128884110 "feature_list 3" :: Rotation : @edfd83d2-80f2-40f5-990e-89322a444d38
+					{
+						#3248772901 rotationEnabled :: bool : true;
+						#3803691436 rotationAngleX :: float : 0.0;
+						#4199374387 rotationAngleY :: float : 0.0;
+						#3040080676 rotationAngleZ :: float : 45.0;
+					}
+					#1753164848 "feature_list 4" :: Scaling : @b2ecc5c6-96dd-446b-ac88-3dc96e022ada
+					{
+						#3493462333 scalingEnabled :: bool : true;
+						#1207756948 scalingX :: float : 100.0;
+						#4055174460 scalingY :: float : 100.0;
+						#966051716 scalingZ :: float : 100.0;
+					}
+					#1541046707 "feature_list 5" :: Shearing : @88d93869-8a83-4b3e-9f83-b9324aa4162a
+					{
+						#613949274 shearingEnabled :: bool : true;
+						#182140227 shearingXbyY :: float : 0.0;
+						#3226808181 shearingXbyZ :: float : 0.0;
+						#2990705123 shearingYbyX :: float : 0.0;
+						#28939472 shearingYbyZ :: float : 0.0;
+						#2698975956 shearingZbyX :: float : 0.0;
+						#554013063 shearingZbyY :: float : 0.0;
+					}
+					#1755510041 "feature_list 6" :: Pivot : @ad62b656-4e5c-4a1c-a3fe-ca43047f0477
+					{
+						#3645913913 pivotX :: float_scriptedValue : @f2d0d6ca-8b9c-4864-84c8-1c757424ebf3
+						{
+							#1184791008 triggerList :: trigger_list : @f1f8ae06-2f60-498b-87b7-80ac8311a59e
+							{
+								#258581164 events :: event_refs : <objectref>[];
+								#466005537 dp_items :: dp_item_refs : <objectref>[];
+								#3658394791 properties :: property_reference_list : <propref>[];
+							}
+							#1577333929 onTrigger :: function(bool,bool) : @36c59177-a8a1-4437-8647-7482873e0a37
+							{
+								#2501585828 script :: string : "function(v:arg0::bool)\n{\n\tfalse\n}";
+							}
+							#2505123633 read :: function(float) : @33c3b995-407f-4a4e-90ab-395f623ffdaf
+							{
+								#2962040201 script :: string : "function()\n{\n\tf:int2float(v:this.width / 2)\n}";
+							}
+							#2488966396 write :: function(bool,float) : @809124ef-7671-429e-83c8-3b871862a1c0
+							{
+								#2124963803 script :: string : "function(v:arg0::float)\n{\n\tv:this.pivotX = v:arg0\n\tfalse\n}";
+							}
+						}
+						#3428818694 pivotY :: float : 0.0;
+						#77443241 pivotZ :: float : 0.0;
+					}
+				}
+				#470213149 children :: children_list : @711a5875-cdcd-4f74-b24c-30be8203ee37
+				{
+				}
+				#245971295 name :: string : "Seconds";
+				#748121693 visible :: bool : true;
+				#3874433658 width :: propref(int) : @49ccba6e-38ae-49ae-ac12-03117613cb88#3465996117;
+				#1197173915 height :: propref(int) : @49ccba6e-38ae-49ae-ac12-03117613cb88#1675433583;
+				#3474097944 x :: int_scriptedValue : @2a84bf6f-61c2-418f-a791-1d7f6468e164
+				{
+					#1284521614 triggerList :: trigger_list : @30497209-141b-45bc-b359-ccf097185a76
+					{
+						#3655696397 events :: event_refs : <objectref>[];
+						#4199363499 dp_items :: dp_item_refs : <objectref>[];
+						#3652961495 properties :: property_reference_list : <propref>[];
+					}
+					#1629619596 onTrigger :: function(bool,bool) : @d8c7b6fc-3888-49d2-8d8c-4892535bb1c2
+					{
+						#3321269403 script :: string : "function(v:arg0::bool)\n{\n\tfalse\n}";
+					}
+					#2421871628 read :: function(int) : @37132a20-e35e-423e-9577-8ab61cbf8a80
+					{
+						#1362971076 script :: string : "function()\n{\n\tv:this->^->Pos.Width / 2\n}";
+					}
+					#3906101956 write :: function(bool,int) : @f35b0fc1-39f3-4f10-bbe9-1db8a4eb39a1
+					{
+						#3195882406 script :: string : "function(v:arg0::int)\n{\n\tv:this.x = v:arg0\n\tfalse\n}";
+					}
+				}
+				#1158849485 y :: int_scriptedValue : @e0744cb6-9eb8-4ed6-bbf9-ae7021432cd6
+				{
+					#3205206672 triggerList :: trigger_list : @24662afe-ca94-49ee-87c2-becf74e1f677
+					{
+						#113204439 events :: event_refs : <objectref>[];
+						#439280862 dp_items :: dp_item_refs : <objectref>[];
+						#2848555850 properties :: property_reference_list : <propref>[];
+					}
+					#3224095229 onTrigger :: function(bool,bool) : @f3907339-a4fb-4b2f-9c2c-e1ac38548ce6
+					{
+						#1784267435 script :: string : "function(v:arg0::bool)\n{\n\tfalse\n}";
+					}
+					#1440842647 read :: function(int) : @7b18cc75-eb42-4419-8900-b162f6c873db
+					{
+						#2620815275 script :: string : "function()\n{\n\tv:this->^->Pos.Height / 2\n}";
+					}
+					#4048338283 write :: function(bool,int) : @bd9427ab-80b6-4156-826d-049b9d166312
+					{
+						#1512017279 script :: string : "function(v:arg0::int)\n{\n\tv:this.y = v:arg0\n\tfalse\n}";
+					}
+				}
+				#1821783224 fillColor :: propref(color) : @49ccba6e-38ae-49ae-ac12-03117613cb88#3970459983;
+			}
+		}
+		#1502886446 name :: string : "Container";
+		#849124415 visible :: propref(bool) : @49ccba6e-38ae-49ae-ac12-03117613cb88#1200222418;
+		#2817006775 width :: propref(int) : @49ccba6e-38ae-49ae-ac12-03117613cb88#3927346029;
+		#1443203509 height :: propref(int) : @49ccba6e-38ae-49ae-ac12-03117613cb88#1739103881;
+		#1192114178 x :: propref(int) : @49ccba6e-38ae-49ae-ac12-03117613cb88#1124976287;
+		#3646423274 y :: propref(int) : @49ccba6e-38ae-49ae-ac12-03117613cb88#4291825638;
+		#674116840 TimeRotation :: propref(function(bool)) : @49ccba6e-38ae-49ae-ac12-03117613cb88#3365730578;
+	}
+	#1200222418 visible :: bool : true;
+	#3927346029 width :: int : 200;
+	#1739103881 height :: int : 200;
+	#1124976287 x :: int : 0;
+	#4291825638 y :: int : 0;
+	#3365730578 TimeRotation :: function(bool) : @b68e7ba5-16d0-434f-9a24-93790f73fae3
+	{
+		#2616285740 script :: string : "function()\n{\n\tlet v:Time = f:system_time() in{\n\t\t//\n\t\tlet v:Hour = f:int2float(f:localtime_hour(v:Time)) in{\n\t\t\tif(v:Hour >= 12.0){v:Hour -= 12.0}\n\t\t\tv:this->Hour.rotationAngleZ = -(v:Hour * 30.0) + 180.0\n\t\t\tf:trace_string(f:float2string(v:Hour) + \"時\")\n\t\t}\n\t\t\n\t\tv:this->Minute.rotationAngleZ =  -(f:int2float(f:localtime_minute(v:Time)) * 6.0) + 180.0\n\t\tv:this->Seconds.rotationAngleZ = -(f:int2float(f:localtime_second(v:Time)) * 6.0) + 180.0\n\t}\n\ttrue\n}";
+	}
+	#395114738 "width 2" :: int : 10;
+	#2490721197 "height 2" :: int : 50;
+	#1508589599 fillColor :: color : -1448498689;
+	#1287727741 "width 3" :: int : 8;
+	#4243940256 "height 3" :: int : 80;
+	#890947527 "fillColor 2" :: color : -1448498689;
+	#3465996117 "width 4" :: int : 4;
+	#1675433583 "height 4" :: int : 80;
+	#3970459983 "fillColor 3" :: color : -1448498689;
+}

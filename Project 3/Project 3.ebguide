@@ -1,0 +1,80 @@
+EBGUIDE 6.4.1.127810;
+@929a0e75-4acd-4873-bbac-26c1fe9fac3e
+{
+	#995351220 module :: module : @c6122fde-3e97-4121-825c-f897ea9ca5b2
+	{
+		#589354357 name :: string : "";
+		#107445319 events :: events : @0afb80d3-aaef-441d-bb4d-c50e04b681ef;
+		#305229557 statemachines :: statemachines : @bbd1aae7-2b56-44a0-b670-8fed11ea5542
+		{
+			#1826555796 "statemachines 1" :: haptic_statemachine : @fc2165db-969e-40c8-949e-6dcf8c1a5665;
+		}
+		#3589269159 dp_items :: dp_items : @8df9ccee-0cec-466c-ae49-ea05fb47f4a8;
+		#1078627161 contexts :: contexts : @35f35837-1497-4822-83d9-d689ace56daa
+		{
+			#4215191265 "contexts 1" :: context : @d320599b-1aac-4b2d-b990-dbd2391de476
+			{
+				#1971109798 name :: string : "HMI";
+				#3488609745 contextId :: int : 0;
+				#2253126205 ownsThread :: bool : false;
+			}
+		}
+		#3469035406 languages :: languages : @ff038078-0f0f-4b92-a49e-4f82af0b9607
+		{
+			#1496169771 "languages 1" :: language : @8f0b5c3b-47a3-4203-af10-8305bfe790d8
+			{
+				#2043548777 name :: string : "Standard";
+				#1887402682 country :: string : "JP";
+				#1052681867 dialect :: string : "ja";
+			}
+		}
+		#2466640445 templates :: templates : @597f2a31-260f-4de9-8b2e-e7c0bb844222
+		{
+			#478800711 "templates 1" :: GtfImage_template : @6377dc25-815b-421e-8dd8-eee5dc4fba1e;
+			#3407331503 "templates 2" :: GtfImage_template : @c4ac040d-2906-4258-92ad-e656bee7d754;
+			#2457007518 "templates 6" :: GtfImage_template : @12591aaa-09b0-4be8-bcfc-772b70d7d023;
+			#4188179503 "templates 7" :: GtfContainer_template : @f82e4f87-4997-4271-b664-f81022da16ab;
+			#533890759 "templates 4" :: GtfContainer_template : @01a645ce-023c-43f7-a50f-5fe0879a85de;
+			#904093082 "templates 3" :: GtfRectangle_template : @f4da9e56-95ee-4534-ba47-121ea2d87c2c;
+			#1439683215 "templates 5" :: GtfContainer_template : @c31857c3-a730-4147-8c45-684691f5aa17;
+			#2569576250 "templates 8" :: GtfRectangle_template : @aea3c21b-61f6-4f13-b1c4-7e9899e008e3;
+			#4294162526 "templates 11" :: GtfContainer_template : @49ccba6e-38ae-49ae-ac12-03117613cb88;
+			#875959641 "templates 9" :: GtfContainer_template : @4c2b9a42-0ea8-459f-bc2d-3efafd12862e;
+		}
+		#1676104195 event_groups :: event_groups : @61f24ed6-7045-49fc-9823-2ba23373c37c
+		{
+			#1492160437 "event_groups 1" :: event_group : @3300ae2c-831f-434e-ac06-cfa5677f1a81
+			{
+				#764793137 name :: string : "Default";
+				#2286487171 event_group_id :: int : 2;
+			}
+			#2851462434 "event_groups 2" :: event_group : @9e55e6ef-6006-4047-9314-a7a90ceec137
+			{
+				#836104835 name :: string : "Key";
+				#4021625223 event_group_id :: int : 10;
+			}
+			#1756923087 "event_groups 3" :: event_group : @6bd1f696-d86f-4294-995d-6b4f01be8515
+			{
+				#1638800648 name :: string : "Touch";
+				#3038239167 event_group_id :: int : 11;
+			}
+			#3485747629 "event_groups 4" :: event_group : @89f5f91a-5746-4bb7-8c17-f793b4cb81a5
+			{
+				#2092629556 name :: string : "Rotary";
+				#2801043400 event_group_id :: int : 12;
+			}
+			#2370199339 "event_groups 5" :: event_group : @f63fd334-2ec3-4c6e-b35e-ffddaa199a72
+			{
+				#479908488 name :: string : "System notification";
+				#3988699637 event_group_id :: int : 13;
+			}
+		}
+		#1056212881 profiles :: profiles : @a2a3219f-15af-4eb5-b383-d1961f47a9b2
+		{
+			#2753765102 "profiles 1" :: configuration_profile : @23cddad4-02c9-42b6-b90a-1db9de7af43c;
+			#1497452721 "profiles 2" :: configuration_profile : @a0833fc9-37b7-43c9-8d1e-3cf1fb24a91f;
+		}
+		#2204231873 editModeConfigurationProfile :: objectref(configuration_profile) : @23cddad4-02c9-42b6-b90a-1db9de7af43c;
+		#1703550207 simulationModeConfigurationProfile :: objectref(configuration_profile) : @a0833fc9-37b7-43c9-8d1e-3cf1fb24a91f;
+	}
+}

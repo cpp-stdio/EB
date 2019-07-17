@@ -1,0 +1,157 @@
+EBGUIDE 6.4.1.127810;
+@c4ac040d-2906-4258-92ad-e656bee7d754
+{
+	#2094408340 name :: string : "Button_to_Label";
+	#1177734971 structure :: GtfImage : @3c24372d-3ff5-45be-8d5e-ae1e974a9828
+	{
+		#4118950701 features :: feature_list : @c86ed858-76d0-4883-8cc0-cc6c00cbc1e7
+		{
+			#1732172710 "feature_list 1" :: TouchPressed : @ea287b08-eee2-459f-aa0b-931b94027be8
+			{
+				#1092946377 touchPressed :: propref(function(bool,int,int,int,int)) : @c4ac040d-2906-4258-92ad-e656bee7d754#1324964554;
+			}
+			#2275339599 "feature_list 2" :: StateTouched : @860e50cf-9f4f-487e-a822-17a03b25d356
+			{
+				#1980824582 touchable :: bool : true;
+				#3283400510 touched :: propref(bool) : @c4ac040d-2906-4258-92ad-e656bee7d754#2987482784;
+				#961038425 touchPolicy :: propref(int) : @c4ac040d-2906-4258-92ad-e656bee7d754#603430713;
+				#454038627 touchBehavior :: propref(int) : @c4ac040d-2906-4258-92ad-e656bee7d754#46577981;
+			}
+			#1523350205 "feature_list 3" :: ScaleMode : @14b5cce4-b807-4d80-b5d5-30a16cda54b0
+			{
+				#2880497552 scaleMode :: int : 1;
+			}
+			#1233790291 "feature_list 4" :: StateEnabled : @10e085a5-c8be-41d9-820d-eeab24d2ee64
+			{
+				#1232607286 enabled :: propref(bool) : @3c24372d-3ff5-45be-8d5e-ae1e974a9828#638542112;
+			}
+			#1744037441 "feature_list 5" :: LayoutPolicyListItem : @3b828921-22d2-48b2-a114-1f5256a22b0a
+			{
+				#501505203 listIndex :: propref(int) : @c4ac040d-2906-4258-92ad-e656bee7d754#3218454261;
+			}
+			#2445222118 "feature_list 6" :: LineIndex : @605c6e49-c99d-4ca3-8c32-f3b176c70ea6
+			{
+				#120785579 lineIndex :: propref(int) : @c4ac040d-2906-4258-92ad-e656bee7d754#2519154343;
+			}
+			#2585780707 "feature_list 7" :: TouchShortReleased : @554754c5-fbfa-4e1c-88a7-f40653064a3d
+			{
+				#4099206101 touchShortReleased :: function(bool,int,int,int,int) : @96d57e9a-3a00-4612-9ade-3471c0fda35c
+				{
+					#1659574950 script :: string : "function(v:touchId::int, v:x::int, v:y::int, v:fingerId::int)\n{\n\tv:this.releasedReaction()\n    false\n}";
+				}
+			}
+			#2842955572 "feature_list 9" :: TouchMove : @5d06cd51-1057-4793-ac73-40a688181643
+			{
+				#2874274349 touchMoved :: propref(function(bool,int,int,int,int)) : @c4ac040d-2906-4258-92ad-e656bee7d754#2268928498;
+			}
+			#634203406 "feature_list 10" :: Coloration : @bd1dd2ce-6631-4821-b11d-054cf8706891
+			{
+				#2331063395 colorationEnabled :: propref(bool) : @c4ac040d-2906-4258-92ad-e656bee7d754#939102376;
+				#415479467 colorationColor :: propref(color) : @c4ac040d-2906-4258-92ad-e656bee7d754#127175281;
+			}
+		}
+		#3744561186 children :: children_list : @911ee145-af3b-4694-904d-af33b5e66aba
+		{
+			#1846365348 "children_list 6" :: GtfLabel : @6ec65519-7666-4a6d-a316-50e2940f3a33
+			{
+				#3857723314 features :: feature_list : @5f4b1fd9-8594-4b6b-8a54-cf6ab536905d
+				{
+				}
+				#3661927739 children :: children_list : @b85a6d1d-f28f-4a50-8fac-e1f7231702ab
+				{
+				}
+				#2063864336 name :: string : "Lable";
+				#1822758979 visible :: propref(bool) : @c4ac040d-2906-4258-92ad-e656bee7d754#2549912772;
+				#3204679068 width :: propref(int) : @c4ac040d-2906-4258-92ad-e656bee7d754#3015405326;
+				#581028470 height :: propref(int) : @c4ac040d-2906-4258-92ad-e656bee7d754#2645190652;
+				#3962312128 x :: propref(int) : @c4ac040d-2906-4258-92ad-e656bee7d754#1866256746;
+				#3732928763 y :: propref(int) : @c4ac040d-2906-4258-92ad-e656bee7d754#773009018;
+				#69771665 text :: propref(string) : @c4ac040d-2906-4258-92ad-e656bee7d754#912547867;
+				#208561927 textColor :: propref(color) : @c4ac040d-2906-4258-92ad-e656bee7d754#3704267150;
+				#1258775149 font :: propref(font) : @c4ac040d-2906-4258-92ad-e656bee7d754#54196812;
+				#4191219596 horizontalAlign :: propref(int) : @c4ac040d-2906-4258-92ad-e656bee7d754#3459057273;
+				#830600060 verticalAlign :: propref(int) : @c4ac040d-2906-4258-92ad-e656bee7d754#670409998;
+			}
+		}
+		#990831843 name :: string : "Button";
+		#638542112 visible :: propref(bool) : @c4ac040d-2906-4258-92ad-e656bee7d754#1504587065;
+		#2539696371 width :: propref(int) : @c4ac040d-2906-4258-92ad-e656bee7d754#3169756939;
+		#1329273701 height :: propref(int) : @c4ac040d-2906-4258-92ad-e656bee7d754#1113403487;
+		#1028743693 x :: propref(int) : @c4ac040d-2906-4258-92ad-e656bee7d754#89460343;
+		#1163049484 y :: propref(int) : @c4ac040d-2906-4258-92ad-e656bee7d754#4067345786;
+		#1267433859 image :: image_resource : @7fdcbf1f-d30c-4541-8110-6e87709256a3
+		{
+			#2626837520 file :: file : "EB.png";
+		}
+		#3996319691 horizontalAlign :: int : 1;
+		#4270016213 verticalAlign :: int : 0;
+		#44378259 releasedImage :: image_resource : @2fc363f8-8959-4af7-ae08-6ba5a11d5c52
+		{
+			#3456798511 file :: file : "button_bg_enabled.9.png";
+		}
+		#2118640189 pressedImage :: image_resource : @9a24086d-d32d-4073-85e8-5465ea844bf0
+		{
+			#2932947362 file :: file : "button_bg_pressed.9.png";
+		}
+		#1092060913 releasedReaction :: propref(function(bool)) : @c4ac040d-2906-4258-92ad-e656bee7d754#2298475748;
+		#2499886351 setImage :: bool_scriptedValue : @0dab07df-11e2-4f66-a885-65a85edc6134
+		{
+			#1310992897 triggerList :: trigger_list : @dea833e3-9daa-4005-a5ec-a3167f485b6f
+			{
+				#2748541863 events :: event_refs : <objectref>[];
+				#3387228417 dp_items :: dp_item_refs : <objectref>[];
+				#3687868358 properties :: property_reference_list : <propref>[@860e50cf-9f4f-487e-a822-17a03b25d356#3283400510];
+			}
+			#3188888128 onTrigger :: function(bool,bool) : @8ba3c020-d6d5-4251-9c6e-30a1ed3694e1
+			{
+				#2708004971 script :: string : "function(v:arg0::bool)\n{\n\tif(v:this.touched){\n\t\tv:this.image = v:this.pressedImage\n\t}else{\n\t\tv:this.image = v:this.releasedImage\n\t}\n\tv:this.releasedReaction()\n\tfalse\n}";
+			}
+			#972610436 read :: function(bool) : @f8efe176-6651-4060-a2a6-d6a0b51a7b81
+			{
+				#1661410896 script :: string : "function()\n{\n\tfalse\n}";
+			}
+			#3918717446 write :: function(bool,bool) : @394e14fb-c364-44e5-91cd-7286432885ca
+			{
+				#1875749499 script :: string : "function(v:arg0::bool)\n{\n\tfalse\n}";
+			}
+		}
+	}
+	#2298475748 releasedReaction :: function(bool) : @c86b9a83-ba0e-4765-b8a9-4e63bdd47e3c
+	{
+		#3049802810 script :: string : "function()\n{\n\tfalse\n}";
+	}
+	#2519154343 lineIndex :: int : 0;
+	#3218454261 listIndex :: int : 0;
+	#2549912772 "visible 2" :: bool : true;
+	#3015405326 "width 2" :: int : 77;
+	#2645190652 "height 2" :: int : 56;
+	#1866256746 "x 2" :: int : 0;
+	#773009018 "y 2" :: int : 0;
+	#912547867 text :: string : "label";
+	#3704267150 textColor :: color : -1;
+	#54196812 font :: font_resource : @811da09b-b9b0-40b3-960e-95ed370db8b1
+	{
+		#3276709398 file :: file : "PT_Sans_Narrow.ttf";
+		#671953261 size :: int : 30;
+	}
+	#3459057273 horizontalAlign :: int : 1;
+	#670409998 verticalAlign :: int : 0;
+	#1504587065 visible :: bool : true;
+	#3169756939 width :: int : 77;
+	#1113403487 height :: int : 56;
+	#89460343 x :: int : 0;
+	#4067345786 y :: int : 0;
+	#2987482784 touched :: bool : false;
+	#603430713 touchPolicy :: int : 0;
+	#46577981 touchBehavior :: int : 1;
+	#1324964554 touchPressed :: function(bool,int,int,int,int) : @bcba0931-e1d0-44a7-8395-cd8d52fef072
+	{
+		#2000504525 script :: string : "function(v:touchId::int, v:x::int, v:y::int, v:fingerId::int)\n{\n    true\n}";
+	}
+	#2268928498 touchMoved :: function(bool,int,int,int,int) : @455347cb-ad75-4ba1-9f19-b00b735203ec
+	{
+		#3196642240 script :: string : "function(v:touchId::int, v:x::int, v:y::int, v:fingerId::int)\n{\n    false\n}";
+	}
+	#939102376 colorationEnabled :: bool : false;
+	#127175281 colorationColor :: color : -1;
+}

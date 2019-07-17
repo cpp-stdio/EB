@@ -1,0 +1,133 @@
+EBGUIDE 6.4.1.127810;
+@7858612e-b484-42b3-8591-b4ff3fd39d87
+{
+	#835471658 features :: feature_list : @e3eb9145-38ea-4337-a10a-3e4cb13fd962
+	{
+	}
+	#2792939396 children :: children_list : @09164240-d088-4c17-a36a-174e84dd40d4
+	{
+		#616512727 "children_list 2" :: GtfImage : @57d6e981-4e48-4fb9-b930-e739e44667da
+		{
+			#1053264852 features :: feature_list : @fe0acea1-d397-4b3a-b8cd-84d8ef18251d
+			{
+				#1046637100 "feature_list 1" :: StateFocused : @e9c9c5df-b157-4332-ba99-8c682634966b
+				{
+					#1705189308 focusable :: int : 3;
+					#2017255508 focused :: bool : true;
+				}
+				#2224999460 "feature_list 2" :: AutoFocus : @244e68f1-6ac3-473c-a230-48c11b71bd1c
+				{
+					#2861323624 initFocus :: int : 0;
+					#256106122 focusedIndex :: int : 12;
+					#1553061230 focusNext :: bool : true;
+					#542234838 focusPrev :: bool : true;
+					#1656082250 focusFlow :: int : 2;
+				}
+				#3089922861 "feature_list 3" :: Coloration : @634c3aa8-3254-4706-a1ee-361c66b98720
+				{
+					#1101346733 colorationEnabled :: bool : true;
+					#1354137663 colorationColor :: propref(color) : @57d6e981-4e48-4fb9-b930-e739e44667da#3622771168;
+				}
+			}
+			#3080689432 children :: children_list : @4c4f9deb-290b-4187-ac39-33078d0cc750
+			{
+			}
+			#968117809 name :: string : "背景";
+			#181985976 visible :: bool : true;
+			#3806242156 width :: int : 640;
+			#1521879207 height :: int : 480;
+			#3564026306 x :: int : 0;
+			#1116534033 y :: int : 0;
+			#950231052 image :: image_resource : @0f323b06-d95c-4fd1-a92f-3e96d940438a
+			{
+				#2447745743 file :: file : "logo_tresos2.png";
+			}
+			#2299284408 horizontalAlign :: int : 1;
+			#4084651473 verticalAlign :: int : 0;
+			#3622771168 Color :: color : -589505281;
+		}
+		#268737305 "children_list 10" :: GtfParallelAnimation : @6a0f3da4-cda9-46e2-9e66-5edeffafe61f
+		{
+			#56456902 features :: feature_list : @5e5ca21f-15c4-4e2e-b43a-b91a0680eb02
+			{
+			}
+			#4264208394 children :: children_list : @64b5e41a-772e-4cb6-b0ab-a50d121be54a
+			{
+				#3860265535 "children_list 22" :: GtfFastStartColor : @71e8af52-7304-4529-bedb-0df883b92f1e
+				{
+					#3843760821 features :: feature_list : @ca337761-7865-4d40-b65f-046b267e398b
+					{
+					}
+					#3070514346 children :: children_list : @77fea55f-943a-4d45-b0d8-dcd9539e5514
+					{
+					}
+					#1519858955 name :: string : "高速開始色1";
+					#883601872 enabled :: bool : true;
+					#1639936866 delay :: int : 0;
+					#3387619744 duration :: int : 2000;
+					#2669020634 repeat :: int : 1;
+					#1074839620 alternating :: bool : false;
+					#93224577 relative :: bool : false;
+					#382261775 start :: color : 255;
+					#4131254572 end :: color : -7601921;
+					#3542707412 target :: propref(color) : @57d6e981-4e48-4fb9-b930-e739e44667da#3622771168;
+				}
+				#1538651361 "children_list 28" :: GtfSlowStartColor : @c87013dc-94a3-4339-be3b-bccb9425bd7e
+				{
+					#273113479 features :: feature_list : @127f40f0-ad13-43f9-a737-aee47699067c
+					{
+					}
+					#3975730006 children :: children_list : @80246638-1d26-478d-9b56-1d2cedd6f9e8
+					{
+					}
+					#1006589129 name :: string : "低速開始色1";
+					#1168812768 enabled :: bool : true;
+					#1341298802 delay :: int : 2500;
+					#3376517100 duration :: int : 3000;
+					#3552202264 repeat :: int : 1;
+					#737818243 alternating :: bool : false;
+					#3002012 relative :: bool : false;
+					#3722246268 start :: propref(color) : @71e8af52-7304-4529-bedb-0df883b92f1e#4131254572;
+					#473424685 end :: color : 255;
+					#662657832 target :: propref(color) : @57d6e981-4e48-4fb9-b930-e739e44667da#3622771168;
+				}
+			}
+			#1889668017 name :: string : "FadeAnimation";
+			#1809880292 enabled :: bool : true;
+			#3165783034 repeat :: int : 1;
+			#3703136513 alternating :: bool : false;
+			#2540946236 scale :: float : 1.0;
+			#1596302106 onPlay :: function(void,int,bool) : @cfa9ae05-fe8c-48bd-985c-0b8b6eca905f
+			{
+				#3006237312 script :: string : "function(v:animation_time::int, v:forward::bool)\n{\n\t\n}";
+			}
+			#189075355 onPause :: function(void,int) : @35d0485c-9d86-4034-a9e4-d19c2ecc869f
+			{
+				#1473232574 script :: string : "function(v:animation_time::int)\n{\n\n}";
+			}
+			#2997461181 onTerminate :: function(void,int,int) : @49f32efa-f628-4f48-b6ae-f5ecd12c7f07
+			{
+				#1901655698 script :: string : "function(v:animation_time::int, v:terminate::int)\n{\n\tfire_delayed 3000, ev:OP_goto_Title()\n}";
+			}
+			#3059074293 startAnimation :: conditional_script : @150a6081-8247-4a9d-aaeb-f35c6ac5d138
+			{
+				#2485519591 triggerList :: trigger_list : @67ce7a12-77fa-4bb7-84e0-af4cc173adca
+				{
+					#3228261494 events :: event_refs : <objectref>[];
+					#3475001326 dp_items :: dp_item_refs : <objectref>[];
+					#2183649200 properties :: property_reference_list : <propref>[];
+				}
+				#1371726935 onTrigger :: function(bool,bool) : @476baa45-5ec0-4b44-9cb7-7f0c9e0d3edd
+				{
+					#1246448529 script :: string : "function(v:arg0::bool)\n{\n\tf:animation_play(v:this)\n\tfalse\n}";
+				}
+			}
+		}
+	}
+	#1630044319 name :: string : "Viwe";
+	#1608281631 visible :: bool : true;
+	#3302143148 width :: int : 800;
+	#2283873557 height :: int : 480;
+	#876347974 x :: int : 0;
+	#650856003 y :: int : 0;
+}

@@ -1,0 +1,22 @@
+EBGUIDE 6.4.1.127810;
+@01a645ce-023c-43f7-a50f-5fe0879a85de
+{
+	#429171993 name :: string : "5_Letter";
+	#253235375 structure :: GtfContainer : @d84a1e50-b080-4c42-95c7-636b12217edc
+	{
+		#9761133 features :: feature_list : @1d797346-5b53-4507-9998-a2351c9c743a
+		{
+		}
+		#2926926897 children :: children_list : @4cef9a88-8e9f-4bde-8a71-dacd2f49cf9e
+		{
+		}
+		#1090745448 name :: string : "Letter";
+		#1837397930 visible :: bool : false;
+		#3837439484 width :: int : 0;
+		#2080932047 height :: int : 0;
+		#613566735 x :: int : 0;
+		#375778308 y :: int : 0;
+		#3582668414 Letter :: propref(stringlist) : @01a645ce-023c-43f7-a50f-5fe0879a85de#2861168466;
+	}
+	#2861168466 Letter :: stringlist : <string>["START", "FINAL", "TOUCH", "LABEL", "GROUP", "RADIO", "IMAGE", "ABOUT", "MEDIA", "STATE", "BOARD", "FOCUS", "ALOFT", "FALSE", "FLOAT", "FRONT", "INDEX", "INLET", "JEWEL", "LARGE", "ORBIT", "ORDER", "PLANE", "RIGHT", "SLEEP", "UNITY", "WORLD", "WATER", "GRASS", "MUSIC", "TABLE"];
+}

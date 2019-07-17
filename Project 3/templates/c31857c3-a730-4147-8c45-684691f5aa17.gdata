@@ -1,0 +1,245 @@
+EBGUIDE 6.4.1.127810;
+@c31857c3-a730-4147-8c45-684691f5aa17
+{
+	#575252487 name :: string : "Switch";
+	#4194557256 structure :: GtfContainer : @fcb45db9-c59b-4479-a561-24c9debe8aa3
+	{
+		#486618009 features :: feature_list : @ecd55582-198a-4bdb-a6b5-ae73c063e2ee
+		{
+			#2559661310 "feature_list 1" :: TouchPressed : @e2492dee-8eb7-427d-9020-aef7f37d6086
+			{
+				#1450870152 touchPressed :: propref(function(bool,int,int,int,int)) : @c31857c3-a730-4147-8c45-684691f5aa17#2383801181;
+			}
+			#2378681091 "feature_list 2" :: TouchShortReleased : @f3e2d186-1fe5-4004-b25d-2accf9f90ead
+			{
+				#3783825908 touchShortReleased :: function(bool,int,int,int,int) : @c9195144-78dd-432e-ba32-395fc5a8904f
+				{
+					#1221243255 script :: string : "function(v:touchId::int, v:x::int, v:y::int, v:fingerId::int)\n{\n    v:this.Touch()\n    false\n}";
+				}
+			}
+			#2704053324 "feature_list 3" :: StateTouched : @3682ee66-52b9-44dd-9e8e-c0e066388232
+			{
+				#384820425 touchable :: bool : true;
+				#3830597433 touched :: propref(bool) : @c31857c3-a730-4147-8c45-684691f5aa17#3813251782;
+				#1266132570 touchPolicy :: propref(int) : @c31857c3-a730-4147-8c45-684691f5aa17#1461994525;
+				#903322594 touchBehavior :: propref(int) : @c31857c3-a730-4147-8c45-684691f5aa17#761194177;
+			}
+			#2628467742 "feature_list 4" :: LayoutPolicyListItem : @7246a6a4-b085-4400-89f6-642c4d02ad13
+			{
+				#257455329 listIndex :: propref(int) : @c31857c3-a730-4147-8c45-684691f5aa17#97463830;
+			}
+			#2228895934 "feature_list 5" :: LineIndex : @06af7109-8234-4e4b-a372-2e53c2a3ff01
+			{
+				#3784574881 lineIndex :: propref(int) : @c31857c3-a730-4147-8c45-684691f5aa17#3301626315;
+			}
+			#2595964554 "feature_list 6" :: TouchMove : @5f1f045f-91fb-47a4-949b-3754ea4c51c9
+			{
+				#2949371733 touchMoved :: propref(function(bool,int,int,int,int)) : @c31857c3-a730-4147-8c45-684691f5aa17#4070009821;
+			}
+		}
+		#350200726 children :: children_list : @a7176b20-c277-4b9c-8eb7-2f1fe68f2f99
+		{
+			#349441428 "children_list 1" :: GtfImage : @ba1e1b4e-96ea-4216-aaac-f3e18966a809
+			{
+				#4118950701 features :: feature_list : @ed6d626b-2643-4340-b7de-4bf420322006
+				{
+					#1732172710 "feature_list 1" :: Coloration : @56806fb9-4b44-4d53-a379-de3e85c7d7b2
+					{
+						#2331063395 colorationEnabled :: propref(bool) : @c31857c3-a730-4147-8c45-684691f5aa17#1412122420;
+						#415479467 colorationColor :: propref(color) : @c31857c3-a730-4147-8c45-684691f5aa17#336168646;
+					}
+					#2547568326 "feature_list 2" :: ScaleMode : @7285214c-35f8-4883-834a-9343a3dba0ea
+					{
+						#3027269176 scaleMode :: propref(int) : @c31857c3-a730-4147-8c45-684691f5aa17#3244880648;
+					}
+				}
+				#3744561186 children :: children_list : @46f6e022-6e17-4fd6-8a8a-79414ca29b24
+				{
+				}
+				#990831843 name :: string : "Button";
+				#638542112 visible :: bool : true;
+				#2539696371 width :: int_scriptedValue : @a5cb57dc-4175-4495-95f1-31edc45a2839
+				{
+					#2281047234 triggerList :: trigger_list : @52702e48-6c01-4b02-a6ca-5b107e69880b
+					{
+						#4237543065 events :: event_refs : <objectref>[];
+						#3848153499 dp_items :: dp_item_refs : <objectref>[];
+						#3363753687 properties :: property_reference_list : <propref>[];
+					}
+					#2259996302 onTrigger :: function(bool,bool) : @89039c85-b99b-4c80-b3d5-f98054265308
+					{
+						#3305533593 script :: string : "function(v:arg0::bool)\n{\n\t// todo: auto generated return value, please adapt\n\tfalse\n}";
+					}
+					#2343526041 read :: function(int) : @4ee865b5-e864-4bb9-9a99-8adb3cb9302d
+					{
+						#2034597155 script :: string : "function()\n{\n\tv:this.height//常に正円を保つために...\n}";
+					}
+					#3625972284 write :: function(bool,int) : @2e21fb01-70a9-45f3-96b5-a83332601a95
+					{
+						#2170468676 script :: string : "function(v:arg0::int)\n{\n\tv:this.width = v:arg0\n\tfalse\n}";
+					}
+				}
+				#1329273701 height :: int_scriptedValue : @1bdbd28a-1235-482b-8552-3078d8254201
+				{
+					#2257950405 triggerList :: trigger_list : @6577af13-172b-43d3-9e97-85a3de7a60e8
+					{
+						#3491695648 events :: event_refs : <objectref>[];
+						#3092000604 dp_items :: dp_item_refs : <objectref>[];
+						#2347495496 properties :: property_reference_list : <propref>[];
+					}
+					#1876074512 onTrigger :: function(bool,bool) : @da47ddc9-3191-4f32-b008-c7df304ad243
+					{
+						#1808115539 script :: string : "function(v:arg0::bool)\n{\n\tfalse\n}";
+					}
+					#892732801 read :: function(int) : @792251a0-4cba-4a8a-88ca-b9b7887ab030
+					{
+						#1361282267 script :: string : "function()\n{\n\tv:this.SwitchHeight / 2\n}";
+					}
+					#2258124409 write :: function(bool,int) : @56796ed6-f30f-4aff-92ff-c67065a82ffb
+					{
+						#2139430204 script :: string : "function(v:arg0::int)\n{\n\tv:this.height = v:arg0\n\ttrue\n}";
+					}
+				}
+				#1028743693 x :: int : 0;
+				#1163049484 y :: int_scriptedValue : @6ee9de67-0645-4873-80e8-94283bad9fb8
+				{
+					#3115278596 triggerList :: trigger_list : @b395498d-b800-4d75-88fe-062f15fd39bc
+					{
+						#441252732 events :: event_refs : <objectref>[];
+						#3155505854 dp_items :: dp_item_refs : <objectref>[];
+						#2026185182 properties :: property_reference_list : <propref>[];
+					}
+					#1882151817 onTrigger :: function(bool,bool) : @4f1ecc29-cd92-447b-8e3a-319fb907217a
+					{
+						#3164076592 script :: string : "function(v:arg0::bool)\n{\n\tfalse\n}";
+					}
+					#2555411382 read :: function(int) : @8949451c-25d8-4773-9b36-c121c272ee2c
+					{
+						#3012680250 script :: string : "function()\n{\n\tv:this.height / 2\n}";
+					}
+					#3284854807 write :: function(bool,int) : @1daf82c9-7105-4ed0-bae7-92a625841721
+					{
+						#3324693895 script :: string : "function(v:arg0::int)\n{\n\tv:this.y = v:arg0\n\tfalse\n}";
+					}
+				}
+				#1267433859 image :: propref(image) : @c31857c3-a730-4147-8c45-684691f5aa17#875047049;
+				#3996319691 horizontalAlign :: propref(int) : @c31857c3-a730-4147-8c45-684691f5aa17#4214083594;
+				#4270016213 verticalAlign :: propref(int) : @c31857c3-a730-4147-8c45-684691f5aa17#225846058;
+				#3213454268 SwitchHeight :: propref(int) : @fcb45db9-c59b-4479-a561-24c9debe8aa3#1021371572;
+			}
+			#281974709 "children_list 2" :: GtfLabel : @963ab7a5-c6b1-4e42-9ce5-adc636e994af
+			{
+				#3857723314 features :: feature_list : @cdc23f6b-6e4b-4a8b-a348-53a5b9a33c2b
+				{
+				}
+				#3661927739 children :: children_list : @f3da5454-1e4f-4d48-86e8-a8f68dbcfcde
+				{
+				}
+				#2063864336 name :: string : "Lable";
+				#1822758979 visible :: bool : true;
+				#3204679068 width :: int_scriptedValue : @8298248b-cb10-4158-ac62-6abd97ab44e1
+				{
+					#2418995378 triggerList :: trigger_list : @e3bd4ee7-1e24-4710-876c-79f3be0bf30a
+					{
+						#225842847 events :: event_refs : <objectref>[];
+						#316053135 dp_items :: dp_item_refs : <objectref>[];
+						#1762585377 properties :: property_reference_list : <propref>[];
+					}
+					#1649720904 onTrigger :: function(bool,bool) : @a671351d-6f7f-4633-a330-11236565d201
+					{
+						#1338023280 script :: string : "function(v:arg0::bool)\n{\n\tfalse\n}";
+					}
+					#2013255649 read :: function(int) : @a669afb6-d835-4956-9845-598742f83035
+					{
+						#2852108604 script :: string : "function()\n{\n\tv:this.SwitchWidth - v:this.ButtonWidth\n}";
+					}
+					#2221324688 write :: function(bool,int) : @a3cd86cb-fe39-4b11-b898-4e95bf129bc8
+					{
+						#1263616966 script :: string : "function(v:arg0::int)\n{\n\tv:this.width = v:arg0\n\tfalse\n}";
+					}
+				}
+				#581028470 height :: propref(int) : @fcb45db9-c59b-4479-a561-24c9debe8aa3#1021371572;
+				#3962312128 x :: int_scriptedValue : @d48dfc25-db1b-4e63-a141-0a4a169e78c7
+				{
+					#2263591543 triggerList :: trigger_list : @9ad1082f-eb0c-4477-94a6-6b70ae5ea7c5
+					{
+						#2798112654 events :: event_refs : <objectref>[];
+						#620699116 dp_items :: dp_item_refs : <objectref>[];
+						#3504164878 properties :: property_reference_list : <propref>[];
+					}
+					#3008254568 onTrigger :: function(bool,bool) : @8ec2d3c8-1746-4ba9-8df3-0fd891e02243
+					{
+						#2874374308 script :: string : "function(v:arg0::bool)\n{\n\tfalse\n}";
+					}
+					#1088638104 read :: function(int) : @66b498df-6846-4d9c-a5c4-eb869f9656bb
+					{
+						#3071546202 script :: string : "function()\n{\n\tv:this.ButtonWidth\n}";
+					}
+					#2314430182 write :: function(bool,int) : @c458caec-9fe3-4d73-b166-64eda62228bf
+					{
+						#3198356601 script :: string : "function(v:arg0::int)\n{\n\tv:this.x = v:arg0\n\tfalse\n}";
+					}
+				}
+				#3732928763 y :: int : 0;
+				#69771665 text :: propref(string) : @c31857c3-a730-4147-8c45-684691f5aa17#1751940807;
+				#208561927 textColor :: propref(color) : @c31857c3-a730-4147-8c45-684691f5aa17#3840954886;
+				#1258775149 font :: propref(font) : @c31857c3-a730-4147-8c45-684691f5aa17#1584195450;
+				#4191219596 horizontalAlign :: int : 0;
+				#830600060 verticalAlign :: int : 0;
+				#3775775622 SwitchWidth :: propref(int) : @fcb45db9-c59b-4479-a561-24c9debe8aa3#2961755943;
+				#3409919809 ButtonWidth :: propref(int) : @ba1e1b4e-96ea-4216-aaac-f3e18966a809#2539696371;
+			}
+		}
+		#699852590 name :: string : "Switch";
+		#218281312 visible :: propref(bool) : @c31857c3-a730-4147-8c45-684691f5aa17#995083090;
+		#2961755943 width :: propref(int) : @c31857c3-a730-4147-8c45-684691f5aa17#3327453375;
+		#1021371572 height :: propref(int) : @c31857c3-a730-4147-8c45-684691f5aa17#785369108;
+		#3999238452 x :: propref(int) : @c31857c3-a730-4147-8c45-684691f5aa17#774211210;
+		#3479722203 y :: propref(int) : @c31857c3-a730-4147-8c45-684691f5aa17#568689929;
+		#1567515188 SwitchFlag :: propref(bool) : @c31857c3-a730-4147-8c45-684691f5aa17#3475606764;
+		#121204109 SwitchNumber :: propref(int) : @c31857c3-a730-4147-8c45-684691f5aa17#2667026475;
+		#2254864772 Touch :: propref(function(bool)) : @c31857c3-a730-4147-8c45-684691f5aa17#859865185;
+		#3457935508 LableWidth :: propref(int) : @c31857c3-a730-4147-8c45-684691f5aa17#1257561429;
+	}
+	#995083090 visible :: bool : true;
+	#3327453375 width :: int : 100;
+	#785369108 height :: int : 30;
+	#774211210 x :: int : 0;
+	#568689929 y :: int : 0;
+	#859865185 Touch :: function(bool) : @4ad14dfa-8356-4e88-b258-a4fe1eb14eae
+	{
+		#3035943249 script :: string : "function()\n{\n\tif(v:this.SwitchFlag){\n\t\tv:this->Button.colorationColor = f:rgba2color(255,255,255,255)//白\n\t\tv:this->Lable.textColor = f:rgba2color(255,255,255,255)\n\t\tv:this.SwitchFlag = false\n\t}else{\n\t\tv:this->Button.colorationColor = f:rgba2color(  0,  0,  0,255)//黒\n\t\tv:this->Lable.textColor = f:rgba2color(255,255,255,255)\n\t\tv:this.SwitchFlag = true\n\t}\n\tfalse\n}";
+	}
+	#1257561429 LableWidth :: int : 0;
+	#2667026475 SwitchNumber :: int : 0;
+	#875047049 image :: image_resource : @7982c1c1-058e-4a71-b181-deb507b373a2
+	{
+		#1743800834 file :: file : "circle.png";
+	}
+	#4214083594 horizontalAlign :: int : 1;
+	#225846058 verticalAlign :: int : 0;
+	#3244880648 scaleMode :: int : 1;
+	#1751940807 text :: string : "label";
+	#3840954886 textColor :: color : -1;
+	#1584195450 font :: font_resource : @f01022a4-f17e-40ad-8d76-a0c87c8f9a3e
+	{
+		#1665735605 file :: file : "PT_Sans_Narrow.ttf";
+		#1007466232 size :: int : 30;
+	}
+	#3301626315 lineIndex :: int : 0;
+	#97463830 listIndex :: int : 0;
+	#2383801181 touchPressed :: function(bool,int,int,int,int) : @0c7e8d0b-bb41-4903-87c6-24aa57208a55
+	{
+		#2699860640 script :: string : "function(v:touchId::int, v:x::int, v:y::int, v:fingerId::int)\n{\n    true\n}";
+	}
+	#4070009821 touchMoved :: function(bool,int,int,int,int) : @cc39f89f-1ad0-470d-b563-6166bbb6e5fe
+	{
+		#1244458854 script :: string : "function(v:touchId::int, v:x::int, v:y::int, v:fingerId::int)\n{\n    false\n}";
+	}
+	#3813251782 touched :: bool : false;
+	#1461994525 touchPolicy :: int : 0;
+	#761194177 touchBehavior :: int : 1;
+	#3475606764 SwitchFlag :: bool : false;
+	#1412122420 colorationEnabled :: bool : true;
+	#336168646 colorationColor :: color : -1;
+}

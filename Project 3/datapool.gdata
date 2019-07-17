@@ -1,0 +1,104 @@
+EBGUIDE 6.4.1.127810;
+@8df9ccee-0cec-466c-ae49-ea05fb47f4a8
+{
+	#4187332388 "dp_items 1" :: dp(int) : @a9853104-9d54-49a5-957b-b4ef124fa9d0
+	{
+		#500608648 value :: int : 0;
+		#2058289053 name :: string : "Index1";
+		#296936562 reader_context :: objectref(context) : @d320599b-1aac-4b2d-b990-dbd2391de476;
+		#3700073617 reader_id :: int : -1;
+		#3101324316 writer_context :: objectref(context) : @d320599b-1aac-4b2d-b990-dbd2391de476;
+		#2016219492 writer_id :: int : -1;
+		#3063192012 dp_item_mode_member :: dp_item_mode : 0;
+	}
+	#354340208 "dp_items 2" :: dp(int) : @cf9869a1-06a5-44d0-acf4-c7f02e1ba1ae
+	{
+		#491919575 value :: int : 0;
+		#967881932 name :: string : "Index2";
+		#460068126 reader_context :: objectref(context) : @d320599b-1aac-4b2d-b990-dbd2391de476;
+		#3990189176 reader_id :: int : -1;
+		#3261844873 writer_context :: objectref(context) : @d320599b-1aac-4b2d-b990-dbd2391de476;
+		#1210058642 writer_id :: int : -1;
+		#3566373172 dp_item_mode_member :: dp_item_mode : 0;
+	}
+	#349444205 "dp_items 3" :: dp(int) : @c5da3e9f-7e85-41ca-a447-fc783a138ab4
+	{
+		#669131815 value :: int : 0;
+		#1367220373 name :: string : "Index3";
+		#2972677356 reader_context :: objectref(context) : @d320599b-1aac-4b2d-b990-dbd2391de476;
+		#3321187108 reader_id :: int : -1;
+		#1255084499 writer_context :: objectref(context) : @d320599b-1aac-4b2d-b990-dbd2391de476;
+		#389183045 writer_id :: int : -1;
+		#2485222969 dp_item_mode_member :: dp_item_mode : 0;
+	}
+	#3690748969 "dp_items 4" :: dp(int) : @bb602812-967b-443b-8f0e-d0bd36b64655
+	{
+		#1317981989 value :: int : 0;
+		#733705728 name :: string : "Index4";
+		#4015125244 reader_context :: objectref(context) : @d320599b-1aac-4b2d-b990-dbd2391de476;
+		#3673803568 reader_id :: int : -1;
+		#2848481337 writer_context :: objectref(context) : @d320599b-1aac-4b2d-b990-dbd2391de476;
+		#1091569158 writer_id :: int : -1;
+		#3487840784 dp_item_mode_member :: dp_item_mode : 0;
+	}
+	#378961408 "dp_items 5" :: dp(float) : @a759bae0-32b3-4d99-8a88-b343efedd4bf
+	{
+		#3510908506 value :: float : 0.0;
+		#147332025 name :: string : "VectorX";
+		#3141155842 reader_context :: objectref(context) : @d320599b-1aac-4b2d-b990-dbd2391de476;
+		#4280234430 reader_id :: int : -1;
+		#1666531649 writer_context :: objectref(context) : @d320599b-1aac-4b2d-b990-dbd2391de476;
+		#510936076 writer_id :: int : -1;
+		#3219994711 dp_item_mode_member :: dp_item_mode : 0;
+	}
+	#3140891036 "dp_items 6" :: dp(float) : @7107c85e-e4b2-4440-9f45-a87aa096eaf4
+	{
+		#3801538257 value :: float : 0.0;
+		#1523415875 name :: string : "VectorY";
+		#257789287 reader_context :: objectref(context) : @d320599b-1aac-4b2d-b990-dbd2391de476;
+		#22210039 reader_id :: int : -1;
+		#1311484085 writer_context :: objectref(context) : @d320599b-1aac-4b2d-b990-dbd2391de476;
+		#640135233 writer_id :: int : -1;
+		#2020706478 dp_item_mode_member :: dp_item_mode : 0;
+	}
+	#142269074 "dp_items 8" :: dp(float) : @94bc127e-41f7-48ac-b165-899f4bbc0ace
+	{
+		#198947343 value :: float : 0.0;
+		#1290261689 name :: string : "VectorZ";
+		#3560095738 reader_context :: objectref(context) : @d320599b-1aac-4b2d-b990-dbd2391de476;
+		#2940987339 reader_id :: int : -1;
+		#2753605298 writer_context :: objectref(context) : @d320599b-1aac-4b2d-b990-dbd2391de476;
+		#698126064 writer_id :: int : -1;
+		#3373319706 dp_item_mode_member :: dp_item_mode : 0;
+	}
+	#796683374 "dp_items 9" :: dp(int) : @417dc721-19b6-4b33-9fce-1b62892afa2b
+	{
+		#3630964418 value :: int : 0;
+		#1340401657 name :: string : "Int_VectorX";
+		#3848162348 reader_context :: objectref(context) : @d320599b-1aac-4b2d-b990-dbd2391de476;
+		#10468503 reader_id :: int : -1;
+		#2476025620 writer_context :: objectref(context) : @d320599b-1aac-4b2d-b990-dbd2391de476;
+		#2313872953 writer_id :: int : -1;
+		#2745030943 dp_item_mode_member :: dp_item_mode : 0;
+	}
+	#3216737627 "dp_items 10" :: dp(int) : @9fc8082d-44f5-463c-9d80-084c2ba69e7d
+	{
+		#623657412 value :: int : 0;
+		#727163614 name :: string : "Int_VectorY";
+		#589173351 reader_context :: objectref(context) : @d320599b-1aac-4b2d-b990-dbd2391de476;
+		#3995685393 reader_id :: int : -1;
+		#3207078059 writer_context :: objectref(context) : @d320599b-1aac-4b2d-b990-dbd2391de476;
+		#778296575 writer_id :: int : -1;
+		#2466563862 dp_item_mode_member :: dp_item_mode : 0;
+	}
+	#772044442 "dp_items 11" :: dp(int) : @453fd50d-acaa-425e-ac7b-d83a2e237503
+	{
+		#28078458 value :: int : 0;
+		#1706311081 name :: string : "Int_VectorZ";
+		#316848213 reader_context :: objectref(context) : @d320599b-1aac-4b2d-b990-dbd2391de476;
+		#4893121 reader_id :: int : -1;
+		#1649597249 writer_context :: objectref(context) : @d320599b-1aac-4b2d-b990-dbd2391de476;
+		#1995912568 writer_id :: int : -1;
+		#2948554391 dp_item_mode_member :: dp_item_mode : 0;
+	}
+}

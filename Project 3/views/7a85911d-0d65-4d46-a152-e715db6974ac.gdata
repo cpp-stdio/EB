@@ -1,0 +1,100 @@
+EBGUIDE 6.4.1.127810;
+@7a85911d-0d65-4d46-a152-e715db6974ac
+{
+	#1326144726 features :: feature_list : @c906b3be-9f6b-4318-ae4a-9aae3ec3e7b8
+	{
+		#1078988268 "feature_list 1" :: Coloration : @a0288741-e3b2-4767-aa59-f72080f65e8f
+		{
+			#1148888978 colorationEnabled :: bool : true;
+			#1169866607 colorationColor :: color : -1;
+		}
+	}
+	#2696004250 children :: children_list : @8e3b1d19-111c-4ef6-8464-5a5325182848
+	{
+		#345860007 "children_list 1" :: GtfImage : @8bf486fd-c504-47a6-b8de-f1d864a65721
+		{
+			#1173060387 features :: feature_list : @e0fa9176-4d32-44c3-86ea-93cfd8e64945
+			{
+			}
+			#208077228 children :: children_list : @67a35e2d-eec3-492c-bcf4-08826178c6cf
+			{
+			}
+			#532563675 name :: string : "背景";
+			#1484158392 visible :: bool : true;
+			#1941001511 width :: int : 640;
+			#637208663 height :: int : 480;
+			#509893701 x :: int : 0;
+			#1230187950 y :: int : 0;
+			#2321683667 image :: image_resource : @d40e817f-8a30-4397-ad37-9f6b9dc6fbff
+			{
+				#2589765697 file :: file : "menu_sub_bg.png";
+			}
+			#4090818183 horizontalAlign :: int : 0;
+			#3915299530 verticalAlign :: int : 1;
+		}
+		#4140225464 "children_list 2" :: GtfParallelAnimation : @0f7a62f1-bdf3-4bb3-a855-441852b485c4
+		{
+			#175797092 features :: feature_list : @8e8d751b-c38c-4cd4-8317-fccf32c6ec2e
+			{
+			}
+			#2951476442 children :: children_list : @b6c8d1c4-ba52-4442-8952-cc0a5751c1fe
+			{
+				#204212377 "children_list 9" :: GtfLinearInterpolationColor : @bbf8f522-516f-4ac8-9146-ce03f3c6bfc6
+				{
+					#4097293329 features :: feature_list : @a9a3a3ca-c415-409b-9dcd-7784eb1161ed
+					{
+					}
+					#4090569293 children :: children_list : @092f0255-1e32-4fb6-89ed-331519be7a68
+					{
+					}
+					#922236684 name :: string : "Linear";
+					#2669461534 enabled :: bool : true;
+					#3172410434 delay :: int : 0;
+					#2563881150 duration :: int : 80;
+					#3876397880 repeat :: int : 1;
+					#4271517806 alternating :: bool : false;
+					#2027027511 relative :: bool : false;
+					#3168161882 start :: color : 255;
+					#4267159215 end :: color : -1;
+					#3491579168 target :: propref(color) : @a0288741-e3b2-4767-aa59-f72080f65e8f#1169866607;
+				}
+			}
+			#465584236 name :: string : "FadeIn";
+			#769159010 enabled :: bool : true;
+			#4088262141 repeat :: int : 1;
+			#475179157 alternating :: bool : false;
+			#885012588 scale :: float : 1.0;
+			#1643233404 onPlay :: function(void,int,bool) : @696fb2fd-8508-4037-acfc-acf9145ec5ea
+			{
+				#1713515467 script :: string : "function(v:animation_time::int, v:forward::bool)\n{\n\n}";
+			}
+			#3207938278 onPause :: function(void,int) : @6c0a2bc9-34f9-4d7e-b2fc-337ca8cfa5df
+			{
+				#1884582359 script :: string : "function(v:animation_time::int)\n{\n\n}";
+			}
+			#3700272578 onTerminate :: function(void,int,int) : @b96de54b-3354-49a9-b2b4-faebd18c8a2d
+			{
+				#2940926839 script :: string : "function(v:animation_time::int, v:terminate::int)\r\n{\r\n}";
+			}
+			#2918894913 AnimationStart :: conditional_script : @9258c3a5-9865-49a1-a217-cdd9f2d27d3d
+			{
+				#1363890427 triggerList :: trigger_list : @ca564d25-6f75-4d65-b2c9-a9eedb264370
+				{
+					#3052967458 events :: event_refs : <objectref>[];
+					#3018204001 dp_items :: dp_item_refs : <objectref>[];
+					#2557920906 properties :: property_reference_list : <propref>[];
+				}
+				#1857451347 onTrigger :: function(bool,bool) : @d6531148-bd6d-4bab-85dd-ea1e126c6c4a
+				{
+					#2048074595 script :: string : "function(v:arg0::bool)\n{\n\tf:animation_play(v:this)\n\tfalse\n}";
+				}
+			}
+		}
+	}
+	#707845225 name :: string : "View";
+	#1132152388 visible :: bool : true;
+	#2668321906 width :: int : 640;
+	#1480381144 height :: int : 480;
+	#604512862 x :: int : 0;
+	#464350769 y :: int : 0;
+}

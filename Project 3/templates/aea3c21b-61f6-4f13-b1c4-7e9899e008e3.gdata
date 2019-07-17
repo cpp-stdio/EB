@@ -1,0 +1,87 @@
+EBGUIDE 6.4.1.127810;
+@aea3c21b-61f6-4f13-b1c4-7e9899e008e3
+{
+	#408687585 name :: string : "Update";
+	#973297281 structure :: GtfRectangle : @004fdc61-2dbc-4aab-90ab-9e085690f2d0
+	{
+		#3861625194 features :: feature_list : @250e0cf1-f59e-4d2e-998b-b2689ef0d06b
+		{
+		}
+		#4127564458 children :: children_list : @d18f8b3f-8d7d-429e-bd28-caad7cd5c8d3
+		{
+			#3381823022 "children_list 1" :: GtfParallelAnimation : @96c6c456-bbdb-4bba-b41f-f28630ade6c5
+			{
+				#4024346443 features :: feature_list : @61a1bdb7-7a6d-4e83-ab45-d315595770cb
+				{
+				}
+				#2742230264 children :: children_list : @c70e9bf8-4a30-461e-aee1-8d5ce04297f1
+				{
+					#1291431113 "children_list 5" :: GtfSinusCurveColor : @9c6204e6-774c-4e33-859b-86dffa45cc38
+					{
+						#3075950 features :: feature_list : @80a1735a-a333-40d5-845b-ed3a0b08934e
+						{
+						}
+						#4155988267 children :: children_list : @f2b86826-34c8-440c-bffa-564236b4746d
+						{
+						}
+						#1367411547 name :: string : "Second";
+						#2550763753 enabled :: bool : true;
+						#2727361115 delay :: int : 0;
+						#2584463806 duration :: int : 30000;
+						#4029800561 repeat :: int : 0;
+						#850105808 alternating :: bool : false;
+						#1801594323 relative :: bool : false;
+						#2533982889 amplitude :: color : 65535;
+						#1087068426 constant :: color : -16776961;
+						#1749624142 frequency :: float : 1.0;
+						#2070166046 phase :: float : 0.0;
+						#3568560347 target :: propref(color) : @004fdc61-2dbc-4aab-90ab-9e085690f2d0#2262610596;
+					}
+				}
+				#1259245973 name :: string : "Per";
+				#1932148972 enabled :: bool : true;
+				#3293614622 repeat :: int : 1;
+				#777488429 alternating :: bool : false;
+				#2760587368 scale :: float : 1.0;
+				#1315339817 onPlay :: function(void,int,bool) : @edd9ae83-636c-4d5b-868e-284a01e0905a
+				{
+					#3034205488 script :: string : "function(v:animation_time::int, v:forward::bool)\n{\n\n}";
+				}
+				#17017748 onPause :: function(void,int) : @2af36b59-b665-4a85-a180-27cc1a769cb2
+				{
+					#1295633854 script :: string : "function(v:animation_time::int)\n{\n\n}";
+				}
+				#3996654417 onTerminate :: function(void,int,int) : @d4e0ba5b-c805-400d-905c-623f1bee3516
+				{
+					#3316967268 script :: string : "function(v:animation_time::int, v:terminate::int)\n{\n\n}";
+				}
+				#3582128302 Per :: conditional_script : @f79a40e3-58ae-4257-a3b6-4ebd5a38b75e
+				{
+					#2137238911 triggerList :: trigger_list : @c1f3ecd6-f0fb-4222-800f-f06779e89a86
+					{
+						#169291693 events :: event_refs : <objectref>[];
+						#326670320 dp_items :: dp_item_refs : <objectref>[];
+						#2859614055 properties :: property_reference_list : <propref>[];
+					}
+					#2863867143 onTrigger :: function(bool,bool) : @b297e705-e488-47ca-8f05-da96e4b19c36
+					{
+						#3299530610 script :: string : "function(v:arg0::bool)\n{\n\tf:animation_play(v:this)\n\tfalse\n}";
+					}
+				}
+			}
+		}
+		#1965889187 name :: string : "Frame";
+		#554891819 visible :: propref(bool) : @aea3c21b-61f6-4f13-b1c4-7e9899e008e3#1353276122;
+		#3575526462 width :: propref(int) : @aea3c21b-61f6-4f13-b1c4-7e9899e008e3#3293678215;
+		#1710232041 height :: propref(int) : @aea3c21b-61f6-4f13-b1c4-7e9899e008e3#2212672976;
+		#3507665507 x :: propref(int) : @aea3c21b-61f6-4f13-b1c4-7e9899e008e3#4034900236;
+		#966010733 y :: propref(int) : @aea3c21b-61f6-4f13-b1c4-7e9899e008e3#3901871759;
+		#2262610596 fillColor :: propref(color) : @aea3c21b-61f6-4f13-b1c4-7e9899e008e3#1534356371;
+	}
+	#3293678215 width :: int : 100;
+	#2212672976 height :: int : 100;
+	#4034900236 x :: int : 0;
+	#3901871759 y :: int : 0;
+	#1534356371 fillColor :: color : -1;
+	#1353276122 visible :: bool : true;
+}

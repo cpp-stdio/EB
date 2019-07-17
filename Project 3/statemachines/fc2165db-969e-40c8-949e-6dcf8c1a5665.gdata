@@ -1,0 +1,199 @@
+EBGUIDE 6.4.1.127810;
+@fc2165db-969e-40c8-949e-6dcf8c1a5665
+{
+	#3814911303 x :: int : 0;
+	#149837826 y :: int : 0;
+	#3417911348 width :: int : 619;
+	#913499489 height :: int : 498;
+	#1351741987 name :: string : "AllState";
+	#2438852044 entry_action :: function(void) : @00000000-0000-0000-0000-000000000000;
+	#2018508240 exit_action :: function(void) : @00000000-0000-0000-0000-000000000000;
+	#3003661908 transitions :: haptic_transitions : @3fc29393-a24d-47a4-9862-8c2976c144e3
+	{
+	}
+	#3960419338 internal_transitions :: haptic_internal_transitions : @ed8d8cc4-1ed0-4a96-a164-40f025f70488
+	{
+	}
+	#3071481900 states :: haptic_states : @5d4a35da-d2d0-468a-a386-6078cba7ad03
+	{
+		#2049386912 "haptic_states 1" :: haptic_dialog_state : @3ae36125-a28c-4c70-a8a0-5d4426fac7b5
+		{
+			#1246022528 x :: int : 430;
+			#73947468 y :: int : 166;
+			#2530111113 width :: int : 100;
+			#731752225 height :: int : 100;
+			#373704060 name :: string : "メイン";
+			#3333090563 entry_action :: function(void) : @adb61e16-513f-4678-b24a-b42c04e5d4fc
+			{
+				#3185213940 script :: string : "function()\n{\n\n}";
+			}
+			#1700529294 exit_action :: function(void) : @00000000-0000-0000-0000-000000000000;
+			#2913659346 transitions :: haptic_transitions : @ef94fac6-0436-4f0c-8ca3-653121340bd4
+			{
+				#1569784430 "haptic_transitions 1" :: haptic_transition : @54623bdc-703d-4f4b-af74-e9ca375589cb
+				{
+					#346918434 event :: objectref(event) : @3dfdebc5-8200-412f-bf7a-6a40219295ed;
+					#2743613706 condition :: function(bool) : @00000000-0000-0000-0000-000000000000;
+					#4173095501 action :: function(void) : @00000000-0000-0000-0000-000000000000;
+					#857545305 target_state :: objectref(haptic_dialog_state) : @599a62fc-4ed5-4367-b34b-846253aad5f2;
+					#2125864789 source_dock :: float : 0.9251206;
+					#2998194240 target_dock :: float : 0.571962535;
+				}
+			}
+			#3928147417 internal_transitions :: haptic_internal_transitions : @c6281192-b7bc-45b0-ac54-9d268050cdf1
+			{
+			}
+			#2332873062 dialog :: GtfView : @407e8f17-8d60-4e15-8916-4f6ce3dabe90;
+			#4137489196 priority_stack :: priority_stack : @00000000-0000-0000-0000-000000000000;
+		}
+		#864567906 "haptic_states 2" :: haptic_dialog_state : @6eecd027-6d16-4273-9086-5cc184b425bc
+		{
+			#104714000 x :: int : 89;
+			#3869144051 y :: int : 4;
+			#2387723816 width :: int : 100;
+			#2134341386 height :: int : 100;
+			#1233913133 name :: string : "オープニング";
+			#2777286370 entry_action :: function(void) : @00000000-0000-0000-0000-000000000000;
+			#1944862287 exit_action :: function(void) : @00000000-0000-0000-0000-000000000000;
+			#3114633545 transitions :: haptic_transitions : @ec351472-dbd0-4a58-97b8-53db71ec6861
+			{
+				#2628085368 "haptic_transitions 1" :: haptic_transition : @32aa531b-e1cf-4fec-a478-1559598b39fe
+				{
+					#56963990 event :: objectref(event) : @e47a60eb-a659-4192-9c97-762acb288cb7;
+					#2733786660 condition :: function(bool) : @00000000-0000-0000-0000-000000000000;
+					#4069738641 action :: function(void) : @00000000-0000-0000-0000-000000000000;
+					#3931509402 target_state :: objectref(haptic_dialog_state) : @b6fd102d-d5da-4c69-ab8b-d5cf62d1d5e0;
+					#1846784947 source_dock :: float : 0.428037465;
+					#1406576438 target_dock :: float : 0.954867661;
+				}
+			}
+			#2927819835 internal_transitions :: haptic_internal_transitions : @db9f1de9-726f-4239-ada6-3b0c016611d2
+			{
+			}
+			#1070360867 dialog :: GtfView : @7858612e-b484-42b3-8591-b4ff3fd39d87;
+			#52898492 priority_stack :: priority_stack : @00000000-0000-0000-0000-000000000000;
+		}
+		#4167478531 "haptic_states 3" :: haptic_dialog_state : @b6fd102d-d5da-4c69-ab8b-d5cf62d1d5e0
+		{
+			#1280337434 x :: int : 158;
+			#591582000 y :: int : 166;
+			#2815683049 width :: int : 100;
+			#2528791112 height :: int : 100;
+			#658945634 name :: string : "タイトル";
+			#4156806400 entry_action :: function(void) : @00000000-0000-0000-0000-000000000000;
+			#2404399490 exit_action :: function(void) : @00000000-0000-0000-0000-000000000000;
+			#4002944224 transitions :: haptic_transitions : @5d1a3b9e-08b8-44bb-a385-542330d1a4ba
+			{
+				#3979893867 "haptic_transitions 2" :: haptic_transition : @deb19099-f1f8-4832-b4f3-2bb25c6c6925
+				{
+					#392472680 event :: objectref(event) : @10c55f0a-e5de-4401-9121-460774c2cab9;
+					#2550593781 condition :: function(bool) : @00000000-0000-0000-0000-000000000000;
+					#2610084647 action :: function(void) : @00000000-0000-0000-0000-000000000000;
+					#1011820321 target_state :: objectref(haptic_statemachine) : @fc2165db-969e-40c8-949e-6dcf8c1a5665;
+					#1764056908 source_dock :: float : 0.74296236;
+					#1231524767 target_dock :: float : 0.7658;
+				}
+				#2202323836 "haptic_transitions 3" :: haptic_transition : @fcdbbc52-4879-4d7e-b111-854849f53fb2
+				{
+					#3378528218 event :: objectref(event) : @53b9d7e0-3133-4b5a-83ae-4e360b35d055;
+					#3441113851 condition :: function(bool) : @00000000-0000-0000-0000-000000000000;
+					#3884616400 action :: function(void) : @00000000-0000-0000-0000-000000000000;
+					#4053695828 target_state :: objectref(haptic_dialog_state) : @3ae36125-a28c-4c70-a8a0-5d4426fac7b5;
+					#1602852641 source_dock :: float : 0.375;
+					#3085767622 target_dock :: float : 0.625;
+				}
+				#943769168 "haptic_transitions 1" :: haptic_transition : @18379367-32b1-4620-b35d-1033e6cdb43b
+				{
+					#4109679176 event :: objectref(event) : @0a0d35dd-1bd5-46ed-b0eb-1fbdb1e06174;
+					#2211899820 condition :: function(bool) : @00000000-0000-0000-0000-000000000000;
+					#3930774452 action :: function(void) : @00000000-0000-0000-0000-000000000000;
+					#4119935675 target_state :: objectref(haptic_dialog_state) : @c5736239-b8d6-4d69-ab40-8516a3203e4d;
+					#2288888485 source_dock :: float : 0.625;
+					#1460425700 target_dock :: float : 0.875;
+				}
+			}
+			#3998956561 internal_transitions :: haptic_internal_transitions : @49ce5a19-6c53-46c9-a83c-007deadef1c9
+			{
+			}
+			#1933742517 dialog :: GtfView : @66dd14a2-5f29-42ce-8f78-b22ab14634e1;
+			#154131809 priority_stack :: priority_stack : @00000000-0000-0000-0000-000000000000;
+		}
+		#3234776815 "haptic_states 4" :: haptic_dialog_state : @599a62fc-4ed5-4367-b34b-846253aad5f2
+		{
+			#464001925 x :: int : 428;
+			#1300465907 y :: int : 10;
+			#2615571999 width :: int : 100;
+			#488209440 height :: int : 100;
+			#1540323647 name :: string : "リザルト";
+			#3230527985 entry_action :: function(void) : @00000000-0000-0000-0000-000000000000;
+			#2372803117 exit_action :: function(void) : @00000000-0000-0000-0000-000000000000;
+			#2724375941 transitions :: haptic_transitions : @bcea4a65-9b0a-4f80-a87a-e233c780115a
+			{
+				#3703915484 "haptic_transitions 2" :: haptic_transition : @6e1fbae0-5ec4-4aa7-a4e3-add528463bb9
+				{
+					#359555126 event :: objectref(event) : @00000000-0000-0000-0000-000000000000;
+					#2620934598 condition :: function(bool) : @00000000-0000-0000-0000-000000000000;
+					#3557075124 action :: function(void) : @00000000-0000-0000-0000-000000000000;
+					#938621406 target_state :: objectref(haptic_dialog_state) : @b6fd102d-d5da-4c69-ab8b-d5cf62d1d5e0;
+					#1280870686 source_dock :: float : 0.875;
+					#1718377965 target_dock :: float : 0.125;
+				}
+			}
+			#3000989424 internal_transitions :: haptic_internal_transitions : @d475e5ae-a8f6-49cf-b61c-fee75af5c489
+			{
+			}
+			#2400684505 dialog :: GtfView : @7a85911d-0d65-4d46-a152-e715db6974ac;
+			#1299845845 priority_stack :: priority_stack : @00000000-0000-0000-0000-000000000000;
+		}
+		#957558064 "haptic_states 5" :: haptic_dialog_state : @c5736239-b8d6-4d69-ab40-8516a3203e4d
+		{
+			#3663842197 x :: int : 157;
+			#795612526 y :: int : 341;
+			#2162305540 width :: int : 100;
+			#1339951111 height :: int : 100;
+			#609020907 name :: string : "メニュー";
+			#3169958500 entry_action :: function(void) : @00000000-0000-0000-0000-000000000000;
+			#1757035394 exit_action :: function(void) : @00000000-0000-0000-0000-000000000000;
+			#4051765383 transitions :: haptic_transitions : @27dcd685-c405-4aed-a34b-35b3232d49a3
+			{
+				#4063616424 "haptic_transitions 2" :: haptic_transition : @349cc790-10cb-4e4d-b4d4-dd9f5b325529
+				{
+					#568910401 event :: objectref(event) : @45e78735-c365-4d48-b0a7-29a9d512fb6e;
+					#3387071012 condition :: function(bool) : @00000000-0000-0000-0000-000000000000;
+					#3824094161 action :: function(void) : @00000000-0000-0000-0000-000000000000;
+					#598488069 target_state :: objectref(haptic_dialog_state) : @b6fd102d-d5da-4c69-ab8b-d5cf62d1d5e0;
+					#1233498821 source_dock :: float : 0.125;
+					#2555054269 target_dock :: float : 0.375;
+				}
+			}
+			#3795714333 internal_transitions :: haptic_internal_transitions : @d539cb3d-af81-4e74-99c8-b38fe02699c6
+			{
+			}
+			#1366719335 dialog :: GtfView : @c504c783-fb51-489f-b0ab-f1cb4b9c3433;
+			#4027680555 priority_stack :: priority_stack : @00000000-0000-0000-0000-000000000000;
+		}
+	}
+	#1421934449 initial_state :: haptic_initial_state : @56441021-18ed-4f73-a29a-d56320a55571
+	{
+		#1220692135 x :: int : 21;
+		#1151818651 y :: int : 4;
+		#3094521499 width :: int : 100;
+		#642468895 height :: int : 100;
+		#1053503621 default_transition :: haptic_default_transition : @52fbd4b5-2ef7-48cc-b51b-402fdb57b624
+		{
+			#2953628399 action :: function(void) : @72aaa67d-50bf-4d2c-a543-998fbeea77db
+			{
+				#1914393670 script :: string : "function()\n{\n}";
+			}
+			#3940147513 target_state :: objectref(haptic_dialog_state) : @c5736239-b8d6-4d69-ab40-8516a3203e4d;
+			#2550796582 source_dock :: float : 0.233594045;
+			#2583762654 target_dock :: float : 0.723487437;
+		}
+	}
+	#406496511 final_state :: haptic_final_state : @00000000-0000-0000-0000-000000000000;
+	#857467683 history_state :: haptic_history_state : @00000000-0000-0000-0000-000000000000;
+	#4193155275 deep_history_state :: haptic_deep_history_state : @00000000-0000-0000-0000-000000000000;
+	#3916402472 priority_stack :: priority_stack : @4878e8fb-dc6b-4f50-9401-258bf48f0e83
+	{
+	}
+}

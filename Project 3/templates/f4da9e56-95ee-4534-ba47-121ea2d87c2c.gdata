@@ -1,0 +1,65 @@
+EBGUIDE 6.4.1.127810;
+@f4da9e56-95ee-4534-ba47-121ea2d87c2c
+{
+	#1170676912 name :: string : "DropArea";
+	#1158946485 structure :: GtfRectangle : @86773f40-b6c1-4ec6-b306-96f236337826
+	{
+		#3607900897 features :: feature_list : @87fbc570-f137-4296-807a-1eb1e87c5500
+		{
+			#2319273486 "feature_list 2" :: Border : @34878158-7e68-4a0e-9405-18bef4edec75
+			{
+				#2438150703 borderThickness :: propref(int) : @f4da9e56-95ee-4534-ba47-121ea2d87c2c#1464181271;
+				#798119652 borderColor :: propref(color) : @f4da9e56-95ee-4534-ba47-121ea2d87c2c#3900581796;
+				#1873250589 borderStyle :: int : 0;
+			}
+		}
+		#35575968 children :: children_list : @1d406fa5-30ab-4917-b682-45f63a1ecdff
+		{
+			#4125115521 "children_list 4" :: GtfContainer_template_instance : @504744c6-638b-4376-b8c6-7ad7d335d7db
+			{
+				#1070337060 name :: string : "FrameCollision";
+				#1883037598 template :: objectref(GtfContainer_template) : @f82e4f87-4997-4271-b664-f81022da16ab;
+				#20608346 children :: children_list : @03c3ad95-be94-428f-8f1b-f530b3327fa7
+				{
+				}
+				#3131009778 YouWidth :: propref(int) : @f4da9e56-95ee-4534-ba47-121ea2d87c2c#3919358865;
+				#1298988237 YouX :: propref(int) : @f4da9e56-95ee-4534-ba47-121ea2d87c2c#1948469601;
+				#325968430 YouY :: propref(int) : @f4da9e56-95ee-4534-ba47-121ea2d87c2c#4097500686;
+				#2237608362 width :: propref(int) : @86773f40-b6c1-4ec6-b306-96f236337826#2897542494;
+				#1120540168 height :: propref(int) : @86773f40-b6c1-4ec6-b306-96f236337826#2403294218;
+				#4184438494 x :: propref(int) : @86773f40-b6c1-4ec6-b306-96f236337826#3623440128;
+				#972590012 y :: propref(int) : @86773f40-b6c1-4ec6-b306-96f236337826#1282440033;
+				#1879177136 Collision :: function(bool) : @36520d18-ffa6-443f-bcc0-75457dc6581b
+				{
+					#1962830317 script :: string : "function()\n{\n\tv:this.Flag = false\n\tif(f:abs(v:this.YouX - v:this.x) < ((v:this.YouWidth / 2) + (v:this.width / 2))){\n\t\tif(f:abs(v:this.YouY - v:this.y) < ((v:this.YouHeight / 2) + (v:this.height / 2))){\n\t\t\tv:this.Flag = true\n\t\t}\n\t}\n\ttrue\n}";
+				}
+				#2128577594 YouHeight :: propref(int) : @f4da9e56-95ee-4534-ba47-121ea2d87c2c#1501413929;
+			}
+		}
+		#1903948305 name :: string : "Frame";
+		#369193996 visible :: propref(bool) : @f4da9e56-95ee-4534-ba47-121ea2d87c2c#1832721320;
+		#2897542494 width :: propref(int) : @f4da9e56-95ee-4534-ba47-121ea2d87c2c#2601100870;
+		#2403294218 height :: propref(int) : @f4da9e56-95ee-4534-ba47-121ea2d87c2c#507159858;
+		#3623440128 x :: propref(int) : @f4da9e56-95ee-4534-ba47-121ea2d87c2c#3651327287;
+		#1282440033 y :: propref(int) : @f4da9e56-95ee-4534-ba47-121ea2d87c2c#487616182;
+		#1873862792 fillColor :: color : -256;
+		#2165298893 CheckCollision :: propref(function(bool)) : @f4da9e56-95ee-4534-ba47-121ea2d87c2c#737980110;
+		#2410967272 Check :: propref(bool) : @f4da9e56-95ee-4534-ba47-121ea2d87c2c#1023857438;
+	}
+	#1832721320 visible :: bool : true;
+	#2601100870 width :: int : 100;
+	#507159858 height :: int : 100;
+	#3651327287 x :: int : 0;
+	#487616182 y :: int : 0;
+	#1464181271 borderThickness :: int : 1;
+	#3900581796 borderColor :: color : -1;
+	#3919358865 YouWidth :: int : 0;
+	#1948469601 YouX :: int : 0;
+	#4097500686 YouY :: int : 0;
+	#737980110 CheckCollision :: function(bool) : @84f57a7c-4dea-4e32-9af2-e1c4ecce872d
+	{
+		#2851935492 script :: string : "//上にオブジェクトが乗るようなタイミングで呼ぶが良い\nfunction()\n{\n\t//Youの名を持つ変数たちに値を設定しないと意味はない。\n\tv:this->FrameCollision.Collision()\n\tif(v:this->FrameCollision.Flag){\n\t\tv:this.Check = true\t\t//乗っている\n\t}else{\n\t\tv:this.Check = false\t//乗っていない\n\t}\n\ttrue\n}";
+	}
+	#1023857438 Check :: bool : false;
+	#1501413929 YouHeight :: int : 0;
+}

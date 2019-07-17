@@ -1,0 +1,562 @@
+EBGUIDE 6.4.1.127810;
+@4c2b9a42-0ea8-459f-bc2d-3efafd12862e
+{
+	#1883393743 name :: string : "DigitalClock";
+	#1148460094 structure :: GtfContainer : @76165fa0-a337-4289-873e-169db192b722
+	{
+		#3883202974 features :: feature_list : @b188f686-4c68-47da-8896-ba5d81f6f522
+		{
+		}
+		#3764757579 children :: children_list : @aa7e1171-5c24-4fe7-9093-9974bd1cdba7
+		{
+			#531686993 "children_list 2" :: GtfRectangle_template_instance : @e98f9fb7-9999-4bc8-8c61-e376e4a1e3bc
+			{
+				#2077809096 name :: string : "Update";
+				#3427573746 template :: objectref(GtfRectangle_template) : @aea3c21b-61f6-4f13-b1c4-7e9899e008e3;
+				#106871927 children :: children_list : @ca33f28e-8945-438f-82bd-9d525262177c
+				{
+				}
+				#3574121114 width :: int : 0;
+				#2132997892 height :: int : 0;
+				#875800223 visible :: bool : false;
+				#2712272132 fillColor :: color : -1448498689;
+			}
+			#4016295325 "children_list 3" :: GtfLabel : @55f198eb-10c8-43de-9c0d-de17d85169d7
+			{
+				#3874873041 features :: feature_list : @7e8d93c6-c6f6-4b29-8727-d04d1f976451
+				{
+				}
+				#484123519 children :: children_list : @ac380034-0499-4b94-b9f8-6b40705ca3ad
+				{
+				}
+				#560888113 name :: string : "YearClock";
+				#1112573867 visible :: bool : true;
+				#3103749854 width :: int : 60;
+				#1867198341 height :: propref(int) : @76165fa0-a337-4289-873e-169db192b722#679590067;
+				#464914232 x :: int : 0;
+				#184193652 y :: int : 0;
+				#516799651 text :: string : "1900";
+				#1212690034 textColor :: propref(color) : @4c2b9a42-0ea8-459f-bc2d-3efafd12862e#182655207;
+				#737441305 font :: propref(font) : @4c2b9a42-0ea8-459f-bc2d-3efafd12862e#3910014068;
+				#3776786436 horizontalAlign :: int : 1;
+				#3114258827 verticalAlign :: int : 0;
+			}
+			#954047334 "children_list 5" :: GtfLabel : @b6daccda-f90f-4f76-b808-cdc6f835dbe4
+			{
+				#4225635055 features :: feature_list : @631a3fae-3625-4b0f-b170-ebb3fd196566
+				{
+				}
+				#3766976361 children :: children_list : @480cd7f3-ef0d-4882-8267-23511780b713
+				{
+				}
+				#1475776022 name :: string : "WcologneYear";
+				#561094157 visible :: bool : true;
+				#2869885530 width :: int : 15;
+				#1546008580 height :: propref(int) : @76165fa0-a337-4289-873e-169db192b722#679590067;
+				#741727338 x :: int_scriptedValue : @99c3f505-5d8f-4603-8b37-a825d02abe47
+				{
+					#3101042088 triggerList :: trigger_list : @68b053a6-7c67-4f46-aecf-f42b71925405
+					{
+						#3889835276 events :: event_refs : <objectref>[];
+						#409913459 dp_items :: dp_item_refs : <objectref>[];
+						#3774152748 properties :: property_reference_list : <propref>[];
+					}
+					#1468115352 onTrigger :: function(bool,bool) : @2a69fcbe-a2ab-421d-b422-af45e1c70187
+					{
+						#2713141383 script :: string : "function(v:arg0::bool)\n{\n\tfalse\n}";
+					}
+					#960309666 read :: function(int) : @47582381-231c-4665-9f10-ea98aa955c94
+					{
+						#3113259854 script :: string : "function()\n{\n\tv:this->^->YearClock.width\n}";
+					}
+					#3110171299 write :: function(bool,int) : @f5965492-510c-4d57-bfe3-590b0fbe4921
+					{
+						#3188358331 script :: string : "function(v:arg0::int)\n{\n\tv:this.x = v:arg0\n\tfalse\n}";
+					}
+				}
+				#782220288 y :: int : 0;
+				#405260340 text :: string : ":";
+				#3607755299 textColor :: propref(color) : @4c2b9a42-0ea8-459f-bc2d-3efafd12862e#4151056782;
+				#1303680310 font :: propref(font) : @55f198eb-10c8-43de-9c0d-de17d85169d7#737441305;
+				#3121773122 horizontalAlign :: int : 1;
+				#3439751039 verticalAlign :: int : 0;
+			}
+			#1184477452 "children_list 7" :: GtfLabel : @3d7d1bee-51ae-4037-9f86-2c3468485e7c
+			{
+				#3606889835 features :: feature_list : @0ec1cce9-7d47-4e56-b843-51df3875ecb1
+				{
+				}
+				#3361079700 children :: children_list : @18816f45-2b27-489c-a988-0ea82d68073a
+				{
+				}
+				#857491078 name :: string : "MonthClock";
+				#1917479921 visible :: bool : true;
+				#2880501020 width :: int : 30;
+				#1703716712 height :: propref(int) : @76165fa0-a337-4289-873e-169db192b722#679590067;
+				#1231849881 x :: int_scriptedValue : @695e0523-6409-411d-87a3-3d531e19c9f0
+				{
+					#1125201451 triggerList :: trigger_list : @3d91cab7-9d08-4468-b77f-dc19ca15158b
+					{
+						#4022581908 events :: event_refs : <objectref>[];
+						#54205227 dp_items :: dp_item_refs : <objectref>[];
+						#2703823896 properties :: property_reference_list : <propref>[];
+					}
+					#2378278065 onTrigger :: function(bool,bool) : @8dc0645a-e0d5-4e5d-a026-b4927379c3aa
+					{
+						#2509005393 script :: string : "function(v:arg0::bool)\n{\n\t// todo: auto generated return value, please adapt\n\tfalse\n}";
+					}
+					#2207474563 read :: function(int) : @548bce50-9efb-4c92-8924-479c8bbced11
+					{
+						#2405114606 script :: string : "function()\n{\n\tv:this->^->YearClock.width + v:this->^->WcologneYear.width\n}";
+					}
+					#3679195775 write :: function(bool,int) : @8fe162de-13c2-4a0f-97c5-03ecb2a46c3a
+					{
+						#2103792755 script :: string : "function(v:arg0::int)\n{\n\t// todo: auto generated return value, please adapt\n\tfalse\n}";
+					}
+				}
+				#869169386 y :: int : 0;
+				#396722033 text :: string : "12";
+				#3911901913 textColor :: propref(color) : @4c2b9a42-0ea8-459f-bc2d-3efafd12862e#2351701367;
+				#657961708 font :: propref(font) : @55f198eb-10c8-43de-9c0d-de17d85169d7#737441305;
+				#3593651282 horizontalAlign :: int : 2;
+				#445155425 verticalAlign :: int : 0;
+			}
+			#1340854538 "children_list 8" :: GtfLabel : @e56b1647-5a49-43fb-9356-dfeb0ebc67b1
+			{
+				#4225635055 features :: feature_list : @ecfaf381-edd8-4751-9963-15ed00d1b54b
+				{
+				}
+				#3766976361 children :: children_list : @148a9272-8f38-45c1-809d-05a0725d2e16
+				{
+				}
+				#1475776022 name :: string : "WcologneMonth";
+				#561094157 visible :: bool : true;
+				#2869885530 width :: propref(int) : @b6daccda-f90f-4f76-b808-cdc6f835dbe4#2869885530;
+				#1546008580 height :: propref(int) : @76165fa0-a337-4289-873e-169db192b722#679590067;
+				#741727338 x :: int_scriptedValue : @a31bdd4f-aebc-4165-81fc-a3a7c0c96eb9
+				{
+					#3101042088 triggerList :: trigger_list : @8f9dace5-67ce-4e2f-a968-9875cdf85e6b
+					{
+						#3889835276 events :: event_refs : <objectref>[];
+						#409913459 dp_items :: dp_item_refs : <objectref>[];
+						#3774152748 properties :: property_reference_list : <propref>[];
+					}
+					#1468115352 onTrigger :: function(bool,bool) : @1affe456-7340-442d-8b1b-7f673f55cabe
+					{
+						#2713141383 script :: string : "function(v:arg0::bool)\n{\n\tfalse\n}";
+					}
+					#960309666 read :: function(int) : @3162f5a2-0bb7-46c1-b28f-4cade300d5f5
+					{
+						#3113259854 script :: string : "function()\n{\n\tv:this->^->YearClock.width + v:this->^->WcologneYear.width + v:this->^->MonthClock.width\n}";
+					}
+					#3110171299 write :: function(bool,int) : @7c89da87-ee28-42f7-8c21-c00dfc842da0
+					{
+						#3188358331 script :: string : "function(v:arg0::int)\n{\n\tfalse\n}";
+					}
+				}
+				#782220288 y :: int : 0;
+				#405260340 text :: string : ":";
+				#3607755299 textColor :: propref(color) : @b6daccda-f90f-4f76-b808-cdc6f835dbe4#3607755299;
+				#1303680310 font :: propref(font) : @55f198eb-10c8-43de-9c0d-de17d85169d7#737441305;
+				#3121773122 horizontalAlign :: int : 1;
+				#3439751039 verticalAlign :: int : 0;
+			}
+			#686498768 "children_list 9" :: GtfLabel : @9b1ea28f-1013-45fc-91b3-bf9123ca2cfc
+			{
+				#3606889835 features :: feature_list : @09b634a1-1997-432a-89e5-427dd603f6eb
+				{
+				}
+				#3361079700 children :: children_list : @0bba53e0-5013-4eb3-80b3-470086436184
+				{
+				}
+				#857491078 name :: string : "DayClock";
+				#1917479921 visible :: bool : true;
+				#2880501020 width :: int : 30;
+				#1703716712 height :: propref(int) : @76165fa0-a337-4289-873e-169db192b722#679590067;
+				#1231849881 x :: int_scriptedValue : @1ea50912-8157-46b4-993e-641f2c8431b8
+				{
+					#1125201451 triggerList :: trigger_list : @f596994e-a6f5-4c84-9183-374c768db1f6
+					{
+						#4022581908 events :: event_refs : <objectref>[];
+						#54205227 dp_items :: dp_item_refs : <objectref>[];
+						#2703823896 properties :: property_reference_list : <propref>[];
+					}
+					#2378278065 onTrigger :: function(bool,bool) : @3307e3c0-a7e5-480f-b2b5-4e8cffea3b20
+					{
+						#2509005393 script :: string : "function(v:arg0::bool)\n{\n\t// todo: auto generated return value, please adapt\n\tfalse\n}";
+					}
+					#2207474563 read :: function(int) : @7f2ba33c-0982-4198-9ddb-78dd975b8fdf
+					{
+						#2405114606 script :: string : "function()\n{\n\tv:this->^->YearClock.width + v:this->^->WcologneYear.width + \n\tv:this->^->MonthClock.width + v:this->^->WcologneMonth.width\n}";
+					}
+					#3679195775 write :: function(bool,int) : @0428df13-5726-42e8-96e3-2967db0543f5
+					{
+						#2103792755 script :: string : "function(v:arg0::int)\n{\n\t// todo: auto generated return value, please adapt\n\tfalse\n}";
+					}
+				}
+				#869169386 y :: int : 0;
+				#396722033 text :: string : "30";
+				#3911901913 textColor :: propref(color) : @4c2b9a42-0ea8-459f-bc2d-3efafd12862e#3067083095;
+				#657961708 font :: propref(font) : @55f198eb-10c8-43de-9c0d-de17d85169d7#737441305;
+				#3593651282 horizontalAlign :: int : 2;
+				#445155425 verticalAlign :: int : 0;
+			}
+			#3022608239 "children_list 10" :: GtfLabel : @c9ce343a-8c1e-44b6-8a8b-b108b2529f76
+			{
+				#4225635055 features :: feature_list : @abd0d140-b429-46b3-848b-59a5efbbf9ae
+				{
+				}
+				#3766976361 children :: children_list : @aab0b7dc-9496-4e9e-a5eb-7474b6f47b72
+				{
+				}
+				#1475776022 name :: string : "WcologneDay";
+				#561094157 visible :: bool : true;
+				#2869885530 width :: propref(int) : @b6daccda-f90f-4f76-b808-cdc6f835dbe4#2869885530;
+				#1546008580 height :: propref(int) : @76165fa0-a337-4289-873e-169db192b722#679590067;
+				#741727338 x :: int_scriptedValue : @ab121583-49c3-4e55-aa52-6d3f6a8d37c6
+				{
+					#3101042088 triggerList :: trigger_list : @8614b22e-1c20-4e29-b8b3-b92e98e25753
+					{
+						#3889835276 events :: event_refs : <objectref>[];
+						#409913459 dp_items :: dp_item_refs : <objectref>[];
+						#3774152748 properties :: property_reference_list : <propref>[];
+					}
+					#1468115352 onTrigger :: function(bool,bool) : @25af98b6-dd33-4af9-8120-3728c78a2bf5
+					{
+						#2713141383 script :: string : "function(v:arg0::bool)\n{\n\tfalse\n}";
+					}
+					#960309666 read :: function(int) : @7068b72f-6367-4f1a-9e1e-a44b565af933
+					{
+						#3113259854 script :: string : "function()\n{\n\tv:this->^->YearClock.width + v:this->^->WcologneYear.width +\n\tv:this->^->MonthClock.width + v:this->^->WcologneMonth.width +\n\tv:this->^->DayClock.width\n}";
+					}
+					#3110171299 write :: function(bool,int) : @b04c94f8-a098-4283-9911-09a57881939a
+					{
+						#3188358331 script :: string : "function(v:arg0::int)\n{\n\tfalse\n}";
+					}
+				}
+				#782220288 y :: int : 0;
+				#405260340 text :: string : ":";
+				#3607755299 textColor :: propref(color) : @b6daccda-f90f-4f76-b808-cdc6f835dbe4#3607755299;
+				#1303680310 font :: propref(font) : @55f198eb-10c8-43de-9c0d-de17d85169d7#737441305;
+				#3121773122 horizontalAlign :: int : 1;
+				#3439751039 verticalAlign :: int : 0;
+			}
+			#3348699666 "children_list 19" :: GtfLabel : @0394cc52-3d4d-42ad-b0b7-704cf060ea8a
+			{
+				#3606889835 features :: feature_list : @27d79a43-0de4-4150-af5c-6ba2706b3d77
+				{
+				}
+				#3361079700 children :: children_list : @cf78aad0-da14-424e-99fc-9bed01c0fc45
+				{
+				}
+				#857491078 name :: string : "WeekClock";
+				#1917479921 visible :: bool : true;
+				#2880501020 width :: int : 60;
+				#1703716712 height :: propref(int) : @76165fa0-a337-4289-873e-169db192b722#679590067;
+				#1231849881 x :: int_scriptedValue : @7dd8428a-4b85-4866-994f-b34a1b7439f8
+				{
+					#1125201451 triggerList :: trigger_list : @6208e8a8-100a-4d84-a5af-bb5c3055477a
+					{
+						#4022581908 events :: event_refs : <objectref>[];
+						#54205227 dp_items :: dp_item_refs : <objectref>[];
+						#2703823896 properties :: property_reference_list : <propref>[];
+					}
+					#2378278065 onTrigger :: function(bool,bool) : @0b3434a8-bb0a-488f-a6bc-97aaef4c4f78
+					{
+						#2509005393 script :: string : "function(v:arg0::bool)\n{\n\t// todo: auto generated return value, please adapt\n\tfalse\n}";
+					}
+					#2207474563 read :: function(int) : @9f10f9f9-3c23-4346-a216-882fb6b44579
+					{
+						#2405114606 script :: string : "function()\n{\n\tv:this->^->YearClock.width + v:this->^->WcologneYear.width +\n\tv:this->^->MonthClock.width + v:this->^->WcologneMonth.width +\n\tv:this->^->DayClock.width + v:this->^->WcologneDay.width\n}";
+					}
+					#3679195775 write :: function(bool,int) : @a2b7809e-d064-4fb0-9a07-6d022ae8af2f
+					{
+						#2103792755 script :: string : "function(v:arg0::int)\n{\n\t// todo: auto generated return value, please adapt\n\tfalse\n}";
+					}
+				}
+				#869169386 y :: int : 0;
+				#396722033 text :: string : "SAT";
+				#3911901913 textColor :: propref(color) : @4c2b9a42-0ea8-459f-bc2d-3efafd12862e#3037201855;
+				#657961708 font :: propref(font) : @55f198eb-10c8-43de-9c0d-de17d85169d7#737441305;
+				#3593651282 horizontalAlign :: int : 1;
+				#445155425 verticalAlign :: int : 0;
+			}
+			#3547365674 "children_list 20" :: GtfLabel : @86eec272-c839-4053-807e-42a767392f6a
+			{
+				#4225635055 features :: feature_list : @73be7435-a7d7-4728-b926-5ca85d6cf501
+				{
+				}
+				#3766976361 children :: children_list : @6f979fc2-e2b4-4346-8a0f-216c03b96252
+				{
+				}
+				#1475776022 name :: string : "WcologneWeek";
+				#561094157 visible :: bool : true;
+				#2869885530 width :: propref(int) : @b6daccda-f90f-4f76-b808-cdc6f835dbe4#2869885530;
+				#1546008580 height :: propref(int) : @76165fa0-a337-4289-873e-169db192b722#679590067;
+				#741727338 x :: int_scriptedValue : @a82e66f7-90d8-4d34-b325-2a8369450e10
+				{
+					#3101042088 triggerList :: trigger_list : @93e08705-6427-4f48-b813-d264e96c89b6
+					{
+						#3889835276 events :: event_refs : <objectref>[];
+						#409913459 dp_items :: dp_item_refs : <objectref>[];
+						#3774152748 properties :: property_reference_list : <propref>[];
+					}
+					#1468115352 onTrigger :: function(bool,bool) : @c2e2fb4f-8d19-44a7-96c5-980006d7ee5f
+					{
+						#2713141383 script :: string : "function(v:arg0::bool)\n{\n\tfalse\n}";
+					}
+					#960309666 read :: function(int) : @2eba32b6-be5c-46aa-8a7f-99d3685ef570
+					{
+						#3113259854 script :: string : "function()\n{\n\tv:this->^->YearClock.width + v:this->^->WcologneYear.width +\n\tv:this->^->MonthClock.width + v:this->^->WcologneMonth.width +\n\tv:this->^->DayClock.width + v:this->^->WcologneDay.width +\n\tv:this->^->WeekClock.width\n}";
+					}
+					#3110171299 write :: function(bool,int) : @b45e1db2-07ff-46ce-b2c6-73159337d028
+					{
+						#3188358331 script :: string : "function(v:arg0::int)\n{\n\tfalse\n}";
+					}
+				}
+				#782220288 y :: int : 0;
+				#405260340 text :: string : ":";
+				#3607755299 textColor :: propref(color) : @b6daccda-f90f-4f76-b808-cdc6f835dbe4#3607755299;
+				#1303680310 font :: propref(font) : @55f198eb-10c8-43de-9c0d-de17d85169d7#737441305;
+				#3121773122 horizontalAlign :: int : 1;
+				#3439751039 verticalAlign :: int : 0;
+			}
+			#2926461805 "children_list 21" :: GtfLabel : @cf0b0ef9-c4e8-4d85-ae32-161831b9dae2
+			{
+				#3606889835 features :: feature_list : @1a0fa56c-3edf-4945-9346-6b3c45f1ca68
+				{
+				}
+				#3361079700 children :: children_list : @0976b4ad-5150-4d15-ae78-cd766bdf7b88
+				{
+				}
+				#857491078 name :: string : "HourClock";
+				#1917479921 visible :: bool : true;
+				#2880501020 width :: int : 30;
+				#1703716712 height :: propref(int) : @76165fa0-a337-4289-873e-169db192b722#679590067;
+				#1231849881 x :: int_scriptedValue : @a803dde1-c574-4957-ae2f-285ebbf795f1
+				{
+					#1125201451 triggerList :: trigger_list : @ada47da3-9d39-4c49-b9c1-a223c615e654
+					{
+						#4022581908 events :: event_refs : <objectref>[];
+						#54205227 dp_items :: dp_item_refs : <objectref>[];
+						#2703823896 properties :: property_reference_list : <propref>[];
+					}
+					#2378278065 onTrigger :: function(bool,bool) : @457d795e-3216-43ac-a9f5-01cc05c2c724
+					{
+						#2509005393 script :: string : "function(v:arg0::bool)\n{\n\t// todo: auto generated return value, please adapt\n\tfalse\n}";
+					}
+					#2207474563 read :: function(int) : @fefb29a6-3e84-4c33-b8a8-969a68a2ab47
+					{
+						#2405114606 script :: string : "function()\n{\n\tv:this->^->YearClock.width + v:this->^->WcologneYear.width +\n\tv:this->^->MonthClock.width + v:this->^->WcologneMonth.width +\n\tv:this->^->DayClock.width + v:this->^->WcologneDay.width +\n\tv:this->^->WeekClock.width + v:this->^->WcologneWeek.width\n}";
+					}
+					#3679195775 write :: function(bool,int) : @48aacc67-8aaf-42b2-a270-a8b29129b8fa
+					{
+						#2103792755 script :: string : "function(v:arg0::int)\n{\n\t// todo: auto generated return value, please adapt\n\tfalse\n}";
+					}
+				}
+				#869169386 y :: int : 0;
+				#396722033 text :: string : "12";
+				#3911901913 textColor :: propref(color) : @4c2b9a42-0ea8-459f-bc2d-3efafd12862e#626419147;
+				#657961708 font :: propref(font) : @55f198eb-10c8-43de-9c0d-de17d85169d7#737441305;
+				#3593651282 horizontalAlign :: int : 2;
+				#445155425 verticalAlign :: int : 0;
+			}
+			#3236014064 "children_list 22" :: GtfLabel : @1aba8ea9-4e42-49d3-b1f9-c799bf4001aa
+			{
+				#4225635055 features :: feature_list : @b83541cd-6c84-44f3-bce9-a3a7704fbdc9
+				{
+				}
+				#3766976361 children :: children_list : @f606211c-ce2f-437c-bf95-f3619fc9db77
+				{
+				}
+				#1475776022 name :: string : "WcologneHour";
+				#561094157 visible :: bool : true;
+				#2869885530 width :: propref(int) : @b6daccda-f90f-4f76-b808-cdc6f835dbe4#2869885530;
+				#1546008580 height :: propref(int) : @76165fa0-a337-4289-873e-169db192b722#679590067;
+				#741727338 x :: int_scriptedValue : @ba8b8b4c-f6a9-4d28-961a-b6b0bc2c9ef1
+				{
+					#3101042088 triggerList :: trigger_list : @44dda780-1e4e-4322-a820-d291c9db882f
+					{
+						#3889835276 events :: event_refs : <objectref>[];
+						#409913459 dp_items :: dp_item_refs : <objectref>[];
+						#3774152748 properties :: property_reference_list : <propref>[];
+					}
+					#1468115352 onTrigger :: function(bool,bool) : @36a948f7-2de4-4dbc-8268-1268f1f077ce
+					{
+						#2713141383 script :: string : "function(v:arg0::bool)\n{\n\tfalse\n}";
+					}
+					#960309666 read :: function(int) : @529f1307-43b4-4fe9-aa85-68d82896741b
+					{
+						#3113259854 script :: string : "function()\n{\n\tv:this->^->YearClock.width + v:this->^->WcologneYear.width +\n\tv:this->^->MonthClock.width + v:this->^->WcologneMonth.width +\n\tv:this->^->DayClock.width + v:this->^->WcologneDay.width +\n\tv:this->^->WeekClock.width + v:this->^->WcologneWeek.width +\n\tv:this->^->HourClock.width\n}";
+					}
+					#3110171299 write :: function(bool,int) : @1bae2a95-3fe1-45b3-b473-02843143e5f3
+					{
+						#3188358331 script :: string : "function(v:arg0::int)\n{\n\tfalse\n}";
+					}
+				}
+				#782220288 y :: int : 0;
+				#405260340 text :: string : ":";
+				#3607755299 textColor :: propref(color) : @b6daccda-f90f-4f76-b808-cdc6f835dbe4#3607755299;
+				#1303680310 font :: propref(font) : @55f198eb-10c8-43de-9c0d-de17d85169d7#737441305;
+				#3121773122 horizontalAlign :: int : 1;
+				#3439751039 verticalAlign :: int : 0;
+			}
+			#1176991522 "children_list 23" :: GtfLabel : @ca69ce59-56b0-4cd3-bfa6-d48eda339422
+			{
+				#3606889835 features :: feature_list : @551075b2-2d31-413f-871c-39cbbb4e4ce9
+				{
+				}
+				#3361079700 children :: children_list : @807def99-2d59-4322-90b2-d95f3bc6c578
+				{
+				}
+				#857491078 name :: string : "MinuteClock";
+				#1917479921 visible :: bool : true;
+				#2880501020 width :: int : 30;
+				#1703716712 height :: propref(int) : @76165fa0-a337-4289-873e-169db192b722#679590067;
+				#1231849881 x :: int_scriptedValue : @40186a44-7a97-4505-a208-133da6048db1
+				{
+					#1125201451 triggerList :: trigger_list : @bb9404d1-b1c1-4d48-9ed5-8b21a7f58e2c
+					{
+						#4022581908 events :: event_refs : <objectref>[];
+						#54205227 dp_items :: dp_item_refs : <objectref>[];
+						#2703823896 properties :: property_reference_list : <propref>[];
+					}
+					#2378278065 onTrigger :: function(bool,bool) : @4fcfc52e-cb65-4a19-8377-2be910591af8
+					{
+						#2509005393 script :: string : "function(v:arg0::bool)\n{\n\t// todo: auto generated return value, please adapt\n\tfalse\n}";
+					}
+					#2207474563 read :: function(int) : @19befd5b-cfc6-400a-838a-5aa8864c8071
+					{
+						#2405114606 script :: string : "function()\n{\n\tv:this->^->YearClock.width + v:this->^->WcologneYear.width +\n\tv:this->^->MonthClock.width + v:this->^->WcologneMonth.width +\n\tv:this->^->DayClock.width + v:this->^->WcologneDay.width +\n\tv:this->^->WeekClock.width + v:this->^->WcologneWeek.width +\n\tv:this->^->HourClock.width + v:this->^->WcologneHour.width\n}";
+					}
+					#3679195775 write :: function(bool,int) : @1ac62ccf-8ccb-4245-a8ab-95731e61530a
+					{
+						#2103792755 script :: string : "function(v:arg0::int)\n{\n\t// todo: auto generated return value, please adapt\n\tfalse\n}";
+					}
+				}
+				#869169386 y :: int : 0;
+				#396722033 text :: string : "59";
+				#3911901913 textColor :: propref(color) : @4c2b9a42-0ea8-459f-bc2d-3efafd12862e#3152398989;
+				#657961708 font :: propref(font) : @55f198eb-10c8-43de-9c0d-de17d85169d7#737441305;
+				#3593651282 horizontalAlign :: int : 2;
+				#445155425 verticalAlign :: int : 0;
+			}
+			#3747058988 "children_list 26" :: GtfLabel : @72239700-cb98-4d21-88da-878d37b7126e
+			{
+				#4225635055 features :: feature_list : @2be3ef68-62ae-49a6-89c1-fb53609933f9
+				{
+				}
+				#3766976361 children :: children_list : @9766f21f-b554-4cb7-88fb-1aa1f5279298
+				{
+				}
+				#1475776022 name :: string : "WcologneMinute";
+				#561094157 visible :: bool : true;
+				#2869885530 width :: propref(int) : @b6daccda-f90f-4f76-b808-cdc6f835dbe4#2869885530;
+				#1546008580 height :: propref(int) : @76165fa0-a337-4289-873e-169db192b722#679590067;
+				#741727338 x :: int_scriptedValue : @27fba768-1da9-441d-9fcc-6aa9b2685cd0
+				{
+					#3101042088 triggerList :: trigger_list : @321a115a-1457-43c8-9a1c-8a610d9ad7b9
+					{
+						#3889835276 events :: event_refs : <objectref>[];
+						#409913459 dp_items :: dp_item_refs : <objectref>[];
+						#3774152748 properties :: property_reference_list : <propref>[];
+					}
+					#1468115352 onTrigger :: function(bool,bool) : @6ae252ab-988f-416a-97fa-7d722cc2b666
+					{
+						#2713141383 script :: string : "function(v:arg0::bool)\n{\n\tfalse\n}";
+					}
+					#960309666 read :: function(int) : @b3cd51bb-5add-4c1d-80be-e561652d09dc
+					{
+						#3113259854 script :: string : "function()\n{\n\tv:this->^->YearClock.width + v:this->^->WcologneYear.width +\n\tv:this->^->MonthClock.width + v:this->^->WcologneMonth.width +\n\tv:this->^->DayClock.width + v:this->^->WcologneDay.width +\n\tv:this->^->WeekClock.width + v:this->^->WcologneWeek.width +\n\tv:this->^->HourClock.width + v:this->^->WcologneHour.width +\n\tv:this->^->MinuteClock.width\n}";
+					}
+					#3110171299 write :: function(bool,int) : @19cbc77f-1c77-49a7-9d07-e9988aa8c15a
+					{
+						#3188358331 script :: string : "function(v:arg0::int)\n{\n\tfalse\n}";
+					}
+				}
+				#782220288 y :: int : 0;
+				#405260340 text :: string : ":";
+				#3607755299 textColor :: propref(color) : @b6daccda-f90f-4f76-b808-cdc6f835dbe4#3607755299;
+				#1303680310 font :: propref(font) : @55f198eb-10c8-43de-9c0d-de17d85169d7#737441305;
+				#3121773122 horizontalAlign :: int : 1;
+				#3439751039 verticalAlign :: int : 0;
+			}
+			#1182288511 "children_list 27" :: GtfLabel : @55a50c13-fcf2-4802-8076-184c35fb7fa9
+			{
+				#3606889835 features :: feature_list : @ea1b70f4-8720-48d2-b24e-1436f9090d8d
+				{
+				}
+				#3361079700 children :: children_list : @dad739a6-1db3-4716-9e35-b65cbd29d8e0
+				{
+				}
+				#857491078 name :: string : "SecondClock";
+				#1917479921 visible :: bool : true;
+				#2880501020 width :: int : 30;
+				#1703716712 height :: propref(int) : @76165fa0-a337-4289-873e-169db192b722#679590067;
+				#1231849881 x :: int_scriptedValue : @7a4f0df6-576b-4ffc-b038-39b82bb5d94c
+				{
+					#1125201451 triggerList :: trigger_list : @800a8dd6-e6b4-4da5-82b3-bbe74283ac1c
+					{
+						#4022581908 events :: event_refs : <objectref>[];
+						#54205227 dp_items :: dp_item_refs : <objectref>[];
+						#2703823896 properties :: property_reference_list : <propref>[];
+					}
+					#2378278065 onTrigger :: function(bool,bool) : @c964b362-5059-43b6-8ff9-a38895a60dd8
+					{
+						#2509005393 script :: string : "function(v:arg0::bool)\n{\n\t// todo: auto generated return value, please adapt\n\tfalse\n}";
+					}
+					#2207474563 read :: function(int) : @ba3b24f3-6af7-45b5-8b1c-fa00e54e1bc3
+					{
+						#2405114606 script :: string : "function()\n{\n\tv:this->^->YearClock.width + v:this->^->WcologneYear.width +\n\tv:this->^->MonthClock.width + v:this->^->WcologneMonth.width +\n\tv:this->^->DayClock.width + v:this->^->WcologneDay.width +\n\tv:this->^->WeekClock.width + v:this->^->WcologneWeek.width +\n\tv:this->^->HourClock.width + v:this->^->WcologneHour.width +\n\tv:this->^->MinuteClock.width + v:this->^->WcologneMinute.width\n}";
+					}
+					#3679195775 write :: function(bool,int) : @403666aa-0837-4a64-a5b8-c7a34dac141e
+					{
+						#2103792755 script :: string : "function(v:arg0::int)\n{\n\t// todo: auto generated return value, please adapt\n\tfalse\n}";
+					}
+				}
+				#869169386 y :: int : 0;
+				#396722033 text :: string : "59";
+				#3911901913 textColor :: propref(color) : @4c2b9a42-0ea8-459f-bc2d-3efafd12862e#2199322543;
+				#657961708 font :: propref(font) : @55f198eb-10c8-43de-9c0d-de17d85169d7#737441305;
+				#3593651282 horizontalAlign :: int : 2;
+				#445155425 verticalAlign :: int : 0;
+			}
+		}
+		#502613235 name :: string : "Container";
+		#130403518 visible :: bool : true;
+		#2160772120 width :: propref(int) : @4c2b9a42-0ea8-459f-bc2d-3efafd12862e#2853475408;
+		#679590067 height :: propref(int) : @4c2b9a42-0ea8-459f-bc2d-3efafd12862e#2047652006;
+		#1119763753 x :: propref(int) : @4c2b9a42-0ea8-459f-bc2d-3efafd12862e#160322170;
+		#3776220479 y :: propref(int) : @4c2b9a42-0ea8-459f-bc2d-3efafd12862e#326246716;
+		#41578289 counter :: conditional_script : @921a52f0-98cc-4d5c-96ff-c034a3ee0c44
+		{
+			#2048757193 triggerList :: trigger_list : @aa23eeea-9ab8-4fe3-b023-512e410b0c4f
+			{
+				#3065087442 events :: event_refs : <objectref>[];
+				#144483856 dp_items :: dp_item_refs : <objectref>[];
+				#3673942748 properties :: property_reference_list : <propref>[@e98f9fb7-9999-4bc8-8c61-e376e4a1e3bc#2712272132];
+			}
+			#3475796598 onTrigger :: function(bool,bool) : @0e3fe9c5-dcb1-49a6-8fdc-e250baf0c8a0
+			{
+				#2366209206 script :: string : "function(v:arg0::bool)\n{\n\tlet v:Time = f:system_time() in {\n\t\tv:this->YearClock.text = f:int2string(f:localtime_year(v:Time))\n\t\tv:this->MonthClock.text = f:int2string(f:localtime_month(v:Time))\n\t\tv:this->DayClock.text = f:int2string(f:localtime_day(v:Time))\n\t\t//曜日の設定(めんどくさ!!)\n\t\tlet v:Week = f:localtime_weekday(v:Time) in {\n\t\t\tif(v:Week == 0){ v:this->WeekClock.text = \"SUN\" }//日曜日\n\t\t\tif(v:Week == 1){ v:this->WeekClock.text = \"MON\" }//月曜日\n\t\t\tif(v:Week == 2){ v:this->WeekClock.text = \"TUE\" }//火曜日\n\t\t\tif(v:Week == 3){ v:this->WeekClock.text = \"WED\" }//水曜日\n\t\t\tif(v:Week == 4){ v:this->WeekClock.text = \"THU\" }//木曜日\n\t\t\tif(v:Week == 5){ v:this->WeekClock.text = \"FRI\" }//金曜日\n\t\t\tif(v:Week == 6){ v:this->WeekClock.text = \"SAT\" }//土曜日\n\t\t}\n\t\tv:this->HourClock.text = f:int2string(f:localtime_hour(v:Time))\n\t\tv:this->MinuteClock.text = f:int2string(f:localtime_minute(v:Time))\n\t\tv:this->SecondClock.text = f:int2string(f:localtime_second(v:Time))\n\t}\n\ttrue\n}";
+			}
+		}
+	}
+	#2853475408 width :: int : 350;
+	#2047652006 height :: int : 30;
+	#160322170 x :: int : 0;
+	#326246716 y :: int : 0;
+	#3910014068 font :: font_resource : @f3d1084d-ca28-48e8-81f8-80f95b63b76d
+	{
+		#2970358893 file :: file : "PT_Sans_Narrow.ttf";
+		#1538104825 size :: int : 30;
+	}
+	#182655207 textColor :: color : -1;
+	#2351701367 "textColor 2" :: color : -1;
+	#3067083095 "textColor 3" :: color : -1;
+	#3037201855 "textColor 4" :: color : -1;
+	#626419147 "textColor 5" :: color : -1;
+	#3152398989 "textColor 6" :: color : -1;
+	#2199322543 "textColor 7" :: color : -1;
+	#4151056782 "textColor 8" :: color : -1;
+}

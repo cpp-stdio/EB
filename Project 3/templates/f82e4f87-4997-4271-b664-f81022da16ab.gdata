@@ -1,0 +1,39 @@
+EBGUIDE 6.4.1.127810;
+@f82e4f87-4997-4271-b664-f81022da16ab
+{
+	#675560386 name :: string : "SquareCollision";
+	#1019995241 structure :: GtfContainer : @0471fd8e-e0f9-4f88-8b85-0fc1c611d990
+	{
+		#3744587051 features :: feature_list : @94716691-8725-465a-b4eb-ead0e5407356
+		{
+		}
+		#3793777617 children :: children_list : @efe52007-171c-48fa-964c-85014a5cb9e7
+		{
+		}
+		#700332539 name :: string : "Collision";
+		#321090946 visible :: bool : false;
+		#2268453095 width :: propref(int) : @f82e4f87-4997-4271-b664-f81022da16ab#1961175736;
+		#1894427604 height :: propref(int) : @f82e4f87-4997-4271-b664-f81022da16ab#1954840452;
+		#384997700 x :: propref(int) : @f82e4f87-4997-4271-b664-f81022da16ab#886086477;
+		#1078050964 y :: propref(int) : @f82e4f87-4997-4271-b664-f81022da16ab#63414435;
+		#1441089464 Collision :: propref(function(bool)) : @f82e4f87-4997-4271-b664-f81022da16ab#1786417563;
+		#2860881849 Flag :: propref(bool) : @f82e4f87-4997-4271-b664-f81022da16ab#2115731252;
+		#3137819524 YouWidth :: propref(int) : @f82e4f87-4997-4271-b664-f81022da16ab#3080146917;
+		#3475520814 YouHeight :: propref(int) : @f82e4f87-4997-4271-b664-f81022da16ab#2283961719;
+		#4213362269 YouX :: propref(int) : @f82e4f87-4997-4271-b664-f81022da16ab#1871556401;
+		#671699986 YouY :: propref(int) : @f82e4f87-4997-4271-b664-f81022da16ab#381532008;
+	}
+	#1786417563 Collision :: function(bool) : @7fded150-ad97-4bbb-8d78-e74cfadcebb5
+	{
+		#3160839614 script :: string : "function()\n{\n\tif(f:abs(v:this.YouX - v:this.x) < ((v:this.YouWidth / 2) + (v:this.width / 2))){\n\t\tif(f:abs(v:this.YouY - v:this.y) < ((v:this.YouHeight / 2) + (v:this.height / 2))){\n\t\t\tv:this.Flag = true\n\t\t}else{\n\t\t\tv:this.Flag = false\n\t\t}\n\t}else{\n\t\tv:this.Flag = false\n\t}\n\ttrue\n}";
+	}
+	#2115731252 Flag :: bool : false;
+	#1961175736 width :: int : 0;
+	#1954840452 height :: int : 0;
+	#886086477 x :: int : 0;
+	#63414435 y :: int : 0;
+	#3080146917 YouWidth :: int : 0;
+	#1871556401 YouX :: int : 0;
+	#381532008 YouY :: int : 0;
+	#2283961719 YouHeight :: int : 0;
+}

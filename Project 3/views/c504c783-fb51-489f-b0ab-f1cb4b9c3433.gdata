@@ -1,0 +1,1552 @@
+EBGUIDE 6.4.1.127810;
+@c504c783-fb51-489f-b0ab-f1cb4b9c3433
+{
+	#3741877865 features :: feature_list : @ba23fc48-1083-40eb-85df-0379b95b9724
+	{
+		#1238956726 "feature_list 1" :: Coloration : @cc000c72-ce81-435a-be9f-68e760b87380
+		{
+			#2187065885 colorationEnabled :: bool : true;
+			#1103143414 colorationColor :: color : -1;
+		}
+	}
+	#3586013413 children :: children_list : @d6ad2f31-cb1e-4895-8290-67a411672605
+	{
+		#565832702 "children_list 1" :: GtfImage : @a16e11f9-e691-42f7-9892-d91cff7a4342
+		{
+			#1173060387 features :: feature_list : @338252e2-2a4d-462e-90ff-aa595eb01f9a
+			{
+			}
+			#208077228 children :: children_list : @640b0147-9f79-44d1-998b-cfe825234b4a
+			{
+			}
+			#532563675 name :: string : "背景";
+			#1484158392 visible :: bool : true;
+			#1941001511 width :: int : 640;
+			#637208663 height :: int : 480;
+			#509893701 x :: int : 0;
+			#1230187950 y :: int : 0;
+			#2321683667 image :: image_resource : @71a1aeba-ff66-4151-8e4f-464b000dc2c9
+			{
+				#2589765697 file :: file : "menu_sub_bg.png";
+			}
+			#4090818183 horizontalAlign :: int : 0;
+			#3915299530 verticalAlign :: int : 1;
+		}
+		#2579839742 "children_list 5" :: GtfRectangle_template_instance : @ffcba716-2446-4d12-bb70-3a722c8a6887
+		{
+			#1073863752 name :: string : "Update";
+			#3589999591 template :: objectref(GtfRectangle_template) : @aea3c21b-61f6-4f13-b1c4-7e9899e008e3;
+			#447794848 children :: children_list : @db4010ec-c6f9-466e-98ab-883fc7dec8e5
+			{
+			}
+			#3545471766 x :: int : 500;
+			#873465289 y :: int : 200;
+			#4293670868 visible :: bool : false;
+			#2148392498 fillColor :: color : -1448498689;
+		}
+		#1695174271 "children_list 6" :: GtfContainer_template_instance : @f8dc8fd5-0fb8-4422-9e65-d8d88af91d2b
+		{
+			#794156602 name :: string : "AnalogClock 1";
+			#2078913201 template :: objectref(GtfContainer_template) : @49ccba6e-38ae-49ae-ac12-03117613cb88;
+			#3050189149 children :: children_list : @e188ed58-17a8-4249-b5ee-8be736122efc
+			{
+			}
+			#964994646 x :: int : 344;
+			#4477038 y :: int : 141;
+			#2159442216 fillColor :: color : -1523963137;
+			#816340903 "fillColor 2" :: color : -1523963137;
+			#3228293178 "fillColor 3" :: color : -1523963137;
+			#4163054644 Update :: conditional_script : @3a751dcc-4cd5-4bff-a7ea-ee76d2967032
+			{
+				#2675801557 triggerList :: trigger_list : @8d19c2cd-63d6-4246-9275-ac85d96c8f03
+				{
+					#3683176867 events :: event_refs : <objectref>[];
+					#3259189559 dp_items :: dp_item_refs : <objectref>[];
+					#2451813771 properties :: property_reference_list : <propref>[@ffcba716-2446-4d12-bb70-3a722c8a6887#2148392498];
+				}
+				#1803991570 onTrigger :: function(bool,bool) : @18baa12a-409a-43fc-9ee3-c2dfe517512e
+				{
+					#2965055534 script :: string : "function(v:arg0::bool)\n{\n\tv:this.TimeRotation()\n\tfalse\n}";
+				}
+			}
+		}
+		#153611224 "children_list 7" :: GtfContainer_template_instance : @3e9eb44c-fdae-4fe9-b422-78bb75b159a8
+		{
+			#1685474111 name :: string : "DigitalClock 1";
+			#2681340436 template :: objectref(GtfContainer_template) : @4c2b9a42-0ea8-459f-bc2d-3efafd12862e;
+			#2678419360 children :: children_list : @b3ab9f46-e5cb-46fd-ae8f-de6ba5362e7e
+			{
+			}
+			#702684523 y :: int : 343;
+			#660635941 x :: int : 144;
+			#1553885596 height :: int : 30;
+			#4034090412 "textColor 8" :: propref(color) : @ad283be6-84f8-4f25-8d3c-27991041e4f5#3727669992;
+		}
+		#2532582732 "children_list 14" :: GtfContainer : @95b29266-c2cd-4737-bb1c-6cde39a4a171
+		{
+			#3537212018 features :: feature_list : @ed9024a8-9c51-444b-bbfb-e731487b9394
+			{
+			}
+			#3097591770 children :: children_list : @de343b09-c6aa-46eb-b572-64503dfdca46
+			{
+				#17539724 "children_list 12" :: GtfRectangle : @ddbf3f0b-f619-4c85-9145-490a9424bc9a
+				{
+					#500721076 features :: feature_list : @9d11f45d-7e4e-40b8-9d66-a8ca567ecf14
+					{
+					}
+					#3334875218 children :: children_list : @b7f0f2bb-ba4d-4cd2-adaa-c47982baa3a7
+					{
+					}
+					#530377879 name :: string : "Walk";
+					#267831952 visible :: bool : true;
+					#3275064437 width :: int : 50;
+					#707530501 height :: int : 50;
+					#976847306 x :: int : -146;
+					#3906618516 y :: int : -194;
+					#2630171290 fillColor :: color : -1448498689;
+					#1318354534 Initialize :: conditional_script : @dcd39c08-5cb9-4568-89d3-c059582e0961
+					{
+						#3047579700 triggerList :: trigger_list : @96508451-0d5d-4ad4-a5bf-a30800868c4c
+						{
+							#398559614 events :: event_refs : <objectref>[];
+							#3416861704 dp_items :: dp_item_refs : <objectref>[];
+							#3735199251 properties :: property_reference_list : <propref>[];
+						}
+						#2623151553 onTrigger :: function(bool,bool) : @9f7a1959-d8a0-4598-b2d3-27684653d4fc
+						{
+							#2318400939 script :: string : "function(v:arg0::bool)\n{\n\tf:seed_rand(f:system_time())\n\tv:this.Change()\n\t\n\tv:this.x = f:rand()%(v:this.MaxWidth  - v:this.width )\n\tv:this.y = f:rand()%(v:this.MaxHeight - v:this.height)\n\t\n\tv:this.VectorX = ((f:rand()%1000) - 500) / 100\n\tv:this.VectorY = ((f:rand()%1000) - 500) / 100\n\ttrue\n}";
+						}
+					}
+					#756553601 MaxWidth :: propref(int) : @95b29266-c2cd-4737-bb1c-6cde39a4a171#3186545109;
+					#3302241841 MaxHeight :: propref(int) : @95b29266-c2cd-4737-bb1c-6cde39a4a171#1727185576;
+					#2883309307 Update :: conditional_script : @97295626-d59e-4b27-aa1b-20dbb784c09b
+					{
+						#1120365192 triggerList :: trigger_list : @387f0248-8246-431c-b146-81f28ebd1131
+						{
+							#3133564737 events :: event_refs : <objectref>[];
+							#4151357304 dp_items :: dp_item_refs : <objectref>[];
+							#2932831907 properties :: property_reference_list : <propref>[@ffcba716-2446-4d12-bb70-3a722c8a6887#2148392498];
+						}
+						#2351475387 onTrigger :: function(bool,bool) : @74e18020-25c3-4546-b421-a96ffaa5228c
+						{
+							#1289245843 script :: string : "function(v:arg0::bool)\n{\n\tv:this.x += v:this.VectorX\n\tif(v:this.x <= 0){\n\t\tv:this.x = 0\n\t\tv:this.VectorX = -v:this.VectorX\n\t\t//v:this.VectorX += (f:rand()%3) - 1\n\t\tv:this.Change()\n\t}\n\t\n\tif(v:this.x >= (v:this.MaxWidth - v:this.width)){\n\t\tv:this.x = (v:this.MaxWidth - v:this.width)\n\t\tv:this.VectorX = -v:this.VectorX\n\t\t//v:this.VectorX += (f:rand()%3) - 1\n\t\tv:this.Change()\n\t}\n\tv:this.y += v:this.VectorY\n\tif(v:this.y <= 0){\n\t\tv:this.y = 0\n\t\tv:this.VectorY = -v:this.VectorY\n\t\t//v:this.VectorY += (f:rand()%3) - 1\n\t\tv:this.Change()\n\t}\n\t\n\tif(v:this.y >= (v:this.MaxHeight - v:this.height)){\n\t\tv:this.y = (v:this.MaxHeight - v:this.height)\n\t\tv:this.VectorY = -v:this.VectorY\n\t\t//v:this.VectorY += (f:rand()%3) - 1\n\t\tv:this.Change()\n\t}\n\tfalse\n}";
+						}
+					}
+					#1739246729 Change :: function(bool) : @a90cdfe5-ba49-4e5d-bcbb-b6b45a9390c5
+					{
+						#2056747418 script :: string : "function()\n{\n\tv:this.fillColor = f:rgba2color(f:rand()%256,f:rand()%256,f:rand()%256,255)\n\t\n\tv:this.width  += (f:rand()%9) - 4\n\tv:this.height += (f:rand()%9) - 4\n\tfalse\n}";
+					}
+					#3343308939 VectorX :: int : 0;
+					#3122685672 VectorY :: int : 0;
+				}
+			}
+			#879428583 name :: string : "RandomWalk";
+			#420097682 visible :: bool : false;
+			#3186545109 width :: propref(int) : @c504c783-fb51-489f-b0ab-f1cb4b9c3433#4041525459;
+			#1727185576 height :: propref(int) : @c504c783-fb51-489f-b0ab-f1cb4b9c3433#1202042074;
+			#3852023372 x :: int : 0;
+			#4283139092 y :: int : 0;
+		}
+		#2149658963 "children_list 21" :: GtfContainer : @ad283be6-84f8-4f25-8d3c-27991041e4f5
+		{
+			#4150243665 features :: feature_list : @4b4aff22-2b16-4e15-9e38-7557a5e6a11d
+			{
+			}
+			#3701647355 children :: children_list : @62e42487-73a2-4ab0-8077-59ea3efec0eb
+			{
+				#45140263 "children_list 20" :: GtfImage : @87498d6a-0b51-47d3-9c18-2032281dc6a3
+				{
+					#4148549358 features :: feature_list : @17870617-3b88-4898-96c4-d7fa3880dd86
+					{
+						#2377961064 "feature_list 6" :: ScaleMode : @ad7501f0-13fb-4ea7-9040-c9178c180a51
+						{
+							#3878831882 scaleMode :: int : 1;
+						}
+						#1121241012 "feature_list 7" :: Coloration : @685aedfd-bca6-47be-8a1e-3ac4edb63275
+						{
+							#2301177924 colorationEnabled :: bool : true;
+							#899873761 colorationColor :: propref(color) : @ad283be6-84f8-4f25-8d3c-27991041e4f5#3727669992;
+						}
+					}
+					#3702244186 children :: children_list : @2795bd12-df7e-4aab-b4a0-ad7b751ae606
+					{
+					}
+					#1589989632 name :: string : "WaveS-1";
+					#4258757475 visible :: bool : true;
+					#3293699028 width :: int : 80;
+					#654339236 height :: int : 2000;
+					#503510677 x :: int : 0;
+					#968250015 y :: int : 0;
+					#2951215137 image :: image_resource : @cd3314a9-43c2-4c78-b9d6-7c84bf5e5438
+					{
+						#3183309834 file :: file : "waveS.png";
+					}
+					#3657830660 horizontalAlign :: int : 0;
+					#721286127 verticalAlign :: int : 1;
+				}
+				#2098497317 "children_list 21" :: GtfImage : @fcfc57c4-fdc6-46c8-a14c-8b3d768310b0
+				{
+					#4148549358 features :: feature_list : @603b398f-9f75-4e1a-9c94-43f644e41f9d
+					{
+						#2377961064 "feature_list 6" :: ScaleMode : @b70292e1-c95c-4521-bc1b-5d43c0a0ea6e
+						{
+							#3878831882 scaleMode :: int : 1;
+						}
+						#1121241012 "feature_list 7" :: Coloration : @70c1b0a7-909a-45da-9b8f-0487a9186dd5
+						{
+							#2301177924 colorationEnabled :: bool : true;
+							#899873761 colorationColor :: propref(color) : @ad283be6-84f8-4f25-8d3c-27991041e4f5#3727669992;
+						}
+					}
+					#3702244186 children :: children_list : @441af4b5-b174-4529-971e-10e630015200
+					{
+					}
+					#1589989632 name :: string : "WaveS-2";
+					#4258757475 visible :: bool : true;
+					#3293699028 width :: int : 70;
+					#654339236 height :: int : 2000;
+					#503510677 x :: int : 20;
+					#968250015 y :: int : 0;
+					#2951215137 image :: image_resource : @165b9c67-7338-4abe-9c5e-a0513123dcce
+					{
+						#1739247929 file :: file : "waveS.png";
+					}
+					#3657830660 horizontalAlign :: int : 0;
+					#721286127 verticalAlign :: int : 1;
+				}
+				#2806682483 "children_list 22" :: GtfImage : @876eb188-de74-43f5-955b-b6a8d62bdc16
+				{
+					#4148549358 features :: feature_list : @b56fbeba-20c4-4063-a403-04fb9545fbdd
+					{
+						#2377961064 "feature_list 6" :: ScaleMode : @ad1ad6d8-515b-4965-8fdd-0db64dcbcfc4
+						{
+							#3878831882 scaleMode :: int : 1;
+						}
+						#1121241012 "feature_list 7" :: Coloration : @c0bab6a2-488a-4033-a3d2-d2bf86d90d0f
+						{
+							#2301177924 colorationEnabled :: bool : true;
+							#899873761 colorationColor :: propref(color) : @ad283be6-84f8-4f25-8d3c-27991041e4f5#3727669992;
+						}
+					}
+					#3702244186 children :: children_list : @f568eac3-8d49-4bad-9aaf-a25cb968dab3
+					{
+					}
+					#1589989632 name :: string : "WaveS-3";
+					#4258757475 visible :: bool : true;
+					#3293699028 width :: int : 90;
+					#654339236 height :: int : 2000;
+					#503510677 x :: int : 0;
+					#968250015 y :: int : 0;
+					#2951215137 image :: image_resource : @5c4b7bf6-a4d3-48fa-b723-454c17a2dd95
+					{
+						#3183309834 file :: file : "waveS.png";
+					}
+					#3657830660 horizontalAlign :: int : 0;
+					#721286127 verticalAlign :: int : 1;
+				}
+				#2588762458 "children_list 23" :: GtfImage : @1fa20179-574b-487f-a2b2-89d7c8efaaac
+				{
+					#4148549358 features :: feature_list : @fd59cf53-c41c-4800-b138-a420576a814e
+					{
+						#2377961064 "feature_list 6" :: ScaleMode : @a17d1aa3-6d14-4e55-aa96-cf1179f4bd80
+						{
+							#3878831882 scaleMode :: int : 1;
+						}
+						#1121241012 "feature_list 7" :: Coloration : @91888896-6972-4c51-8eb6-8f6c7b022ed7
+						{
+							#2301177924 colorationEnabled :: bool : true;
+							#899873761 colorationColor :: propref(color) : @ad283be6-84f8-4f25-8d3c-27991041e4f5#3727669992;
+						}
+					}
+					#3702244186 children :: children_list : @e4565afc-0ba2-4ca7-9d77-f9f4e5c089e7
+					{
+					}
+					#1589989632 name :: string : "WaveXL-1";
+					#4258757475 visible :: bool : true;
+					#3293699028 width :: int : 80;
+					#654339236 height :: int : 2000;
+					#503510677 x :: int : 20;
+					#968250015 y :: int : 0;
+					#2951215137 image :: image_resource : @e8257211-4333-422b-8e3c-bf81868306d2
+					{
+						#2768389265 file :: file : "waveXL.png";
+					}
+					#3657830660 horizontalAlign :: int : 0;
+					#721286127 verticalAlign :: int : 1;
+				}
+				#4056394462 "children_list 24" :: GtfImage : @c6ff93df-9421-452b-b683-2d7195d34a28
+				{
+					#4148549358 features :: feature_list : @256578f4-9d88-462f-80ad-b7931ea01c17
+					{
+						#2377961064 "feature_list 6" :: ScaleMode : @ce74da9a-6d89-4d6a-869d-19beafcdb165
+						{
+							#3878831882 scaleMode :: int : 1;
+						}
+						#1121241012 "feature_list 7" :: Coloration : @625c1cd8-833e-443e-9ffc-ebfd578b6690
+						{
+							#2301177924 colorationEnabled :: bool : true;
+							#899873761 colorationColor :: propref(color) : @ad283be6-84f8-4f25-8d3c-27991041e4f5#3727669992;
+						}
+					}
+					#3702244186 children :: children_list : @79e90f94-bb13-4519-acc2-2c25cddcdcda
+					{
+					}
+					#1589989632 name :: string : "WaveXL-2";
+					#4258757475 visible :: bool : true;
+					#3293699028 width :: int : 90;
+					#654339236 height :: int : 2000;
+					#503510677 x :: int : 0;
+					#968250015 y :: int : 0;
+					#2951215137 image :: image_resource : @d33cfd59-82bc-471a-90f7-33f7dc400863
+					{
+						#2768389265 file :: file : "waveXL.png";
+					}
+					#3657830660 horizontalAlign :: int : 0;
+					#721286127 verticalAlign :: int : 1;
+				}
+				#1143484786 "children_list 25" :: GtfParallelAnimation : @5a51b285-1b8a-4f18-bc1b-9f0f42f118d5
+				{
+					#1023157002 features :: feature_list : @82ed0f3c-04ab-4325-a067-4ecbed11c839
+					{
+					}
+					#4012287785 children :: children_list : @82ee1f5a-46e0-473a-a8dc-320897be3a6b
+					{
+						#3900192329 "children_list 29" :: GtfSinusCurveS32 : @b76bef5a-4f1a-42cb-aabf-c112707c52f0
+						{
+							#335537248 features :: feature_list : @5e557980-42c6-483d-977f-78b691067206
+							{
+							}
+							#4206472365 children :: children_list : @ee0e7c5a-193e-46c1-91bf-b0aee7dd4155
+							{
+							}
+							#83167347 name :: string : "WaveS-1";
+							#1552873274 enabled :: bool : true;
+							#1385780974 delay :: int : 0;
+							#2202336877 duration :: int : 16000;
+							#3946106294 repeat :: int : 0;
+							#3862451263 alternating :: bool : false;
+							#4252528185 relative :: bool : false;
+							#1703884837 amplitude :: int : 450;
+							#2258494006 constant :: int : -450;
+							#3229893223 frequency :: float : 0.0625;
+							#1428444465 phase :: float : 0.0;
+							#188973552 target :: propref(int) : @87498d6a-0b51-47d3-9c18-2032281dc6a3#968250015;
+						}
+						#2817852218 "children_list 30" :: GtfSinusCurveS32 : @9b8dfda7-a28e-4ee0-b7f3-25cf28d925bd
+						{
+							#335537248 features :: feature_list : @5d18bfca-a8f8-48f1-80db-4b8feb2a2208
+							{
+							}
+							#4206472365 children :: children_list : @da3cc395-b013-49ab-b0db-1fb03a2f3639
+							{
+							}
+							#83167347 name :: string : "WaveS-2";
+							#1552873274 enabled :: bool : true;
+							#1385780974 delay :: int : 0;
+							#2202336877 duration :: propref(int) : @b76bef5a-4f1a-42cb-aabf-c112707c52f0#2202336877;
+							#3946106294 repeat :: int : 0;
+							#3862451263 alternating :: bool : false;
+							#4252528185 relative :: bool : false;
+							#1703884837 amplitude :: propref(int) : @b76bef5a-4f1a-42cb-aabf-c112707c52f0#1703884837;
+							#2258494006 constant :: propref(int) : @b76bef5a-4f1a-42cb-aabf-c112707c52f0#2258494006;
+							#3229893223 frequency :: propref(float) : @b76bef5a-4f1a-42cb-aabf-c112707c52f0#3229893223;
+							#1428444465 phase :: float : 90.0;
+							#188973552 target :: propref(int) : @fcfc57c4-fdc6-46c8-a14c-8b3d768310b0#968250015;
+						}
+						#3843328455 "children_list 31" :: GtfSinusCurveS32 : @16ba6afc-f8ee-4e54-b5f3-b20413b1e8ec
+						{
+							#335537248 features :: feature_list : @cb0fcaa7-f408-43eb-a4ae-9e9d6291ea32
+							{
+							}
+							#4206472365 children :: children_list : @fec122ca-870a-475a-acd7-752f3d11e1f7
+							{
+							}
+							#83167347 name :: string : "WaveS-3";
+							#1552873274 enabled :: bool : true;
+							#1385780974 delay :: int : 0;
+							#2202336877 duration :: int : 32000;
+							#3946106294 repeat :: int : 0;
+							#3862451263 alternating :: bool : false;
+							#4252528185 relative :: bool : false;
+							#1703884837 amplitude :: propref(int) : @b76bef5a-4f1a-42cb-aabf-c112707c52f0#1703884837;
+							#2258494006 constant :: int : -450;
+							#3229893223 frequency :: float : 0.03125;
+							#1428444465 phase :: float : 45.0;
+							#188973552 target :: propref(int) : @876eb188-de74-43f5-955b-b6a8d62bdc16#968250015;
+						}
+						#1733880314 "children_list 32" :: GtfSinusCurveS32 : @e5d99adc-3497-44a5-9fb6-da4784ead147
+						{
+							#335537248 features :: feature_list : @f80bdd8a-158b-4f58-ba71-1b5287181a87
+							{
+							}
+							#4206472365 children :: children_list : @922293c4-b579-4409-a1e0-186cfd617546
+							{
+							}
+							#83167347 name :: string : "WaveXL-1";
+							#1552873274 enabled :: bool : true;
+							#1385780974 delay :: int : 0;
+							#2202336877 duration :: int : 16000;
+							#3946106294 repeat :: int : 0;
+							#3862451263 alternating :: bool : false;
+							#4252528185 relative :: bool : false;
+							#1703884837 amplitude :: propref(int) : @b76bef5a-4f1a-42cb-aabf-c112707c52f0#1703884837;
+							#2258494006 constant :: int : -450;
+							#3229893223 frequency :: float : 0.0625;
+							#1428444465 phase :: float : 22.5;
+							#188973552 target :: propref(int) : @1fa20179-574b-487f-a2b2-89d7c8efaaac#968250015;
+						}
+						#3853301717 "children_list 33" :: GtfSinusCurveS32 : @086c60b5-41ae-4bba-be42-d40c2e6468ec
+						{
+							#335537248 features :: feature_list : @727376e2-41a6-41ee-8874-349278c3617c
+							{
+							}
+							#4206472365 children :: children_list : @f98b9f8e-cf14-4dcc-bcbd-f2ac54202f6a
+							{
+							}
+							#83167347 name :: string : "WaveXL-2";
+							#1552873274 enabled :: bool : true;
+							#1385780974 delay :: int : 0;
+							#2202336877 duration :: int : 32000;
+							#3946106294 repeat :: int : 0;
+							#3862451263 alternating :: bool : false;
+							#4252528185 relative :: bool : false;
+							#1703884837 amplitude :: propref(int) : @b76bef5a-4f1a-42cb-aabf-c112707c52f0#1703884837;
+							#2258494006 constant :: int : -450;
+							#3229893223 frequency :: float : 0.03125;
+							#1428444465 phase :: float : 135.0;
+							#188973552 target :: propref(int) : @c6ff93df-9421-452b-b683-2d7195d34a28#968250015;
+						}
+						#199560830 "children_list 38" :: GtfSinusCurveS32 : @9ce3ef41-e35b-4564-baf8-a6cef9c1a030
+						{
+							#781962201 features :: feature_list : @7032e099-3185-4fc5-aa3f-ff2441bf5514
+							{
+							}
+							#3197710832 children :: children_list : @881ca979-ae61-48e3-bc1f-507b1d4feae6
+							{
+							}
+							#67349680 name :: string : "Red";
+							#1254570035 enabled :: bool : true;
+							#2756033263 delay :: int : 0;
+							#1580262735 duration :: int : 30000;
+							#4056947735 repeat :: int : 0;
+							#548401316 alternating :: bool : false;
+							#1993511627 relative :: bool : false;
+							#3224982224 amplitude :: int : 127;
+							#394748137 constant :: int : 127;
+							#2353832713 frequency :: float : 1.0;
+							#708418371 phase :: float : 0.0;
+							#683304500 target :: propref(int) : @ad283be6-84f8-4f25-8d3c-27991041e4f5#543004719;
+						}
+						#1999807166 "children_list 39" :: GtfSinusCurveS32 : @ed3af0b7-d902-464d-b500-5af8b3b4c8c3
+						{
+							#781962201 features :: feature_list : @622b1c63-b9bd-4ebb-8f62-cc08e36a5cbb
+							{
+							}
+							#3197710832 children :: children_list : @b1e66a0a-9f59-4bbd-bce3-99701186846c
+							{
+							}
+							#67349680 name :: string : "Green";
+							#1254570035 enabled :: bool : true;
+							#2756033263 delay :: int : 0;
+							#1580262735 duration :: int : 80000;
+							#4056947735 repeat :: int : 0;
+							#548401316 alternating :: bool : false;
+							#1993511627 relative :: bool : false;
+							#3224982224 amplitude :: int : 127;
+							#394748137 constant :: int : 127;
+							#2353832713 frequency :: float : 2.0;
+							#708418371 phase :: float : 22.5;
+							#683304500 target :: propref(int) : @ad283be6-84f8-4f25-8d3c-27991041e4f5#4150544;
+						}
+						#2776953168 "children_list 40" :: GtfSinusCurveS32 : @69ce332c-2f7a-4b72-90d8-e09de2d391bf
+						{
+							#781962201 features :: feature_list : @7e5a51be-4ba0-421f-9b61-424c7cf52d22
+							{
+							}
+							#3197710832 children :: children_list : @2e51384d-39c8-4be2-8682-72f4f11bcce7
+							{
+							}
+							#67349680 name :: string : "Blue";
+							#1254570035 enabled :: bool : true;
+							#2756033263 delay :: int : 0;
+							#1580262735 duration :: int : 90000;
+							#4056947735 repeat :: int : 0;
+							#548401316 alternating :: bool : false;
+							#1993511627 relative :: bool : false;
+							#3224982224 amplitude :: int : 127;
+							#394748137 constant :: int : 127;
+							#2353832713 frequency :: float : 3.0;
+							#708418371 phase :: float : 90.0;
+							#683304500 target :: propref(int) : @ad283be6-84f8-4f25-8d3c-27991041e4f5#3155579219;
+						}
+					}
+					#127581823 name :: string : "Animation";
+					#1005423985 enabled :: bool : true;
+					#3450016078 repeat :: int : 1;
+					#1154379743 alternating :: bool : false;
+					#1101248829 scale :: float : 0.25;
+					#1753100599 onPlay :: function(void,int,bool) : @166c8096-6867-48d6-81fc-57d88fa261c0
+					{
+						#2555625693 script :: string : "function(v:animation_time::int, v:forward::bool)\n{\n\n}";
+					}
+					#329923857 onPause :: function(void,int) : @af9cdad5-e364-44ff-9326-8dac97432559
+					{
+						#2942816763 script :: string : "function(v:animation_time::int)\n{\n\n}";
+					}
+					#2809555382 onTerminate :: function(void,int,int) : @88e1cd03-0043-4981-a6a4-60a6f8ccfb9f
+					{
+						#2861484190 script :: string : "function(v:animation_time::int, v:terminate::int)\n{\n\n}";
+					}
+					#2628871455 AnimHandler :: conditional_script : @98c07fe6-b409-4879-b8c7-54454b431388
+					{
+						#1274185315 triggerList :: trigger_list : @8d4998cc-2b64-40bb-a306-9971637491df
+						{
+							#3084120080 events :: event_refs : <objectref>[];
+							#2816135948 dp_items :: dp_item_refs : <objectref>[];
+							#1982262174 properties :: property_reference_list : <propref>[];
+						}
+						#3128994689 onTrigger :: function(bool,bool) : @f4ecbbc6-4729-4e88-a113-561293130e19
+						{
+							#3153324524 script :: string : "function(v:arg0::bool)\n{\n\tf:animation_play(v:this)\n\tfalse\n}";
+						}
+					}
+				}
+			}
+			#1604038086 name :: string : "Wave1";
+			#1868456509 visible :: bool_scriptedValue : @980857e9-92a0-4d03-aa81-a0e6588e5681
+			{
+				#2856595849 triggerList :: trigger_list : @c3241c1a-9c17-496f-8599-00e9dc3343b5
+				{
+					#3241973414 events :: event_refs : <objectref>[];
+					#3599496518 dp_items :: dp_item_refs : <objectref>[];
+					#3686257562 properties :: property_reference_list : <propref>[];
+				}
+				#1945303135 onTrigger :: function(bool,bool) : @637b2f78-d7d1-4700-abe3-859fe7017d3b
+				{
+					#3107223966 script :: string : "function(v:arg0::bool)\n{\n\t// todo: auto generated return value, please adapt\n\tfalse\n}";
+				}
+				#1607604074 read :: function(bool) : @5e9645e8-8c5d-46ad-a446-ece7da4f9dc1
+				{
+					#2963997535 script :: string : "function()\n{\n\tv:this.Color\n\ttrue\n}";
+				}
+				#3821007265 write :: function(bool,bool) : @bf2cb304-9d39-4c86-a408-d1bdbe8418b0
+				{
+					#1761521552 script :: string : "function(v:arg0::bool)\n{\n\ttrue\n}";
+				}
+			}
+			#2371783922 width :: int : 90;
+			#1132997455 height :: int : 1024;
+			#3925508682 x :: int : 50;
+			#3761915028 y :: int : 0;
+			#3727669992 Color :: color : 255;
+			#543004719 Rad :: int_scriptedValue : @f658c6f2-c340-4319-86c2-6aa183b0f9a5
+			{
+				#1617273212 triggerList :: trigger_list : @7198d56f-3b8a-4759-9717-4fc819984d99
+				{
+					#3739954309 events :: event_refs : <objectref>[];
+					#2791390660 dp_items :: dp_item_refs : <objectref>[];
+					#3010486985 properties :: property_reference_list : <propref>[];
+				}
+				#1595517770 onTrigger :: function(bool,bool) : @175f850e-9600-495c-b0af-acdeb0f309d5
+				{
+					#2151783109 script :: string : "function(v:arg0::bool)\n{\n\t// todo: auto generated return value, please adapt\n\tfalse\n}";
+				}
+				#1395612887 read :: function(int) : @6693014d-03b5-420f-9609-e9a287a46fd8
+				{
+					#1220864971 script :: string : "function()\n{\n\tv:this.RGB[0]\n}";
+				}
+				#2493150936 write :: function(bool,int) : @1875b6e5-8e51-4e6d-a35f-bbfd24f2b27e
+				{
+					#1271532879 script :: string : "function(v:arg0::int)\n{\n\tv:this.RGB[0] = v:arg0::int\n\tv:this.Color = f:rgba2color(v:this.RGB[0],v:this.RGB[1],v:this.RGB[2],255)\n\ttrue\n}";
+				}
+			}
+			#4150544 Green :: int_scriptedValue : @b57fc1a1-debd-4b17-b92e-1db5ceaa14be
+			{
+				#2980074936 triggerList :: trigger_list : @585cf201-ffb2-4f90-8904-9aecabb9e140
+				{
+					#2887196773 events :: event_refs : <objectref>[];
+					#3497548907 dp_items :: dp_item_refs : <objectref>[];
+					#3223706388 properties :: property_reference_list : <propref>[];
+				}
+				#2913078498 onTrigger :: function(bool,bool) : @a7cc3a62-8b2e-493b-af97-8efc9cdbca39
+				{
+					#1795204450 script :: string : "function(v:arg0::bool)\n{\n\t// todo: auto generated return value, please adapt\n\tfalse\n}";
+				}
+				#932263930 read :: function(int) : @03c8b578-c057-4736-806d-29d246e4a79f
+				{
+					#2309852473 script :: string : "function()\n{\n\tv:this.RGB[1]\n}";
+				}
+				#2379861434 write :: function(bool,int) : @34d384ea-03e3-474c-82ed-e696a74e5bb5
+				{
+					#2421755873 script :: string : "function(v:arg0::int)\n{\n\tv:this.RGB[1] = v:arg0::int\n\tv:this.Color = f:rgba2color(v:this.RGB[0],v:this.RGB[1],v:this.RGB[2],255)\n\tfalse\n}";
+				}
+			}
+			#3155579219 Blue :: int_scriptedValue : @43218ff3-f859-4476-88fd-9baa1c8747ec
+			{
+				#2686843400 triggerList :: trigger_list : @7834a96d-8d97-481e-b523-1830b8f5df6a
+				{
+					#3392251372 events :: event_refs : <objectref>[];
+					#3098989757 dp_items :: dp_item_refs : <objectref>[];
+					#2970862163 properties :: property_reference_list : <propref>[];
+				}
+				#2665079526 onTrigger :: function(bool,bool) : @ff1cd520-75c2-482b-a1e4-f6bffc470e15
+				{
+					#2040816306 script :: string : "function(v:arg0::bool)\n{\n\t// todo: auto generated return value, please adapt\n\tfalse\n}";
+				}
+				#1479914057 read :: function(int) : @828aa771-de9e-444e-a35f-fa1d04d4a3dc
+				{
+					#1412839535 script :: string : "function()\n{\n\tv:this.RGB[2]\n}";
+				}
+				#3516631379 write :: function(bool,int) : @120974b5-c6f8-496f-b17e-da56e9d2e049
+				{
+					#2579306786 script :: string : "function(v:arg0::int)\n{\n\tv:this.RGB[2] = v:arg0::int\n\tv:this.Color = f:rgba2color(v:this.RGB[0],v:this.RGB[1],v:this.RGB[2],255)\n\tfalse\n}";
+				}
+			}
+			#1374743963 RGB :: intlist : <int>[0, 0, 0];
+		}
+		#3386637395 "children_list 35" :: GtfContainer : @79a61246-61e4-4a25-8550-6e975c187223
+		{
+			#4150243665 features :: feature_list : @67c61ced-a567-44e3-9a01-a7e6fbaf973b
+			{
+			}
+			#3701647355 children :: children_list : @3733d6ec-3fe1-489b-8e7e-dc9881c0a211
+			{
+				#45140263 "children_list 20" :: GtfImage : @d5a228d1-6ac9-4ed6-a3f1-cdbe9f3d1dbf
+				{
+					#4148549358 features :: feature_list : @17472012-6b84-495b-9010-8ef21846a330
+					{
+						#2377961064 "feature_list 6" :: ScaleMode : @1cf65726-7bf2-4541-a07c-5b02dd0d8ac3
+						{
+							#3878831882 scaleMode :: int : 1;
+						}
+						#1121241012 "feature_list 7" :: Coloration : @67dac9a8-be31-4286-8d66-d5ff7ca38dc0
+						{
+							#2301177924 colorationEnabled :: bool : true;
+							#899873761 colorationColor :: propref(color) : @79a61246-61e4-4a25-8550-6e975c187223#3727669992;
+						}
+					}
+					#3702244186 children :: children_list : @51cba411-83ee-431f-9097-ee0fcafbe8ea
+					{
+					}
+					#1589989632 name :: string : "WaveS-1";
+					#4258757475 visible :: bool : true;
+					#3293699028 width :: int : 80;
+					#654339236 height :: int : 2000;
+					#503510677 x :: int : 0;
+					#968250015 y :: int : 0;
+					#2951215137 image :: image_resource : @314f7bc0-6b92-4a5d-90ed-acb425f6b8c2
+					{
+						#3183309834 file :: file : "waveS.png";
+					}
+					#3657830660 horizontalAlign :: int : 0;
+					#721286127 verticalAlign :: int : 1;
+				}
+				#2098497317 "children_list 21" :: GtfImage : @3ec6758b-e33c-40e2-99c7-923c881049bc
+				{
+					#4148549358 features :: feature_list : @3b8a10e4-c162-4937-90bb-42f78e89579e
+					{
+						#2377961064 "feature_list 6" :: ScaleMode : @45a1b97b-c210-4df3-96be-29641751df44
+						{
+							#3878831882 scaleMode :: int : 1;
+						}
+						#1121241012 "feature_list 7" :: Coloration : @5a465c08-0991-4039-a336-e88601383cd4
+						{
+							#2301177924 colorationEnabled :: bool : true;
+							#899873761 colorationColor :: propref(color) : @79a61246-61e4-4a25-8550-6e975c187223#3727669992;
+						}
+					}
+					#3702244186 children :: children_list : @87f30c8f-cd0b-4e88-8474-e8874c68010a
+					{
+					}
+					#1589989632 name :: string : "WaveS-2";
+					#4258757475 visible :: bool : true;
+					#3293699028 width :: int : 70;
+					#654339236 height :: int : 2000;
+					#503510677 x :: int : 20;
+					#968250015 y :: int : 0;
+					#2951215137 image :: image_resource : @6bf89dc6-8b3f-4b59-81e1-0361f965320c
+					{
+						#1739247929 file :: file : "waveS.png";
+					}
+					#3657830660 horizontalAlign :: int : 0;
+					#721286127 verticalAlign :: int : 1;
+				}
+				#2806682483 "children_list 22" :: GtfImage : @c5f3c8ac-555b-467e-87eb-790888a151bb
+				{
+					#4148549358 features :: feature_list : @59daa5f4-c2c0-44ca-a5a4-ff6735e83fc2
+					{
+						#2377961064 "feature_list 6" :: ScaleMode : @0b55c424-9c94-49a5-8736-1b9ae124342e
+						{
+							#3878831882 scaleMode :: int : 1;
+						}
+						#1121241012 "feature_list 7" :: Coloration : @399cee72-88a4-4d86-b235-3589fa88392e
+						{
+							#2301177924 colorationEnabled :: bool : true;
+							#899873761 colorationColor :: propref(color) : @79a61246-61e4-4a25-8550-6e975c187223#3727669992;
+						}
+					}
+					#3702244186 children :: children_list : @31f508af-699d-4ffd-9f16-c604b719bc09
+					{
+					}
+					#1589989632 name :: string : "WaveS-3";
+					#4258757475 visible :: bool : true;
+					#3293699028 width :: int : 90;
+					#654339236 height :: int : 2000;
+					#503510677 x :: int : 0;
+					#968250015 y :: int : 0;
+					#2951215137 image :: image_resource : @03d4128d-b186-44b8-af37-33a28d2810cc
+					{
+						#3183309834 file :: file : "waveS.png";
+					}
+					#3657830660 horizontalAlign :: int : 0;
+					#721286127 verticalAlign :: int : 1;
+				}
+				#2588762458 "children_list 23" :: GtfImage : @d5652c05-6905-4070-89d9-a41c721c21d8
+				{
+					#4148549358 features :: feature_list : @ec13af8e-0577-403c-9ee3-9bb77f8c7cac
+					{
+						#2377961064 "feature_list 6" :: ScaleMode : @f281cfdf-4a5a-498e-9217-27de75540470
+						{
+							#3878831882 scaleMode :: int : 1;
+						}
+						#1121241012 "feature_list 7" :: Coloration : @c79865f6-98db-4e17-a71a-ca3fe56234a6
+						{
+							#2301177924 colorationEnabled :: bool : true;
+							#899873761 colorationColor :: propref(color) : @79a61246-61e4-4a25-8550-6e975c187223#3727669992;
+						}
+					}
+					#3702244186 children :: children_list : @c6b227a5-fd9b-4479-82c9-10698b60b24f
+					{
+					}
+					#1589989632 name :: string : "WaveXL-1";
+					#4258757475 visible :: bool : true;
+					#3293699028 width :: int : 80;
+					#654339236 height :: int : 2000;
+					#503510677 x :: int : 20;
+					#968250015 y :: int : 0;
+					#2951215137 image :: image_resource : @b1d23031-7255-415f-92f3-f05cb7a2161b
+					{
+						#2768389265 file :: file : "waveXL.png";
+					}
+					#3657830660 horizontalAlign :: int : 0;
+					#721286127 verticalAlign :: int : 1;
+				}
+				#4056394462 "children_list 24" :: GtfImage : @c870cb06-aebf-4a2f-bd65-ee4cfc08c3ca
+				{
+					#4148549358 features :: feature_list : @4bb64084-a621-4c19-a3e4-a4ae55a020af
+					{
+						#2377961064 "feature_list 6" :: ScaleMode : @ca105153-34e5-4b2d-9fb9-f6eb106f75dd
+						{
+							#3878831882 scaleMode :: int : 1;
+						}
+						#1121241012 "feature_list 7" :: Coloration : @ec02fbea-72b3-4879-aaa4-feb6832e550f
+						{
+							#2301177924 colorationEnabled :: bool : true;
+							#899873761 colorationColor :: propref(color) : @79a61246-61e4-4a25-8550-6e975c187223#3727669992;
+						}
+					}
+					#3702244186 children :: children_list : @f8573e5e-db6e-4ca7-bdf1-14e66805d95d
+					{
+					}
+					#1589989632 name :: string : "WaveXL-2";
+					#4258757475 visible :: bool : true;
+					#3293699028 width :: int : 90;
+					#654339236 height :: int : 2000;
+					#503510677 x :: int : 0;
+					#968250015 y :: int : 0;
+					#2951215137 image :: image_resource : @1a10ec7c-153b-4e3c-868d-25eb8ad81f44
+					{
+						#2768389265 file :: file : "waveXL.png";
+					}
+					#3657830660 horizontalAlign :: int : 0;
+					#721286127 verticalAlign :: int : 1;
+				}
+				#1143484786 "children_list 25" :: GtfParallelAnimation : @05038790-ca0a-467a-8e1b-b076609f0a24
+				{
+					#1023157002 features :: feature_list : @e3e0ff1e-8763-4de8-a766-6c9903e87607
+					{
+					}
+					#4012287785 children :: children_list : @6ed2f7d3-868c-41cc-81ad-001016d05f8e
+					{
+						#3900192329 "children_list 29" :: GtfSinusCurveS32 : @bff8a4d2-9fd1-4f7d-bf6e-641921bc5e4a
+						{
+							#335537248 features :: feature_list : @3248fb4f-0db1-4e5f-abc2-7877dfd5da06
+							{
+							}
+							#4206472365 children :: children_list : @78a0ec3c-26d3-42b6-adf5-1df0912cbe02
+							{
+							}
+							#83167347 name :: string : "WaveS-1";
+							#1552873274 enabled :: bool : true;
+							#1385780974 delay :: int : 0;
+							#2202336877 duration :: int : 16000;
+							#3946106294 repeat :: int : 0;
+							#3862451263 alternating :: bool : false;
+							#4252528185 relative :: bool : false;
+							#1703884837 amplitude :: int : 450;
+							#2258494006 constant :: int : -450;
+							#3229893223 frequency :: float : 0.0625;
+							#1428444465 phase :: float : 15.5;
+							#188973552 target :: propref(int) : @d5a228d1-6ac9-4ed6-a3f1-cdbe9f3d1dbf#968250015;
+						}
+						#2817852218 "children_list 30" :: GtfSinusCurveS32 : @39f95457-3f8e-4317-8199-751e37fb4d14
+						{
+							#335537248 features :: feature_list : @79c7c975-181f-4c27-a8db-23a0b7a14775
+							{
+							}
+							#4206472365 children :: children_list : @9eee5ca6-8f6d-443c-b456-53ead64ac1c1
+							{
+							}
+							#83167347 name :: string : "WaveS-2";
+							#1552873274 enabled :: bool : true;
+							#1385780974 delay :: int : 0;
+							#2202336877 duration :: propref(int) : @bff8a4d2-9fd1-4f7d-bf6e-641921bc5e4a#2202336877;
+							#3946106294 repeat :: int : 0;
+							#3862451263 alternating :: bool : false;
+							#4252528185 relative :: bool : false;
+							#1703884837 amplitude :: propref(int) : @bff8a4d2-9fd1-4f7d-bf6e-641921bc5e4a#1703884837;
+							#2258494006 constant :: propref(int) : @bff8a4d2-9fd1-4f7d-bf6e-641921bc5e4a#2258494006;
+							#3229893223 frequency :: propref(float) : @bff8a4d2-9fd1-4f7d-bf6e-641921bc5e4a#3229893223;
+							#1428444465 phase :: float : 75.5;
+							#188973552 target :: propref(int) : @3ec6758b-e33c-40e2-99c7-923c881049bc#968250015;
+						}
+						#3843328455 "children_list 31" :: GtfSinusCurveS32 : @5abd1089-e4b8-4e96-b3f1-c981576d3874
+						{
+							#335537248 features :: feature_list : @627ff092-244c-4ff7-950b-6760c61c57e3
+							{
+							}
+							#4206472365 children :: children_list : @45dd12ae-c5c8-427a-baa3-c7bb69ed5d96
+							{
+							}
+							#83167347 name :: string : "WaveS-3";
+							#1552873274 enabled :: bool : true;
+							#1385780974 delay :: int : 0;
+							#2202336877 duration :: int : 32000;
+							#3946106294 repeat :: int : 0;
+							#3862451263 alternating :: bool : false;
+							#4252528185 relative :: bool : false;
+							#1703884837 amplitude :: propref(int) : @bff8a4d2-9fd1-4f7d-bf6e-641921bc5e4a#1703884837;
+							#2258494006 constant :: int : -450;
+							#3229893223 frequency :: float : 0.03125;
+							#1428444465 phase :: float : 90.0;
+							#188973552 target :: propref(int) : @c5f3c8ac-555b-467e-87eb-790888a151bb#968250015;
+						}
+						#1733880314 "children_list 32" :: GtfSinusCurveS32 : @44b128f6-a4a3-4929-8c26-e853688d9f77
+						{
+							#335537248 features :: feature_list : @6dd3dbc4-b6b2-4cfa-8bac-95d0fefc9993
+							{
+							}
+							#4206472365 children :: children_list : @18080539-b6b9-4ef4-b536-552f32091313
+							{
+							}
+							#83167347 name :: string : "WaveXL-1";
+							#1552873274 enabled :: bool : true;
+							#1385780974 delay :: int : 0;
+							#2202336877 duration :: int : 16000;
+							#3946106294 repeat :: int : 0;
+							#3862451263 alternating :: bool : false;
+							#4252528185 relative :: bool : false;
+							#1703884837 amplitude :: propref(int) : @bff8a4d2-9fd1-4f7d-bf6e-641921bc5e4a#1703884837;
+							#2258494006 constant :: int : -450;
+							#3229893223 frequency :: float : 0.0625;
+							#1428444465 phase :: float : 11.25;
+							#188973552 target :: propref(int) : @d5652c05-6905-4070-89d9-a41c721c21d8#968250015;
+						}
+						#3853301717 "children_list 33" :: GtfSinusCurveS32 : @1d038cc7-445a-490b-9e8c-28d5781b4327
+						{
+							#335537248 features :: feature_list : @ed00cd05-7b8e-4356-9c50-83661a43bf98
+							{
+							}
+							#4206472365 children :: children_list : @46ebb3fc-ac36-4eeb-9b50-afdf5b1ac19d
+							{
+							}
+							#83167347 name :: string : "WaveXL-2";
+							#1552873274 enabled :: bool : true;
+							#1385780974 delay :: int : 0;
+							#2202336877 duration :: int : 32000;
+							#3946106294 repeat :: int : 0;
+							#3862451263 alternating :: bool : false;
+							#4252528185 relative :: bool : false;
+							#1703884837 amplitude :: propref(int) : @bff8a4d2-9fd1-4f7d-bf6e-641921bc5e4a#1703884837;
+							#2258494006 constant :: int : -450;
+							#3229893223 frequency :: float : 0.03125;
+							#1428444465 phase :: float : 101.25;
+							#188973552 target :: propref(int) : @c870cb06-aebf-4a2f-bd65-ee4cfc08c3ca#968250015;
+						}
+						#199560830 "children_list 38" :: GtfSinusCurveS32 : @a1399b57-2f6a-487d-a76f-d8188f89dc7a
+						{
+							#781962201 features :: feature_list : @6ca2e298-a260-4422-8709-d1206abbc0b3
+							{
+							}
+							#3197710832 children :: children_list : @30b822e0-bd88-43a3-8c4a-312e43a2c044
+							{
+							}
+							#67349680 name :: string : "Red";
+							#1254570035 enabled :: bool : true;
+							#2756033263 delay :: int : 0;
+							#1580262735 duration :: int : 30000;
+							#4056947735 repeat :: int : 0;
+							#548401316 alternating :: bool : false;
+							#1993511627 relative :: bool : false;
+							#3224982224 amplitude :: int : 127;
+							#394748137 constant :: int : 127;
+							#2353832713 frequency :: float : 1.0;
+							#708418371 phase :: float : 0.0;
+							#683304500 target :: propref(int) : @79a61246-61e4-4a25-8550-6e975c187223#543004719;
+						}
+						#1999807166 "children_list 39" :: GtfSinusCurveS32 : @910ed69e-1193-4681-aa08-06ea9f1250f5
+						{
+							#781962201 features :: feature_list : @e6949b86-b081-4c21-b6fa-2018ec126007
+							{
+							}
+							#3197710832 children :: children_list : @64947eee-881d-4afb-bbbc-5e3dafec63f0
+							{
+							}
+							#67349680 name :: string : "Green";
+							#1254570035 enabled :: bool : true;
+							#2756033263 delay :: int : 0;
+							#1580262735 duration :: int : 80000;
+							#4056947735 repeat :: int : 0;
+							#548401316 alternating :: bool : false;
+							#1993511627 relative :: bool : false;
+							#3224982224 amplitude :: int : 127;
+							#394748137 constant :: int : 127;
+							#2353832713 frequency :: float : 2.0;
+							#708418371 phase :: float : 22.5;
+							#683304500 target :: propref(int) : @79a61246-61e4-4a25-8550-6e975c187223#4150544;
+						}
+						#2776953168 "children_list 40" :: GtfSinusCurveS32 : @3a94fb7a-9724-41b9-8f73-1f9860c523be
+						{
+							#781962201 features :: feature_list : @86b352d3-cf01-415b-8b20-2d4a063bef6c
+							{
+							}
+							#3197710832 children :: children_list : @4eb37ea1-870a-4364-8517-1c8325817cd1
+							{
+							}
+							#67349680 name :: string : "Blue";
+							#1254570035 enabled :: bool : true;
+							#2756033263 delay :: int : 0;
+							#1580262735 duration :: int : 90000;
+							#4056947735 repeat :: int : 0;
+							#548401316 alternating :: bool : false;
+							#1993511627 relative :: bool : false;
+							#3224982224 amplitude :: int : 127;
+							#394748137 constant :: int : 127;
+							#2353832713 frequency :: float : 3.0;
+							#708418371 phase :: float : 90.0;
+							#683304500 target :: propref(int) : @79a61246-61e4-4a25-8550-6e975c187223#3155579219;
+						}
+					}
+					#127581823 name :: string : "Animation";
+					#1005423985 enabled :: bool : true;
+					#3450016078 repeat :: int : 1;
+					#1154379743 alternating :: bool : false;
+					#1101248829 scale :: float : 0.25;
+					#1753100599 onPlay :: function(void,int,bool) : @ccbe5913-265f-40f1-9dae-77c995cc38a2
+					{
+						#2555625693 script :: string : "function(v:animation_time::int, v:forward::bool)\n{\n\n}";
+					}
+					#329923857 onPause :: function(void,int) : @396847dd-e26a-4d6b-bde0-1b3a5f277bf6
+					{
+						#2942816763 script :: string : "function(v:animation_time::int)\n{\n\n}";
+					}
+					#2809555382 onTerminate :: function(void,int,int) : @790faeab-11e1-4ad0-b934-66bf0d7083ae
+					{
+						#2861484190 script :: string : "function(v:animation_time::int, v:terminate::int)\n{\n\n}";
+					}
+					#2628871455 AnimHandler :: conditional_script : @61b78487-57bb-41f1-965d-6200a4919548
+					{
+						#1274185315 triggerList :: trigger_list : @2b426bd1-7134-472d-a73e-4f8802406bda
+						{
+							#3084120080 events :: event_refs : <objectref>[];
+							#2816135948 dp_items :: dp_item_refs : <objectref>[];
+							#1982262174 properties :: property_reference_list : <propref>[];
+						}
+						#3128994689 onTrigger :: function(bool,bool) : @71cad584-dc7d-4694-9c0c-c52137888120
+						{
+							#3153324524 script :: string : "function(v:arg0::bool)\n{\n\tf:animation_play(v:this)\n\tfalse\n}";
+						}
+					}
+				}
+			}
+			#1604038086 name :: string : "Wave2";
+			#1868456509 visible :: bool_scriptedValue : @96695f52-e60e-4d31-bad2-86c2d62f5181
+			{
+				#2856595849 triggerList :: trigger_list : @fbce7a10-79d1-46e4-a352-d7e6d2b8d993
+				{
+					#3241973414 events :: event_refs : <objectref>[];
+					#3599496518 dp_items :: dp_item_refs : <objectref>[];
+					#3686257562 properties :: property_reference_list : <propref>[];
+				}
+				#1945303135 onTrigger :: function(bool,bool) : @e0c71b69-5d80-4003-b003-f9b3136d87df
+				{
+					#3107223966 script :: string : "function(v:arg0::bool)\n{\n\t// todo: auto generated return value, please adapt\n\tfalse\n}";
+				}
+				#1607604074 read :: function(bool) : @8d53ab34-013e-4d9c-ab1f-96dedab11cfe
+				{
+					#2963997535 script :: string : "function()\n{\n\tv:this.Color\n\ttrue\n}";
+				}
+				#3821007265 write :: function(bool,bool) : @86180330-8eda-40c1-9f01-f196a4724ebb
+				{
+					#1761521552 script :: string : "function(v:arg0::bool)\n{\n\ttrue\n}";
+				}
+			}
+			#2371783922 width :: int : 90;
+			#1132997455 height :: int : 1024;
+			#3925508682 x :: int : 500;
+			#3761915028 y :: int : 0;
+			#3727669992 Color :: color : 255;
+			#543004719 Rad :: int_scriptedValue : @af95789e-eb6a-4ff1-8523-737ee3e78b82
+			{
+				#1617273212 triggerList :: trigger_list : @dd8de2f2-3ff7-47b1-931e-44aadaa8ea68
+				{
+					#3739954309 events :: event_refs : <objectref>[];
+					#2791390660 dp_items :: dp_item_refs : <objectref>[];
+					#3010486985 properties :: property_reference_list : <propref>[];
+				}
+				#1595517770 onTrigger :: function(bool,bool) : @c2f4fcd7-8527-4df1-a21e-07aebbf471c5
+				{
+					#2151783109 script :: string : "function(v:arg0::bool)\n{\n\tfalse\n}";
+				}
+				#1395612887 read :: function(int) : @5b3d4fe7-0640-4cb3-92ed-6df08e23ff37
+				{
+					#1220864971 script :: string : "function()\n{\n\tv:this.RGB[0]\n}";
+				}
+				#2493150936 write :: function(bool,int) : @ae661592-00e8-4f3d-b409-5ce95d4ac846
+				{
+					#1271532879 script :: string : "function(v:arg0::int)\n{\n\tv:this.RGB[0] = v:arg0::int\n\tv:this.Color = f:rgba2color(v:this.RGB[0],v:this.RGB[1],v:this.RGB[2],255)\n\ttrue\n}";
+				}
+			}
+			#4150544 Green :: int_scriptedValue : @337175de-7791-46ab-b69d-8443c4185773
+			{
+				#2980074936 triggerList :: trigger_list : @a116aed4-06eb-4a3f-a52c-b3b155ab19d3
+				{
+					#2887196773 events :: event_refs : <objectref>[];
+					#3497548907 dp_items :: dp_item_refs : <objectref>[];
+					#3223706388 properties :: property_reference_list : <propref>[];
+				}
+				#2913078498 onTrigger :: function(bool,bool) : @66c2ceb9-8d3a-438a-b6b3-fdbb99630c1b
+				{
+					#1795204450 script :: string : "function(v:arg0::bool)\n{\n\tfalse\n}";
+				}
+				#932263930 read :: function(int) : @b20d79c7-4538-477f-9f72-b26f6fa4bbac
+				{
+					#2309852473 script :: string : "function()\n{\n\tv:this.RGB[1]\n}";
+				}
+				#2379861434 write :: function(bool,int) : @27c8a674-885c-441a-8c0b-9980042ddc2e
+				{
+					#2421755873 script :: string : "function(v:arg0::int)\n{\n\tv:this.RGB[1] = v:arg0::int\n\tv:this.Color = f:rgba2color(v:this.RGB[0],v:this.RGB[1],v:this.RGB[2],255)\n\tfalse\n}";
+				}
+			}
+			#3155579219 Blue :: int_scriptedValue : @54b898c7-d3da-4d77-a855-4dcb0a283b48
+			{
+				#2686843400 triggerList :: trigger_list : @5bcf4081-c77d-45cb-8bea-52297717a153
+				{
+					#3392251372 events :: event_refs : <objectref>[];
+					#3098989757 dp_items :: dp_item_refs : <objectref>[];
+					#2970862163 properties :: property_reference_list : <propref>[];
+				}
+				#2665079526 onTrigger :: function(bool,bool) : @135d84dd-d29a-4539-b594-bcad4d6c2cea
+				{
+					#2040816306 script :: string : "function(v:arg0::bool)\n{\n\t// todo: auto generated return value, please adapt\n\tfalse\n}";
+				}
+				#1479914057 read :: function(int) : @17ed026a-f911-44bc-af25-029c28af8c3b
+				{
+					#1412839535 script :: string : "function()\n{\n\tv:this.RGB[2]\n}";
+				}
+				#3516631379 write :: function(bool,int) : @0bd1a07a-1552-413f-9653-3cff780fec60
+				{
+					#2579306786 script :: string : "function(v:arg0::int)\n{\n\tv:this.RGB[2] = v:arg0::int\n\tv:this.Color = f:rgba2color(v:this.RGB[0],v:this.RGB[1],v:this.RGB[2],255)\n\tfalse\n}";
+				}
+			}
+			#1374743963 RGB :: intlist : <int>[0, 0, 0];
+		}
+		#311863498 "children_list 2" :: GtfImage_template_instance : @20db02ad-d415-4865-91ca-82f7bab74ef4
+		{
+			#1952082155 name :: string : "BackButton";
+			#3886386602 template :: objectref(GtfImage_template) : @c4ac040d-2906-4258-92ad-e656bee7d754;
+			#2702682173 children :: children_list : @09e9a4f3-4c64-4464-a00e-71502b1d7ee5
+			{
+			}
+			#3449938315 width :: int : 83;
+			#645184131 text :: string : "戻る";
+			#101610394 font :: font_resource : @2a43b3c4-a27a-47d9-8af9-1b367a6a04b2
+			{
+				#2338449847 file :: file : "meiryo.ttc";
+				#1535165181 size :: int : 30;
+			}
+			#18612489 horizontalAlign :: int : 1;
+			#973527753 height :: int : 56;
+			#2371435262 "height 2" :: propref(int) : @20db02ad-d415-4865-91ca-82f7bab74ef4#973527753;
+			#3112231761 "width 2" :: propref(int) : @20db02ad-d415-4865-91ca-82f7bab74ef4#3449938315;
+			#1028226269 x :: int : 2;
+			#3770143738 y :: int : 2;
+			#737550986 releasedReaction :: function(bool) : @a88a3e0e-8520-4297-bb74-aa7852628ddf
+			{
+				#3022268952 script :: string : "function()\n{\n\tif(v:this.touched){\n\t\tv:this->^->goto_Title.AnimationStart()\n\t}\n\tfalse\n}";
+			}
+		}
+		#3116064873 "children_list 3" :: GtfContainer : @20d551eb-cbdc-4a33-a19f-12f58cf711ba
+		{
+			#3572327222 features :: feature_list : @8ef0baef-e5a4-46f6-b4d0-51dc697c3788
+			{
+			}
+			#425639028 children :: children_list : @c4ad7c24-f7a7-4bb5-9b4f-874f992072d8
+			{
+				#2368688045 "children_list 26" :: GtfContainer_template_instance : @bbbd766d-272c-4c49-a8e5-ff8f346bcac5
+				{
+					#237598604 name :: string : "Switch1";
+					#2811114214 template :: objectref(GtfContainer_template) : @c31857c3-a730-4147-8c45-684691f5aa17;
+					#332439915 children :: children_list : @3fdb14c8-8b4e-40db-8221-a4a95141c3a3
+					{
+					}
+					#1252595753 x :: int : 0;
+					#3736986451 y :: int : 0;
+					#689135946 text :: string : " ヒントを表示";
+					#3537339940 Touch :: function(bool) : @c73985fa-4280-4818-8302-d9f50e3107aa
+					{
+						#3053297095 script :: string : "function()\n{\n\tif(v:this.SwitchFlag){\n\t\tv:this.colorationColor = f:rgba2color(255,255,255,255)//白\n\t\tv:this.textColor = f:rgba2color(255,255,255,255)\n\t\tv:this->^->^->RadioButton1.Add -= v:this.SwitchNumber\n\t\tv:this.SwitchFlag = false\n\t}else{\n\t\tv:this.colorationColor = f:rgba2color(  0,255,  0,255)//黒\n\t\tv:this.textColor = f:rgba2color(255,255,255,255)\n\t\tv:this->^->^->RadioButton1.Add += v:this.SwitchNumber\n\t\tv:this.SwitchFlag = true\n\t}\n\tfalse\n}";
+					}
+					#1999771232 SwitchNumber :: int : 1;
+					#408014235 font :: font_resource : @cb613998-5857-4fae-92bd-2eaf9056179a
+					{
+						#2022102591 file :: file : "meiryo.ttc";
+						#999045523 size :: int : 30;
+					}
+					#2889884842 width :: int : 211;
+				}
+				#3082528328 "children_list 30" :: GtfContainer_template_instance : @2058401f-d4c8-4fe7-9815-9bad45bfe989
+				{
+					#237598604 name :: string : "Switch2";
+					#2811114214 template :: objectref(GtfContainer_template) : @c31857c3-a730-4147-8c45-684691f5aa17;
+					#332439915 children :: children_list : @48cf5903-4077-4eac-9935-b2c68679b8e7
+					{
+					}
+					#1252595753 x :: int : 0;
+					#3736986451 y :: int : 40;
+					#689135946 text :: string : " 制限時間";
+					#3537339940 Touch :: function(bool) : @224bc2df-1258-4194-9911-0cd4680aa5c6
+					{
+						#3053297095 script :: string : "function()\n{\n\tif(v:this.SwitchFlag){\n\t\tv:this.colorationColor = f:rgba2color(255,255,255,255)//白\n\t\tv:this.textColor = f:rgba2color(255,255,255,255)\n\t\tv:this->^->^->RadioButton1.Add -= v:this.SwitchNumber\n\t\tv:this.SwitchFlag = false\n\t}else{\n\t\tv:this.colorationColor = f:rgba2color(  0,255,  0,255)//黒\n\t\tv:this.textColor = f:rgba2color(255,255,255,255)\n\t\tv:this->^->^->RadioButton1.Add += v:this.SwitchNumber\n\t\tv:this.SwitchFlag = true\n\t}\n\tfalse\n}";
+					}
+					#1999771232 SwitchNumber :: int : 2;
+					#621061999 font :: font_resource : @a22c94e0-10e4-49ff-ae56-ea99ea61d786
+					{
+						#3730267317 file :: file : "meiryo.ttc";
+						#1730287203 size :: int : 30;
+					}
+					#3764188447 width :: int : 150;
+				}
+				#957089533 "children_list 36" :: GtfContainer_template_instance : @f65bd68f-5fc7-411a-8be8-ad8e1579766b
+				{
+					#237598604 name :: string : "Switch3";
+					#2811114214 template :: objectref(GtfContainer_template) : @c31857c3-a730-4147-8c45-684691f5aa17;
+					#332439915 children :: children_list : @88a644e4-6f15-42ec-ac5a-e8f5cfdb2303
+					{
+					}
+					#1252595753 x :: int : 0;
+					#3736986451 y :: int : 80;
+					#689135946 text :: string : " シード値固定";
+					#3537339940 Touch :: function(bool) : @43cb3301-cd48-4612-ba1b-081bdbec07aa
+					{
+						#3053297095 script :: string : "function()\n{\n\tif(v:this.SwitchFlag){\n\t\tv:this.colorationColor = f:rgba2color(255,255,255,255)//白\n\t\tv:this.textColor = f:rgba2color(255,255,255,255)\n\t\tv:this->^->^->RadioButton1.Add -= v:this.SwitchNumber\n\t\tv:this.SwitchFlag = false\n\t}else{\n\t\tv:this.colorationColor = f:rgba2color(  0,255,  0,255)//黒\n\t\tv:this.textColor = f:rgba2color(255,255,255,255)\n\t\tv:this->^->^->RadioButton1.Add += v:this.SwitchNumber\n\t\tv:this.SwitchFlag = true\n\t}\n\tfalse\n}";
+					}
+					#1999771232 SwitchNumber :: int : 4;
+					#822401138 font :: font_resource : @e14ce456-9a81-4b49-bf49-2a27858e57d3
+					{
+						#1912472779 file :: file : "meiryo.ttc";
+						#182989760 size :: int : 30;
+					}
+					#3608042054 width :: int : 213;
+				}
+				#330205240 "children_list 37" :: GtfContainer_template_instance : @66c89eec-c2c1-4bb2-aa8a-865181922745
+				{
+					#237598604 name :: string : "Switch4";
+					#2811114214 template :: objectref(GtfContainer_template) : @c31857c3-a730-4147-8c45-684691f5aa17;
+					#332439915 children :: children_list : @6f92a245-e2be-4b41-96da-d4903dad8b1a
+					{
+					}
+					#1252595753 x :: int : 0;
+					#3736986451 y :: int : 120;
+					#689135946 text :: string : " デバックモード";
+					#3537339940 Touch :: function(bool) : @f95b55f1-fd1b-46eb-8475-2161a45c6661
+					{
+						#3053297095 script :: string : "function()\n{\n\tif(v:this.SwitchFlag){\n\t\tv:this.colorationColor = f:rgba2color(255,255,255,255)//白\n\t\tv:this.textColor = f:rgba2color(255,255,255,255)\n\t\tv:this->^->^->RadioButton1.Add -= v:this.SwitchNumber\n\t\tv:this.SwitchFlag = false\n\t}else{\n\t\tv:this.colorationColor = f:rgba2color(  0,255,  0,255)//黒\n\t\tv:this.textColor = f:rgba2color(255,255,255,255)\n\t\tv:this->^->^->RadioButton1.Add += v:this.SwitchNumber\n\t\tv:this.SwitchFlag = true\n\t}\n\tfalse\n}";
+					}
+					#1999771232 SwitchNumber :: int : 8;
+					#1431869557 font :: font_resource : @bf2961c1-5d66-4782-b8c5-16efe65bd2b0
+					{
+						#3101235809 file :: file : "meiryo.ttc";
+						#319477897 size :: int : 30;
+					}
+					#2252920103 width :: int : 250;
+				}
+				#3653191578 "children_list 38" :: GtfLabel : @e5549d2e-012e-4049-a200-dbcd67b86abc
+				{
+					#3836514412 features :: feature_list : @4069a5f5-4fe0-4024-8aaf-622d78d066e1
+					{
+					}
+					#2988082092 children :: children_list : @3163de0f-6035-4267-bb63-85f3d9392b49
+					{
+					}
+					#620346355 name :: string : "Plus";
+					#965507769 visible :: bool : true;
+					#3613637420 width :: int : 100;
+					#1990098476 height :: int : 30;
+					#1068566676 x :: int : 0;
+					#967831626 y :: int : 160;
+					#130685973 text :: string : "No.0";
+					#4263600769 textColor :: color : -1;
+					#1448199474 font :: font_resource : @9a98ebad-2084-412c-b525-b3728d2ad8d0
+					{
+						#3437535183 file :: file : "PT_Sans_Narrow.ttf";
+						#1791985746 size :: int : 30;
+					}
+					#2371386317 horizontalAlign :: int : 0;
+					#329906866 verticalAlign :: int : 0;
+				}
+			}
+			#2187887664 name :: string : "RadioButton1";
+			#716903051 visible :: bool : true;
+			#2453136840 width :: int : 250;
+			#1621430889 height :: int : 150;
+			#3551886192 x :: int_scriptedValue : @d09516e3-ded7-47fb-80bc-24a59ee8fac4
+			{
+				#1857405180 triggerList :: trigger_list : @e164521f-dfce-49dd-8fba-3a0806baa0b1
+				{
+					#4287179596 events :: event_refs : <objectref>[];
+					#4221255554 dp_items :: dp_item_refs : <objectref>[];
+					#2097229673 properties :: property_reference_list : <propref>[];
+				}
+				#2218178301 onTrigger :: function(bool,bool) : @a042db22-a5af-4683-b28e-8c0f5b663a10
+				{
+					#1257612646 script :: string : "function(v:arg0::bool)\n{\n\tfalse\n}";
+				}
+				#1499323300 read :: function(int) : @cd7c87ea-6a0b-48ab-a3f5-d617c3c25f42
+				{
+					#1938270385 script :: string : "function()\n{\n\t(640 / 2) - (v:this.width / 2)\n}";
+				}
+				#2039938060 write :: function(bool,int) : @385cd21e-c9fa-48ce-a138-284e03e4bd61
+				{
+					#1828244826 script :: string : "function(v:arg0::int)\n{\n\tv:this.x = v:arg0\n\tfalse\n}";
+				}
+			}
+			#271060625 y :: int : 20;
+			#2321848426 Update :: conditional_script : @1fe4513b-9171-492c-9565-472da242f8fb
+			{
+				#2880337860 triggerList :: trigger_list : @e07937e5-f7a4-4d32-a9d6-31eb77840b46
+				{
+					#3513962602 events :: event_refs : <objectref>[];
+					#4124536642 dp_items :: dp_item_refs : <objectref>[];
+					#2136974433 properties :: property_reference_list : <propref>[@ffcba716-2446-4d12-bb70-3a722c8a6887#2148392498];
+				}
+				#2917262442 onTrigger :: function(bool,bool) : @6f082523-ccc9-4a4e-94da-a14624937941
+				{
+					#2891324640 script :: string : "function(v:arg0::bool)\n{\n\tv:this->Plus.text = \"No.\" + f:int2string(v:this.Add)\n\ttrue\n}";
+				}
+			}
+			#333162923 Add :: int : 0;
+		}
+		#3996361843 "children_list 10" :: GtfContainer : @b848c023-9cb6-498d-8901-0c5ff4e0f5da
+		{
+			#3572327222 features :: feature_list : @b30fd731-fba3-47e8-aca2-aab202d544f2
+			{
+			}
+			#425639028 children :: children_list : @bc06731a-43be-4eb6-b394-934e48a6a045
+			{
+				#2368688045 "children_list 26" :: GtfContainer_template_instance : @e17590fc-fbe6-4c4d-90c2-2baf0c89e251
+				{
+					#237598604 name :: string : "Switch1";
+					#2811114214 template :: objectref(GtfContainer_template) : @c31857c3-a730-4147-8c45-684691f5aa17;
+					#332439915 children :: children_list : @0093d9ee-4deb-4baa-821b-8695862cd1ab
+					{
+					}
+					#1252595753 x :: int : 0;
+					#3736986451 y :: int : 0;
+					#689135946 text :: string : "No.1";
+					#3537339940 Touch :: function(bool) : @aad13cdc-5049-491d-90a3-67b3293bee60
+					{
+						#3053297095 script :: string : "function()\n{\n\tif(v:this.SwitchFlag){\n\t\tv:this.colorationColor = f:rgba2color(255,255,255,255)//白\n\t\tv:this.textColor = f:rgba2color(255,255,255,255)\n\t\tv:this->^->^->RadioButton2.Switch -= v:this.SwitchNumber\n\t\tv:this.SwitchFlag = false\n\t}else{\n\t\tv:this.colorationColor = f:rgba2color(  0,255,  0,255)//黒\n\t\tv:this.textColor = f:rgba2color(255,255,255,255)\n\t\tv:this->^->^->RadioButton2.Switch += v:this.SwitchNumber\n\t\tv:this->^->^->RadioButton2.Change()\n\t\tv:this.SwitchFlag = true\n\t}\n\tfalse\n}";
+					}
+					#1999771232 SwitchNumber :: int : 1;
+					#3793154774 touched :: bool : false;
+					#3106191588 SwitchFlag :: bool : false;
+				}
+				#3082528328 "children_list 30" :: GtfContainer_template_instance : @5315ef69-8915-42b7-9c7b-7c89988368e7
+				{
+					#237598604 name :: string : "Switch2";
+					#2811114214 template :: objectref(GtfContainer_template) : @c31857c3-a730-4147-8c45-684691f5aa17;
+					#332439915 children :: children_list : @41dc131b-c413-4f51-af40-fc163bcb0ede
+					{
+					}
+					#1252595753 x :: int : 0;
+					#3736986451 y :: int : 30;
+					#689135946 text :: string : "No.2";
+					#3537339940 Touch :: function(bool) : @a7812ed8-6a9b-44e8-86ff-8d28c11e4189
+					{
+						#3053297095 script :: string : "function()\n{\n\tif(v:this.SwitchFlag){\n\t\tv:this.colorationColor = f:rgba2color(255,255,255,255)//白\n\t\tv:this.textColor = f:rgba2color(255,255,255,255)\n\t\tv:this->^->^->RadioButton2.Switch -= v:this.SwitchNumber\n\t\tv:this.SwitchFlag = false\n\t}else{\n\t\tv:this.colorationColor = f:rgba2color(  0,255,  0,255)//黒\n\t\tv:this.textColor = f:rgba2color(255,255,255,255)\n\t\tv:this->^->^->RadioButton2.Switch += v:this.SwitchNumber\n\t\tv:this->^->^->RadioButton2.Change()\n\t\tv:this.SwitchFlag = true\n\t}\n\tfalse\n}";
+					}
+					#1999771232 SwitchNumber :: int : 2;
+				}
+				#303214971 "children_list 45" :: GtfContainer_template_instance : @4484d618-c910-444a-80f9-81e9cc2acedc
+				{
+					#237598604 name :: string : "Switch3";
+					#2811114214 template :: objectref(GtfContainer_template) : @c31857c3-a730-4147-8c45-684691f5aa17;
+					#332439915 children :: children_list : @8e2dd011-1025-4e22-83c1-96df5c3cd8f4
+					{
+					}
+					#1252595753 x :: int : 0;
+					#3736986451 y :: int : 60;
+					#689135946 text :: string : "No.3";
+					#3537339940 Touch :: function(bool) : @43c537f2-c2a6-48d2-b763-b172747339bf
+					{
+						#3053297095 script :: string : "function()\n{\n\tif(v:this.SwitchFlag){\n\t\tv:this.colorationColor = f:rgba2color(255,255,255,255)//白\n\t\tv:this.textColor = f:rgba2color(255,255,255,255)\n\t\tv:this->^->^->RadioButton2.Switch -= v:this.SwitchNumber\n\t\tv:this.SwitchFlag = false\n\t}else{\n\t\tv:this.colorationColor = f:rgba2color(  0,255,  0,255)//黒\n\t\tv:this.textColor = f:rgba2color(255,255,255,255)\n\t\tv:this->^->^->RadioButton2.Switch += v:this.SwitchNumber\n\t\tv:this->^->^->RadioButton2.Change()\n\t\tv:this.SwitchFlag = true\n\t}\n\tfalse\n}";
+					}
+					#1999771232 SwitchNumber :: int : 3;
+				}
+				#1360834837 "children_list 46" :: GtfContainer_template_instance : @18ab3fa0-4675-4edf-b9a4-bad1b473664d
+				{
+					#237598604 name :: string : "Switch4";
+					#2811114214 template :: objectref(GtfContainer_template) : @c31857c3-a730-4147-8c45-684691f5aa17;
+					#332439915 children :: children_list : @ab6df2f2-c1ff-4667-b9db-97debf363c98
+					{
+					}
+					#1252595753 x :: int : 0;
+					#3736986451 y :: int : 90;
+					#689135946 text :: string : "No.4";
+					#3537339940 Touch :: function(bool) : @4fa909e2-c082-47ff-b7cb-d54e2c60687b
+					{
+						#3053297095 script :: string : "function()\n{\n\tif(v:this.SwitchFlag){\n\t\tv:this.colorationColor = f:rgba2color(255,255,255,255)//白\n\t\tv:this.textColor = f:rgba2color(255,255,255,255)\n\t\tv:this->^->^->RadioButton2.Switch -= v:this.SwitchNumber\n\t\tv:this.SwitchFlag = false\n\t}else{\n\t\tv:this.colorationColor = f:rgba2color(  0,255,  0,255)//黒\n\t\tv:this.textColor = f:rgba2color(255,255,255,255)\n\t\tv:this->^->^->RadioButton2.Switch += v:this.SwitchNumber\n\t\tv:this->^->^->RadioButton2.Change()\n\t\tv:this.SwitchFlag = true\n\t}\n\tfalse\n}";
+					}
+					#1999771232 SwitchNumber :: int : 4;
+				}
+				#3296721867 "children_list 47" :: GtfContainer_template_instance : @79f2f98e-c9be-4cbe-8a89-ce5772635088
+				{
+					#237598604 name :: string : "Switch5";
+					#2811114214 template :: objectref(GtfContainer_template) : @c31857c3-a730-4147-8c45-684691f5aa17;
+					#332439915 children :: children_list : @ca070aaa-8bef-4614-8f4f-0dd92008d602
+					{
+					}
+					#1252595753 x :: int : 0;
+					#3736986451 y :: int : 120;
+					#689135946 text :: string : "No.5";
+					#3537339940 Touch :: function(bool) : @b647e377-9068-48e4-b6aa-7c9adaa591c6
+					{
+						#3053297095 script :: string : "function()\n{\n\tif(v:this.SwitchFlag){\n\t\tv:this.colorationColor = f:rgba2color(255,255,255,255)//白\n\t\tv:this.textColor = f:rgba2color(255,255,255,255)\n\t\tv:this->^->^->RadioButton2.Switch -= v:this.SwitchNumber\n\t\tv:this.SwitchFlag = false\n\t}else{\n\t\tv:this.colorationColor = f:rgba2color(  0,255,  0,255)//黒\n\t\tv:this.textColor = f:rgba2color(255,255,255,255)\n\t\tv:this->^->^->RadioButton2.Switch += v:this.SwitchNumber\n\t\tv:this->^->^->RadioButton2.Change()\n\t\tv:this.SwitchFlag = true\n\t}\n\tfalse\n}";
+					}
+					#1999771232 SwitchNumber :: int : 5;
+				}
+				#3585602790 "children_list 48" :: GtfLabel : @69d3d97d-4e36-47ec-914f-5691bb9a831a
+				{
+					#3836514412 features :: feature_list : @1be24b8f-a842-4792-88c6-cc7788e27146
+					{
+					}
+					#2988082092 children :: children_list : @613ab001-3fa7-4dde-8585-4defe7707502
+					{
+					}
+					#620346355 name :: string : "Plus";
+					#965507769 visible :: bool : true;
+					#3613637420 width :: int : 100;
+					#1990098476 height :: int : 30;
+					#1068566676 x :: int : 0;
+					#967831626 y :: int : 150;
+					#130685973 text :: string : "No.0";
+					#4263600769 textColor :: color : -1;
+					#1448199474 font :: font_resource : @c3b363f3-1f02-449f-84a1-02dc319d0d8b
+					{
+						#3437535183 file :: file : "PT_Sans_Narrow.ttf";
+						#1791985746 size :: int : 30;
+					}
+					#2371386317 horizontalAlign :: int : 0;
+					#329906866 verticalAlign :: int : 0;
+				}
+			}
+			#2187887664 name :: string : "RadioButton2";
+			#716903051 visible :: bool : false;
+			#2453136840 width :: int : 100;
+			#1621430889 height :: int : 180;
+			#3551886192 x :: int : 0;
+			#271060625 y :: int_scriptedValue : @153b6146-c890-4356-9c48-9c5edb3e97be
+			{
+				#2796389485 triggerList :: trigger_list : @b73c845f-ad02-47e6-9ef2-7475487046b5
+				{
+					#4039793977 events :: event_refs : <objectref>[];
+					#3741427398 dp_items :: dp_item_refs : <objectref>[];
+					#1986105835 properties :: property_reference_list : <propref>[];
+				}
+				#2024778154 onTrigger :: function(bool,bool) : @b81c1ce3-3913-400c-9157-f1f019c9c26d
+				{
+					#2327184561 script :: string : "function(v:arg0::bool)\n{\n\tfalse\n}";
+				}
+				#2575402168 read :: function(int) : @07d9eead-9829-4b43-b206-0434c65cc74b
+				{
+					#1639850208 script :: string : "function()\n{\n\t480 - v:this.height\n}";
+				}
+				#2462290673 write :: function(bool,int) : @8de58a0e-79ce-4e65-8245-ef39a7d3a33d
+				{
+					#1632161589 script :: string : "function(v:arg0::int)\n{\n\tv:this.y = v:arg0\n\tfalse\n}";
+				}
+			}
+			#2321848426 Update :: conditional_script : @d8b7b28d-6555-4834-9c8f-7a13cae66be2
+			{
+				#2880337860 triggerList :: trigger_list : @8c2a0bcb-fc55-44c7-8d19-f6c43a575a3c
+				{
+					#3513962602 events :: event_refs : <objectref>[];
+					#4124536642 dp_items :: dp_item_refs : <objectref>[];
+					#2136974433 properties :: property_reference_list : <propref>[@ffcba716-2446-4d12-bb70-3a722c8a6887#2148392498];
+				}
+				#2917262442 onTrigger :: function(bool,bool) : @2ec564e6-e3c3-4573-8380-de04e79eee22
+				{
+					#2891324640 script :: string : "function(v:arg0::bool)\n{\n\tv:this->Plus.text = \"No.\" + f:int2string(v:this.Switch)\n\ttrue\n}";
+				}
+			}
+			#443123015 Switch :: int : 0;
+			#27405011 Change :: function(bool) : @fcfcba0f-4399-4cb4-ad6e-7dc271c465f0
+			{
+				#1771905069 script :: string : "function()\n{\n\t//スイッチ1のスイッチを元に戻す\n\tif(v:this->Switch1.SwitchFlag && v:this.Switch != v:this->Switch1.SwitchNumber){\n\t\tv:this->Switch1.Touch()\n\t}\n\t//スイッチ2のスイッチを元に戻す\n\tif(v:this->Switch2.SwitchFlag && v:this.Switch != v:this->Switch2.SwitchNumber){\n\t\tv:this->Switch2.Touch()\n\t}\n\t//スイッチ3のスイッチを元に戻す\n\tif(v:this->Switch3.SwitchFlag && v:this.Switch != v:this->Switch3.SwitchNumber){\n\t\tv:this->Switch3.Touch()\n\t}\n\t//スイッチ4のスイッチを元に戻す\n\tif(v:this->Switch4.SwitchFlag && v:this.Switch != v:this->Switch4.SwitchNumber){\n\t\tv:this->Switch4.Touch()\n\t}\n\t//スイッチ5のスイッチを元に戻す\n\tif(v:this->Switch5.SwitchFlag && v:this.Switch != v:this->Switch5.SwitchNumber){\n\t\tv:this->Switch5.Touch()\n\t}\n\tfalse\n}";
+			}
+		}
+		#332688383 "children_list 15" :: GtfContainer : @1c54eb4e-7ae9-4302-b010-e382e8d31562
+		{
+			#3629004317 features :: feature_list : @b5ec5aff-6bb9-4887-a919-bc1e681ed144
+			{
+			}
+			#3881785578 children :: children_list : @c017f731-098c-462e-a489-9c9886809b56
+			{
+			}
+			#175828413 name :: string : "CommandButton";
+			#357958150 visible :: bool : true;
+			#2172061367 width :: int : 100;
+			#2122293064 height :: int : 100;
+			#4112576340 x :: int : 200;
+			#934815160 y :: int : 194;
+			#885151201 Swich :: int : 0;
+			#3573478368 Update :: conditional_script : @a97cdf33-818e-451f-a01d-3671a488882b
+			{
+				#3101539479 triggerList :: trigger_list : @f02105d3-03aa-43bd-a27b-fb0c8e6ffc1e
+				{
+					#3479924458 events :: event_refs : <objectref>[];
+					#467061470 dp_items :: dp_item_refs : <objectref>[];
+					#1852180037 properties :: property_reference_list : <propref>[@ffcba716-2446-4d12-bb70-3a722c8a6887#2148392498];
+				}
+				#1680129964 onTrigger :: function(bool,bool) : @3f3e3257-e246-4e58-953e-30ca61e17cad
+				{
+					#1908049306 script :: string : "function(v:arg0::bool)\n{\n\t//v:this->Button_to_Image1.touched = v:this->Button_to_Image1.TouchFlag\n\tfalse\n}";
+				}
+			}
+		}
+		#974454687 "children_list 13" :: GtfParallelAnimation : @a71dcf56-5901-4992-8f6f-c6a6edb2f81d
+		{
+			#175797092 features :: feature_list : @d1251814-7c34-4711-ad01-457eb316437b
+			{
+			}
+			#2951476442 children :: children_list : @c9fb0039-f1d0-42e9-825d-922bf4cae27a
+			{
+				#204212377 "children_list 9" :: GtfLinearInterpolationColor : @8da9da8e-d914-4857-a065-d54cdefaa66c
+				{
+					#4097293329 features :: feature_list : @111dac1e-d181-4d73-86ab-a8dfbf2f2c09
+					{
+					}
+					#4090569293 children :: children_list : @2ef35252-c9eb-4e72-90e0-89bd0c45046f
+					{
+					}
+					#922236684 name :: string : "Linear";
+					#2669461534 enabled :: bool : true;
+					#3172410434 delay :: int : 0;
+					#2563881150 duration :: int : 500;
+					#3876397880 repeat :: int : 1;
+					#4271517806 alternating :: bool : false;
+					#2027027511 relative :: bool : false;
+					#3168161882 start :: color : -1;
+					#4267159215 end :: color : 255;
+					#3491579168 target :: propref(color) : @cc000c72-ce81-435a-be9f-68e760b87380#1103143414;
+				}
+			}
+			#465584236 name :: string : "goto_Title";
+			#769159010 enabled :: bool : true;
+			#4088262141 repeat :: int : 1;
+			#475179157 alternating :: bool : false;
+			#885012588 scale :: float : 1.0;
+			#1643233404 onPlay :: function(void,int,bool) : @deb2ddb8-458d-4627-8971-6443d2e4646f
+			{
+				#1713515467 script :: string : "function(v:animation_time::int, v:forward::bool)\n{\n\n}";
+			}
+			#3207938278 onPause :: function(void,int) : @7b4d7fe0-46f2-4d03-9d26-67f544df0f8b
+			{
+				#1884582359 script :: string : "function(v:animation_time::int)\n{\n\n}";
+			}
+			#3700272578 onTerminate :: function(void,int,int) : @3abe4044-047b-44e3-8fa7-2ad954424e7b
+			{
+				#2940926839 script :: string : "function(v:animation_time::int, v:terminate::int)\n{\n\tfire_delayed 500, ev:Menu_goto_Title()\n}";
+			}
+			#2118690261 AnimationStart :: function(bool) : @10e43b5a-7754-4e41-b288-7c5aacaff15e
+			{
+				#2792234155 script :: string : "function()\n{\n\tf:animation_play(v:this)\n\tfalse\n}";
+			}
+		}
+		#823695817 "children_list 18" :: GtfParallelAnimation : @58075f4f-8216-4cf9-9dd4-19eed8f52f37
+		{
+			#175797092 features :: feature_list : @a7088e64-fe44-4659-ba37-c1d8fcca2c42
+			{
+			}
+			#2951476442 children :: children_list : @d4901042-4346-4a0e-a614-dbf8dc9a43c0
+			{
+				#204212377 "children_list 9" :: GtfLinearInterpolationColor : @447850d9-4103-4c73-a1c4-efcb6f1477d1
+				{
+					#4097293329 features :: feature_list : @85cf035e-47e6-4675-a316-e73aec2e5a21
+					{
+					}
+					#4090569293 children :: children_list : @be13e65f-6e19-4e18-bacd-9526b8f08e81
+					{
+					}
+					#922236684 name :: string : "Linear";
+					#2669461534 enabled :: bool : true;
+					#3172410434 delay :: int : 0;
+					#2563881150 duration :: int : 500;
+					#3876397880 repeat :: int : 1;
+					#4271517806 alternating :: bool : false;
+					#2027027511 relative :: bool : false;
+					#3168161882 start :: color : 255;
+					#4267159215 end :: color : -1;
+					#3491579168 target :: propref(color) : @cc000c72-ce81-435a-be9f-68e760b87380#1103143414;
+				}
+			}
+			#465584236 name :: string : "InitializeAnimation";
+			#769159010 enabled :: bool : true;
+			#4088262141 repeat :: int : 1;
+			#475179157 alternating :: bool : false;
+			#885012588 scale :: float : 1.0;
+			#1643233404 onPlay :: function(void,int,bool) : @6d1aa7ea-52aa-4bde-825d-9c243761e97f
+			{
+				#1713515467 script :: string : "function(v:animation_time::int, v:forward::bool)\n{\n\n}";
+			}
+			#3207938278 onPause :: function(void,int) : @5e05ba56-437d-430b-9f04-c8a0917ac855
+			{
+				#1884582359 script :: string : "function(v:animation_time::int)\n{\n\n}";
+			}
+			#3700272578 onTerminate :: function(void,int,int) : @d7505a5d-6a27-40c9-8c85-51596e555da2
+			{
+				#2940926839 script :: string : "function(v:animation_time::int, v:terminate::int)\n{\n\t\n}";
+			}
+			#2918894913 AnimationStart :: conditional_script : @9988bac4-44ff-48c0-b115-619b2edc020c
+			{
+				#1363890427 triggerList :: trigger_list : @4d36d679-3fa7-42c5-ae98-e92e0fa47028
+				{
+					#3052967458 events :: event_refs : <objectref>[];
+					#3018204001 dp_items :: dp_item_refs : <objectref>[];
+					#2557920906 properties :: property_reference_list : <propref>[];
+				}
+				#1857451347 onTrigger :: function(bool,bool) : @6fa1ca1b-e8d4-43a1-af91-045a0549677c
+				{
+					#2048074595 script :: string : "function(v:arg0::bool)\n{\n\tf:animation_play(v:this)\n\tfalse\n}";
+				}
+			}
+		}
+	}
+	#985847880 name :: string : "View";
+	#694746249 visible :: bool : true;
+	#4041525459 width :: int : 640;
+	#1202042074 height :: int : 480;
+	#166414083 x :: int : 0;
+	#4021288527 y :: int : 0;
+}

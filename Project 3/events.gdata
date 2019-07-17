@@ -1,0 +1,56 @@
+EBGUIDE 6.4.1.127810;
+@0afb80d3-aaef-441d-bb4d-c50e04b681ef
+{
+	#1093235969 "events 2" :: event : @8291581d-4032-42b3-9b3e-b455b93fe1e0
+	{
+		#761582082 name :: string : "Result_goto_Title";
+		#549249033 eventId :: int : 1;
+		#1488373375 event_group :: objectref(event_group) : @3300ae2c-831f-434e-ac06-cfa5677f1a81;
+	}
+	#2902623009 "events 1" :: event : @53b9d7e0-3133-4b5a-83ae-4e360b35d055
+	{
+		#315996477 name :: string : "Title_goto_Main";
+		#3567146932 eventId :: int : 2;
+		#826618380 event_group :: objectref(event_group) : @3300ae2c-831f-434e-ac06-cfa5677f1a81;
+	}
+	#2670618618 "events 3" :: event : @3dfdebc5-8200-412f-bf7a-6a40219295ed
+	{
+		#1975896305 name :: string : "Main_goto_Result";
+		#4043469110 eventId :: int : 3;
+		#1817992816 event_group :: objectref(event_group) : @3300ae2c-831f-434e-ac06-cfa5677f1a81;
+	}
+	#1683086990 "events 4" :: event : @e47a60eb-a659-4192-9c97-762acb288cb7
+	{
+		#874786632 name :: string : "OP_goto_Title";
+		#3930736353 eventId :: int : 4;
+		#1340869857 event_group :: objectref(event_group) : @3300ae2c-831f-434e-ac06-cfa5677f1a81;
+	}
+	#883067586 "events 6" :: event : @10c55f0a-e5de-4401-9121-460774c2cab9
+	{
+		#1192889773 name :: string : "END";
+		#992814116 eventId :: int : 5;
+		#1350089319 event_group :: objectref(event_group) : @3300ae2c-831f-434e-ac06-cfa5677f1a81;
+	}
+	#2690924014 "events 5" :: event : @c763582e-ddfb-4517-81af-6a8214f66b17
+	{
+		#378957800 name :: string : "SendResultInformation";
+		#4273720693 eventId :: int : 0;
+		#1822623453 event_group :: objectref(event_group) : @3300ae2c-831f-434e-ac06-cfa5677f1a81;
+		#3419433544 TheShortestTime :: int : 0;
+		#95107503 RightNum :: int : 0;
+		#402565188 NotRightNum :: int : 0;
+		#3191231216 PlaceNum :: int : 0;
+	}
+	#4088848735 "events 7" :: event : @0a0d35dd-1bd5-46ed-b0eb-1fbdb1e06174
+	{
+		#951649098 name :: string : "Title_goto_Menu";
+		#881226443 eventId :: int : 7;
+		#1833237623 event_group :: objectref(event_group) : @3300ae2c-831f-434e-ac06-cfa5677f1a81;
+	}
+	#1503102186 "events 8" :: event : @45e78735-c365-4d48-b0a7-29a9d512fb6e
+	{
+		#265287284 name :: string : "Menu_goto_Title";
+		#1056326011 eventId :: int : 8;
+		#716539918 event_group :: objectref(event_group) : @3300ae2c-831f-434e-ac06-cfa5677f1a81;
+	}
+}

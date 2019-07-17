@@ -1,0 +1,1366 @@
+EBGUIDE 6.4.1.127810;
+@66dd14a2-5f29-42ce-8f78-b22ab14634e1
+{
+	#392572078 features :: feature_list : @227fb30d-baa3-4430-baf0-5e7ce5767172
+	{
+		#982787009 "feature_list 5" :: Coloration : @05c6b5a2-2da5-4c1b-8166-3763d29f3274
+		{
+			#735750715 colorationEnabled :: bool : true;
+			#1107153658 colorationColor :: color : -1;
+		}
+	}
+	#2871083273 children :: children_list : @baed4731-7af8-429c-b4d9-05d5674b94c5
+	{
+		#574444084 "children_list 2" :: GtfImage : @17c0f6b4-71c9-4aa4-9bc9-29ac1eb1e815
+		{
+			#1173060387 features :: feature_list : @446b199f-4022-41cf-96e7-333d2ed34609
+			{
+			}
+			#208077228 children :: children_list : @e8b4c7e2-2b65-4541-8e95-237b0b08f7ce
+			{
+			}
+			#532563675 name :: string : "背景";
+			#1484158392 visible :: bool : true;
+			#1941001511 width :: int : 640;
+			#637208663 height :: int : 480;
+			#509893701 x :: int : 0;
+			#1230187950 y :: int : 0;
+			#2321683667 image :: image_resource : @64ed9c0e-1308-48ac-86b5-f2ecaa054608
+			{
+				#1928990690 file :: file : "menu_sub_bg.png";
+			}
+			#4090818183 horizontalAlign :: int : 0;
+			#3915299530 verticalAlign :: int : 1;
+		}
+		#3019139340 "children_list 6" :: GtfContainer : @c4c29084-0811-4dfa-9a13-e88c067283d7
+		{
+			#4150243665 features :: feature_list : @64b56c99-01d0-4020-a233-871d587534ac
+			{
+			}
+			#3701647355 children :: children_list : @32fbea08-e50a-484c-a8be-b6c83024f114
+			{
+				#45140263 "children_list 20" :: GtfImage : @4d0c9dc7-a238-48b5-b823-dbb282ee0720
+				{
+					#4148549358 features :: feature_list : @2c32fe22-3c2f-4cc9-b381-bfea76ffa06e
+					{
+						#2377961064 "feature_list 6" :: ScaleMode : @b28bddfc-886d-4674-8ab0-ad31ad68cc69
+						{
+							#3878831882 scaleMode :: int : 1;
+						}
+						#1121241012 "feature_list 7" :: Coloration : @bd991eff-d3e5-480e-9601-fd3355c8d36f
+						{
+							#2301177924 colorationEnabled :: bool : true;
+							#899873761 colorationColor :: propref(color) : @c4c29084-0811-4dfa-9a13-e88c067283d7#3727669992;
+						}
+					}
+					#3702244186 children :: children_list : @cb20148e-e758-4941-bb9b-6b71021abd08
+					{
+					}
+					#1589989632 name :: string : "WaveS-1";
+					#4258757475 visible :: bool : true;
+					#3293699028 width :: int : 80;
+					#654339236 height :: int : 2000;
+					#503510677 x :: int : 0;
+					#968250015 y :: int : 0;
+					#2951215137 image :: image_resource : @e703672f-3b68-4189-8391-c7a33042da42
+					{
+						#3183309834 file :: file : "waveS.png";
+					}
+					#3657830660 horizontalAlign :: int : 0;
+					#721286127 verticalAlign :: int : 1;
+				}
+				#2098497317 "children_list 21" :: GtfImage : @2d549fcd-3fe3-4eba-a0e7-00fb33637318
+				{
+					#4148549358 features :: feature_list : @9c097300-1ccc-4556-b655-1080cbf7c8e6
+					{
+						#2377961064 "feature_list 6" :: ScaleMode : @097c3165-4532-4579-b1c8-a1abaa270d9f
+						{
+							#3878831882 scaleMode :: int : 1;
+						}
+						#1121241012 "feature_list 7" :: Coloration : @8424ba71-17ea-4128-b5bf-5140064584b5
+						{
+							#2301177924 colorationEnabled :: bool : true;
+							#899873761 colorationColor :: propref(color) : @c4c29084-0811-4dfa-9a13-e88c067283d7#3727669992;
+						}
+					}
+					#3702244186 children :: children_list : @3d5bc0a9-6d69-4b35-9c6c-87d82b7add84
+					{
+					}
+					#1589989632 name :: string : "WaveS-2";
+					#4258757475 visible :: bool : true;
+					#3293699028 width :: int : 70;
+					#654339236 height :: int : 2000;
+					#503510677 x :: int : 20;
+					#968250015 y :: int : 0;
+					#2951215137 image :: image_resource : @7300afe5-0d74-46c5-9da4-b97366974bc9
+					{
+						#1739247929 file :: file : "waveS.png";
+					}
+					#3657830660 horizontalAlign :: int : 0;
+					#721286127 verticalAlign :: int : 1;
+				}
+				#2806682483 "children_list 22" :: GtfImage : @21366928-d258-465d-92aa-a16fca1f9a36
+				{
+					#4148549358 features :: feature_list : @dc1bded9-ae13-4228-aa11-34227c400170
+					{
+						#2377961064 "feature_list 6" :: ScaleMode : @3f62813a-cf77-4191-b78c-f76e38b606d0
+						{
+							#3878831882 scaleMode :: int : 1;
+						}
+						#1121241012 "feature_list 7" :: Coloration : @fe1aabf3-380e-4af8-ae47-44cf95429718
+						{
+							#2301177924 colorationEnabled :: bool : true;
+							#899873761 colorationColor :: propref(color) : @c4c29084-0811-4dfa-9a13-e88c067283d7#3727669992;
+						}
+					}
+					#3702244186 children :: children_list : @9af557ce-8360-417b-b9fa-d26223c86a84
+					{
+					}
+					#1589989632 name :: string : "WaveS-3";
+					#4258757475 visible :: bool : true;
+					#3293699028 width :: int : 90;
+					#654339236 height :: int : 2000;
+					#503510677 x :: int : 0;
+					#968250015 y :: int : 0;
+					#2951215137 image :: image_resource : @f2d19d16-d5d5-4a3d-a3d8-c108256b6b50
+					{
+						#3183309834 file :: file : "waveS.png";
+					}
+					#3657830660 horizontalAlign :: int : 0;
+					#721286127 verticalAlign :: int : 1;
+				}
+				#2588762458 "children_list 23" :: GtfImage : @fe31cf5f-3075-42ee-b615-5ab1bd738841
+				{
+					#4148549358 features :: feature_list : @96e39ed1-a5ed-487c-8d5d-e40e0812a0c3
+					{
+						#2377961064 "feature_list 6" :: ScaleMode : @d4f0a3af-c563-4929-b614-f1eb90400a20
+						{
+							#3878831882 scaleMode :: int : 1;
+						}
+						#1121241012 "feature_list 7" :: Coloration : @637e7f0a-8873-47c9-bb43-47a2c3309462
+						{
+							#2301177924 colorationEnabled :: bool : true;
+							#899873761 colorationColor :: propref(color) : @c4c29084-0811-4dfa-9a13-e88c067283d7#3727669992;
+						}
+					}
+					#3702244186 children :: children_list : @5146b520-0ff0-4e21-856b-92ed94128a44
+					{
+					}
+					#1589989632 name :: string : "WaveXL-1";
+					#4258757475 visible :: bool : true;
+					#3293699028 width :: int : 80;
+					#654339236 height :: int : 2000;
+					#503510677 x :: int : 20;
+					#968250015 y :: int : 0;
+					#2951215137 image :: image_resource : @717217b6-97ee-4b2f-95fb-9bf83b8c5f1d
+					{
+						#2768389265 file :: file : "waveXL.png";
+					}
+					#3657830660 horizontalAlign :: int : 0;
+					#721286127 verticalAlign :: int : 1;
+				}
+				#4056394462 "children_list 24" :: GtfImage : @ec9b6c26-1e63-4256-9570-785c4eb3e1de
+				{
+					#4148549358 features :: feature_list : @78b7b528-2244-4554-ad3b-deccce0c2e9e
+					{
+						#2377961064 "feature_list 6" :: ScaleMode : @08c2def3-2733-4037-9df3-068dfbbc258e
+						{
+							#3878831882 scaleMode :: int : 1;
+						}
+						#1121241012 "feature_list 7" :: Coloration : @20fa1628-2904-45e8-9c45-b3109a313497
+						{
+							#2301177924 colorationEnabled :: bool : true;
+							#899873761 colorationColor :: propref(color) : @c4c29084-0811-4dfa-9a13-e88c067283d7#3727669992;
+						}
+					}
+					#3702244186 children :: children_list : @e944ef37-aea2-4d73-ac5b-f419e63b7172
+					{
+					}
+					#1589989632 name :: string : "WaveXL-2";
+					#4258757475 visible :: bool : true;
+					#3293699028 width :: int : 90;
+					#654339236 height :: int : 2000;
+					#503510677 x :: int : 0;
+					#968250015 y :: int : 0;
+					#2951215137 image :: image_resource : @6c1806f7-9247-4c44-85fa-2ddba0fcb712
+					{
+						#2768389265 file :: file : "waveXL.png";
+					}
+					#3657830660 horizontalAlign :: int : 0;
+					#721286127 verticalAlign :: int : 1;
+				}
+				#1143484786 "children_list 25" :: GtfParallelAnimation : @7a27b99e-469e-4437-a2e9-30fa25446854
+				{
+					#1023157002 features :: feature_list : @75d23205-0232-4d07-a7a6-cf2ca8afd581
+					{
+					}
+					#4012287785 children :: children_list : @2a4cacfe-67c9-4bec-a7e2-e9e80898a379
+					{
+						#3900192329 "children_list 29" :: GtfSinusCurveS32 : @25180493-89e4-4618-9c8d-0a4beae03b5c
+						{
+							#335537248 features :: feature_list : @8591aa00-5f79-4dfb-a59b-c34250ccda7a
+							{
+							}
+							#4206472365 children :: children_list : @026975e0-74c2-42a4-a51a-183dcb64a289
+							{
+							}
+							#83167347 name :: string : "WaveS-1";
+							#1552873274 enabled :: bool : true;
+							#1385780974 delay :: int : 0;
+							#2202336877 duration :: int : 16000;
+							#3946106294 repeat :: int : 0;
+							#3862451263 alternating :: bool : false;
+							#4252528185 relative :: bool : false;
+							#1703884837 amplitude :: int : 450;
+							#2258494006 constant :: int : -450;
+							#3229893223 frequency :: float : 0.0625;
+							#1428444465 phase :: float : 0.0;
+							#188973552 target :: propref(int) : @4d0c9dc7-a238-48b5-b823-dbb282ee0720#968250015;
+						}
+						#2817852218 "children_list 30" :: GtfSinusCurveS32 : @e75cb468-6ebe-4055-9b2f-bf58b3fb2614
+						{
+							#335537248 features :: feature_list : @edb58106-f934-4320-8504-acfa111d63ed
+							{
+							}
+							#4206472365 children :: children_list : @25850ee2-e8ce-4c95-8ca1-57caa3ce8c6c
+							{
+							}
+							#83167347 name :: string : "WaveS-2";
+							#1552873274 enabled :: bool : true;
+							#1385780974 delay :: int : 0;
+							#2202336877 duration :: propref(int) : @25180493-89e4-4618-9c8d-0a4beae03b5c#2202336877;
+							#3946106294 repeat :: int : 0;
+							#3862451263 alternating :: bool : false;
+							#4252528185 relative :: bool : false;
+							#1703884837 amplitude :: propref(int) : @25180493-89e4-4618-9c8d-0a4beae03b5c#1703884837;
+							#2258494006 constant :: propref(int) : @25180493-89e4-4618-9c8d-0a4beae03b5c#2258494006;
+							#3229893223 frequency :: propref(float) : @25180493-89e4-4618-9c8d-0a4beae03b5c#3229893223;
+							#1428444465 phase :: float : 90.0;
+							#188973552 target :: propref(int) : @2d549fcd-3fe3-4eba-a0e7-00fb33637318#968250015;
+						}
+						#3843328455 "children_list 31" :: GtfSinusCurveS32 : @628f1dc2-20d1-4732-a53c-2ebaa7605d7a
+						{
+							#335537248 features :: feature_list : @57e252ee-e249-4ab4-80a6-bac539b5f03e
+							{
+							}
+							#4206472365 children :: children_list : @2967b359-9f6a-4783-a33b-d2489079ea49
+							{
+							}
+							#83167347 name :: string : "WaveS-3";
+							#1552873274 enabled :: bool : true;
+							#1385780974 delay :: int : 0;
+							#2202336877 duration :: int : 32000;
+							#3946106294 repeat :: int : 0;
+							#3862451263 alternating :: bool : false;
+							#4252528185 relative :: bool : false;
+							#1703884837 amplitude :: propref(int) : @25180493-89e4-4618-9c8d-0a4beae03b5c#1703884837;
+							#2258494006 constant :: int : -450;
+							#3229893223 frequency :: float : 0.03125;
+							#1428444465 phase :: float : 45.0;
+							#188973552 target :: propref(int) : @21366928-d258-465d-92aa-a16fca1f9a36#968250015;
+						}
+						#1733880314 "children_list 32" :: GtfSinusCurveS32 : @6929a15c-1a5b-4703-b768-69f5f3ccf60b
+						{
+							#335537248 features :: feature_list : @69408aa4-9850-41e3-80ce-aad8f92d0b77
+							{
+							}
+							#4206472365 children :: children_list : @00361a8e-bb27-4fe1-9225-8b8216b262dc
+							{
+							}
+							#83167347 name :: string : "WaveXL-1";
+							#1552873274 enabled :: bool : true;
+							#1385780974 delay :: int : 0;
+							#2202336877 duration :: int : 16000;
+							#3946106294 repeat :: int : 0;
+							#3862451263 alternating :: bool : false;
+							#4252528185 relative :: bool : false;
+							#1703884837 amplitude :: propref(int) : @25180493-89e4-4618-9c8d-0a4beae03b5c#1703884837;
+							#2258494006 constant :: int : -450;
+							#3229893223 frequency :: float : 0.0625;
+							#1428444465 phase :: float : 22.5;
+							#188973552 target :: propref(int) : @fe31cf5f-3075-42ee-b615-5ab1bd738841#968250015;
+						}
+						#3853301717 "children_list 33" :: GtfSinusCurveS32 : @34f85dcd-fd3c-4d6e-b331-ab36ff4e0d9a
+						{
+							#335537248 features :: feature_list : @4f13ea00-a54e-4d0c-91cf-98c0bc1443da
+							{
+							}
+							#4206472365 children :: children_list : @08580002-d645-493c-9679-66a856d7b26a
+							{
+							}
+							#83167347 name :: string : "WaveXL-2";
+							#1552873274 enabled :: bool : true;
+							#1385780974 delay :: int : 0;
+							#2202336877 duration :: int : 32000;
+							#3946106294 repeat :: int : 0;
+							#3862451263 alternating :: bool : false;
+							#4252528185 relative :: bool : false;
+							#1703884837 amplitude :: propref(int) : @25180493-89e4-4618-9c8d-0a4beae03b5c#1703884837;
+							#2258494006 constant :: int : -450;
+							#3229893223 frequency :: float : 0.03125;
+							#1428444465 phase :: float : 135.0;
+							#188973552 target :: propref(int) : @ec9b6c26-1e63-4256-9570-785c4eb3e1de#968250015;
+						}
+						#199560830 "children_list 38" :: GtfSinusCurveS32 : @7564763d-5331-4c1c-8b93-d831445c8b86
+						{
+							#781962201 features :: feature_list : @6d35dedf-9d06-4964-bc63-2c0af826e411
+							{
+							}
+							#3197710832 children :: children_list : @c6a0c876-8ecb-42d8-b2c3-02765f724b79
+							{
+							}
+							#67349680 name :: string : "Red";
+							#1254570035 enabled :: bool : true;
+							#2756033263 delay :: int : 0;
+							#1580262735 duration :: int : 30000;
+							#4056947735 repeat :: int : 0;
+							#548401316 alternating :: bool : false;
+							#1993511627 relative :: bool : false;
+							#3224982224 amplitude :: int : 127;
+							#394748137 constant :: int : 127;
+							#2353832713 frequency :: float : 1.0;
+							#708418371 phase :: float : 0.0;
+							#683304500 target :: propref(int) : @c4c29084-0811-4dfa-9a13-e88c067283d7#543004719;
+						}
+						#1999807166 "children_list 39" :: GtfSinusCurveS32 : @a25bf461-efc8-42fd-b5b7-e18263008931
+						{
+							#781962201 features :: feature_list : @6dd812f8-9889-48f5-9551-afae647d1f99
+							{
+							}
+							#3197710832 children :: children_list : @456e214b-e095-4744-8a10-1e1202451095
+							{
+							}
+							#67349680 name :: string : "Green";
+							#1254570035 enabled :: bool : true;
+							#2756033263 delay :: int : 0;
+							#1580262735 duration :: int : 80000;
+							#4056947735 repeat :: int : 0;
+							#548401316 alternating :: bool : false;
+							#1993511627 relative :: bool : false;
+							#3224982224 amplitude :: int : 127;
+							#394748137 constant :: int : 127;
+							#2353832713 frequency :: float : 2.0;
+							#708418371 phase :: float : 22.5;
+							#683304500 target :: propref(int) : @c4c29084-0811-4dfa-9a13-e88c067283d7#4150544;
+						}
+						#2776953168 "children_list 40" :: GtfSinusCurveS32 : @9a2ae507-1baf-4e63-b505-9473508b010e
+						{
+							#781962201 features :: feature_list : @e57e9bb4-9a17-48e3-af40-6ff3ec8e0cb4
+							{
+							}
+							#3197710832 children :: children_list : @5bf21570-ddad-416d-9ca4-a4a0f6a73be5
+							{
+							}
+							#67349680 name :: string : "Blue";
+							#1254570035 enabled :: bool : true;
+							#2756033263 delay :: int : 0;
+							#1580262735 duration :: int : 90000;
+							#4056947735 repeat :: int : 0;
+							#548401316 alternating :: bool : false;
+							#1993511627 relative :: bool : false;
+							#3224982224 amplitude :: int : 127;
+							#394748137 constant :: int : 127;
+							#2353832713 frequency :: float : 3.0;
+							#708418371 phase :: float : 90.0;
+							#683304500 target :: propref(int) : @c4c29084-0811-4dfa-9a13-e88c067283d7#3155579219;
+						}
+					}
+					#127581823 name :: string : "Animation";
+					#1005423985 enabled :: bool : true;
+					#3450016078 repeat :: int : 1;
+					#1154379743 alternating :: bool : false;
+					#1101248829 scale :: float : 0.25;
+					#1753100599 onPlay :: function(void,int,bool) : @0c484f76-5d70-4dcf-af53-35295212919c
+					{
+						#2555625693 script :: string : "function(v:animation_time::int, v:forward::bool)\n{\n\n}";
+					}
+					#329923857 onPause :: function(void,int) : @a0e63611-be4c-4dd9-9bb7-09d93b49c601
+					{
+						#2942816763 script :: string : "function(v:animation_time::int)\n{\n\n}";
+					}
+					#2809555382 onTerminate :: function(void,int,int) : @7ac5fb1f-0bec-4396-8896-2646a7040df7
+					{
+						#2861484190 script :: string : "function(v:animation_time::int, v:terminate::int)\n{\n\n}";
+					}
+					#2628871455 AnimHandler :: conditional_script : @5aebdd97-1c3f-44f6-bed4-33277c704fdb
+					{
+						#1274185315 triggerList :: trigger_list : @da792ce8-307e-419c-9a67-a7bb183bfe7f
+						{
+							#3084120080 events :: event_refs : <objectref>[];
+							#2816135948 dp_items :: dp_item_refs : <objectref>[];
+							#1982262174 properties :: property_reference_list : <propref>[];
+						}
+						#3128994689 onTrigger :: function(bool,bool) : @268e848e-ceaa-4671-90df-1169f0b8595a
+						{
+							#3153324524 script :: string : "function(v:arg0::bool)\n{\n\tf:animation_play(v:this)\n\tfalse\n}";
+						}
+					}
+				}
+			}
+			#1604038086 name :: string : "Wave1";
+			#1868456509 visible :: bool_scriptedValue : @11aee932-a90c-4c6a-bb19-4e43de5ce7e7
+			{
+				#2856595849 triggerList :: trigger_list : @9222be97-bf90-4b95-8b02-2f19783f67ff
+				{
+					#3241973414 events :: event_refs : <objectref>[];
+					#3599496518 dp_items :: dp_item_refs : <objectref>[];
+					#3686257562 properties :: property_reference_list : <propref>[];
+				}
+				#1945303135 onTrigger :: function(bool,bool) : @94092769-f929-43cd-8396-e5715ecc285b
+				{
+					#3107223966 script :: string : "function(v:arg0::bool)\n{\n\t// todo: auto generated return value, please adapt\n\tfalse\n}";
+				}
+				#1607604074 read :: function(bool) : @869a181d-c804-49d7-9b19-45245227a653
+				{
+					#2963997535 script :: string : "function()\n{\n\tv:this.Color\n\ttrue\n}";
+				}
+				#3821007265 write :: function(bool,bool) : @a70276d4-cdaf-412e-b4e1-46a16a4ab353
+				{
+					#1761521552 script :: string : "function(v:arg0::bool)\n{\n\ttrue\n}";
+				}
+			}
+			#2371783922 width :: int : 90;
+			#1132997455 height :: int : 1024;
+			#3925508682 x :: int : 50;
+			#3761915028 y :: int : 0;
+			#3727669992 Color :: color : 255;
+			#543004719 Rad :: int_scriptedValue : @fe6f8c20-e2f7-4781-ad8b-d76041a8f433
+			{
+				#1617273212 triggerList :: trigger_list : @b2426a9a-c959-43ac-b33a-68b475e8fff0
+				{
+					#3739954309 events :: event_refs : <objectref>[];
+					#2791390660 dp_items :: dp_item_refs : <objectref>[];
+					#3010486985 properties :: property_reference_list : <propref>[];
+				}
+				#1595517770 onTrigger :: function(bool,bool) : @301f75f0-c9b3-4ca7-a736-e6291d58348c
+				{
+					#2151783109 script :: string : "function(v:arg0::bool)\n{\n\t// todo: auto generated return value, please adapt\n\tfalse\n}";
+				}
+				#1395612887 read :: function(int) : @177ce3bd-2ad6-4dd9-b4a2-4799edae364c
+				{
+					#1220864971 script :: string : "function()\n{\n\tv:this.RGB[0]\n}";
+				}
+				#2493150936 write :: function(bool,int) : @fabfe1f2-539a-492d-a030-2da371ea406d
+				{
+					#1271532879 script :: string : "function(v:arg0::int)\n{\n\tv:this.RGB[0] = v:arg0::int\n\tv:this.Color = f:rgba2color(v:this.RGB[0],v:this.RGB[1],v:this.RGB[2],255)\n\ttrue\n}";
+				}
+			}
+			#4150544 Green :: int_scriptedValue : @22e3c435-38f3-4fc8-aa82-45af20165929
+			{
+				#2980074936 triggerList :: trigger_list : @c88ac035-a558-4b7e-93b5-a5ada095fe80
+				{
+					#2887196773 events :: event_refs : <objectref>[];
+					#3497548907 dp_items :: dp_item_refs : <objectref>[];
+					#3223706388 properties :: property_reference_list : <propref>[];
+				}
+				#2913078498 onTrigger :: function(bool,bool) : @718415fc-7aff-44c6-a2e2-a5879be8d21e
+				{
+					#1795204450 script :: string : "function(v:arg0::bool)\n{\n\t// todo: auto generated return value, please adapt\n\tfalse\n}";
+				}
+				#932263930 read :: function(int) : @809066fe-7bdb-4626-8883-fe3849df28cc
+				{
+					#2309852473 script :: string : "function()\n{\n\tv:this.RGB[1]\n}";
+				}
+				#2379861434 write :: function(bool,int) : @1a8e112b-b637-4dd2-a06e-5bfbd94cd8ae
+				{
+					#2421755873 script :: string : "function(v:arg0::int)\n{\n\tv:this.RGB[1] = v:arg0::int\n\tv:this.Color = f:rgba2color(v:this.RGB[0],v:this.RGB[1],v:this.RGB[2],255)\n\tfalse\n}";
+				}
+			}
+			#3155579219 Blue :: int_scriptedValue : @df376fd5-8b34-4b9b-a035-26b972c94b39
+			{
+				#2686843400 triggerList :: trigger_list : @a171dbe8-0972-4b37-857b-b08537c87954
+				{
+					#3392251372 events :: event_refs : <objectref>[];
+					#3098989757 dp_items :: dp_item_refs : <objectref>[];
+					#2970862163 properties :: property_reference_list : <propref>[];
+				}
+				#2665079526 onTrigger :: function(bool,bool) : @780f0c29-ecf8-4e6b-bc3e-487767ea6fa2
+				{
+					#2040816306 script :: string : "function(v:arg0::bool)\n{\n\t// todo: auto generated return value, please adapt\n\tfalse\n}";
+				}
+				#1479914057 read :: function(int) : @fac65e94-66a8-4be8-b626-40be5a67e19e
+				{
+					#1412839535 script :: string : "function()\n{\n\tv:this.RGB[2]\n}";
+				}
+				#3516631379 write :: function(bool,int) : @64fc9a81-6dcc-4df2-9d49-24147e340f99
+				{
+					#2579306786 script :: string : "function(v:arg0::int)\n{\n\tv:this.RGB[2] = v:arg0::int\n\tv:this.Color = f:rgba2color(v:this.RGB[0],v:this.RGB[1],v:this.RGB[2],255)\n\tfalse\n}";
+				}
+			}
+			#1374743963 RGB :: intlist : <int>[0, 0, 0];
+		}
+		#1241244023 "children_list 7" :: GtfContainer : @dde63038-a373-48b4-a584-22e0392d71fa
+		{
+			#4150243665 features :: feature_list : @9042f305-f927-40bd-b17e-4c2a5668bb35
+			{
+			}
+			#3701647355 children :: children_list : @7320bd7a-f606-40a4-8932-8509f63589fe
+			{
+				#45140263 "children_list 20" :: GtfImage : @1943d374-3457-47a2-a356-ea1b4cbe11f9
+				{
+					#4148549358 features :: feature_list : @397708b2-11db-4f06-8a31-e8da798072c4
+					{
+						#2377961064 "feature_list 6" :: ScaleMode : @32876aac-95f8-4dd0-8a73-bf0d5f5fa362
+						{
+							#3878831882 scaleMode :: int : 1;
+						}
+						#1121241012 "feature_list 7" :: Coloration : @a78c38f3-4e0f-49c1-9ebd-2c4a0822d847
+						{
+							#2301177924 colorationEnabled :: bool : true;
+							#899873761 colorationColor :: propref(color) : @dde63038-a373-48b4-a584-22e0392d71fa#3727669992;
+						}
+					}
+					#3702244186 children :: children_list : @3227047f-bc41-4cff-8bb2-47b965c250ef
+					{
+					}
+					#1589989632 name :: string : "WaveS-1";
+					#4258757475 visible :: bool : true;
+					#3293699028 width :: int : 80;
+					#654339236 height :: int : 2000;
+					#503510677 x :: int : 0;
+					#968250015 y :: int : 0;
+					#2951215137 image :: image_resource : @971df79d-23d5-4002-9d73-838b5c8872d0
+					{
+						#3183309834 file :: file : "waveS.png";
+					}
+					#3657830660 horizontalAlign :: int : 0;
+					#721286127 verticalAlign :: int : 1;
+				}
+				#2098497317 "children_list 21" :: GtfImage : @72954fbc-f498-4e40-96f3-dbd926edfad8
+				{
+					#4148549358 features :: feature_list : @d09f82e1-5b2a-4c90-ace8-2c471917d3ec
+					{
+						#2377961064 "feature_list 6" :: ScaleMode : @723bed44-1644-4212-9b7c-c56310c562c8
+						{
+							#3878831882 scaleMode :: int : 1;
+						}
+						#1121241012 "feature_list 7" :: Coloration : @0957e347-7dd1-4a1f-bbba-dcad078b60b8
+						{
+							#2301177924 colorationEnabled :: bool : true;
+							#899873761 colorationColor :: propref(color) : @dde63038-a373-48b4-a584-22e0392d71fa#3727669992;
+						}
+					}
+					#3702244186 children :: children_list : @10f3124b-8cdb-4b89-99e6-59f3ecf2584f
+					{
+					}
+					#1589989632 name :: string : "WaveS-2";
+					#4258757475 visible :: bool : true;
+					#3293699028 width :: int : 70;
+					#654339236 height :: int : 2000;
+					#503510677 x :: int : 20;
+					#968250015 y :: int : 0;
+					#2951215137 image :: image_resource : @4cd12ce0-cc40-44be-b28c-057659c5f2c7
+					{
+						#1739247929 file :: file : "waveS.png";
+					}
+					#3657830660 horizontalAlign :: int : 0;
+					#721286127 verticalAlign :: int : 1;
+				}
+				#2806682483 "children_list 22" :: GtfImage : @b12ac18a-1525-4ef0-9a32-6d884c2e6257
+				{
+					#4148549358 features :: feature_list : @3a6df39f-599d-4930-9b59-3db8aa8bae75
+					{
+						#2377961064 "feature_list 6" :: ScaleMode : @6c715456-d4ed-4b5b-8c5a-77b60511be97
+						{
+							#3878831882 scaleMode :: int : 1;
+						}
+						#1121241012 "feature_list 7" :: Coloration : @106082e8-40f8-4750-b4d1-a41c0140ad19
+						{
+							#2301177924 colorationEnabled :: bool : true;
+							#899873761 colorationColor :: propref(color) : @dde63038-a373-48b4-a584-22e0392d71fa#3727669992;
+						}
+					}
+					#3702244186 children :: children_list : @90078946-a21d-4d3f-8a06-6c2d7c7c7857
+					{
+					}
+					#1589989632 name :: string : "WaveS-3";
+					#4258757475 visible :: bool : true;
+					#3293699028 width :: int : 90;
+					#654339236 height :: int : 2000;
+					#503510677 x :: int : 0;
+					#968250015 y :: int : 0;
+					#2951215137 image :: image_resource : @628c28d0-78f0-469b-8ae1-699bfeb95d8c
+					{
+						#3183309834 file :: file : "waveS.png";
+					}
+					#3657830660 horizontalAlign :: int : 0;
+					#721286127 verticalAlign :: int : 1;
+				}
+				#2588762458 "children_list 23" :: GtfImage : @7073c71f-1719-44e5-a960-25bc60c0a8d5
+				{
+					#4148549358 features :: feature_list : @97819872-c03b-4519-8fdf-121ea8876317
+					{
+						#2377961064 "feature_list 6" :: ScaleMode : @ba55c75b-46a4-4233-b6f0-c5c273348a01
+						{
+							#3878831882 scaleMode :: int : 1;
+						}
+						#1121241012 "feature_list 7" :: Coloration : @5fd715a2-4926-480e-b6ac-81e765292d48
+						{
+							#2301177924 colorationEnabled :: bool : true;
+							#899873761 colorationColor :: propref(color) : @dde63038-a373-48b4-a584-22e0392d71fa#3727669992;
+						}
+					}
+					#3702244186 children :: children_list : @e173742a-5e46-43ca-9b2c-63463ea58365
+					{
+					}
+					#1589989632 name :: string : "WaveXL-1";
+					#4258757475 visible :: bool : true;
+					#3293699028 width :: int : 80;
+					#654339236 height :: int : 2000;
+					#503510677 x :: int : 20;
+					#968250015 y :: int : 0;
+					#2951215137 image :: image_resource : @d5e6e5b6-da32-4657-b6a3-89683b54cbb3
+					{
+						#2768389265 file :: file : "waveXL.png";
+					}
+					#3657830660 horizontalAlign :: int : 0;
+					#721286127 verticalAlign :: int : 1;
+				}
+				#4056394462 "children_list 24" :: GtfImage : @07f689c0-c400-45af-b74e-3e341bb4448a
+				{
+					#4148549358 features :: feature_list : @c3d43f5a-4ee3-45eb-9751-5e4971b58885
+					{
+						#2377961064 "feature_list 6" :: ScaleMode : @90ee3037-b81b-4e55-b326-870332bbf938
+						{
+							#3878831882 scaleMode :: int : 1;
+						}
+						#1121241012 "feature_list 7" :: Coloration : @109eaf39-22e8-4961-9163-b133d99619f3
+						{
+							#2301177924 colorationEnabled :: bool : true;
+							#899873761 colorationColor :: propref(color) : @dde63038-a373-48b4-a584-22e0392d71fa#3727669992;
+						}
+					}
+					#3702244186 children :: children_list : @8f23a139-fce3-4fc1-96c9-e5025c36edb6
+					{
+					}
+					#1589989632 name :: string : "WaveXL-2";
+					#4258757475 visible :: bool : true;
+					#3293699028 width :: int : 90;
+					#654339236 height :: int : 2000;
+					#503510677 x :: int : 0;
+					#968250015 y :: int : 0;
+					#2951215137 image :: image_resource : @5e61fdb7-60aa-4d9f-8b4a-7c8e47b8f7e1
+					{
+						#2768389265 file :: file : "waveXL.png";
+					}
+					#3657830660 horizontalAlign :: int : 0;
+					#721286127 verticalAlign :: int : 1;
+				}
+				#1143484786 "children_list 25" :: GtfParallelAnimation : @e4f29c5d-c2c2-4e55-90da-a78bc37b9547
+				{
+					#1023157002 features :: feature_list : @8c42a640-4547-4450-8e19-bf5497643132
+					{
+					}
+					#4012287785 children :: children_list : @2c942fb4-43b8-43dc-9ba6-94a4c312c1bf
+					{
+						#3900192329 "children_list 29" :: GtfSinusCurveS32 : @b20db74d-f59f-4bcb-a3fd-e58e2a400fcc
+						{
+							#335537248 features :: feature_list : @9dd7f116-65db-4105-bb2c-3872a8151541
+							{
+							}
+							#4206472365 children :: children_list : @72660f9c-9015-4636-9109-2b11d81f96d0
+							{
+							}
+							#83167347 name :: string : "WaveS-1";
+							#1552873274 enabled :: bool : true;
+							#1385780974 delay :: int : 0;
+							#2202336877 duration :: int : 16000;
+							#3946106294 repeat :: int : 0;
+							#3862451263 alternating :: bool : false;
+							#4252528185 relative :: bool : false;
+							#1703884837 amplitude :: int : 450;
+							#2258494006 constant :: int : -450;
+							#3229893223 frequency :: float : 0.0625;
+							#1428444465 phase :: float : 15.5;
+							#188973552 target :: propref(int) : @1943d374-3457-47a2-a356-ea1b4cbe11f9#968250015;
+						}
+						#2817852218 "children_list 30" :: GtfSinusCurveS32 : @94a33af5-c884-4f7c-a2b5-8fdb58f8bdbf
+						{
+							#335537248 features :: feature_list : @b8997ee7-7d9e-420f-b349-a326de915491
+							{
+							}
+							#4206472365 children :: children_list : @7677714d-9dc1-42ea-9a3f-0b0f631501e1
+							{
+							}
+							#83167347 name :: string : "WaveS-2";
+							#1552873274 enabled :: bool : true;
+							#1385780974 delay :: int : 0;
+							#2202336877 duration :: propref(int) : @b20db74d-f59f-4bcb-a3fd-e58e2a400fcc#2202336877;
+							#3946106294 repeat :: int : 0;
+							#3862451263 alternating :: bool : false;
+							#4252528185 relative :: bool : false;
+							#1703884837 amplitude :: propref(int) : @b20db74d-f59f-4bcb-a3fd-e58e2a400fcc#1703884837;
+							#2258494006 constant :: propref(int) : @b20db74d-f59f-4bcb-a3fd-e58e2a400fcc#2258494006;
+							#3229893223 frequency :: propref(float) : @b20db74d-f59f-4bcb-a3fd-e58e2a400fcc#3229893223;
+							#1428444465 phase :: float : 75.5;
+							#188973552 target :: propref(int) : @72954fbc-f498-4e40-96f3-dbd926edfad8#968250015;
+						}
+						#3843328455 "children_list 31" :: GtfSinusCurveS32 : @c5c6134c-11f1-4403-a05c-e239cd8abf31
+						{
+							#335537248 features :: feature_list : @f68259ba-8175-4ab1-b1b8-44d892429166
+							{
+							}
+							#4206472365 children :: children_list : @0f631da9-9db9-487f-ae46-499f8f05ad78
+							{
+							}
+							#83167347 name :: string : "WaveS-3";
+							#1552873274 enabled :: bool : true;
+							#1385780974 delay :: int : 0;
+							#2202336877 duration :: int : 32000;
+							#3946106294 repeat :: int : 0;
+							#3862451263 alternating :: bool : false;
+							#4252528185 relative :: bool : false;
+							#1703884837 amplitude :: propref(int) : @b20db74d-f59f-4bcb-a3fd-e58e2a400fcc#1703884837;
+							#2258494006 constant :: int : -450;
+							#3229893223 frequency :: float : 0.03125;
+							#1428444465 phase :: float : 90.0;
+							#188973552 target :: propref(int) : @b12ac18a-1525-4ef0-9a32-6d884c2e6257#968250015;
+						}
+						#1733880314 "children_list 32" :: GtfSinusCurveS32 : @b1773dac-0796-49ec-8c53-3ca19c6c5b9e
+						{
+							#335537248 features :: feature_list : @0402842a-b939-40ae-bd5c-935b31689612
+							{
+							}
+							#4206472365 children :: children_list : @2a3f29c2-143e-470a-bdc4-d8214245f2f7
+							{
+							}
+							#83167347 name :: string : "WaveXL-1";
+							#1552873274 enabled :: bool : true;
+							#1385780974 delay :: int : 0;
+							#2202336877 duration :: int : 16000;
+							#3946106294 repeat :: int : 0;
+							#3862451263 alternating :: bool : false;
+							#4252528185 relative :: bool : false;
+							#1703884837 amplitude :: propref(int) : @b20db74d-f59f-4bcb-a3fd-e58e2a400fcc#1703884837;
+							#2258494006 constant :: int : -450;
+							#3229893223 frequency :: float : 0.0625;
+							#1428444465 phase :: float : 11.25;
+							#188973552 target :: propref(int) : @7073c71f-1719-44e5-a960-25bc60c0a8d5#968250015;
+						}
+						#3853301717 "children_list 33" :: GtfSinusCurveS32 : @cfa8d983-b184-4c22-8a1d-3442aecab4df
+						{
+							#335537248 features :: feature_list : @38343bc1-a5dc-48c9-adf7-89da86327993
+							{
+							}
+							#4206472365 children :: children_list : @b8e368ba-f264-4711-ab6c-1db5ed00a9de
+							{
+							}
+							#83167347 name :: string : "WaveXL-2";
+							#1552873274 enabled :: bool : true;
+							#1385780974 delay :: int : 0;
+							#2202336877 duration :: int : 32000;
+							#3946106294 repeat :: int : 0;
+							#3862451263 alternating :: bool : false;
+							#4252528185 relative :: bool : false;
+							#1703884837 amplitude :: propref(int) : @b20db74d-f59f-4bcb-a3fd-e58e2a400fcc#1703884837;
+							#2258494006 constant :: int : -450;
+							#3229893223 frequency :: float : 0.03125;
+							#1428444465 phase :: float : 101.25;
+							#188973552 target :: propref(int) : @07f689c0-c400-45af-b74e-3e341bb4448a#968250015;
+						}
+						#199560830 "children_list 38" :: GtfSinusCurveS32 : @7df941d7-4474-4210-8d78-ccf8e54d4de7
+						{
+							#781962201 features :: feature_list : @a817c81d-914e-4213-8af7-3f269488472c
+							{
+							}
+							#3197710832 children :: children_list : @f444f0c1-b5ea-4cfc-ae33-ed72a028b4be
+							{
+							}
+							#67349680 name :: string : "Red";
+							#1254570035 enabled :: bool : true;
+							#2756033263 delay :: int : 0;
+							#1580262735 duration :: int : 30000;
+							#4056947735 repeat :: int : 0;
+							#548401316 alternating :: bool : false;
+							#1993511627 relative :: bool : false;
+							#3224982224 amplitude :: int : 127;
+							#394748137 constant :: int : 127;
+							#2353832713 frequency :: float : 1.0;
+							#708418371 phase :: float : 0.0;
+							#683304500 target :: propref(int) : @dde63038-a373-48b4-a584-22e0392d71fa#543004719;
+						}
+						#1999807166 "children_list 39" :: GtfSinusCurveS32 : @46e33ec2-3f8c-4875-8fc7-b63e7b045631
+						{
+							#781962201 features :: feature_list : @1a9d44a0-4662-40f3-b596-c0a5b94171d4
+							{
+							}
+							#3197710832 children :: children_list : @fe007eac-5659-494c-a657-26e26d1d695c
+							{
+							}
+							#67349680 name :: string : "Green";
+							#1254570035 enabled :: bool : true;
+							#2756033263 delay :: int : 0;
+							#1580262735 duration :: int : 80000;
+							#4056947735 repeat :: int : 0;
+							#548401316 alternating :: bool : false;
+							#1993511627 relative :: bool : false;
+							#3224982224 amplitude :: int : 127;
+							#394748137 constant :: int : 127;
+							#2353832713 frequency :: float : 2.0;
+							#708418371 phase :: float : 22.5;
+							#683304500 target :: propref(int) : @dde63038-a373-48b4-a584-22e0392d71fa#4150544;
+						}
+						#2776953168 "children_list 40" :: GtfSinusCurveS32 : @7065f2eb-6903-4382-b0ce-07233302b22a
+						{
+							#781962201 features :: feature_list : @bb01d68a-4e64-4f81-8efc-e078e79005da
+							{
+							}
+							#3197710832 children :: children_list : @4c3b0374-a8e0-4ac6-8dcc-b817e99c80ee
+							{
+							}
+							#67349680 name :: string : "Blue";
+							#1254570035 enabled :: bool : true;
+							#2756033263 delay :: int : 0;
+							#1580262735 duration :: int : 90000;
+							#4056947735 repeat :: int : 0;
+							#548401316 alternating :: bool : false;
+							#1993511627 relative :: bool : false;
+							#3224982224 amplitude :: int : 127;
+							#394748137 constant :: int : 127;
+							#2353832713 frequency :: float : 3.0;
+							#708418371 phase :: float : 90.0;
+							#683304500 target :: propref(int) : @dde63038-a373-48b4-a584-22e0392d71fa#3155579219;
+						}
+					}
+					#127581823 name :: string : "Animation";
+					#1005423985 enabled :: bool : true;
+					#3450016078 repeat :: int : 1;
+					#1154379743 alternating :: bool : false;
+					#1101248829 scale :: float : 0.25;
+					#1753100599 onPlay :: function(void,int,bool) : @d8ef8aa9-97ae-4346-b878-45de907af0e1
+					{
+						#2555625693 script :: string : "function(v:animation_time::int, v:forward::bool)\n{\n\n}";
+					}
+					#329923857 onPause :: function(void,int) : @83f1f3da-640e-4784-bad6-75381497eb58
+					{
+						#2942816763 script :: string : "function(v:animation_time::int)\n{\n\n}";
+					}
+					#2809555382 onTerminate :: function(void,int,int) : @6dd680cd-ee1e-403e-b81e-e2ad4f977c11
+					{
+						#2861484190 script :: string : "function(v:animation_time::int, v:terminate::int)\n{\n\n}";
+					}
+					#2628871455 AnimHandler :: conditional_script : @c8419618-d5d5-42fd-bf54-583f16d1e357
+					{
+						#1274185315 triggerList :: trigger_list : @9c2ebf27-d443-4fd7-95db-48cc114d7ed4
+						{
+							#3084120080 events :: event_refs : <objectref>[];
+							#2816135948 dp_items :: dp_item_refs : <objectref>[];
+							#1982262174 properties :: property_reference_list : <propref>[];
+						}
+						#3128994689 onTrigger :: function(bool,bool) : @b70e3725-de08-4cab-a291-e8b1dce707c2
+						{
+							#3153324524 script :: string : "function(v:arg0::bool)\n{\n\tf:animation_play(v:this)\n\tfalse\n}";
+						}
+					}
+				}
+			}
+			#1604038086 name :: string : "Wave2";
+			#1868456509 visible :: bool_scriptedValue : @ac018e1a-af44-4524-8696-f304765a1490
+			{
+				#2856595849 triggerList :: trigger_list : @61056071-18ae-45ee-b4c5-c52f4b5215f6
+				{
+					#3241973414 events :: event_refs : <objectref>[];
+					#3599496518 dp_items :: dp_item_refs : <objectref>[];
+					#3686257562 properties :: property_reference_list : <propref>[];
+				}
+				#1945303135 onTrigger :: function(bool,bool) : @cf06064b-a1ca-4413-b5a0-c54659ed4041
+				{
+					#3107223966 script :: string : "function(v:arg0::bool)\n{\n\t// todo: auto generated return value, please adapt\n\tfalse\n}";
+				}
+				#1607604074 read :: function(bool) : @9cbe5d7b-8911-43b0-bfd2-90e7df2db141
+				{
+					#2963997535 script :: string : "function()\n{\n\tv:this.Color\n\ttrue\n}";
+				}
+				#3821007265 write :: function(bool,bool) : @919815ef-67ff-4ab4-8a20-03635917b7a5
+				{
+					#1761521552 script :: string : "function(v:arg0::bool)\n{\n\ttrue\n}";
+				}
+			}
+			#2371783922 width :: int : 90;
+			#1132997455 height :: int : 1024;
+			#3925508682 x :: int : 500;
+			#3761915028 y :: int : 0;
+			#3727669992 Color :: color : 255;
+			#543004719 Rad :: int_scriptedValue : @8197268d-6f61-4a1c-8690-50a4f121e3b0
+			{
+				#1617273212 triggerList :: trigger_list : @a63d09a3-eff6-462e-b4ce-be8a300fe555
+				{
+					#3739954309 events :: event_refs : <objectref>[];
+					#2791390660 dp_items :: dp_item_refs : <objectref>[];
+					#3010486985 properties :: property_reference_list : <propref>[];
+				}
+				#1595517770 onTrigger :: function(bool,bool) : @943b1946-72e8-4b96-a8f7-a4c207d73e12
+				{
+					#2151783109 script :: string : "function(v:arg0::bool)\n{\n\tfalse\n}";
+				}
+				#1395612887 read :: function(int) : @04ea2c7f-b6fd-4f92-b7d4-1fb1ddb8a773
+				{
+					#1220864971 script :: string : "function()\n{\n\tv:this.RGB[0]\n}";
+				}
+				#2493150936 write :: function(bool,int) : @f2aefe19-475e-44e3-830d-2fba7269bd87
+				{
+					#1271532879 script :: string : "function(v:arg0::int)\n{\n\tv:this.RGB[0] = v:arg0::int\n\tv:this.Color = f:rgba2color(v:this.RGB[0],v:this.RGB[1],v:this.RGB[2],255)\n\ttrue\n}";
+				}
+			}
+			#4150544 Green :: int_scriptedValue : @b577ad10-9212-467c-8fc1-4b07951c0105
+			{
+				#2980074936 triggerList :: trigger_list : @a9a8fb5d-992d-4637-9e4b-0dfd61f61af9
+				{
+					#2887196773 events :: event_refs : <objectref>[];
+					#3497548907 dp_items :: dp_item_refs : <objectref>[];
+					#3223706388 properties :: property_reference_list : <propref>[];
+				}
+				#2913078498 onTrigger :: function(bool,bool) : @5f8ae887-50a3-4b43-9c49-5ff7f7fa4b92
+				{
+					#1795204450 script :: string : "function(v:arg0::bool)\n{\n\tfalse\n}";
+				}
+				#932263930 read :: function(int) : @5261d355-e19f-44ea-aed5-cbe54f65962b
+				{
+					#2309852473 script :: string : "function()\n{\n\tv:this.RGB[1]\n}";
+				}
+				#2379861434 write :: function(bool,int) : @6e2e1cbf-70ea-4359-a93c-6d205da50880
+				{
+					#2421755873 script :: string : "function(v:arg0::int)\n{\n\tv:this.RGB[1] = v:arg0::int\n\tv:this.Color = f:rgba2color(v:this.RGB[0],v:this.RGB[1],v:this.RGB[2],255)\n\tfalse\n}";
+				}
+			}
+			#3155579219 Blue :: int_scriptedValue : @e54b218b-4059-45e2-ad6f-54b1cfedcc73
+			{
+				#2686843400 triggerList :: trigger_list : @9edea784-f4a8-43da-98a0-72c977079e40
+				{
+					#3392251372 events :: event_refs : <objectref>[];
+					#3098989757 dp_items :: dp_item_refs : <objectref>[];
+					#2970862163 properties :: property_reference_list : <propref>[];
+				}
+				#2665079526 onTrigger :: function(bool,bool) : @47b8eb82-85e2-49f3-b376-6d23ddb7d5ff
+				{
+					#2040816306 script :: string : "function(v:arg0::bool)\n{\n\t// todo: auto generated return value, please adapt\n\tfalse\n}";
+				}
+				#1479914057 read :: function(int) : @b69f953d-7e53-4fda-94ad-811862f2460d
+				{
+					#1412839535 script :: string : "function()\n{\n\tv:this.RGB[2]\n}";
+				}
+				#3516631379 write :: function(bool,int) : @c364de9c-61f2-4096-b4ca-8d280c6271f5
+				{
+					#2579306786 script :: string : "function(v:arg0::int)\n{\n\tv:this.RGB[2] = v:arg0::int\n\tv:this.Color = f:rgba2color(v:this.RGB[0],v:this.RGB[1],v:this.RGB[2],255)\n\tfalse\n}";
+				}
+			}
+			#1374743963 RGB :: intlist : <int>[0, 0, 0];
+		}
+		#2620985404 "children_list 11" :: GtfContainer : @dfdd70a2-3634-4c8c-a453-67521817cccc
+		{
+			#1171412898 features :: feature_list : @a871eccc-09ca-48c1-b865-1e41b1151345
+			{
+			}
+			#4081551642 children :: children_list : @58bed6ee-8c6b-47db-a080-830ea80efec2
+			{
+				#3407503242 "children_list 16" :: GtfImage : @4792e829-ed93-4346-887e-b49ff4aec9bd
+				{
+					#3968110974 features :: feature_list : @e545a413-bfcf-4b3e-80f9-a20d7736f071
+					{
+						#1318953083 "feature_list 1" :: Coloration : @10deb01a-01c5-43ed-9f56-a6edc4e80ec8
+						{
+							#1070149571 colorationEnabled :: bool : true;
+							#1295476832 colorationColor :: color : -252116993;
+						}
+						#1241341707 "feature_list 2" :: ScaleMode : @63e11750-b2f2-42cd-bf41-e70fc9a53796
+						{
+							#3830397008 scaleMode :: int : 2;
+						}
+					}
+					#3708095925 children :: children_list : @e426e5ca-e4bc-45dd-abcc-ec305f1878e3
+					{
+						#2423220473 "children_list 5" :: GtfImage : @f592bda2-de24-44a5-8847-efe7ebc1c42f
+						{
+							#837144219 features :: feature_list : @ca254cf7-1ecd-41f9-8748-cae694e701b4
+							{
+								#2602831584 "feature_list 3" :: ScaleMode : @2e4b5f8d-c695-428a-ba2a-5d67f541cb16
+								{
+									#3597041612 scaleMode :: int : 2;
+								}
+							}
+							#3515441171 children :: children_list : @5106e215-93c3-4949-ae7e-29b5f6d7284d
+							{
+							}
+							#2161222237 name :: string : "Logo";
+							#354509500 visible :: bool : true;
+							#3490687793 width :: int : 150;
+							#1838227911 height :: int : 150;
+							#497765125 x :: int : 0;
+							#192693710 y :: int : 0;
+							#2324718897 image :: image_resource : @f40e85d0-7317-4973-8461-895ad32421fc
+							{
+								#3616112772 file :: file : "EB_logo.png";
+							}
+							#2933307247 horizontalAlign :: int : 1;
+							#3128966966 verticalAlign :: int : 0;
+						}
+					}
+					#1567118951 name :: string : "Glow";
+					#1036340095 visible :: bool : true;
+					#2492073639 width :: int : 150;
+					#656641691 height :: int : 150;
+					#855442549 x :: int : 0;
+					#3855769135 y :: int : 0;
+					#2893182039 image :: image_resource : @28b6906a-88d1-41c1-b0f9-2beb02fe6203
+					{
+						#2440335239 file :: file : "EB_glow.png";
+					}
+					#3704721396 horizontalAlign :: int : 1;
+					#613134050 verticalAlign :: int : 0;
+					#3982097534 ADD :: image_resource : @dce29f4e-2739-45ee-83f9-300a80c1be9d
+					{
+						#2893006615 file :: file : "EB_logo.png";
+					}
+				}
+			}
+			#230754613 name :: string : "Logo";
+			#658597484 visible :: bool : true;
+			#2605019934 width :: int : 150;
+			#958862236 height :: int : 150;
+			#851342144 x :: int_scriptedValue : @94f638fe-77de-45f4-a8a7-8eb8966cd4be
+			{
+				#1332823801 triggerList :: trigger_list : @ea8f2182-6074-4960-bf51-71d0661cdbb4
+				{
+					#3776884992 events :: event_refs : <objectref>[];
+					#3028253805 dp_items :: dp_item_refs : <objectref>[];
+					#3700007679 properties :: property_reference_list : <propref>[];
+				}
+				#1601081245 onTrigger :: function(bool,bool) : @cf500455-cf8e-42d1-b2a4-86507db5a8e4
+				{
+					#3026390521 script :: string : "function(v:arg0::bool)\n{\n\tfalse\n}";
+				}
+				#1068726780 read :: function(int) : @829d991c-deb3-437e-8a08-da98a0f37058
+				{
+					#2352734251 script :: string : "function()\n{\n\t(640 / 2) - (v:this.width / 2)\n}";
+				}
+				#1983759088 write :: function(bool,int) : @9d733bd3-0beb-446c-9c70-9f6bccb24e7a
+				{
+					#1833282775 script :: string : "function(v:arg0::int)\n{\n\tfalse\n}";
+				}
+			}
+			#4036719562 y :: int : 50;
+		}
+		#3373660500 "children_list 12" :: GtfImage_template_instance : @f2a6780a-3aff-47d4-8ba2-10c4b356bdc0
+		{
+			#443438118 name :: string : "START";
+			#3015725075 template :: objectref(GtfImage_template) : @c4ac040d-2906-4258-92ad-e656bee7d754;
+			#3486092596 children :: children_list : @bc93da40-4571-4842-9f8b-3d1e4e20b665
+			{
+			}
+			#1082444662 x :: int_scriptedValue : @16b917ee-8bc5-4969-8ae2-4e74520d2132
+			{
+				#2576169915 triggerList :: trigger_list : @7cc1f1b6-b64b-4138-864c-e3e969d8e602
+				{
+					#3712417467 events :: event_refs : <objectref>[];
+					#3127748063 dp_items :: dp_item_refs : <objectref>[];
+					#2869723068 properties :: property_reference_list : <propref>[];
+				}
+				#2090721179 onTrigger :: function(bool,bool) : @32bc09b6-38b7-4e27-b58d-31c8b9f330f4
+				{
+					#2680850828 script :: string : "function(v:arg0::bool)\n{\n\tfalse\n}";
+				}
+				#1852585797 read :: function(int) : @d01c9ac0-2729-4ec3-a768-faae0464cf9e
+				{
+					#3307738485 script :: string : "function()\n{\n\t640 / 2 - v:this.width/2\n}";
+				}
+				#3624361250 write :: function(bool,int) : @63007f36-b089-46c4-aacc-db35a01696aa
+				{
+					#2560513211 script :: string : "function(v:arg0::int)\n{\n\tfalse\n}";
+				}
+			}
+			#507593524 y :: int : 250;
+			#1402111287 text :: string : "S    T    A    R    T";
+			#3118936266 width :: int : 230;
+			#3037299762 "width 2" :: int : 230;
+			#1637164728 releasedReaction :: function(bool) : @0b1308dd-22d5-40fe-a721-7fe6ab67688c
+			{
+				#2755407263 script :: string : "function()\n{\n\tif(v:this.touched){\n\t\tv:this->^->goto_Main.AnimationStart()\n\t}\n\tfalse\n}";
+			}
+		}
+		#3513072301 "children_list 14" :: GtfImage_template_instance : @5c9c608d-485f-4cda-b89a-bf205ec01544
+		{
+			#443438118 name :: string : "MENU";
+			#3015725075 template :: objectref(GtfImage_template) : @c4ac040d-2906-4258-92ad-e656bee7d754;
+			#3486092596 children :: children_list : @4519224f-8285-43ce-9f60-063ca87d8c60
+			{
+			}
+			#1082444662 x :: int_scriptedValue : @7d9009a3-9b9d-412b-b93d-58ea16bc13d0
+			{
+				#2576169915 triggerList :: trigger_list : @58583498-123b-4cb1-ab79-4dc8a4b70234
+				{
+					#3712417467 events :: event_refs : <objectref>[];
+					#3127748063 dp_items :: dp_item_refs : <objectref>[];
+					#2869723068 properties :: property_reference_list : <propref>[];
+				}
+				#2090721179 onTrigger :: function(bool,bool) : @6c9903ae-1472-41d5-b4dc-7ce378ab9436
+				{
+					#2680850828 script :: string : "function(v:arg0::bool)\n{\n\t// todo: auto generated return value, please adapt\n\tfalse\n}";
+				}
+				#1852585797 read :: function(int) : @e9b191d6-b9c5-4ec9-9750-01f5902fc1f2
+				{
+					#3307738485 script :: string : "function()\n{\n\t// todo: auto generated return value, please adapt\n\t640 / 2 - v:this.width/2\n}";
+				}
+				#3624361250 write :: function(bool,int) : @b2b6c355-4328-4d0a-be43-24a257f632d7
+				{
+					#2560513211 script :: string : "function(v:arg0::int)\n{\n\t// todo: auto generated return value, please adapt\n\tfalse\n}";
+				}
+			}
+			#507593524 y :: int : 320;
+			#1402111287 text :: string : "M    E    N    U";
+			#3118936266 width :: int : 230;
+			#3037299762 "width 2" :: int : 230;
+			#1626313807 releasedReaction :: function(bool) : @5fd01bc8-a26a-4302-b0ff-2ad86210d983
+			{
+				#2156740717 script :: string : "function()\n{\n\tif(v:this.touched){\n\t\tv:this->^->goto_Menu.AnimationStart()\n\t}\n\tfalse\n}";
+			}
+		}
+		#218173938 "children_list 1" :: GtfImage_template_instance : @0ad2cda2-fba1-40e3-9780-ac3760a41126
+		{
+			#443438118 name :: string : "EXIT";
+			#3015725075 template :: objectref(GtfImage_template) : @c4ac040d-2906-4258-92ad-e656bee7d754;
+			#3486092596 children :: children_list : @c708f9fd-2a38-482b-92b2-8f888ad6b166
+			{
+			}
+			#1082444662 x :: int_scriptedValue : @adb8898d-fd7e-40d0-ae24-d42b6018cdc0
+			{
+				#2576169915 triggerList :: trigger_list : @e4ad0e7e-6484-4de1-807a-9a63c71cfc86
+				{
+					#3712417467 events :: event_refs : <objectref>[];
+					#3127748063 dp_items :: dp_item_refs : <objectref>[];
+					#2869723068 properties :: property_reference_list : <propref>[];
+				}
+				#2090721179 onTrigger :: function(bool,bool) : @73165101-4bfb-4344-a51d-3fd03d2d5edc
+				{
+					#2680850828 script :: string : "function(v:arg0::bool)\n{\n\t// todo: auto generated return value, please adapt\n\tfalse\n}";
+				}
+				#1852585797 read :: function(int) : @26c70d5a-7bda-4c07-ac79-ff246c86db90
+				{
+					#3307738485 script :: string : "function()\n{\n\t640 / 2 - v:this.width/2\n}";
+				}
+				#3624361250 write :: function(bool,int) : @0ee69f80-77e5-4224-8408-c914a1d1d655
+				{
+					#2560513211 script :: string : "function(v:arg0::int)\n{\n\tfalse\n}";
+				}
+			}
+			#507593524 y :: int : 390;
+			#1402111287 text :: string : "E    X    I    T";
+			#3118936266 width :: int : 230;
+			#3037299762 "width 2" :: int : 230;
+			#825196308 releasedReaction :: function(bool) : @28458f18-6ef6-42c1-8389-fac3bd1a7fdd
+			{
+				#2830655291 script :: string : "function()\n{\n\tif(v:this.touched){\n\t\tv:this->^->goto_END.AnimationStart()\n\t}\n\ttrue\n}";
+			}
+		}
+		#1275557361 "children_list 8" :: GtfParallelAnimation : @f7c8ad6c-39aa-4d96-9ca3-ff763f103961
+		{
+			#175797092 features :: feature_list : @f889024c-f0ba-48f3-95dc-00f0439ff0eb
+			{
+			}
+			#2951476442 children :: children_list : @aa1715af-f471-4935-b434-2021e28fb5c5
+			{
+				#204212377 "children_list 9" :: GtfLinearInterpolationColor : @c71f3476-2b35-42cb-ae22-465e452e25b5
+				{
+					#4097293329 features :: feature_list : @529efefa-ad80-419a-b5a3-9b1ec34dd09c
+					{
+					}
+					#4090569293 children :: children_list : @bc5efb12-4205-4946-b301-bc3e0de4f61c
+					{
+					}
+					#922236684 name :: string : "Linear";
+					#2669461534 enabled :: bool : true;
+					#3172410434 delay :: int : 0;
+					#2563881150 duration :: int : 1000;
+					#3876397880 repeat :: int : 1;
+					#4271517806 alternating :: bool : false;
+					#2027027511 relative :: bool : false;
+					#3168161882 start :: color : -1;
+					#4267159215 end :: color : 255;
+					#3491579168 target :: propref(color) : @05c6b5a2-2da5-4c1b-8166-3763d29f3274#1107153658;
+				}
+			}
+			#465584236 name :: string : "goto_Main";
+			#769159010 enabled :: bool : true;
+			#4088262141 repeat :: int : 1;
+			#475179157 alternating :: bool : false;
+			#885012588 scale :: float : 1.0;
+			#1643233404 onPlay :: function(void,int,bool) : @713d0e1e-2873-4ace-ae29-39874e045030
+			{
+				#1713515467 script :: string : "function(v:animation_time::int, v:forward::bool)\n{\n\n}";
+			}
+			#3207938278 onPause :: function(void,int) : @e5ccae9f-39b7-4d15-abf1-2fe1b159d818
+			{
+				#1884582359 script :: string : "function(v:animation_time::int)\n{\n\n}";
+			}
+			#3700272578 onTerminate :: function(void,int,int) : @427bcb83-7629-4a67-af39-a034d9404a64
+			{
+				#2940926839 script :: string : "function(v:animation_time::int, v:terminate::int)\n{\n\tfire_delayed 3000, ev:Title_goto_Main()\n}";
+			}
+			#2118690261 AnimationStart :: function(bool) : @cf1a96bc-f3df-4307-9d71-595857eff312
+			{
+				#2792234155 script :: string : "function()\n{\n\tf:animation_play(v:this)\n\tfalse\n}";
+			}
+		}
+		#2898669670 "children_list 10" :: GtfParallelAnimation : @cf14180f-7c78-47f7-81c2-a4cac1f2b973
+		{
+			#175797092 features :: feature_list : @ceff2256-7b07-402c-b030-8fa7be51227f
+			{
+			}
+			#2951476442 children :: children_list : @6f4db7ac-0582-4f07-8524-fba058774b8b
+			{
+				#204212377 "children_list 9" :: GtfLinearInterpolationColor : @efb710e4-062c-44bc-8c2b-974ab872aa4b
+				{
+					#4097293329 features :: feature_list : @cd89ba63-6dd3-4e7e-a680-b857358e978c
+					{
+					}
+					#4090569293 children :: children_list : @108e6ad2-505f-44ca-b26c-0c3937c559ef
+					{
+					}
+					#922236684 name :: string : "Linear";
+					#2669461534 enabled :: bool : true;
+					#3172410434 delay :: int : 0;
+					#2563881150 duration :: int : 1000;
+					#3876397880 repeat :: int : 1;
+					#4271517806 alternating :: bool : false;
+					#2027027511 relative :: bool : false;
+					#3168161882 start :: color : -1;
+					#4267159215 end :: color : 255;
+					#3491579168 target :: propref(color) : @05c6b5a2-2da5-4c1b-8166-3763d29f3274#1107153658;
+				}
+			}
+			#465584236 name :: string : "goto_END";
+			#769159010 enabled :: bool : true;
+			#4088262141 repeat :: int : 1;
+			#475179157 alternating :: bool : false;
+			#885012588 scale :: float : 1.0;
+			#1643233404 onPlay :: function(void,int,bool) : @7c980775-5cb0-40a6-87b0-de892324b9b5
+			{
+				#1713515467 script :: string : "function(v:animation_time::int, v:forward::bool)\n{\n\n}";
+			}
+			#3207938278 onPause :: function(void,int) : @3cfd3b26-1305-427e-b9a7-54e7af13845c
+			{
+				#1884582359 script :: string : "function(v:animation_time::int)\n{\n\n}";
+			}
+			#3700272578 onTerminate :: function(void,int,int) : @2199f302-cacf-4f6c-ab24-6a6744015d81
+			{
+				#2940926839 script :: string : "function(v:animation_time::int, v:terminate::int)\n{\n\tfire_delayed 3000, ev:END()\n}";
+			}
+			#2118690261 AnimationStart :: function(bool) : @335427fd-76e6-427f-b61a-4c7a3cec19dc
+			{
+				#2792234155 script :: string : "function()\n{\n\tf:animation_play(v:this)\n\tfalse\n}";
+			}
+		}
+		#524514283 "children_list 13" :: GtfParallelAnimation : @c44435cb-e621-4615-8719-06deb51c8e6c
+		{
+			#175797092 features :: feature_list : @d41a5bb1-7393-482b-826f-62fbce283507
+			{
+			}
+			#2951476442 children :: children_list : @18cfbcd4-5d6b-4f21-ab9c-e2bfe777f777
+			{
+				#204212377 "children_list 9" :: GtfLinearInterpolationColor : @df2757e6-c7f2-4c16-9d7f-a11675075026
+				{
+					#4097293329 features :: feature_list : @c1839090-dcb9-4387-908e-083fe02e30a1
+					{
+					}
+					#4090569293 children :: children_list : @65d8e130-a4e1-4c46-bedc-5e5c8e32906d
+					{
+					}
+					#922236684 name :: string : "Linear";
+					#2669461534 enabled :: bool : true;
+					#3172410434 delay :: int : 0;
+					#2563881150 duration :: int : 1000;
+					#3876397880 repeat :: int : 1;
+					#4271517806 alternating :: bool : false;
+					#2027027511 relative :: bool : false;
+					#3168161882 start :: color : -1;
+					#4267159215 end :: color : 255;
+					#3491579168 target :: propref(color) : @05c6b5a2-2da5-4c1b-8166-3763d29f3274#1107153658;
+				}
+			}
+			#465584236 name :: string : "goto_Menu";
+			#769159010 enabled :: bool : true;
+			#4088262141 repeat :: int : 1;
+			#475179157 alternating :: bool : false;
+			#885012588 scale :: float : 1.0;
+			#1643233404 onPlay :: function(void,int,bool) : @ae4f4ec2-4d16-4762-a6a7-d04dddb2733a
+			{
+				#1713515467 script :: string : "function(v:animation_time::int, v:forward::bool)\n{\n\n}";
+			}
+			#3207938278 onPause :: function(void,int) : @f30f16a2-b376-4edb-857e-8b46033aa87f
+			{
+				#1884582359 script :: string : "function(v:animation_time::int)\n{\n\n}";
+			}
+			#3700272578 onTerminate :: function(void,int,int) : @825b201e-cee9-4b9f-9392-97de34dd7abd
+			{
+				#2940926839 script :: string : "function(v:animation_time::int, v:terminate::int)\n{\n\tfire_delayed 3000, ev:Title_goto_Menu()\n}";
+			}
+			#2118690261 AnimationStart :: function(bool) : @c553c4a4-1e97-41dd-bfdc-ca25866ad1cc
+			{
+				#2792234155 script :: string : "function()\n{\n\tf:animation_play(v:this)\n\tfalse\n}";
+			}
+		}
+		#3919536953 "children_list 3" :: GtfParallelAnimation : @497ad7ee-0929-42a9-9f2b-04f2045865b6
+		{
+			#175797092 features :: feature_list : @9cf9161b-f6d0-4aae-85ad-ed36d11cd248
+			{
+			}
+			#2951476442 children :: children_list : @d379294b-0c8d-4cd9-8c8f-ec1eb268edca
+			{
+				#204212377 "children_list 9" :: GtfLinearInterpolationColor : @8c4a5b79-1ed9-4675-b34e-8bd0025d48fe
+				{
+					#4097293329 features :: feature_list : @6d816da6-8688-4b21-b0fd-1107d20b2bc5
+					{
+					}
+					#4090569293 children :: children_list : @8126bb68-ef9b-462a-ab39-4febeb0135aa
+					{
+					}
+					#922236684 name :: string : "Linear";
+					#2669461534 enabled :: bool : true;
+					#3172410434 delay :: int : 0;
+					#2563881150 duration :: int : 1000;
+					#3876397880 repeat :: int : 1;
+					#4271517806 alternating :: bool : false;
+					#2027027511 relative :: bool : false;
+					#3168161882 start :: color : 255;
+					#4267159215 end :: color : -1;
+					#3491579168 target :: propref(color) : @05c6b5a2-2da5-4c1b-8166-3763d29f3274#1107153658;
+				}
+			}
+			#465584236 name :: string : "InitializeAnimation";
+			#769159010 enabled :: bool : true;
+			#4088262141 repeat :: int : 1;
+			#475179157 alternating :: bool : false;
+			#885012588 scale :: float : 1.0;
+			#1643233404 onPlay :: function(void,int,bool) : @7950604b-ddbc-4429-b2d8-def3b56dcca9
+			{
+				#1713515467 script :: string : "function(v:animation_time::int, v:forward::bool)\n{\n\n}";
+			}
+			#3207938278 onPause :: function(void,int) : @f909d8ab-f509-4c1b-b5e2-dbe216c6e441
+			{
+				#1884582359 script :: string : "function(v:animation_time::int)\n{\n\n}";
+			}
+			#3700272578 onTerminate :: function(void,int,int) : @b9450e32-6a1a-43aa-8989-6dde82c4f1ed
+			{
+				#2940926839 script :: string : "function(v:animation_time::int, v:terminate::int)\n{\n\t\n}";
+			}
+			#2918894913 AnimationStart :: conditional_script : @f3649b0d-2f69-49b4-bfce-9ed2ecaeccfc
+			{
+				#1363890427 triggerList :: trigger_list : @2cbd5a53-2ae9-4e2b-8957-a452b758566b
+				{
+					#3052967458 events :: event_refs : <objectref>[];
+					#3018204001 dp_items :: dp_item_refs : <objectref>[];
+					#2557920906 properties :: property_reference_list : <propref>[];
+				}
+				#1857451347 onTrigger :: function(bool,bool) : @000879c5-17a9-4cf1-90f3-733cdb85d04c
+				{
+					#2048074595 script :: string : "function(v:arg0::bool)\n{\n\tf:animation_play(v:this)\n\tfalse\n}";
+				}
+			}
+		}
+	}
+	#830127853 name :: string : "Viwe";
+	#578090467 visible :: bool : true;
+	#1942191327 width :: int : 640;
+	#533987616 height :: int : 480;
+	#4048914973 x :: int : 0;
+	#3978959993 y :: int : 0;
+}

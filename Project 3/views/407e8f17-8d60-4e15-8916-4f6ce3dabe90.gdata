@@ -1,0 +1,1605 @@
+EBGUIDE 6.4.1.127810;
+@407e8f17-8d60-4e15-8916-4f6ce3dabe90
+{
+	#4045691364 features :: feature_list : @dc20d8b1-f990-4dad-8fbf-33f790608e11
+	{
+		#2578659201 "feature_list 1" :: Coloration : @ac18467c-dd2e-434f-b403-8df74d9c832d
+		{
+			#1052373149 colorationEnabled :: bool : true;
+			#849880203 colorationColor :: color : -1;
+		}
+	}
+	#9929820 children :: children_list : @bd538c1f-06c4-482f-b88d-a44f3ebc2684
+	{
+		#1203438634 "children_list 5" :: GtfContainer : @08bc4281-6873-4b60-8cb8-759aeb26af05
+		{
+			#1273499956 features :: feature_list : @66cb9b85-f246-4262-b47c-f4d8ab46dfb9
+			{
+			}
+			#2824819158 children :: children_list : @166979b4-ed6b-40c0-90b1-8bfdb895cca5
+			{
+			}
+			#620853240 name :: string : "Initialize";
+			#1123876731 visible :: bool : true;
+			#2365810732 width :: int : 0;
+			#457055774 height :: int : 0;
+			#517963392 x :: int : 0;
+			#920944784 y :: int : 0;
+			#229744085 Initialize :: conditional_script : @74e39ec2-9498-418d-8a6e-ee917e98f1f8
+			{
+				#2827619661 triggerList :: trigger_list : @a9aa9401-2193-4af0-ba58-51665b601c04
+				{
+					#4181050932 events :: event_refs : <objectref>[];
+					#3767850348 dp_items :: dp_item_refs : <objectref>[];
+					#3530452588 properties :: property_reference_list : <propref>[];
+				}
+				#2445059086 onTrigger :: function(bool,bool) : @651eb1c0-eb44-452f-9277-b01fe46ddef7
+				{
+					#1674750810 script :: string : "function(v:arg0::bool)\n{\n\tev:SendResultInformation(0,0,0,0)\n\t//最初に残しておくものを設定\n\tv:this->^->Button->Button1.SizeX = v:this->^->Button->Button1.width\n\tv:this->^->Button->Button1.SizeY = v:this->^->Button->Button1.height\n\tv:this->^->Button->Button2.SizeX = v:this->^->Button->Button2.width\n\tv:this->^->Button->Button2.SizeY = v:this->^->Button->Button2.height\n\tv:this->^->Button->Button3.SizeX = v:this->^->Button->Button3.width\n\tv:this->^->Button->Button3.SizeY = v:this->^->Button->Button3.height\n\tv:this->^->Button->Button4.SizeX = v:this->^->Button->Button4.width\n\tv:this->^->Button->Button4.SizeY = v:this->^->Button->Button4.height\n\tv:this->^->Button->Button5.SizeX = v:this->^->Button->Button5.width\n\tv:this->^->Button->Button5.SizeY = v:this->^->Button->Button5.height\n\tv:this.SetData()\n\tfalse\n}";
+				}
+			}
+			#2590944359 SetData :: function(bool) : @63c9cc33-9a14-4e45-b147-fab5a5f0ee01
+			{
+				#2497289308 script :: string : "function()\n{\n\t//乱数初期化\n\tf:seed_rand(f:system_time())\n\t//挿入データを取得する\n\tv:this.ListNum = length v:this->^->Letter.Letter\n\tv:this->^->Button->ButtonContainer.AnswerIndex = f:rand() % v:this.ListNum\n\tv:this.Letter = v:this->^->Letter.Letter[v:this->^->Button->ButtonContainer.AnswerIndex]\n\tdp:Index1 = 0\n\t//フラグの初期化\n\twhile( dp:Index1 < length v:this.LetterList ) {\n\t\tv:this.LetterFlag[dp:Index1] = false\n\t\tdp:Index1 += 1\n\t}\n\tdp:Index1 = 0\n\t//ボタンに挿入するためグチャグチャにする\n\twhile( dp:Index1 < length v:this.LetterList ) {\n\t\tdp:Index2 = f:rand() % (length v:this.LetterList)\n\t\tif(!v:this.LetterFlag[dp:Index2]){\n\t\t\tv:this.LetterFlag[dp:Index2] = true\n\t\t\tv:this.LetterList[dp:Index1] = f:substring(v:this.Letter,dp:Index2,dp:Index2 - (length v:this.LetterList))\n\t\t\tdp:Index1 += 1\n\t\t}\n\t}\n\tdp:Index1 = 0\n\t//Button1の初期化\n\tv:this->^->Button->Button1.textColor = f:rgba2color(f:rand()%128 + 128, f:rand()%128 + 128, f:rand()%128 + 128,255)\n\tv:this->^->Button->Button1.text = v:this.LetterList[0]\n\tv:this->^->Button->Button1.InitializePos()\n\tv:this->^->Button->Button1->InitializeAnimation.AnimationStart()\n\t//Button2の初期化\n\tv:this->^->Button->Button2.textColor = f:rgba2color(f:rand()%128 + 128, f:rand()%128 + 128, f:rand()%128 + 128,255)\n\tv:this->^->Button->Button2.text = v:this.LetterList[1]\n\tv:this->^->Button->Button2.InitializePos()\n\tv:this->^->Button->Button2->InitializeAnimation.AnimationStart()\n\t//Button3の初期化\n\tv:this->^->Button->Button3.textColor = f:rgba2color(f:rand()%128 + 128, f:rand()%128 + 128, f:rand()%128 + 128,255)\n\tv:this->^->Button->Button3.text = v:this.LetterList[2]\n\tv:this->^->Button->Button3.InitializePos()\n\tv:this->^->Button->Button3->InitializeAnimation.AnimationStart()\n\t//Button4の初期化\n\tv:this->^->Button->Button4.textColor = f:rgba2color(f:rand()%128 + 128, f:rand()%128 + 128, f:rand()%128 + 128,255)\n\tv:this->^->Button->Button4.text = v:this.LetterList[3]\n\tv:this->^->Button->Button4.InitializePos()\n\tv:this->^->Button->Button4->InitializeAnimation.AnimationStart()\n\t//Button5の初期化\n\tv:this->^->Button->Button5.textColor = f:rgba2color(f:rand()%128 + 128, f:rand()%128 + 128, f:rand()%128 + 128,255)\n\tv:this->^->Button->Button5.text = v:this.LetterList[4]\n\tv:this->^->Button->Button5.InitializePos()\n\tv:this->^->Button->Button5->InitializeAnimation.AnimationStart()\n\t//ボタンに挿入したので後の判定のためちゃんとした順番に戻す\n\twhile( dp:Index1 < length v:this.LetterList ) {\n\t\tv:this.LetterList[dp:Index1] = f:substring(v:this.Letter,dp:Index1,dp:Index1 - (length v:this.LetterList))\n\t\tdp:Index1 += 1\n\t}\n\t//使う予定のフラグを初期化\n\tv:this->^->TimeCounter->Counter.CountFlag = true\n\tv:this->^->Button.EndFlag = false\n\tv:this->^->Answer.colorationColor = f:rgba2color(0,0,0,0)\n\tv:this->^->Answer.AnswerFlag = false\n\tdp:Index1 = 0\n\t\n\ttrue\n}";
+			}
+			#315573939 Letter :: string : "";
+			#822244921 ListNum :: int : 0;
+			#3065090032 LetterList :: stringlist : <string>["", "", "", "", ""];
+			#1597834351 LetterFlag :: boollist : <bool>[false, false, false, false, false];
+		}
+		#3643346323 "children_list 1" :: GtfContainer_template_instance : @7f528e10-8465-4fc7-8ecc-0698e598abea
+		{
+			#476132593 name :: string : "Letter";
+			#1981706348 template :: objectref(GtfContainer_template) : @01a645ce-023c-43f7-a50f-5fe0879a85de;
+			#3859335756 children :: children_list : @4a626d3f-df5a-4c3f-8ee7-9ebdb251517a
+			{
+			}
+		}
+		#1101009513 "children_list 2" :: GtfImage : @eb02fe07-b93e-4bc7-8ccb-b8596db6dc5e
+		{
+			#1173060387 features :: feature_list : @a2cbf3f9-85e6-4f92-b006-c0111e2eb6e2
+			{
+			}
+			#208077228 children :: children_list : @c68a1405-05d4-4295-b06c-5ad316eaeeea
+			{
+			}
+			#532563675 name :: string : "背景";
+			#1484158392 visible :: bool : true;
+			#1941001511 width :: int : 640;
+			#637208663 height :: int : 480;
+			#509893701 x :: int : 0;
+			#1230187950 y :: int : 0;
+			#2321683667 image :: image_resource : @4b936eb5-2241-4428-9071-bf095ad47586
+			{
+				#2589765697 file :: file : "menu_sub_bg.png";
+			}
+			#4090818183 horizontalAlign :: int : 0;
+			#3915299530 verticalAlign :: int : 1;
+		}
+		#927879129 "children_list 7" :: GtfImage : @ada8bf2e-5e04-44bc-a51f-72f83d489ccd
+		{
+			#3699773974 features :: feature_list : @50c1afcf-fb7c-4c5d-bfc2-9f314647e653
+			{
+				#2216481244 "feature_list 1" :: ScaleMode : @d86f0ca0-aed3-47ad-948d-abf31b3170be
+				{
+					#4200818175 scaleMode :: int : 1;
+				}
+			}
+			#3918672384 children :: children_list : @12d89d18-4177-4ef5-bc39-3d633906a463
+			{
+			}
+			#1003046079 name :: string : "Background";
+			#4118700001 visible :: bool : true;
+			#3296346848 width :: int : 540;
+			#2487182408 height :: int : 380;
+			#511095767 x :: int : 50;
+			#1035974152 y :: int : 75;
+			#2867296221 image :: image_resource : @e4ce4e63-01f3-4484-84ad-395d41754de3
+			{
+				#2689401214 file :: file : "background.png";
+			}
+			#2381643269 horizontalAlign :: int : 1;
+			#3362295278 verticalAlign :: int : 0;
+		}
+		#580533579 "children_list 9" :: GtfImage : @95ca9205-c9e8-4741-9a71-67a75ac76f6b
+		{
+			#57126052 features :: feature_list : @dc365adf-6045-43c0-8f03-f99c1c724109
+			{
+				#2710268432 "feature_list 1" :: Coloration : @a80238b8-e19a-4938-8f3f-26bdc55afde0
+				{
+					#2226610114 colorationEnabled :: bool : true;
+					#312142895 colorationColor :: color : -1306385665;
+				}
+			}
+			#2824021397 children :: children_list : @45bbda5e-c0a9-4d4a-9d15-35f2227965b3
+			{
+			}
+			#1132276416 name :: string : "Arrow";
+			#1766145435 visible :: bool : true;
+			#3629291000 width :: int : 79;
+			#1252172477 height :: int : 68;
+			#4192639200 x :: int_scriptedValue : @0f04c993-67c5-4633-a791-ebbbe0503694
+			{
+				#2610333959 triggerList :: trigger_list : @86b491bb-ce20-41f3-beed-28e9317c6644
+				{
+					#3212374268 events :: event_refs : <objectref>[];
+					#3194693485 dp_items :: dp_item_refs : <objectref>[];
+					#3235927456 properties :: property_reference_list : <propref>[];
+				}
+				#1463355123 onTrigger :: function(bool,bool) : @0a7b97fb-c46b-45b0-ac5d-eca94ca68465
+				{
+					#2500201133 script :: string : "function(v:arg0::bool)\n{\n\tfalse\n}";
+				}
+				#1808922031 read :: function(int) : @a8db6a7c-232b-47f0-b36b-c40655c05837
+				{
+					#2720522484 script :: string : "function()\n{\n\t(640 / 2) - (v:this.width / 2)\n}";
+				}
+				#3510429080 write :: function(bool,int) : @131f2513-c170-4df5-b04b-38d750cbba92
+				{
+					#1866637640 script :: string : "function(v:arg0::int)\n{\n\tfalse\n}";
+				}
+			}
+			#3607225784 y :: int_scriptedValue : @44bcbbc3-b4b9-4eb6-bd18-1c11648c81a1
+			{
+				#2357398206 triggerList :: trigger_list : @c756ca5c-70e6-440d-9162-c2f74acb3235
+				{
+					#3933821996 events :: event_refs : <objectref>[];
+					#2899697956 dp_items :: dp_item_refs : <objectref>[];
+					#2539016190 properties :: property_reference_list : <propref>[];
+				}
+				#1376241833 onTrigger :: function(bool,bool) : @4364e82e-0275-41b9-bcf8-1edd9ed2b9a9
+				{
+					#1442623597 script :: string : "function(v:arg0::bool)\n{\n\tfalse\n}";
+				}
+				#1024031236 read :: function(int) : @c12d60f4-5038-4770-9d6d-783dbb54affd
+				{
+					#1835900341 script :: string : "function()\n{\n\t(480 / 2) - (v:this.height / 2)\n}";
+				}
+				#3805264762 write :: function(bool,int) : @e271fc05-5d80-4a72-8022-3ff4ab0f0963
+				{
+					#2023075014 script :: string : "function(v:arg0::int)\n{\n\tfalse\n}";
+				}
+			}
+			#2601750753 image :: image_resource : @f8c5a0f1-05f0-4130-a4af-8ce49738a6ae
+			{
+				#2567885189 file :: file : "arrow_white.png";
+			}
+			#3943920916 horizontalAlign :: int : 1;
+			#3142496808 verticalAlign :: int : 0;
+		}
+		#4045413455 "children_list 12" :: GtfLabel : @2b961e63-82a0-461f-8c54-90ee39f2ebde
+		{
+			#1037706642 features :: feature_list : @c49827ae-143c-4105-974a-a7aae91dbc64
+			{
+			}
+			#27590869 children :: children_list : @d7444714-0241-41c9-89f7-d869deb44652
+			{
+				#2023015818 "children_list 5" :: GtfLabel : @618a044d-3ad7-4c9c-8102-a198f394dfc6
+				{
+					#1037706642 features :: feature_list : @bd3347db-ca6a-41dd-a478-aff644ac2b7e
+					{
+					}
+					#27590869 children :: children_list : @59d96226-78b5-4b32-a56b-2b1e5d23f65d
+					{
+					}
+					#963859987 name :: string : "Rule";
+					#1445714259 visible :: bool : true;
+					#2911671608 width :: int : 640;
+					#1989264989 height :: int : 48;
+					#4270129839 x :: int : -2;
+					#943884820 y :: int : -1;
+					#1441095385 text :: string : "文字をに正しい順に並び変えて下さい。";
+					#3549771932 textColor :: color : -1;
+					#670928175 font :: font_resource : @d9800e97-35a8-42a1-b663-c5b2f5427e14
+					{
+						#3016832264 file :: file : "meiryo.ttc";
+						#4081569271 size :: int : 20;
+					}
+					#2328044915 horizontalAlign :: int : 1;
+					#726268626 verticalAlign :: int : 0;
+				}
+			}
+			#963859987 name :: string : "ShadowRule";
+			#1445714259 visible :: bool : true;
+			#2911671608 width :: int : 640;
+			#1989264989 height :: int : 48;
+			#4270129839 x :: int_scriptedValue : @615e4dbb-63c0-4a12-8644-c12b2cce8623
+			{
+				#1730513114 triggerList :: trigger_list : @5162da46-1403-4de9-9546-33b389b9d93c
+				{
+					#171588691 events :: event_refs : <objectref>[];
+					#2784119195 dp_items :: dp_item_refs : <objectref>[];
+					#3488001336 properties :: property_reference_list : <propref>[];
+				}
+				#2330601277 onTrigger :: function(bool,bool) : @8d6f56b5-0c06-499f-aaca-d6895b9b5158
+				{
+					#2151483556 script :: string : "function(v:arg0::bool)\n{\n\tfalse\n}";
+				}
+				#898736888 read :: function(int) : @efa7be98-5ec2-41fa-b32e-abf494ed738a
+				{
+					#3241659443 script :: string : "function()\n{\n\t(640 / 2) - (v:this.width / 2)\n}";
+				}
+				#2040809163 write :: function(bool,int) : @aa3f07f4-18aa-44dc-83ed-5366164ddbb0
+				{
+					#2269354874 script :: string : "function(v:arg0::int)\n{\n\tfalse\n}";
+				}
+			}
+			#943884820 y :: int : 42;
+			#1441095385 text :: string : "文字をに正しい順に並び変えて下さい。";
+			#3549771932 textColor :: color : 1768516095;
+			#670928175 font :: font_resource : @e59758a1-571d-4e1c-9256-3130443a57d2
+			{
+				#3225334233 file :: file : "meiryo.ttc";
+				#1108194793 size :: int : 20;
+			}
+			#2328044915 horizontalAlign :: int : 1;
+			#726268626 verticalAlign :: int : 0;
+		}
+		#3568737042 "children_list 3" :: GtfContainer : @2e6e6fb2-dda1-4981-980b-8762efd47ea1
+		{
+			#4150243665 features :: feature_list : @dc31a3c2-509c-4e8c-ac8a-2e2619a8d199
+			{
+			}
+			#3701647355 children :: children_list : @a90513c7-d80f-4716-9f98-86e119d9131c
+			{
+				#45140263 "children_list 20" :: GtfImage : @10046afd-0759-45fe-b507-7f17dd9e5488
+				{
+					#4148549358 features :: feature_list : @3e274848-2304-4544-9f4e-82c7f3803a63
+					{
+						#2377961064 "feature_list 6" :: ScaleMode : @afe51ad9-9adc-47eb-a5d5-9d00d3562669
+						{
+							#3878831882 scaleMode :: int : 1;
+						}
+						#1121241012 "feature_list 7" :: Coloration : @c9fc304a-273f-4d32-96ae-10f4dc454b54
+						{
+							#2301177924 colorationEnabled :: bool : true;
+							#899873761 colorationColor :: propref(color) : @2e6e6fb2-dda1-4981-980b-8762efd47ea1#3727669992;
+						}
+						#1096423805 "feature_list 1" :: Rotation : @0c1b1612-e9f7-417f-87b5-15472ca95b99
+						{
+							#474249019 rotationEnabled :: bool : true;
+							#266420093 rotationAngleX :: float : 0.0;
+							#3225794333 rotationAngleY :: float : 0.0;
+							#21841546 rotationAngleZ :: float : 90.0;
+						}
+					}
+					#3702244186 children :: children_list : @c30e601a-30fb-42b9-a494-528230198c33
+					{
+					}
+					#1589989632 name :: string : "WaveXL-1";
+					#4258757475 visible :: bool : true;
+					#3293699028 width :: int : 40;
+					#654339236 height :: int : 2000;
+					#503510677 x :: int : 0;
+					#968250015 y :: int : 40;
+					#2951215137 image :: image_resource : @d93c7f3c-a2c5-47fb-a83c-92d152c592df
+					{
+						#2316567712 file :: file : "waveXL.png";
+					}
+					#3657830660 horizontalAlign :: int : 0;
+					#721286127 verticalAlign :: int : 1;
+				}
+				#2098497317 "children_list 21" :: GtfImage : @c3189a0c-dd4b-45e3-9066-6bc37c2b6d30
+				{
+					#4148549358 features :: feature_list : @bb89c180-07f4-4b3d-89ab-8341e47cec9c
+					{
+						#2377961064 "feature_list 6" :: ScaleMode : @f2e8945f-af47-45cc-ae2d-d4b1610b232d
+						{
+							#3878831882 scaleMode :: int : 1;
+						}
+						#1121241012 "feature_list 7" :: Coloration : @af53a146-0002-454b-8e0e-d46d59877ccd
+						{
+							#2301177924 colorationEnabled :: bool : true;
+							#899873761 colorationColor :: propref(color) : @2e6e6fb2-dda1-4981-980b-8762efd47ea1#3727669992;
+						}
+						#1709998577 "feature_list 2" :: Rotation : @aac45e48-4021-485a-af1c-4ac20bd30a3f
+						{
+							#363098847 rotationEnabled :: bool : true;
+							#2935626495 rotationAngleX :: float : 0.0;
+							#15614886 rotationAngleY :: float : 0.0;
+							#3342538628 rotationAngleZ :: float : 90.0;
+						}
+					}
+					#3702244186 children :: children_list : @b8adbd36-1f09-40bf-8a12-ca0bbe59dfea
+					{
+					}
+					#1589989632 name :: string : "WaveXL-2";
+					#4258757475 visible :: bool : true;
+					#3293699028 width :: int : 35;
+					#654339236 height :: int : 2000;
+					#503510677 x :: int : 0;
+					#968250015 y :: int : 35;
+					#2951215137 image :: image_resource : @f7be7578-20c4-4223-84a7-6fbbe593af2b
+					{
+						#1653942995 file :: file : "waveXL.png";
+					}
+					#3657830660 horizontalAlign :: int : 0;
+					#721286127 verticalAlign :: int : 1;
+				}
+				#2806682483 "children_list 22" :: GtfImage : @ed85c2d7-9cee-4efe-bca3-54bb5a8e79c1
+				{
+					#4148549358 features :: feature_list : @0c650946-53cf-492a-bf66-d6e017e0aa10
+					{
+						#2377961064 "feature_list 6" :: ScaleMode : @16677084-41b9-4b40-911f-e58828dbe03b
+						{
+							#3878831882 scaleMode :: int : 1;
+						}
+						#1121241012 "feature_list 7" :: Coloration : @21e29ac7-c4cb-446b-9589-465771f5a9a4
+						{
+							#2301177924 colorationEnabled :: bool : true;
+							#899873761 colorationColor :: propref(color) : @2e6e6fb2-dda1-4981-980b-8762efd47ea1#3727669992;
+						}
+						#970379453 "feature_list 3" :: Rotation : @75f0b4ff-f621-41af-8dd6-806549bc4f47
+						{
+							#3353644219 rotationEnabled :: bool : true;
+							#3590672877 rotationAngleX :: float : 0.0;
+							#3748849843 rotationAngleY :: float : 0.0;
+							#3665407908 rotationAngleZ :: float : 90.0;
+						}
+					}
+					#3702244186 children :: children_list : @c2f04314-9409-4174-90ad-57ca48d5ae05
+					{
+					}
+					#1589989632 name :: string : "WaveXL-3";
+					#4258757475 visible :: bool : true;
+					#3293699028 width :: int : 45;
+					#654339236 height :: int : 2000;
+					#503510677 x :: int : 0;
+					#968250015 y :: int : 45;
+					#2951215137 image :: image_resource : @bc609d80-b1f2-4434-8717-30184a2db0eb
+					{
+						#3356207873 file :: file : "waveXL.png";
+					}
+					#3657830660 horizontalAlign :: int : 0;
+					#721286127 verticalAlign :: int : 1;
+				}
+				#2588762458 "children_list 23" :: GtfImage : @d47e57ff-2e41-41b5-bc15-74c881dd25b9
+				{
+					#4148549358 features :: feature_list : @f970085d-ccd0-4894-9b29-c9f478ec1cb7
+					{
+						#2377961064 "feature_list 6" :: ScaleMode : @35de862f-bd1b-4dc3-8d03-1acfcb55d602
+						{
+							#3878831882 scaleMode :: int : 1;
+						}
+						#1121241012 "feature_list 7" :: Coloration : @34ca17a2-6919-4578-8bc9-c6e0d4a48f98
+						{
+							#2301177924 colorationEnabled :: bool : true;
+							#899873761 colorationColor :: propref(color) : @2e6e6fb2-dda1-4981-980b-8762efd47ea1#3727669992;
+						}
+						#970379453 "feature_list 3" :: Rotation : @c15ea357-de6a-4636-b38f-56c4bc15ebdb
+						{
+							#3353644219 rotationEnabled :: bool : true;
+							#3590672877 rotationAngleX :: float : 0.0;
+							#3748849843 rotationAngleY :: float : 0.0;
+							#3665407908 rotationAngleZ :: float : 90.0;
+						}
+					}
+					#3702244186 children :: children_list : @e1a36c3b-f2ad-479f-8366-bb9ece64fb23
+					{
+					}
+					#1589989632 name :: string : "WaveXL-4";
+					#4258757475 visible :: bool : true;
+					#3293699028 width :: int : 35;
+					#654339236 height :: int : 2000;
+					#503510677 x :: int : 0;
+					#968250015 y :: int : 40;
+					#2951215137 image :: image_resource : @f5be0b5d-90df-4c30-9943-2dc3bd3702ea
+					{
+						#3561336919 file :: file : "waveXL.png";
+					}
+					#3657830660 horizontalAlign :: int : 0;
+					#721286127 verticalAlign :: int : 1;
+				}
+				#4056394462 "children_list 24" :: GtfImage : @55701202-77e7-4926-bdd6-6d6bbf978946
+				{
+					#4148549358 features :: feature_list : @c5c69eea-320e-4543-addd-74deff79c925
+					{
+						#2377961064 "feature_list 6" :: ScaleMode : @8c909567-33d9-44e5-a9b6-b04ff4f1ef09
+						{
+							#3878831882 scaleMode :: int : 1;
+						}
+						#1121241012 "feature_list 7" :: Coloration : @d138eac7-5fb9-4c70-b0b1-5cf285cf5516
+						{
+							#2301177924 colorationEnabled :: bool : true;
+							#899873761 colorationColor :: propref(color) : @2e6e6fb2-dda1-4981-980b-8762efd47ea1#3727669992;
+						}
+						#2359736901 "feature_list 5" :: Rotation : @2f824ec5-18af-40a2-89c8-bd06f40acb46
+						{
+							#3725827244 rotationEnabled :: bool : true;
+							#212030011 rotationAngleX :: float : 0.0;
+							#89822612 rotationAngleY :: float : 0.0;
+							#3951540963 rotationAngleZ :: float : 90.0;
+						}
+					}
+					#3702244186 children :: children_list : @bfa0de30-5fce-4dbc-8330-39adc5b31548
+					{
+					}
+					#1589989632 name :: string : "WaveXL-5";
+					#4258757475 visible :: bool : true;
+					#3293699028 width :: int : 45;
+					#654339236 height :: int : 2000;
+					#503510677 x :: int : 0;
+					#968250015 y :: int : 45;
+					#2951215137 image :: image_resource : @847922f3-70e8-4e98-a442-f1997cd618c1
+					{
+						#2768389265 file :: file : "waveXL.png";
+					}
+					#3657830660 horizontalAlign :: int : 0;
+					#721286127 verticalAlign :: int : 1;
+				}
+				#1143484786 "children_list 25" :: GtfParallelAnimation : @d1ef284d-0136-4771-a90c-64ad878a6e99
+				{
+					#1023157002 features :: feature_list : @8f95b6bb-899c-4c12-9996-99f4b8f0c0a6
+					{
+					}
+					#4012287785 children :: children_list : @5f894774-70e0-4a92-b506-955351f95a92
+					{
+						#3900192329 "children_list 29" :: GtfSinusCurveS32 : @0edadd95-4cfb-4b55-b2cb-fa188c8d5d6e
+						{
+							#335537248 features :: feature_list : @d2297021-51d8-4f33-9855-c4ed5c594a74
+							{
+							}
+							#4206472365 children :: children_list : @aebbc9c8-99a9-448c-8990-49a687d64a81
+							{
+							}
+							#83167347 name :: string : "WaveXL-1";
+							#1552873274 enabled :: bool : true;
+							#1385780974 delay :: int : 0;
+							#2202336877 duration :: int : 16000;
+							#3946106294 repeat :: int : 0;
+							#3862451263 alternating :: bool : false;
+							#4252528185 relative :: bool : false;
+							#1703884837 amplitude :: int : 450;
+							#2258494006 constant :: int : -450;
+							#3229893223 frequency :: float : 0.0625;
+							#1428444465 phase :: float : 0.0;
+							#188973552 target :: propref(int) : @10046afd-0759-45fe-b507-7f17dd9e5488#503510677;
+						}
+						#2817852218 "children_list 30" :: GtfSinusCurveS32 : @a1ec5ca9-f535-4723-a5bf-cf18cd7bb167
+						{
+							#335537248 features :: feature_list : @a6551b6c-5d9f-4b77-89ce-21d66187ac49
+							{
+							}
+							#4206472365 children :: children_list : @bb836977-a1ef-4645-bdbe-26d1c3a1c222
+							{
+							}
+							#83167347 name :: string : "WaveXL-2";
+							#1552873274 enabled :: bool : true;
+							#1385780974 delay :: int : 0;
+							#2202336877 duration :: propref(int) : @0edadd95-4cfb-4b55-b2cb-fa188c8d5d6e#2202336877;
+							#3946106294 repeat :: int : 0;
+							#3862451263 alternating :: bool : false;
+							#4252528185 relative :: bool : false;
+							#1703884837 amplitude :: propref(int) : @0edadd95-4cfb-4b55-b2cb-fa188c8d5d6e#1703884837;
+							#2258494006 constant :: propref(int) : @0edadd95-4cfb-4b55-b2cb-fa188c8d5d6e#2258494006;
+							#3229893223 frequency :: propref(float) : @0edadd95-4cfb-4b55-b2cb-fa188c8d5d6e#3229893223;
+							#1428444465 phase :: float : 90.0;
+							#188973552 target :: propref(int) : @c3189a0c-dd4b-45e3-9066-6bc37c2b6d30#503510677;
+						}
+						#3843328455 "children_list 31" :: GtfSinusCurveS32 : @ffbf6345-11ca-4d55-a597-e8ddf0f3c36b
+						{
+							#335537248 features :: feature_list : @f7e51d85-0722-4f66-96cb-724037e09494
+							{
+							}
+							#4206472365 children :: children_list : @66130fa5-2fb1-4bcf-8301-7b63d0d08103
+							{
+							}
+							#83167347 name :: string : "WaveXL-3";
+							#1552873274 enabled :: bool : true;
+							#1385780974 delay :: int : 0;
+							#2202336877 duration :: int : 32000;
+							#3946106294 repeat :: int : 0;
+							#3862451263 alternating :: bool : false;
+							#4252528185 relative :: bool : false;
+							#1703884837 amplitude :: propref(int) : @0edadd95-4cfb-4b55-b2cb-fa188c8d5d6e#1703884837;
+							#2258494006 constant :: int : -450;
+							#3229893223 frequency :: float : 0.03125;
+							#1428444465 phase :: float : 45.0;
+							#188973552 target :: propref(int) : @ed85c2d7-9cee-4efe-bca3-54bb5a8e79c1#503510677;
+						}
+						#1733880314 "children_list 32" :: GtfSinusCurveS32 : @f0d4501e-5357-41f1-b2ff-df7207ccd8d2
+						{
+							#335537248 features :: feature_list : @85408d64-558b-4d5c-8f2a-fe30620ae3da
+							{
+							}
+							#4206472365 children :: children_list : @cb136671-89e8-4399-be73-a35516b79f50
+							{
+							}
+							#83167347 name :: string : "WaveXL-4";
+							#1552873274 enabled :: bool : true;
+							#1385780974 delay :: int : 0;
+							#2202336877 duration :: int : 32000;
+							#3946106294 repeat :: int : 0;
+							#3862451263 alternating :: bool : false;
+							#4252528185 relative :: bool : false;
+							#1703884837 amplitude :: propref(int) : @0edadd95-4cfb-4b55-b2cb-fa188c8d5d6e#1703884837;
+							#2258494006 constant :: int : -450;
+							#3229893223 frequency :: float : 0.03125;
+							#1428444465 phase :: float : 90.0;
+							#188973552 target :: propref(int) : @ed85c2d7-9cee-4efe-bca3-54bb5a8e79c1#503510677;
+						}
+						#3853301717 "children_list 33" :: GtfSinusCurveS32 : @df788cec-3344-418e-ba8a-25270e977585
+						{
+							#335537248 features :: feature_list : @5f30f032-486a-4051-9b28-b6276a982c84
+							{
+							}
+							#4206472365 children :: children_list : @e43266f1-f0df-4906-9692-b470890e92dc
+							{
+							}
+							#83167347 name :: string : "WaveXL-5";
+							#1552873274 enabled :: bool : true;
+							#1385780974 delay :: int : 0;
+							#2202336877 duration :: int : 64000;
+							#3946106294 repeat :: int : 0;
+							#3862451263 alternating :: bool : false;
+							#4252528185 relative :: bool : false;
+							#1703884837 amplitude :: propref(int) : @0edadd95-4cfb-4b55-b2cb-fa188c8d5d6e#1703884837;
+							#2258494006 constant :: int : -450;
+							#3229893223 frequency :: float : 0.015625;
+							#1428444465 phase :: float : 135.0;
+							#188973552 target :: propref(int) : @55701202-77e7-4926-bdd6-6d6bbf978946#503510677;
+						}
+						#199560830 "children_list 38" :: GtfSinusCurveS32 : @d7ee19f2-fe4d-4ed8-a964-047b7bb78016
+						{
+							#781962201 features :: feature_list : @909c8d1b-4c9f-4d76-836f-38f0a3463beb
+							{
+							}
+							#3197710832 children :: children_list : @c0a83ad1-1049-4cbc-84d8-3e26c212c9cb
+							{
+							}
+							#67349680 name :: string : "Red";
+							#1254570035 enabled :: bool : true;
+							#2756033263 delay :: int : 0;
+							#1580262735 duration :: int : 30000;
+							#4056947735 repeat :: int : 0;
+							#548401316 alternating :: bool : false;
+							#1993511627 relative :: bool : false;
+							#3224982224 amplitude :: int : 127;
+							#394748137 constant :: int : 127;
+							#2353832713 frequency :: float : 1.0;
+							#708418371 phase :: float : 0.0;
+							#683304500 target :: propref(int) : @2e6e6fb2-dda1-4981-980b-8762efd47ea1#543004719;
+						}
+						#1999807166 "children_list 39" :: GtfSinusCurveS32 : @3aeb5e08-0034-43bd-b94e-21222fdfa8ce
+						{
+							#781962201 features :: feature_list : @e99aedbc-8131-4050-bf6b-72e04e51f7f4
+							{
+							}
+							#3197710832 children :: children_list : @5b6d28e8-ea3f-408c-938a-a65938312169
+							{
+							}
+							#67349680 name :: string : "Green";
+							#1254570035 enabled :: bool : true;
+							#2756033263 delay :: int : 0;
+							#1580262735 duration :: int : 80000;
+							#4056947735 repeat :: int : 0;
+							#548401316 alternating :: bool : false;
+							#1993511627 relative :: bool : false;
+							#3224982224 amplitude :: int : 127;
+							#394748137 constant :: int : 127;
+							#2353832713 frequency :: float : 2.0;
+							#708418371 phase :: float : 22.5;
+							#683304500 target :: propref(int) : @2e6e6fb2-dda1-4981-980b-8762efd47ea1#4150544;
+						}
+						#2776953168 "children_list 40" :: GtfSinusCurveS32 : @bde0c73e-695a-4358-9062-32afe43d784c
+						{
+							#781962201 features :: feature_list : @e31fe465-a513-48fc-8a84-aefa8fcfee72
+							{
+							}
+							#3197710832 children :: children_list : @d6922d59-f5c3-4eda-b4ca-0df9c102ef18
+							{
+							}
+							#67349680 name :: string : "Blue";
+							#1254570035 enabled :: bool : true;
+							#2756033263 delay :: int : 0;
+							#1580262735 duration :: int : 90000;
+							#4056947735 repeat :: int : 0;
+							#548401316 alternating :: bool : false;
+							#1993511627 relative :: bool : false;
+							#3224982224 amplitude :: int : 127;
+							#394748137 constant :: int : 127;
+							#2353832713 frequency :: float : 3.0;
+							#708418371 phase :: float : 90.0;
+							#683304500 target :: propref(int) : @2e6e6fb2-dda1-4981-980b-8762efd47ea1#3155579219;
+						}
+					}
+					#127581823 name :: string : "Animation";
+					#1005423985 enabled :: bool : true;
+					#3450016078 repeat :: int : 1;
+					#1154379743 alternating :: bool : false;
+					#1101248829 scale :: float : 0.25;
+					#1753100599 onPlay :: function(void,int,bool) : @614a0d47-f80f-43db-a64d-02b192a8dbec
+					{
+						#2555625693 script :: string : "function(v:animation_time::int, v:forward::bool)\n{\n\n}";
+					}
+					#329923857 onPause :: function(void,int) : @ee6fd4ee-41cb-4ed6-9518-dee23d4be94e
+					{
+						#2942816763 script :: string : "function(v:animation_time::int)\n{\n\n}";
+					}
+					#2809555382 onTerminate :: function(void,int,int) : @7007dde1-3e4f-4780-b75e-1db1e8616da7
+					{
+						#2861484190 script :: string : "function(v:animation_time::int, v:terminate::int)\n{\n\n}";
+					}
+					#2628871455 AnimHandler :: conditional_script : @513fbec3-23d7-4c50-aab9-ecff0c77d203
+					{
+						#1274185315 triggerList :: trigger_list : @f538fc58-b6a1-4ff2-95d2-03d53c6cb911
+						{
+							#3084120080 events :: event_refs : <objectref>[];
+							#2816135948 dp_items :: dp_item_refs : <objectref>[];
+							#1982262174 properties :: property_reference_list : <propref>[];
+						}
+						#3128994689 onTrigger :: function(bool,bool) : @9972adaa-df7b-483f-b727-df8f5d7d05a6
+						{
+							#3153324524 script :: string : "function(v:arg0::bool)\n{\n\tf:animation_play(v:this)\n\tfalse\n}";
+						}
+					}
+				}
+			}
+			#1604038086 name :: string : "Wave";
+			#1868456509 visible :: bool : true;
+			#2371783922 width :: int : 640;
+			#1132997455 height :: int : 120;
+			#3925508682 x :: int : 0;
+			#3761915028 y :: int : 10;
+			#3727669992 Color :: color : 255;
+			#543004719 Rad :: int_scriptedValue : @e87e41b0-df28-483b-81b0-4ab1f476e366
+			{
+				#1617273212 triggerList :: trigger_list : @44927d10-e7f3-4d71-a777-116650ca50dc
+				{
+					#3739954309 events :: event_refs : <objectref>[];
+					#2791390660 dp_items :: dp_item_refs : <objectref>[];
+					#3010486985 properties :: property_reference_list : <propref>[];
+				}
+				#1595517770 onTrigger :: function(bool,bool) : @6435da0c-28f3-4a4f-acea-daf7e23f3a24
+				{
+					#2151783109 script :: string : "function(v:arg0::bool)\n{\n\tfalse\n}";
+				}
+				#1395612887 read :: function(int) : @66026b6f-d5d9-4825-af53-6ed73b5fc044
+				{
+					#1220864971 script :: string : "function()\n{\n\tv:this.RGB[0]\n}";
+				}
+				#2493150936 write :: function(bool,int) : @5fc4977b-b508-409f-857c-8e682549f0c2
+				{
+					#1271532879 script :: string : "function(v:arg0::int)\n{\n\tv:this.RGB[0] = v:arg0::int\n\tv:this.Color = f:rgba2color(v:this.RGB[0],v:this.RGB[1],v:this.RGB[2],255)\n\ttrue\n}";
+				}
+			}
+			#4150544 Green :: int_scriptedValue : @9e47ca7e-bc85-4160-b143-dff9921ef9f1
+			{
+				#2980074936 triggerList :: trigger_list : @564e8885-6381-4beb-b1af-5a207b8ff648
+				{
+					#2887196773 events :: event_refs : <objectref>[];
+					#3497548907 dp_items :: dp_item_refs : <objectref>[];
+					#3223706388 properties :: property_reference_list : <propref>[];
+				}
+				#2913078498 onTrigger :: function(bool,bool) : @87beddc9-6da7-47ff-b51d-085758e4df9b
+				{
+					#1795204450 script :: string : "function(v:arg0::bool)\n{\n\tfalse\n}";
+				}
+				#932263930 read :: function(int) : @049e69a7-e904-4940-bbcb-577e4aecc06d
+				{
+					#2309852473 script :: string : "function()\n{\n\tv:this.RGB[1]\n}";
+				}
+				#2379861434 write :: function(bool,int) : @8d1e2c38-1c1c-4e93-98f6-b0c8aecd4bad
+				{
+					#2421755873 script :: string : "function(v:arg0::int)\n{\n\tv:this.RGB[1] = v:arg0::int\n\tv:this.Color = f:rgba2color(v:this.RGB[0],v:this.RGB[1],v:this.RGB[2],255)\n\tfalse\n}";
+				}
+			}
+			#3155579219 Blue :: int_scriptedValue : @28bce21e-5fce-4044-b7e8-d8cbe4b83059
+			{
+				#2686843400 triggerList :: trigger_list : @ffd3dbb0-7363-4a1e-8ab4-2c4292c28587
+				{
+					#3392251372 events :: event_refs : <objectref>[];
+					#3098989757 dp_items :: dp_item_refs : <objectref>[];
+					#2970862163 properties :: property_reference_list : <propref>[];
+				}
+				#2665079526 onTrigger :: function(bool,bool) : @cb0bd1f6-f29c-47f2-9719-5e31eadccf10
+				{
+					#2040816306 script :: string : "function(v:arg0::bool)\n{\n\t// todo: auto generated return value, please adapt\n\tfalse\n}";
+				}
+				#1479914057 read :: function(int) : @156b0f72-f194-41a1-a9cf-07c773e48be8
+				{
+					#1412839535 script :: string : "function()\n{\n\tv:this.RGB[2]\n}";
+				}
+				#3516631379 write :: function(bool,int) : @17863a76-e7ed-482d-8a6a-7f320baaee5c
+				{
+					#2579306786 script :: string : "function(v:arg0::int)\n{\n\tv:this.RGB[2] = v:arg0::int\n\tv:this.Color = f:rgba2color(v:this.RGB[0],v:this.RGB[1],v:this.RGB[2],255)\n\tfalse\n}";
+				}
+			}
+			#1374743963 RGB :: intlist : <int>[0, 0, 0];
+		}
+		#1839422764 "children_list 8" :: GtfImage : @55488541-c2c0-4d3d-871a-df64ec7688a7
+		{
+			#354969808 features :: feature_list : @b0ef8a5b-5f21-4c92-9459-d3b36585d471
+			{
+				#1311862620 "feature_list 4" :: ScaleMode : @1a682d56-f496-42c2-8230-9c4a07f12010
+				{
+					#3581827457 scaleMode :: int : 1;
+				}
+				#2276824406 "feature_list 5" :: Coloration : @5a5d538f-912c-41e0-bf9e-785d4f1f1b5b
+				{
+					#2195902102 colorationEnabled :: bool : true;
+					#133170219 colorationColor :: color : -1;
+				}
+			}
+			#3930256 children :: children_list : @112ff682-ebbb-4f19-b9d3-b27162d6f144
+			{
+				#688656929 "children_list 17" :: GtfLabel : @9fc51f6e-276e-4a1e-baf6-09b8197c8ec2
+				{
+					#3683515159 features :: feature_list : @8fb5e1c5-d0c9-494f-83c2-9c37da7425d2
+					{
+					}
+					#3661646738 children :: children_list : @be4406ec-8d41-4ecc-9dd9-803ce561903f
+					{
+					}
+					#115177129 name :: string : "Counter";
+					#1884111231 visible :: bool : true;
+					#1962504871 width :: int : 50;
+					#1478715954 height :: int : 50;
+					#1207399711 x :: int : 0;
+					#3815319825 y :: int : 0;
+					#1325738227 text :: string_scriptedValue : @68605b29-341a-4f83-a623-96b1939cb093
+					{
+						#2019507859 triggerList :: trigger_list : @1e86c207-8109-48d0-90fb-f13a125754dc
+						{
+							#4155746038 events :: event_refs : <objectref>[];
+							#4173067604 dp_items :: dp_item_refs : <objectref>[];
+							#3745479465 properties :: property_reference_list : <propref>[];
+						}
+						#2265908505 onTrigger :: function(bool,bool) : @4ee46421-b5a9-48f4-b1c5-e6b0be1d6358
+						{
+							#1676069362 script :: string : "function(v:arg0::bool)\n{\n\tfalse\n}";
+						}
+						#1034336902 read :: function(string) : @5544fe61-e72b-4ac6-a2f6-323307c3e4f4
+						{
+							#1238543578 script :: string : "function()\n{\n\tf:int2string(v:this.Counter)\n}";
+						}
+						#2790002111 write :: function(bool,string) : @d6e98221-9d93-4600-8614-0f57aee30f67
+						{
+							#1612344815 script :: string : "function(v:arg0::string)\n{\n\tfalse\n}";
+						}
+					}
+					#501024947 textColor :: propref(color) : @2e6e6fb2-dda1-4981-980b-8762efd47ea1#3727669992;
+					#1011406655 font :: font_resource : @8c364040-539b-4415-9f78-c2c1061a8b14
+					{
+						#2732501850 file :: file : "HGRGY.TTC";
+						#1642295906 size :: int : 42;
+					}
+					#2446159963 horizontalAlign :: int : 1;
+					#480479622 verticalAlign :: int : 0;
+					#165387815 Counter :: int : 60;
+					#949541446 Move :: conditional_script : @68a2bccd-be1f-4852-bdf5-40295ce91be6
+					{
+						#2955630880 triggerList :: trigger_list : @e675274d-e4a9-40d2-ade8-909776a6a001
+						{
+							#4087439135 events :: event_refs : <objectref>[];
+							#397888626 dp_items :: dp_item_refs : <objectref>[];
+							#2908665374 properties :: property_reference_list : <propref>[@2e6e6fb2-dda1-4981-980b-8762efd47ea1#3727669992];
+						}
+						#2764208071 onTrigger :: function(bool,bool) : @15645fa9-a3a3-49b3-a617-71829cfa0478
+						{
+							#1329017819 script :: string : "function(v:arg0::bool)\n{\n\tif(v:this.CountFlag){\t\n\t\tv:this.Seconds -= 1\n\t\tif(v:this.Seconds <= 0){\n\t\t\tv:this.Counter -= 1\n\t\t\tv:this.Seconds = 60\n\t\t}\n\t}else{\n\t\t//カウンターが起動していない時は、時間情報を常に更新しておく。\n\t\tv:this.Seconds = 60\n\t}\n\t//時かが来ればリザルトへ\n\tif(v:this.Counter < 0){\n\t\tv:this.Counter = 0\n\t\t//重複呼び出し禁止。\n\t\tif(!v:this->^->^->FadeOut.StartFlag){\n\t\t\tv:this->^->^->FadeOut.AnimationStart()\n\t\t\tv:this->^->^->FadeOut.StartFlag = true\n\t\t}\n\t}\n\ttrue\n}";
+						}
+					}
+					#778775774 Seconds :: int : 60;
+					#2925801241 CountFlag :: bool : true;
+				}
+			}
+			#290485547 name :: string : "TimeCounter";
+			#895552624 visible :: bool : true;
+			#3029312486 width :: int : 50;
+			#1590111036 height :: int : 50;
+			#958031977 x :: int_scriptedValue : @aacbcf90-898c-4ba9-a4d1-79df9974fcf7
+			{
+				#2130147361 triggerList :: trigger_list : @1d8a4724-596c-4c49-a0d6-3ff4b1bd10d1
+				{
+					#3733329277 events :: event_refs : <objectref>[];
+					#540610321 dp_items :: dp_item_refs : <objectref>[];
+					#1823021533 properties :: property_reference_list : <propref>[];
+				}
+				#3453527068 onTrigger :: function(bool,bool) : @409f5244-2f5a-466c-8fb3-d20420a65b3f
+				{
+					#3257266708 script :: string : "function(v:arg0::bool)\n{\n\tfalse\n}";
+				}
+				#1139652737 read :: function(int) : @7ad4e8cd-198a-4fe8-934f-c21bbce3e44d
+				{
+					#2270948480 script :: string : "function()\n{\n\t(640 / 2) - (v:this.width / 2)\n}";
+				}
+				#2422912149 write :: function(bool,int) : @bd7a3592-80b3-4f68-908f-bfb200fee6ef
+				{
+					#2564113793 script :: string : "function(v:arg0::int)\n{\n\tfalse\n}";
+				}
+			}
+			#769251387 y :: int : 2;
+			#1501348833 image :: image_resource : @91780a71-24a3-4cfa-a2a2-1880aaf86578
+			{
+				#3312036167 file :: file : "moon002.png";
+			}
+			#3362881456 horizontalAlign :: int : 1;
+			#3655899361 verticalAlign :: int : 0;
+		}
+		#688814877 "children_list 15" :: GtfContainer : @93ffe3eb-e778-480e-bd0e-8270ded8b739
+		{
+			#3724164582 features :: feature_list : @821d7b7d-47f1-49b8-946e-a707d6f939c5
+			{
+			}
+			#3155324040 children :: children_list : @32aa93d1-7a53-4fa2-9064-3d8f6f117f59
+			{
+				#203714375 "children_list 20" :: GtfContainer : @5fa4260e-6a7b-4994-9541-b17082730e8b
+				{
+					#3543723457 features :: feature_list : @4821f193-1549-4b92-af94-382108d05117
+					{
+					}
+					#2803096546 children :: children_list : @2161bac8-c078-46cd-a23e-4e5b6b3680d5
+					{
+					}
+					#996662624 name :: string : "DropAreaContainer";
+					#1871516877 visible :: bool : false;
+					#2074091023 width :: int : 0;
+					#1668247325 height :: int : 0;
+					#103327232 x :: int : -255;
+					#3527327845 y :: int : -255;
+					#737842150 PosX :: intlist : <int>[0, 0, 0, 0, 0];
+					#539887269 PosY :: intlist : <int>[0, 0, 0, 0, 0];
+					#1169820417 Width :: intlist : <int>[0, 0, 0, 0, 0];
+					#4240513891 Height :: intlist : <int>[0, 0, 0, 0, 0];
+					#1601791694 SetDropArea :: function(bool) : @8ec0f413-2f3b-4f24-957c-b199c3dd8d4a
+					{
+						#3309504997 script :: string : "function()\n{\n\t//DropArea1の必要情報を代入\n\tv:this.PosX[0] = v:this->^->DropArea1.x\n\tv:this.PosY[0] = v:this->^->DropArea1.y\n\tv:this.Width[0]  = v:this->^->DropArea1.width\n\tv:this.Height[0] = v:this->^->DropArea1.height\n\t//DropArea2の必要情報を代入\n\tv:this.PosX[1] = v:this->^->DropArea2.x\n\tv:this.PosY[1] = v:this->^->DropArea2.y\n\tv:this.Width[1]  = v:this->^->DropArea2.width\n\tv:this.Height[1] = v:this->^->DropArea2.height\n\t//DropArea3の必要情報を代入\n\tv:this.PosX[2] = v:this->^->DropArea3.x\n\tv:this.PosY[2] = v:this->^->DropArea3.y\n\tv:this.Width[2]  = v:this->^->DropArea3.width\n\tv:this.Height[2] = v:this->^->DropArea3.height\n\t//DropArea4の必要情報を代入\n\tv:this.PosX[3] = v:this->^->DropArea4.x\n\tv:this.PosY[3] = v:this->^->DropArea4.y\n\tv:this.Width[3]  = v:this->^->DropArea4.width\n\tv:this.Height[3] = v:this->^->DropArea4.height\n\t//DropArea5の必要情報を代入\n\tv:this.PosX[4] = v:this->^->DropArea5.x\n\tv:this.PosY[4] = v:this->^->DropArea5.y\n\tv:this.Width[4]  = v:this->^->DropArea5.width\n\tv:this.Height[4] = v:this->^->DropArea5.height\n\t\n\tv:this.Length = 5\n\ttrue\n}";
+					}
+					#2230624312 GetDropArea :: function(bool) : @29c8ae5b-b786-452d-a027-25f667338f7b
+					{
+						#3037269732 script :: string : "function()\n{\n\tv:this->^->DropArea1.x = v:this.PosX[0]\n\tv:this->^->DropArea1.y = v:this.PosY[0]\n\t\n\tv:this->^->DropArea2.x = v:this.PosX[1]\n\tv:this->^->DropArea2.y = v:this.PosY[1]\n\t\n\tv:this->^->DropArea3.x = v:this.PosX[2]\n\tv:this->^->DropArea3.y = v:this.PosY[2]\n\t\n\tv:this->^->DropArea4.x = v:this.PosX[3]\n\tv:this->^->DropArea4.y = v:this.PosY[3]\n\t\n\tv:this->^->DropArea5.x = v:this.PosX[4]\n\tv:this->^->DropArea5.y = v:this.PosY[4]\n\ttrue\n}";
+					}
+					#3226467800 Length :: int : 5;
+					#198782197 OnFlag :: intlist : <int>[-255, -255, -255, -255, -255];
+				}
+				#891852157 "children_list 1" :: GtfRectangle_template_instance : @17b4f78c-4e2d-4e62-9d34-71afd7050fac
+				{
+					#299548912 name :: string : "DropArea1";
+					#3486332663 template :: objectref(GtfRectangle_template) : @f4da9e56-95ee-4534-ba47-121ea2d87c2c;
+					#2896608141 children :: children_list : @4214a573-fdc8-4ac1-b485-6a79b45326ea
+					{
+					}
+					#3682610472 width :: int : 65;
+					#490658206 height :: int : 65;
+					#903091895 x :: int : 450;
+					#357937894 y :: int : 84;
+					#977982681 borderColor :: color : 255;
+					#2224082433 borderThickness :: int : 5;
+				}
+				#3104441269 "children_list 6" :: GtfRectangle_template_instance : @e6a2b410-3d7a-4cd5-867d-1d3644ff6955
+				{
+					#299548912 name :: string : "DropArea2";
+					#3486332663 template :: objectref(GtfRectangle_template) : @f4da9e56-95ee-4534-ba47-121ea2d87c2c;
+					#2896608141 children :: children_list : @5d69eaa7-f2c3-4e5e-9632-cfdaa1ee9d28
+					{
+					}
+					#3682610472 width :: int : 65;
+					#490658206 height :: int : 65;
+					#903091895 x :: int : 451;
+					#357937894 y :: int : 158;
+					#977982681 borderColor :: color : 255;
+					#2224082433 borderThickness :: int : 5;
+				}
+				#1126060379 "children_list 7" :: GtfRectangle_template_instance : @e7c54584-e061-4664-b4fb-211aa128aa0c
+				{
+					#299548912 name :: string : "DropArea3";
+					#3486332663 template :: objectref(GtfRectangle_template) : @f4da9e56-95ee-4534-ba47-121ea2d87c2c;
+					#2896608141 children :: children_list : @b2916a0a-4e58-4df1-a505-5bd3295faaae
+					{
+					}
+					#3682610472 width :: int : 65;
+					#490658206 height :: int : 65;
+					#903091895 x :: int : 450;
+					#357937894 y :: int : 232;
+					#977982681 borderColor :: color : 255;
+					#2224082433 borderThickness :: int : 5;
+				}
+				#3675400312 "children_list 9" :: GtfRectangle_template_instance : @dd0a7e0e-1749-4037-818d-66c7ef799aa2
+				{
+					#299548912 name :: string : "DropArea4";
+					#3486332663 template :: objectref(GtfRectangle_template) : @f4da9e56-95ee-4534-ba47-121ea2d87c2c;
+					#2896608141 children :: children_list : @d6a9328c-95c2-46e7-ab3e-5b51ebbd51cb
+					{
+					}
+					#3682610472 width :: int : 65;
+					#490658206 height :: int : 65;
+					#903091895 x :: int : 450;
+					#357937894 y :: int : 306;
+					#977982681 borderColor :: color : 255;
+					#2224082433 borderThickness :: int : 5;
+				}
+				#2935251414 "children_list 10" :: GtfRectangle_template_instance : @32db28db-3fc4-459e-8465-5cc5d6875f5d
+				{
+					#299548912 name :: string : "DropArea5";
+					#3486332663 template :: objectref(GtfRectangle_template) : @f4da9e56-95ee-4534-ba47-121ea2d87c2c;
+					#2896608141 children :: children_list : @e3f4d282-7144-49d9-828f-ee9a1abf2138
+					{
+					}
+					#3682610472 width :: int : 65;
+					#490658206 height :: int : 65;
+					#903091895 x :: int : 450;
+					#357937894 y :: int : 380;
+					#977982681 borderColor :: color : 255;
+					#2224082433 borderThickness :: int : 5;
+				}
+				#1759952745 "children_list 11" :: GtfContainer : @3bb56fc8-fbea-4b0e-a962-498db932fe82
+				{
+					#3543723457 features :: feature_list : @bc2deea7-35ee-478d-ae3d-20a2d9975b03
+					{
+					}
+					#2803096546 children :: children_list : @2d15a9c7-2530-4b4b-82bf-d5f77f73ba48
+					{
+					}
+					#996662624 name :: string : "ButtonContainer";
+					#1871516877 visible :: bool : false;
+					#2074091023 width :: int : 0;
+					#1668247325 height :: int : 0;
+					#103327232 x :: int : -255;
+					#3527327845 y :: int : -255;
+					#737842150 PosX :: intlist : <int>[0, 0, 0, 0, 0];
+					#539887269 PosY :: intlist : <int>[0, 0, 0, 0, 0];
+					#1169820417 Width :: intlist : <int>[0, 0, 0, 0, 0];
+					#4240513891 Height :: intlist : <int>[0, 0, 0, 0, 0];
+					#1601791694 SetButton :: function(bool) : @39d3fcd3-a3bb-4271-8dcb-45cf7733836b
+					{
+						#3309504997 script :: string : "function()\n{\n\t//Button1の必要情報を代入\n\tv:this.Touch[0] = v:this->^->Button1.touched\n\tv:this.Text[0] = v:this->^->Button1.text\n\tv:this.PosX[0] = v:this->^->Button1.x\n\tv:this.PosY[0] = v:this->^->Button1.y\n\tv:this.Width[0] = v:this->^->Button1.width\n\tv:this.Height[0] = v:this->^->Button1.height\n\t//Button2の必要情報を代入\n\tv:this.Touch[1] = v:this->^->Button2.touched\n\tv:this.Text[1] = v:this->^->Button2.text\n\tv:this.PosX[1] = v:this->^->Button2.x\n\tv:this.PosY[1] = v:this->^->Button2.y\n\tv:this.Width[1] = v:this->^->Button2.width\n\tv:this.Height[1] = v:this->^->Button2.height\n\t//Button3の必要情報を代入\n\tv:this.Touch[2] = v:this->^->Button3.touched\n\tv:this.Text[2] = v:this->^->Button3.text\n\tv:this.PosX[2] = v:this->^->Button3.x\n\tv:this.PosY[2] = v:this->^->Button3.y\n\tv:this.Width[2] = v:this->^->Button3.width\n\tv:this.Height[2] = v:this->^->Button3.height\n\t//Button4の必要情報を代入\n\tv:this.Touch[3] = v:this->^->Button4.touched\n\tv:this.Text[3] = v:this->^->Button4.text\n\tv:this.PosX[3] = v:this->^->Button4.x\n\tv:this.PosY[3] = v:this->^->Button4.y\n\tv:this.Width[3] = v:this->^->Button4.width\n\tv:this.Height[3] = v:this->^->Button4.height\n\t//Button5の必要情報を代入\n\tv:this.Touch[4] = v:this->^->Button5.touched\n\tv:this.Text[4] = v:this->^->Button5.text\n\tv:this.PosX[4] = v:this->^->Button5.x\n\tv:this.PosY[4] = v:this->^->Button5.y\n\tv:this.Width[4] = v:this->^->Button5.width\n\tv:this.Height[4] = v:this->^->Button5.height\n\t\n\tv:this.Length = 5\n\tfalse\n}";
+					}
+					#2230624312 GetButton :: function(bool) : @ed33b3f0-6646-461b-a6fd-d291b21bafa9
+					{
+						#3037269732 script :: string : "function()\n{\n\tv:this->^->Button1.x = v:this.PosX[0]\n\tv:this->^->Button1.y = v:this.PosY[0]\n\tv:this->^->Button1.width  = v:this.Width[0]\n\tv:this->^->Button1.height = v:this.Height[0]\n\t\n\tv:this->^->Button2.x = v:this.PosX[1]\n\tv:this->^->Button2.y = v:this.PosY[1]\n\tv:this->^->Button2.width  = v:this.Width[1]\n\tv:this->^->Button2.height = v:this.Height[1]\n\t\n\tv:this->^->Button3.x = v:this.PosX[2]\n\tv:this->^->Button3.y = v:this.PosY[2]\n\tv:this->^->Button3.width  = v:this.Width[2]\n\tv:this->^->Button3.height = v:this.Height[2]\n\t\n\tv:this->^->Button4.x = v:this.PosX[3]\n\tv:this->^->Button4.y = v:this.PosY[3]\n\tv:this->^->Button4.width  = v:this.Width[3]\n\tv:this->^->Button4.height = v:this.Height[3]\n\t\n\tv:this->^->Button5.x = v:this.PosX[4]\n\tv:this->^->Button5.y = v:this.PosY[4]\n\tv:this->^->Button5.width  = v:this.Width[4]\n\tv:this->^->Button5.height = v:this.Height[4]\n\t\n\ttrue\n}";
+					}
+					#4102167898 Length :: int : 5;
+					#1066292923 Touch :: boollist : <bool>[false, false, false, false, false];
+					#3817465244 Text :: stringlist : <string>["", "", "", "", ""];
+					#3826471036 AnswerIndex :: int : 0;
+				}
+				#322475048 "children_list 2" :: GtfImage_template_instance : @f4821f44-aefa-44e7-bfd0-fe3a92e6c66e
+				{
+					#605484872 name :: string : "Button1";
+					#2616269938 template :: objectref(GtfImage_template) : @c4ac040d-2906-4258-92ad-e656bee7d754;
+					#104357688 children :: children_list : @8e015e6d-e8b2-4537-a046-523e4207f4cb
+					{
+						#94462451 "children_list 4" :: GtfParallelAnimation : @3b91bbad-ba54-4135-9daa-ed45504c9607
+						{
+							#944115511 features :: feature_list : @dbcec355-3555-45c9-a777-f1c38fa9675d
+							{
+							}
+							#2726409877 children :: children_list : @551201ea-706f-4455-ab1f-85b2828b6953
+							{
+								#2539448184 "children_list 6" :: GtfLinearInterpolationS32 : @0cb15f28-caff-4676-ae47-25305336632c
+								{
+									#1182834726 features :: feature_list : @a97092f1-04b6-46cd-884c-9f21a9bb1d03
+									{
+									}
+									#3453984727 children :: children_list : @e9357f0f-f602-4006-a55b-017a8f2a75cc
+									{
+									}
+									#435886849 name :: string : "MoveY";
+									#1167721456 enabled :: bool : true;
+									#2177058636 delay :: int : 0;
+									#2956922459 duration :: int : 500;
+									#2291677091 repeat :: int : 1;
+									#3984234996 alternating :: bool : true;
+									#732358899 relative :: bool : false;
+									#3324244850 start :: propref(int) : @f4821f44-aefa-44e7-bfd0-fe3a92e6c66e#3454249095;
+									#411312036 end :: int : 84;
+									#3253883126 target :: propref(int) : @f4821f44-aefa-44e7-bfd0-fe3a92e6c66e#3454249095;
+								}
+							}
+							#140360463 name :: string : "InitializeAnimation";
+							#1576581935 enabled :: bool : true;
+							#3544696146 repeat :: int : 1;
+							#91969661 alternating :: bool : false;
+							#1025617707 scale :: float : 1.0;
+							#1569234120 onPlay :: function(void,int,bool) : @cd42aede-5050-4d59-8a20-7fa7373f11c7
+							{
+								#2173799268 script :: string : "function(v:animation_time::int, v:forward::bool)\n{\n\n}";
+							}
+							#4080876635 onPause :: function(void,int) : @eed64a94-69c8-4b06-bf79-abc8705b0a43
+							{
+								#2977949783 script :: string : "function(v:animation_time::int)\n{\n\n}";
+							}
+							#2896920857 onTerminate :: function(void,int,int) : @d946f8a1-6a95-4248-bf59-23e11f5aaeb1
+							{
+								#1446667302 script :: string : "function(v:animation_time::int, v:terminate::int)\n{\n\n}";
+							}
+							#3476435641 AnimationStart :: function(bool) : @74508a9b-c6fe-4c50-b266-cd5c0a49e09f
+							{
+								#1279408266 script :: string : "function()\n{\n\tf:animation_play(v:this)\n\tfalse\n}";
+							}
+						}
+					}
+					#3454249095 y :: int : 100;
+					#28669027 x :: int : 100;
+					#1453526011 releasedReaction :: function(bool) : @81ae1fd6-0ebb-4f2f-969e-55205c0d0223
+					{
+						#2799731335 script :: string : "function()\n{\n\tif(v:this.touched){\n\t\tv:this.width  = v:this.SizeX\n\t\tv:this.height = v:this.SizeY\n\t}else{\n\t\tv:this.BeforeTouchPosX = -255\n\t\tv:this.BeforeTouchPosY = -255\n\t\tv:this.MoveVectorX = 0\n\t\tv:this.MoveVectorY = 0\n\t}\n\ttrue\n}";
+					}
+					#2893105330 touchMoved :: function(bool,int,int,int,int) : @da6b4eff-fa3b-4aad-96c5-f2061e0a6279
+					{
+						#2797675869 script :: string : "function(v:touchId::int, v:x::int, v:y::int, v:fingerId::int)\n{\n\tif (v:this.BeforeTouchPosX == -255 && v:this.BeforeTouchPosY == -255){\n\t\tv:this.BeforeTouchPosX = v:x\n\t\tv:this.BeforeTouchPosY = v:y\n\t}else{\n\t\tv:this.MoveVectorX = v:x - v:this.BeforeTouchPosX\n   \t\tv:this.MoveVectorY = v:y - v:this.BeforeTouchPosY\n   \t\t//X座標に移動(制限付き)\n   \t\tv:this.x += v:this.MoveVectorX\n   \t\tdp:Index1 = (v:this->^->^->Background.width + v:this->^->^->Background.x) - v:this.width\n   \t\tif(v:this.x <= v:this->^->^->Background.x ){\n   \t\t\tv:this.x = v:this->^->^->Background.x\n   \t\t}else if(v:this.x >= dp:Index1){\n   \t\t\tv:this.x = dp:Index1\n   \t\t}\n   \t\t//Y座標に移動(制限付き)\n   \t\tv:this.y += v:this.MoveVectorY\n   \t\tdp:Index1 = (v:this->^->^->Background.height + v:this->^->^->Background.y) - v:this.height\n   \t\tif(v:this.y <= v:this->^->^->Background.y ){\n   \t\t\tv:this.y = v:this->^->^->Background.y\n   \t\t}else if(v:this.y >= dp:Index1){\n   \t\t\tv:this.y = dp:Index1\n   \t\t}\n   \t\t\n   \t\tv:this.BeforeTouchPosX = v:x\n   \t\tv:this.BeforeTouchPosY = v:y\n   \t\tdp:Index1 = 0\n\t}\n    true\n}";
+					}
+					#3022165244 width :: int : 56;
+					#18524402 "width 2" :: propref(int) : @f4821f44-aefa-44e7-bfd0-fe3a92e6c66e#3022165244;
+					#510697559 colorationEnabled :: bool : false;
+					#2250553119 colorationColor :: color : -1;
+					#1032514338 text :: string : "L";
+					#248952820 font :: font_resource : @7f2b4cf8-0c6d-4b57-bd93-b913387ff5dd
+					{
+						#2844541097 file :: file : "HGRGY.TTC";
+						#1104133362 size :: int : 30;
+					}
+					#2495421692 height :: int : 56;
+					#1713473105 "height 2" :: propref(int) : @f4821f44-aefa-44e7-bfd0-fe3a92e6c66e#2495421692;
+					#376658294 BeforeTouchPosX :: int : -255;
+					#3101213379 BeforeTouchPosY :: int : -255;
+					#566743662 MoveVectorX :: int : 0;
+					#3775378326 MoveVectorY :: int : 0;
+					#1016193155 InitializePos :: function(bool) : @5e27f567-c130-4c16-8bf9-79b1da0ec4d9
+					{
+						#3053552493 script :: string : "function()\n{\n\tv:this.x = 100\n\tv:this.y = -((f:rand()%300) + 100)\n\tv:this.width = v:this.SizeX\t\t//Widthの初期をを残しておく\n\tv:this.height = v:this.SizeY\t//Heightの初期をを残しておく\n\tfalse\n}";
+					}
+					#3094064706 SizeX :: int : 0;
+					#4257482950 SizeY :: int : 0;
+				}
+				#3287732950 "children_list 4" :: GtfImage_template_instance : @ea560eba-4b89-471d-93e2-7a14b35c4d63
+				{
+					#605484872 name :: string : "Button2";
+					#2616269938 template :: objectref(GtfImage_template) : @c4ac040d-2906-4258-92ad-e656bee7d754;
+					#104357688 children :: children_list : @77b4b9ad-251d-4acb-a213-bcc8168b66f7
+					{
+						#94462451 "children_list 4" :: GtfParallelAnimation : @828707b8-5d6f-410f-aeb0-8c65c02492df
+						{
+							#944115511 features :: feature_list : @8d9e6dc1-57dd-4cb1-8325-bfba5afcb156
+							{
+							}
+							#2726409877 children :: children_list : @922ffdc9-16a1-4323-851b-d69418cd637d
+							{
+								#2539448184 "children_list 6" :: GtfLinearInterpolationS32 : @383a4d64-a8f2-4319-a711-c09f30ef0ef7
+								{
+									#1182834726 features :: feature_list : @f063de1f-dd12-4c8e-92b5-3e1c3cd06c52
+									{
+									}
+									#3453984727 children :: children_list : @20dad4b6-5756-4d3a-8644-c1d3b954cc1e
+									{
+									}
+									#435886849 name :: string : "MoveY";
+									#1167721456 enabled :: bool : true;
+									#2177058636 delay :: int : 0;
+									#2956922459 duration :: int : 500;
+									#2291677091 repeat :: int : 1;
+									#3984234996 alternating :: bool : true;
+									#732358899 relative :: bool : false;
+									#3324244850 start :: propref(int) : @ea560eba-4b89-471d-93e2-7a14b35c4d63#3454249095;
+									#411312036 end :: int : 158;
+									#3253883126 target :: propref(int) : @ea560eba-4b89-471d-93e2-7a14b35c4d63#3454249095;
+								}
+							}
+							#140360463 name :: string : "InitializeAnimation";
+							#1576581935 enabled :: bool : true;
+							#3544696146 repeat :: int : 1;
+							#91969661 alternating :: bool : false;
+							#1025617707 scale :: float : 1.0;
+							#1569234120 onPlay :: function(void,int,bool) : @af89bc5e-d467-40e8-91ef-4d38a3f3f643
+							{
+								#2173799268 script :: string : "function(v:animation_time::int, v:forward::bool)\n{\n\n}";
+							}
+							#4080876635 onPause :: function(void,int) : @c480a294-c965-4b48-836b-bd1a9520a5a1
+							{
+								#2977949783 script :: string : "function(v:animation_time::int)\n{\n\n}";
+							}
+							#2896920857 onTerminate :: function(void,int,int) : @224a47a1-22e2-4d08-8a3c-1f5056004584
+							{
+								#1446667302 script :: string : "function(v:animation_time::int, v:terminate::int)\n{\n\n}";
+							}
+							#3476435641 AnimationStart :: function(bool) : @faaf3d26-a87b-41ff-bdd8-4086d099ae24
+							{
+								#1279408266 script :: string : "function()\n{\n\tf:animation_play(v:this)\n\tfalse\n}";
+							}
+						}
+					}
+					#3454249095 y :: int : 100;
+					#28669027 x :: int : 100;
+					#1453526011 releasedReaction :: function(bool) : @0836e990-72b8-4415-b55e-b80306fd0a39
+					{
+						#2799731335 script :: string : "function()\n{\n\tif(v:this.touched){\n\t\tv:this.width  = v:this.SizeX\n\t\tv:this.height = v:this.SizeY\n\t}else{\n\t\tv:this.BeforeTouchPosX = -255\n\t\tv:this.BeforeTouchPosY = -255\n\t\tv:this.MoveVectorX = 0\n\t\tv:this.MoveVectorY = 0\n\t}\n\ttrue\n}";
+					}
+					#2893105330 touchMoved :: function(bool,int,int,int,int) : @6ec40558-820a-4cf3-87e2-868564674e9f
+					{
+						#2797675869 script :: string : "function(v:touchId::int, v:x::int, v:y::int, v:fingerId::int)\n{\n\tif (v:this.BeforeTouchPosX == -255 && v:this.BeforeTouchPosY == -255){\n\t\tv:this.BeforeTouchPosX = v:x\n\t\tv:this.BeforeTouchPosY = v:y\n\t}else{\n\t\tv:this.MoveVectorX = v:x - v:this.BeforeTouchPosX\n   \t\tv:this.MoveVectorY = v:y - v:this.BeforeTouchPosY\n   \t\t//X座標に移動(制限付き)\n   \t\tv:this.x += v:this.MoveVectorX\n   \t\tdp:Index1 = (v:this->^->^->Background.width + v:this->^->^->Background.x) - v:this.width\n   \t\tif(v:this.x <= v:this->^->^->Background.x ){\n   \t\t\tv:this.x = v:this->^->^->Background.x\n   \t\t}else if(v:this.x >= dp:Index1){\n   \t\t\tv:this.x = dp:Index1\n   \t\t}\n   \t\t//Y座標に移動(制限付き)\n   \t\tv:this.y += v:this.MoveVectorY\n   \t\tdp:Index1 = (v:this->^->^->Background.height + v:this->^->^->Background.y) - v:this.height\n   \t\tif(v:this.y <= v:this->^->^->Background.y ){\n   \t\t\tv:this.y = v:this->^->^->Background.y\n   \t\t}else if(v:this.y >= dp:Index1){\n   \t\t\tv:this.y = dp:Index1\n   \t\t}\n   \t\t\n   \t\tv:this.BeforeTouchPosX = v:x\n   \t\tv:this.BeforeTouchPosY = v:y\n   \t\tdp:Index1 = 0\n\t}\n    true\n}";
+					}
+					#3022165244 width :: int : 56;
+					#18524402 "width 2" :: propref(int) : @ea560eba-4b89-471d-93e2-7a14b35c4d63#3022165244;
+					#510697559 colorationEnabled :: bool : false;
+					#2250553119 colorationColor :: color : -1;
+					#1032514338 text :: string : "L";
+					#248952820 font :: font_resource : @8d282c69-e49a-4d2c-b5bd-ee788638b2c6
+					{
+						#2844541097 file :: file : "HGRGY.TTC";
+						#1104133362 size :: int : 30;
+					}
+					#2495421692 height :: int : 56;
+					#1713473105 "height 2" :: propref(int) : @ea560eba-4b89-471d-93e2-7a14b35c4d63#2495421692;
+					#376658294 BeforeTouchPosX :: int : -255;
+					#3101213379 BeforeTouchPosY :: int : -255;
+					#566743662 MoveVectorX :: int : 0;
+					#3775378326 MoveVectorY :: int : 0;
+					#1016193155 InitializePos :: function(bool) : @14dcf69f-ba8c-4e87-9217-08992a67b2a4
+					{
+						#3053552493 script :: string : "function()\n{\n\tv:this.x = 100\n\tv:this.y = -((f:rand()%300) + 100)\n\tv:this.width = v:this.SizeX\t\t//Widthの初期をを残しておく\n\tv:this.height = v:this.SizeY\t//Heightの初期をを残しておく\n\tfalse\n}";
+					}
+					#3094064706 SizeX :: int : 0;
+					#4257482950 SizeY :: int : 0;
+				}
+				#1275241785 "children_list 5" :: GtfImage_template_instance : @458d2672-459f-42ae-8de0-66bcbc74b994
+				{
+					#605484872 name :: string : "Button3";
+					#2616269938 template :: objectref(GtfImage_template) : @c4ac040d-2906-4258-92ad-e656bee7d754;
+					#104357688 children :: children_list : @05d8c6e2-2c0e-47a8-b6eb-b0058e58b248
+					{
+						#94462451 "children_list 4" :: GtfParallelAnimation : @9b23e3ce-9e1e-43ab-aa4a-02ca950bfdf7
+						{
+							#944115511 features :: feature_list : @e73e184f-4378-4667-ae7d-621074aeb2b4
+							{
+							}
+							#2726409877 children :: children_list : @7dee2a19-1f02-4d5b-ae24-5850073a3ea0
+							{
+								#2539448184 "children_list 6" :: GtfLinearInterpolationS32 : @fa99a954-e3f6-4f43-8377-9efd5541b65f
+								{
+									#1182834726 features :: feature_list : @b1b0b0d4-c427-4f35-8d0c-ab2b95562fc6
+									{
+									}
+									#3453984727 children :: children_list : @c74c54dc-2898-4b0d-91c3-550613eb4339
+									{
+									}
+									#435886849 name :: string : "MoveY";
+									#1167721456 enabled :: bool : true;
+									#2177058636 delay :: int : 0;
+									#2956922459 duration :: int : 500;
+									#2291677091 repeat :: int : 1;
+									#3984234996 alternating :: bool : true;
+									#732358899 relative :: bool : false;
+									#3324244850 start :: propref(int) : @458d2672-459f-42ae-8de0-66bcbc74b994#3454249095;
+									#411312036 end :: int : 232;
+									#3253883126 target :: propref(int) : @458d2672-459f-42ae-8de0-66bcbc74b994#3454249095;
+								}
+							}
+							#140360463 name :: string : "InitializeAnimation";
+							#1576581935 enabled :: bool : true;
+							#3544696146 repeat :: int : 1;
+							#91969661 alternating :: bool : false;
+							#1025617707 scale :: float : 1.0;
+							#1569234120 onPlay :: function(void,int,bool) : @1d6820a6-187f-45ce-84e4-560da0155e37
+							{
+								#2173799268 script :: string : "function(v:animation_time::int, v:forward::bool)\n{\n\n}";
+							}
+							#4080876635 onPause :: function(void,int) : @3eaa8bcf-e7d8-493b-b9b1-5b1365cfd01f
+							{
+								#2977949783 script :: string : "function(v:animation_time::int)\n{\n\n}";
+							}
+							#2896920857 onTerminate :: function(void,int,int) : @e5c8dc1e-c6d6-4eb4-902d-11d906bd91d5
+							{
+								#1446667302 script :: string : "function(v:animation_time::int, v:terminate::int)\n{\n\n}";
+							}
+							#3476435641 AnimationStart :: function(bool) : @8df051d9-ae81-4da7-8992-1e2e95dbc22c
+							{
+								#1279408266 script :: string : "function()\n{\n\tf:animation_play(v:this)\n\tfalse\n}";
+							}
+						}
+					}
+					#3454249095 y :: int : 100;
+					#28669027 x :: int : 100;
+					#1453526011 releasedReaction :: function(bool) : @c195557d-d0ad-4419-b578-ba1fe194bd74
+					{
+						#2799731335 script :: string : "function()\n{\n\tif(v:this.touched){\n\t\tv:this.width  = v:this.SizeX\n\t\tv:this.height = v:this.SizeY\n\t}else{\n\t\tv:this.BeforeTouchPosX = -255\n\t\tv:this.BeforeTouchPosY = -255\n\t\tv:this.MoveVectorX = 0\n\t\tv:this.MoveVectorY = 0\n\t}\n\ttrue\n}";
+					}
+					#2893105330 touchMoved :: function(bool,int,int,int,int) : @cd123911-1800-4c10-ae59-9528747e5342
+					{
+						#2797675869 script :: string : "function(v:touchId::int, v:x::int, v:y::int, v:fingerId::int)\n{\n\tif (v:this.BeforeTouchPosX == -255 && v:this.BeforeTouchPosY == -255){\n\t\tv:this.BeforeTouchPosX = v:x\n\t\tv:this.BeforeTouchPosY = v:y\n\t}else{\n\t\tv:this.MoveVectorX = v:x - v:this.BeforeTouchPosX\n   \t\tv:this.MoveVectorY = v:y - v:this.BeforeTouchPosY\n   \t\t//X座標に移動(制限付き)\n   \t\tv:this.x += v:this.MoveVectorX\n   \t\tdp:Index1 = (v:this->^->^->Background.width + v:this->^->^->Background.x) - v:this.width\n   \t\tif(v:this.x <= v:this->^->^->Background.x ){\n   \t\t\tv:this.x = v:this->^->^->Background.x\n   \t\t}else if(v:this.x >= dp:Index1){\n   \t\t\tv:this.x = dp:Index1\n   \t\t}\n   \t\t//Y座標に移動(制限付き)\n   \t\tv:this.y += v:this.MoveVectorY\n   \t\tdp:Index1 = (v:this->^->^->Background.height + v:this->^->^->Background.y) - v:this.height\n   \t\tif(v:this.y <= v:this->^->^->Background.y ){\n   \t\t\tv:this.y = v:this->^->^->Background.y\n   \t\t}else if(v:this.y >= dp:Index1){\n   \t\t\tv:this.y = dp:Index1\n   \t\t}\n   \t\t\n   \t\tv:this.BeforeTouchPosX = v:x\n   \t\tv:this.BeforeTouchPosY = v:y\n   \t\tdp:Index1 = 0\n\t}\n    true\n}";
+					}
+					#3022165244 width :: int : 56;
+					#18524402 "width 2" :: propref(int) : @458d2672-459f-42ae-8de0-66bcbc74b994#3022165244;
+					#510697559 colorationEnabled :: bool : false;
+					#2250553119 colorationColor :: color : -1;
+					#1032514338 text :: string : "L";
+					#248952820 font :: font_resource : @a4a98410-5f85-41a9-ad0b-a4b6c2bf767d
+					{
+						#2844541097 file :: file : "HGRGY.TTC";
+						#1104133362 size :: int : 30;
+					}
+					#2495421692 height :: int : 56;
+					#1713473105 "height 2" :: propref(int) : @458d2672-459f-42ae-8de0-66bcbc74b994#2495421692;
+					#376658294 BeforeTouchPosX :: int : -255;
+					#3101213379 BeforeTouchPosY :: int : -255;
+					#566743662 MoveVectorX :: int : 0;
+					#3775378326 MoveVectorY :: int : 0;
+					#1016193155 InitializePos :: function(bool) : @555c64bc-987e-4000-91ea-2257ae830a82
+					{
+						#3053552493 script :: string : "function()\n{\n\tv:this.x = 100\n\tv:this.y = -((f:rand()%300) + 100)\n\tv:this.width = v:this.SizeX\t\t//Widthの初期をを残しておく\n\tv:this.height = v:this.SizeY\t//Heightの初期をを残しておく\n\tfalse\n}";
+					}
+					#3094064706 SizeX :: int : 0;
+					#4257482950 SizeY :: int : 0;
+				}
+				#639114319 "children_list 8" :: GtfImage_template_instance : @2753520c-2e89-4ae5-acb7-85a79726228a
+				{
+					#605484872 name :: string : "Button4";
+					#2616269938 template :: objectref(GtfImage_template) : @c4ac040d-2906-4258-92ad-e656bee7d754;
+					#104357688 children :: children_list : @eddfdcac-1a5d-4abb-902a-b9bb3777b95f
+					{
+						#94462451 "children_list 4" :: GtfParallelAnimation : @0dbb9824-8506-4ad2-b6ee-586e0a2e62a5
+						{
+							#944115511 features :: feature_list : @81885e69-d083-47c0-b71a-18401c7894c7
+							{
+							}
+							#2726409877 children :: children_list : @c931fb3a-ecb2-4999-930d-a1fdc9ab3aad
+							{
+								#2539448184 "children_list 6" :: GtfLinearInterpolationS32 : @afbe2952-6038-4392-8bc4-56b107119c61
+								{
+									#1182834726 features :: feature_list : @c484d3d7-aa6c-4f68-a1f3-118a1c42211f
+									{
+									}
+									#3453984727 children :: children_list : @55bb0e81-6695-4c46-9e10-6cffdb0d0bab
+									{
+									}
+									#435886849 name :: string : "MoveY";
+									#1167721456 enabled :: bool : true;
+									#2177058636 delay :: int : 0;
+									#2956922459 duration :: int : 500;
+									#2291677091 repeat :: int : 1;
+									#3984234996 alternating :: bool : true;
+									#732358899 relative :: bool : false;
+									#3324244850 start :: propref(int) : @2753520c-2e89-4ae5-acb7-85a79726228a#3454249095;
+									#411312036 end :: int : 306;
+									#3253883126 target :: propref(int) : @2753520c-2e89-4ae5-acb7-85a79726228a#3454249095;
+								}
+							}
+							#140360463 name :: string : "InitializeAnimation";
+							#1576581935 enabled :: bool : true;
+							#3544696146 repeat :: int : 1;
+							#91969661 alternating :: bool : false;
+							#1025617707 scale :: float : 1.0;
+							#1569234120 onPlay :: function(void,int,bool) : @796155da-ae83-4277-a1d7-38f42a4988ee
+							{
+								#2173799268 script :: string : "function(v:animation_time::int, v:forward::bool)\n{\n\n}";
+							}
+							#4080876635 onPause :: function(void,int) : @a6f6ed41-ead5-41f5-9a01-261383e8cfa5
+							{
+								#2977949783 script :: string : "function(v:animation_time::int)\n{\n\n}";
+							}
+							#2896920857 onTerminate :: function(void,int,int) : @f46f55e7-5572-4bfc-8731-446f1ff40fb4
+							{
+								#1446667302 script :: string : "function(v:animation_time::int, v:terminate::int)\n{\n\n}";
+							}
+							#3476435641 AnimationStart :: function(bool) : @375e7843-ad1b-4af9-a176-20b095f4c0fd
+							{
+								#1279408266 script :: string : "function()\n{\n\tf:animation_play(v:this)\n\tfalse\n}";
+							}
+						}
+					}
+					#3454249095 y :: int : 100;
+					#28669027 x :: int : 100;
+					#1453526011 releasedReaction :: function(bool) : @319587c7-bba1-447b-af47-93f4d45967e7
+					{
+						#2799731335 script :: string : "function()\n{\n\tif(v:this.touched){\n\t\tv:this.width  = v:this.SizeX\n\t\tv:this.height = v:this.SizeY\n\t}else{\n\t\tv:this.BeforeTouchPosX = -255\n\t\tv:this.BeforeTouchPosY = -255\n\t\tv:this.MoveVectorX = 0\n\t\tv:this.MoveVectorY = 0\n\t}\n\ttrue\n}";
+					}
+					#2893105330 touchMoved :: function(bool,int,int,int,int) : @e3839923-615f-4e15-be19-cea61af05e6d
+					{
+						#2797675869 script :: string : "function(v:touchId::int, v:x::int, v:y::int, v:fingerId::int)\n{\n\tif (v:this.BeforeTouchPosX == -255 && v:this.BeforeTouchPosY == -255){\n\t\tv:this.BeforeTouchPosX = v:x\n\t\tv:this.BeforeTouchPosY = v:y\n\t}else{\n\t\tv:this.MoveVectorX = v:x - v:this.BeforeTouchPosX\n   \t\tv:this.MoveVectorY = v:y - v:this.BeforeTouchPosY\n   \t\t//X座標に移動(制限付き)\n   \t\tv:this.x += v:this.MoveVectorX\n   \t\tdp:Index1 = (v:this->^->^->Background.width + v:this->^->^->Background.x) - v:this.width\n   \t\tif(v:this.x <= v:this->^->^->Background.x ){\n   \t\t\tv:this.x = v:this->^->^->Background.x\n   \t\t}else if(v:this.x >= dp:Index1){\n   \t\t\tv:this.x = dp:Index1\n   \t\t}\n   \t\t//Y座標に移動(制限付き)\n   \t\tv:this.y += v:this.MoveVectorY\n   \t\tdp:Index1 = (v:this->^->^->Background.height + v:this->^->^->Background.y) - v:this.height\n   \t\tif(v:this.y <= v:this->^->^->Background.y ){\n   \t\t\tv:this.y = v:this->^->^->Background.y\n   \t\t}else if(v:this.y >= dp:Index1){\n   \t\t\tv:this.y = dp:Index1\n   \t\t}\n   \t\t\n   \t\tv:this.BeforeTouchPosX = v:x\n   \t\tv:this.BeforeTouchPosY = v:y\n   \t\tdp:Index1 = 0\n\t}\n    true\n}";
+					}
+					#3022165244 width :: int : 56;
+					#18524402 "width 2" :: propref(int) : @2753520c-2e89-4ae5-acb7-85a79726228a#3022165244;
+					#510697559 colorationEnabled :: bool : false;
+					#2250553119 colorationColor :: color : -1;
+					#1032514338 text :: string : "L";
+					#248952820 font :: font_resource : @40f80232-bba3-45a0-a462-d9540d2c127c
+					{
+						#2844541097 file :: file : "HGRGY.TTC";
+						#1104133362 size :: int : 30;
+					}
+					#2495421692 height :: int : 56;
+					#1713473105 "height 2" :: propref(int) : @2753520c-2e89-4ae5-acb7-85a79726228a#2495421692;
+					#376658294 BeforeTouchPosX :: int : -255;
+					#3101213379 BeforeTouchPosY :: int : -255;
+					#566743662 MoveVectorX :: int : 0;
+					#3775378326 MoveVectorY :: int : 0;
+					#1016193155 InitializePos :: function(bool) : @d3eafbf0-cb06-4e77-93f1-12400534af56
+					{
+						#3053552493 script :: string : "function()\n{\n\tv:this.x = 100\n\tv:this.y = -((f:rand()%300) + 100)\n\tv:this.width = v:this.SizeX\t\t//Widthの初期をを残しておく\n\tv:this.height = v:this.SizeY\t//Heightの初期をを残しておく\n\tfalse\n}";
+					}
+					#3094064706 SizeX :: int : 0;
+					#4257482950 SizeY :: int : 0;
+				}
+				#2497363370 "children_list 12" :: GtfImage_template_instance : @eaef3482-efad-4537-a670-ce387fdb1661
+				{
+					#605484872 name :: string : "Button5";
+					#2616269938 template :: objectref(GtfImage_template) : @c4ac040d-2906-4258-92ad-e656bee7d754;
+					#104357688 children :: children_list : @c71ffd8f-a1d7-4413-9d32-4476a9be4de6
+					{
+						#94462451 "children_list 4" :: GtfParallelAnimation : @dccb929e-b9a2-49e6-b3bd-ca8e66bce8ce
+						{
+							#944115511 features :: feature_list : @8bfd1dfe-8d59-47b4-971a-afc226c76315
+							{
+							}
+							#2726409877 children :: children_list : @ab34a2e8-9a3b-445f-ba2f-72e009514d9c
+							{
+								#2539448184 "children_list 6" :: GtfLinearInterpolationS32 : @0aef1fea-ab8f-4776-a19d-f1c2e132d62a
+								{
+									#1182834726 features :: feature_list : @c9698996-207e-4026-b6f9-340d75163162
+									{
+									}
+									#3453984727 children :: children_list : @e5d41110-0fbb-459f-b853-41139eb6e619
+									{
+									}
+									#435886849 name :: string : "MoveY";
+									#1167721456 enabled :: bool : true;
+									#2177058636 delay :: int : 0;
+									#2956922459 duration :: int : 500;
+									#2291677091 repeat :: int : 1;
+									#3984234996 alternating :: bool : true;
+									#732358899 relative :: bool : false;
+									#3324244850 start :: propref(int) : @eaef3482-efad-4537-a670-ce387fdb1661#3454249095;
+									#411312036 end :: int : 380;
+									#3253883126 target :: propref(int) : @eaef3482-efad-4537-a670-ce387fdb1661#3454249095;
+								}
+							}
+							#140360463 name :: string : "InitializeAnimation";
+							#1576581935 enabled :: bool : true;
+							#3544696146 repeat :: int : 1;
+							#91969661 alternating :: bool : false;
+							#1025617707 scale :: float : 1.0;
+							#1569234120 onPlay :: function(void,int,bool) : @b2d32ac8-f8cc-4ff5-a039-9b0acc32d533
+							{
+								#2173799268 script :: string : "function(v:animation_time::int, v:forward::bool)\n{\n\n}";
+							}
+							#4080876635 onPause :: function(void,int) : @c52dcdc6-cb90-405c-a52b-d742703e29bb
+							{
+								#2977949783 script :: string : "function(v:animation_time::int)\n{\n\n}";
+							}
+							#2896920857 onTerminate :: function(void,int,int) : @68765761-394d-4f4c-bc86-994303bc5eb2
+							{
+								#1446667302 script :: string : "function(v:animation_time::int, v:terminate::int)\n{\n\n}";
+							}
+							#3476435641 AnimationStart :: function(bool) : @05160c8d-7ce5-4a4c-99c0-bfd549a07622
+							{
+								#1279408266 script :: string : "function()\n{\n\tf:animation_play(v:this)\n\tfalse\n}";
+							}
+						}
+					}
+					#3454249095 y :: int : 100;
+					#28669027 x :: int : 100;
+					#1453526011 releasedReaction :: function(bool) : @6c0bf6bd-faf1-44ec-b203-be5b3dcf8a34
+					{
+						#2799731335 script :: string : "function()\n{\n\tif(v:this.touched){\n\t\tv:this.width  = v:this.SizeX\n\t\tv:this.height = v:this.SizeY\n\t}else{\n\t\tv:this.BeforeTouchPosX = -255\n\t\tv:this.BeforeTouchPosY = -255\n\t\tv:this.MoveVectorX = 0\n\t\tv:this.MoveVectorY = 0\n\t}\n\ttrue\n}";
+					}
+					#2893105330 touchMoved :: function(bool,int,int,int,int) : @cdd525c0-d1f8-404b-9929-350d0d53547b
+					{
+						#2797675869 script :: string : "function(v:touchId::int, v:x::int, v:y::int, v:fingerId::int)\n{\n\tif (v:this.BeforeTouchPosX == -255 && v:this.BeforeTouchPosY == -255){\n\t\tv:this.BeforeTouchPosX = v:x\n\t\tv:this.BeforeTouchPosY = v:y\n\t}else{\n\t\tv:this.MoveVectorX = v:x - v:this.BeforeTouchPosX\n   \t\tv:this.MoveVectorY = v:y - v:this.BeforeTouchPosY\n   \t\t//X座標に移動(制限付き)\n   \t\tv:this.x += v:this.MoveVectorX\n   \t\tdp:Index1 = (v:this->^->^->Background.width + v:this->^->^->Background.x) - v:this.width\n   \t\tif(v:this.x <= v:this->^->^->Background.x ){\n   \t\t\tv:this.x = v:this->^->^->Background.x\n   \t\t}else if(v:this.x >= dp:Index1){\n   \t\t\tv:this.x = dp:Index1\n   \t\t}\n   \t\t//Y座標に移動(制限付き)\n   \t\tv:this.y += v:this.MoveVectorY\n   \t\tdp:Index1 = (v:this->^->^->Background.height + v:this->^->^->Background.y) - v:this.height\n   \t\tif(v:this.y <= v:this->^->^->Background.y ){\n   \t\t\tv:this.y = v:this->^->^->Background.y\n   \t\t}else if(v:this.y >= dp:Index1){\n   \t\t\tv:this.y = dp:Index1\n   \t\t}\n   \t\t\n   \t\tv:this.BeforeTouchPosX = v:x\n   \t\tv:this.BeforeTouchPosY = v:y\n   \t\tdp:Index1 = 0\n\t}\n    true\n}";
+					}
+					#3022165244 width :: int : 56;
+					#18524402 "width 2" :: propref(int) : @eaef3482-efad-4537-a670-ce387fdb1661#3022165244;
+					#510697559 colorationEnabled :: bool : false;
+					#2250553119 colorationColor :: color : -1;
+					#1032514338 text :: string : "L";
+					#248952820 font :: font_resource : @6375e663-34df-4bf0-a705-53922c5a3896
+					{
+						#2844541097 file :: file : "HGRGY.TTC";
+						#1104133362 size :: int : 30;
+					}
+					#2495421692 height :: int : 56;
+					#1713473105 "height 2" :: propref(int) : @eaef3482-efad-4537-a670-ce387fdb1661#2495421692;
+					#376658294 BeforeTouchPosX :: int : -255;
+					#3101213379 BeforeTouchPosY :: int : -255;
+					#566743662 MoveVectorX :: int : 0;
+					#3775378326 MoveVectorY :: int : 0;
+					#1016193155 InitializePos :: function(bool) : @d0084b30-f5c6-4522-8a9a-dd706f81225d
+					{
+						#3053552493 script :: string : "function()\n{\n\tv:this.x = 100\n\tv:this.y = -((f:rand()%300) + 100)\n\tv:this.width = v:this.SizeX\t\t//Widthの初期をを残しておく\n\tv:this.height = v:this.SizeY\t//Heightの初期をを残しておく\n\tfalse\n}";
+					}
+					#3094064706 SizeX :: int : 0;
+					#4257482950 SizeY :: int : 0;
+				}
+				#1983851741 "children_list 13" :: GtfContainer_template_instance : @b29543ac-0a2b-489e-8651-8e86dd2cc0af
+				{
+					#1148112522 name :: string : "Collision";
+					#3154099158 template :: objectref(GtfContainer_template) : @f82e4f87-4997-4271-b664-f81022da16ab;
+					#3060216168 children :: children_list : @5806df27-5ee2-4bd8-a787-22312663f6db
+					{
+					}
+					#2294063344 Collision :: function(bool) : @fdc82068-d899-46ba-acce-dbcd35aa55fe
+					{
+						#2116442583 script :: string : "function()\n{\n\tv:this.Flag = false\n\tif(f:abs(v:this.YouX - v:this.x) < ((v:this.YouWidth / 2) + (v:this.width / 2))){\n\t\tif(f:abs(v:this.YouY - v:this.y) < ((v:this.YouHeight / 2) + (v:this.height / 2))){\n\t\t\tv:this.Flag = true\n\t\t}\n\t}\n\tfalse\n}";
+					}
+				}
+			}
+			#983165787 name :: string : "Button";
+			#273111515 visible :: bool : true;
+			#3652993660 width :: int : 640;
+			#1252050297 height :: int : 480;
+			#4164160884 x :: int : 0;
+			#4128486072 y :: int : 0;
+			#3943135357 Update :: conditional_script : @dc4b13d8-6e7a-4615-ac6a-a808b8bca623
+			{
+				#2967227867 triggerList :: trigger_list : @779b31de-bd76-4052-b55d-c36aad7f6458
+				{
+					#4097311430 events :: event_refs : <objectref>[];
+					#600547387 dp_items :: dp_item_refs : <objectref>[];
+					#2553852072 properties :: property_reference_list : <propref>[@2e6e6fb2-dda1-4981-980b-8762efd47ea1#3727669992];
+				}
+				#2024431343 onTrigger :: function(bool,bool) : @960c15e5-927c-4cd2-a063-64fc30251797
+				{
+					#2125367627 script :: string : "function(v:arg0::bool)\n{\n\tv:this->ButtonContainer.SetButton()\n\tv:this->DropAreaContainer.SetDropArea()\n\t//-------------------------------------------------------------\n\t//ボタンが枠にはまったかどうか\n\t//-------------------------------------------------------------\n\twhile( dp:Index1 < v:this->ButtonContainer.Length ) {\n\t\tif(!v:this->ButtonContainer.Touch[dp:Index1]){\n\t\t\tv:this->Collision.x = v:this->ButtonContainer.PosX[dp:Index1]\n\t\t\tv:this->Collision.y = v:this->ButtonContainer.PosY[dp:Index1]\n\t\t\tv:this->Collision.width  = v:this->ButtonContainer.Width[dp:Index1]\n\t\t\tv:this->Collision.height = v:this->ButtonContainer.Height[dp:Index1]\n\t\t\tdp:Index2 = 0\n\t\t\twhile( dp:Index2 < v:this->DropAreaContainer.Length ){\n\t\t\t\tv:this->Collision.YouX = v:this->DropAreaContainer.PosX[dp:Index2]\n\t\t\t\tv:this->Collision.YouY = v:this->DropAreaContainer.PosY[dp:Index2]\n\t\t\t\tv:this->Collision.YouWidth = v:this->DropAreaContainer.Width[dp:Index2]\n\t\t\t\tv:this->Collision.YouHeight = v:this->DropAreaContainer.Height[dp:Index2]\n\t\t\t\t//衝突判定\n\t\t\t\tv:this->Collision.Collision()\n\t\t\t\tif(v:this->Collision.Flag && v:this->DropAreaContainer.OnFlag[dp:Index2] == -255){\n\t\t\t\t\tv:this->ButtonContainer.PosX[dp:Index1] = v:this->DropAreaContainer.PosX[dp:Index2]\n\t\t\t\t\tv:this->ButtonContainer.PosY[dp:Index1] = v:this->DropAreaContainer.PosY[dp:Index2]\n\t\t\t\t\tv:this->ButtonContainer.Width[dp:Index1]  = v:this->DropAreaContainer.Width[dp:Index2]\n\t\t\t\t\tv:this->ButtonContainer.Height[dp:Index1] = v:this->DropAreaContainer.Height[dp:Index2]\n\t\t\t\t\tv:this->DropAreaContainer.OnFlag[dp:Index2] = dp:Index1\n\t\t\t\t\tdp:Index2 += v:this->DropAreaContainer.Length*100//ごり押しの強制ループ抜け\n\t\t\t\t}else if(!v:this->Collision.Flag && v:this->DropAreaContainer.OnFlag[dp:Index2] == dp:Index1){\n\t\t\t\t\tv:this->DropAreaContainer.OnFlag[dp:Index2] = -255\n\t\t\t\t}\n\t\t\t\tdp:Index2 += 1\n\t\t\t}\n\t\t}\n\t\tdp:Index1 += 1\n\t}\n\t//一端終わったので使ったIndexは戻す。\n\tdp:Index1 = 0\n\tdp:Index2 = 0\n\t//これ以降座標などはいじることはないのでいったん返す。\n\tv:this->ButtonContainer.GetButton()\n\tv:this->DropAreaContainer.GetDropArea()\n\t//-------------------------------------------------------------\n\t//すべてのボタンが枠にはまっていたら次の問題へ\n\t//-------------------------------------------------------------\n\tdp:Index2 = -255\n\twhile( dp:Index1 < v:this->DropAreaContainer.Length ){\n\t\tif( v:this->DropAreaContainer.OnFlag[dp:Index1] == -255 ){\n\t\t\t//はまっていない\n\t\t\tdp:Index2 = dp:Index1\n\t\t\tdp:Index1 += v:this->DropAreaContainer.Length*100//ごり押しの強制ループ抜け\t\t\t\n\t\t}\n\t\tdp:Index1 += 1\n\t}\n\t//一端終わったので使ったIndexは戻す。\n\tdp:Index1 = 0\n\t//値に変化がなければすべて当てはまっている\n\tif(dp:Index2 == -255 && !v:this.EndFlag){\n\t\t//一時期答え合わせの判定を出すため、フラグ等を立てたりする。\n\t\tv:this.EndFlag = true\n\t\tv:this->^->TimeCounter->Counter.CountFlag = false\n\t\tv:this->^->Answer.AnswerFlag = true\n\t\tv:this.Respuesta = true\n\t\t//正解がどおかを判定する\n\t\twhile( dp:Index1 < v:this->DropAreaContainer.Length ){\n\t\t\t//デバック用\n\t\t\t//f:trace_string(v:this->^->Initialize.LetterList[dp:Index1])\n\t\t\t//f:trace_string(v:this->ButtonContainer.Text[v:this->DropAreaContainer.OnFlag[dp:Index1]])\n\t\t\t//このシステムがあまりにの糞なのでif文内が長くなっている。\n\t\t\tif(!(v:this->^->Initialize.LetterList[dp:Index1] =Aa= v:this->ButtonContainer.Text[v:this->DropAreaContainer.OnFlag[dp:Index1]])){\n\t\t\t\tv:this.Respuesta = false//一文字でも間違っていたら違うと見なす\t\t\t\n\t\t\t}\n\t\t\tdp:Index1 += 1\n\t\t}\n\t\tif(v:this.Respuesta){\n\t\t\tv:this->^->Answer.image = v:this->^->Answer.True\n\t\t\tv:this->^->Answer.colorationColor = f:rgba2color(178,34,34,255)\n\t\t\tv:this->^->Answer.scaleMode = 1\n\t\t}else{\n\t\t\tv:this->^->Answer.image = v:this->^->Answer.False\n\t\t\tv:this->^->Answer.colorationColor = f:rgba2color(49,40,94,255)\n\t\t\tv:this->^->Answer.scaleMode = 0\n\t\t}\n\t}\n\t//終わったので使ったIndexは戻す。\n\tdp:Index1 = 0\n\tdp:Index2 = 0\n\tfalse\n}";
+				}
+			}
+			#3291446286 EndFlag :: bool : false;
+			#1897155238 Respuesta :: bool : false;
+		}
+		#3351113169 "children_list 20" :: GtfImage : @3bdae7ed-bcd5-4585-876d-64faf23373b5
+		{
+			#1123758342 features :: feature_list : @ee3d6541-3b21-4fa5-b0a5-44e50e49e3d3
+			{
+				#2048515768 "feature_list 4" :: ScaleMode : @3346cdcd-1552-4889-88a1-82c5a637f6a6
+				{
+					#2885673904 scaleMode :: int : 1;
+				}
+				#2490854993 "feature_list 5" :: Coloration : @b0f13ab2-976d-4b23-9b00-23efbcbde53c
+				{
+					#1321723225 colorationEnabled :: bool : true;
+					#1425077862 colorationColor :: color : 824729343;
+				}
+			}
+			#2943131312 children :: children_list : @58073fbc-ee03-4e57-a766-93ddc2335d42
+			{
+			}
+			#1695749228 name :: string : "Answer";
+			#1657956656 visible :: bool : true;
+			#3107226531 width :: int : 480;
+			#569916521 height :: int : 480;
+			#456916701 x :: int : 80;
+			#494536705 y :: int : 0;
+			#1352729308 image :: image_resource : @6cbe599f-f5b4-431e-a62c-424a1067251e
+			{
+				#2431892993 file :: file : "";
+			}
+			#2979555005 horizontalAlign :: int : 1;
+			#4095854704 verticalAlign :: int : 0;
+			#3281332033 True :: image_resource : @9ab8384c-e3f2-49f8-ad41-1eda5a2c89ec
+			{
+				#2282051394 file :: file : "maru.png";
+			}
+			#858386546 False :: image_resource : @91d38061-2242-45cf-a033-04c033dace05
+			{
+				#1941260748 file :: file : "×.png";
+			}
+			#4111768247 NothingAnimation :: int : 0;
+			#1243529911 Update :: conditional_script : @a58903f2-94d9-4b23-a4ce-d7a1eeab92f3
+			{
+				#1109618754 triggerList :: trigger_list : @329e800c-9ae6-4d8c-8ea6-f94e55482994
+				{
+					#262014243 events :: event_refs : <objectref>[];
+					#126288379 dp_items :: dp_item_refs : <objectref>[];
+					#2460176618 properties :: property_reference_list : <propref>[@2e6e6fb2-dda1-4981-980b-8762efd47ea1#3727669992];
+				}
+				#1439130948 onTrigger :: function(bool,bool) : @665160f6-9be1-4426-afeb-1f07c8056d93
+				{
+					#1767059456 script :: string : "function(v:arg0::bool)\n{\n\tif(v:this.AnswerFlag){\n\t\tv:this.NothingAnimation += 1\n\t\tif(v:this.NothingAnimation >= 60){\n\t\t\tv:this->^->Initialize.SetData()\n\t\t}\n\t}else{\n\t\tv:this.NothingAnimation = 0\n\t\t//○×を表示させる意味がない場合は透過しておく\n\t\tv:this.colorationColor = f:rgba2color(0,0,0,0)\n\t}\n\tfalse\n}";
+				}
+			}
+			#1616341028 AnswerFlag :: bool : false;
+		}
+		#2912514058 "children_list 4" :: GtfParallelAnimation : @a2c23ec4-aa2e-4103-9214-246474fbad45
+		{
+			#175797092 features :: feature_list : @a7e1c0c0-a590-4b00-9d8f-15140e1a85af
+			{
+			}
+			#2951476442 children :: children_list : @3863dd41-06f7-438e-baf1-82be594024d1
+			{
+				#204212377 "children_list 9" :: GtfLinearInterpolationColor : @5cf19763-18d8-4ed5-b7de-e528b0133c33
+				{
+					#4097293329 features :: feature_list : @e790fe27-489d-46db-a16f-6bc0452beacb
+					{
+					}
+					#4090569293 children :: children_list : @253087f9-1805-4ee1-8ea3-bb7dbcde1f99
+					{
+					}
+					#922236684 name :: string : "Linear";
+					#2669461534 enabled :: bool : true;
+					#3172410434 delay :: int : 0;
+					#2563881150 duration :: int : 80;
+					#3876397880 repeat :: int : 1;
+					#4271517806 alternating :: bool : false;
+					#2027027511 relative :: bool : false;
+					#3168161882 start :: color : 255;
+					#4267159215 end :: color : -1;
+					#3491579168 target :: propref(color) : @ac18467c-dd2e-434f-b403-8df74d9c832d#849880203;
+				}
+			}
+			#465584236 name :: string : "FadeIn";
+			#769159010 enabled :: bool : true;
+			#4088262141 repeat :: int : 1;
+			#475179157 alternating :: bool : false;
+			#885012588 scale :: float : 1.0;
+			#1643233404 onPlay :: function(void,int,bool) : @bcde7f9d-81d7-4f04-8abd-46252a714e1f
+			{
+				#1713515467 script :: string : "function(v:animation_time::int, v:forward::bool)\n{\n\n}";
+			}
+			#3207938278 onPause :: function(void,int) : @e854ff02-def8-4550-9b4a-0da453ed3b47
+			{
+				#1884582359 script :: string : "function(v:animation_time::int)\n{\n\n}";
+			}
+			#3700272578 onTerminate :: function(void,int,int) : @182acf08-bd9c-45eb-bfc1-8e99f2be65ba
+			{
+				#2940926839 script :: string : "function(v:animation_time::int, v:terminate::int)\r\n{\r\n}";
+			}
+			#2918894913 AnimationStart :: conditional_script : @2ee03add-4630-4455-b3df-420f29b6ba24
+			{
+				#1363890427 triggerList :: trigger_list : @a1fe3f04-52a1-435e-8968-31649e02f22c
+				{
+					#3052967458 events :: event_refs : <objectref>[];
+					#3018204001 dp_items :: dp_item_refs : <objectref>[];
+					#2557920906 properties :: property_reference_list : <propref>[];
+				}
+				#1857451347 onTrigger :: function(bool,bool) : @f045eb6b-5fa7-495c-832b-875e0bd521ac
+				{
+					#2048074595 script :: string : "function(v:arg0::bool)\n{\n\tf:animation_play(v:this)\n\tfalse\n}";
+				}
+			}
+		}
+		#1576128603 "children_list 16" :: GtfParallelAnimation : @cb377049-10e7-40e7-94cb-309f7432b186
+		{
+			#175797092 features :: feature_list : @bc527ec0-0421-4595-a317-d14d2ad54b8b
+			{
+			}
+			#2951476442 children :: children_list : @f4568870-4c73-4dc5-abcd-6a95e8956d74
+			{
+				#204212377 "children_list 9" :: GtfLinearInterpolationColor : @273a16dc-ce64-498d-9390-d7bcee8c835d
+				{
+					#4097293329 features :: feature_list : @2cd5d3ea-9daf-4c28-9c7c-ef8879ac9114
+					{
+					}
+					#4090569293 children :: children_list : @ba5173c7-f162-4113-b11a-11d2bb1e08f1
+					{
+					}
+					#922236684 name :: string : "Linear";
+					#2669461534 enabled :: bool : true;
+					#3172410434 delay :: int : 0;
+					#2563881150 duration :: int : 80;
+					#3876397880 repeat :: int : 1;
+					#4271517806 alternating :: bool : false;
+					#2027027511 relative :: bool : false;
+					#3168161882 start :: color : -1;
+					#4267159215 end :: color : 255;
+					#3491579168 target :: propref(color) : @ac18467c-dd2e-434f-b403-8df74d9c832d#849880203;
+				}
+			}
+			#465584236 name :: string : "FadeOut";
+			#769159010 enabled :: bool : true;
+			#4088262141 repeat :: int : 1;
+			#475179157 alternating :: bool : false;
+			#885012588 scale :: float : 1.0;
+			#1643233404 onPlay :: function(void,int,bool) : @a8cbe500-74ae-462f-bc81-472fe8eb7229
+			{
+				#1713515467 script :: string : "function(v:animation_time::int, v:forward::bool)\n{\n\n}";
+			}
+			#3207938278 onPause :: function(void,int) : @d4197425-479a-4c2e-8501-f1c31ff9e1e4
+			{
+				#1884582359 script :: string : "function(v:animation_time::int)\n{\n\n}";
+			}
+			#3700272578 onTerminate :: function(void,int,int) : @014d604a-bdec-4e75-835b-65690f7c56b6
+			{
+				#2940926839 script :: string : "function(v:animation_time::int, v:terminate::int)\r\n{\r\n\tfire_delayed 1000, ev:Main_goto_Result()\r\n}";
+			}
+			#2239870227 AnimationStart :: function(bool) : @4808b3bc-3c07-430a-9a7f-d3812d64a211
+			{
+				#3028351792 script :: string : "function()\n{\n\tf:animation_play(v:this)\n\tfalse\n}";
+			}
+			#2998684221 StartFlag :: bool : false;
+		}
+	}
+	#1833817541 name :: string : "Viwe";
+	#4172816793 visible :: bool : true;
+	#2838397030 width :: int : 640;
+	#1143332747 height :: int : 480;
+	#1034628099 x :: int : 0;
+	#167821870 y :: int : 0;
+}
